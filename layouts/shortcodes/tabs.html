@@ -1,0 +1,171 @@
+{{/*
+  tabs shortcode
+
+  Theme-aware tabs container using Bootstrap nav-tabs.
+
+  This shortcode is designed to work with a companion `tab` shortcode
+  that collects individual tab definitions into `.Page.Scratch`. The
+  `tabs` shortcode then renders the full nav + tab content using those
+  definitions.
+
+  --------------------------------------------------------------------
+  Example usage (with a `tab` shortcode implemented separately):
+
+    {{< tabs name="audiences" class="mt-4" >}}
+
+      {{% tab group="audiences" name="users" title="Users" active="true" %}}
+      ### Start Using Apertus Today
+
+      - **Try the Demo** at [PublicAI.co](https://publicai.co)
+      - Explore common **use cases** and scenarios
+      {{% /tab %}}
+
+      {{% tab group="audiences" name="developers" title="Developers" %}}
+      ### Build with Apertus
+
+      - Download models from **Hugging Face**
+      - Integrate via **API** and deployment guides
+      {{% /tab %}}
+
+      {{% tab group="audiences" name="researchers" title="Researchers" %}}
+      ### Advance the Science
+
+      - Access **research papers**, **benchmarks**, and **training data**
+      {{% /tab %}}
+
+    {{< /tabs >}}
+
+  The `tab` shortcode (not defined here) is expected to:
+
+    - Read params:
+        group  : string, must match the `name` used by this `tabs` container
+        name   : string, unique per tab within the group (used to build IDs)
+        title  : string, tab label
+        active : optional, "true"/"1" marks the default active tab
+    - Append a dict with at least the following keys to `.Page.Scratch`:
+        "id"       : safe DOM id for the tab pane (e.g. "audiences-users")
+        "title"    : string label shown in the tab
+        "content"  : rendered HTML for the tab body
+        "active"   : bool
+    - Use a key of the form:
+        key = printf "tabs-%s" .Get "group"
+
+    Example (for reference, NOT included in this file):
+
+      {{- $group := .Get "group" | default "default" -}}
+      {{- $name  := .Get "name" | default (printf "tab-%d" .Ordinal) -}}
+      {{- $id    := printf "%s-%s" $group $name | urlize -}}
+      {{- $tabsKey := printf "tabs-%s" $group -}}
+      {{- $tabs := .Page.Scratch.Get $tabsKey | default (slice) -}}
+      {{- $tab := dict
+            "id"      $id
+            "title"   (.Get "title")
+            "content" (.Inner | markdownify)
+            "active"  (or (eq (lower (.Get "active")) "true") (eq (.Get "active") "1"))
+         -}}
+      {{- $tabs = $tabs | append $tab -}}
+      {{- .Page.Scratch.Set $tabsKey $tabs -}}
+
+  --------------------------------------------------------------------
+  Parameters (tabs container):
+
+    - name       : string, required to group tabs and construct IDs.
+                   Default: "tabs".
+    - class      : extra classes for the outer wrapper.
+    - nav_class  : extra classes for the <ul class="nav nav-tabs">.
+    - content_class :
+                   extra classes for <div class="tab-content">.
+
+  Behavior:
+
+    - Evaluates `.Inner` first to allow nested `tab` shortcodes to
+      push their definitions into `.Page.Scratch`.
+    - Reads the slice of tab definitions from `.Page.Scratch` using
+      key "tabs-<name>".
+    - Renders a Bootstrap nav-tabs header and corresponding tab panes.
+    - Clears the scratch key afterwards to avoid leaking state across
+      multiple uses of `tabs` on the same page.
+*/}}
+
+{{- $page := .Page -}}
+
+{{- $name          := .Get "name" | default "tabs" -}}
+{{- $wrapperClass  := .Get "class" | default "" -}}
+{{- $navExtraClass := .Get "nav_class" | default "" -}}
+{{- $contentExtra  := .Get "content_class" | default "" -}}
+
+{{- $tabsKey := printf "tabs-%s" $name -}}
+
+{{/* Ensure inner shortcodes (e.g. `tab`) are evaluated to populate Scratch. */}}
+{{- $_ := .Inner -}}
+
+{{- $tabs := $page.Scratch.Get $tabsKey | default (slice) -}}
+{{- $count := len $tabs -}}
+
+{{- if gt $count 0 -}}
+  {{- $navId := printf "%s-tabs" $name | urlize -}}
+  {{- $contentId := printf "%s-tabsContent" $name | urlize -}}
+
+  <div class="tabs-wrapper{{ if $wrapperClass }} {{ $wrapperClass }}{{ end }}">
+
+    <ul class="nav nav-tabs{{ if $navExtraClass }} {{ $navExtraClass }}{{ end }}" id="{{ $navId }}" role="tablist">
+      {{- range $index, $tab := $tabs -}}
+        {{- $id     := index $tab "id" -}}
+        {{- $title  := index $tab "title" | default (printf "Tab %d" (add $index 1)) -}}
+        {{- $active := index $tab "active" | default (eq $index 0) -}}
+
+        {{- $btnClasses := slice "nav-link" -}}
+        {{- if $active }}
+          {{- $btnClasses = $btnClasses | append "active" -}}
+        {{- end }}
+
+        <li class="nav-item" role="presentation">
+          <button
+            class="{{ delimit $btnClasses " " }}"
+            id="{{ $id }}-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#{{ $id }}"
+            type="button"
+            role="tab"
+            aria-controls="{{ $id }}"
+            aria-selected="{{ if $active }}true{{ else }}false{{ end }}"
+          >
+            {{ $title }}
+          </button>
+        </li>
+      {{- end }}
+    </ul>
+
+    <div class="tab-content{{ if $contentExtra }} {{ $contentExtra }}{{ end }}" id="{{ $contentId }}">
+      {{- range $index, $tab := $tabs -}}
+        {{- $id      := index $tab "id" -}}
+        {{- $content := index $tab "content" | default "" -}}
+        {{- $active  := index $tab "active" | default (eq $index 0) -}}
+
+        {{- $paneClasses := slice "tab-pane" "fade" -}}
+        {{- if $active }}
+          {{- $paneClasses = $paneClasses | append "show" "active" -}}
+        {{- end }}
+
+        <div
+          class="{{ delimit $paneClasses " " }}"
+          id="{{ $id }}"
+          role="tabpanel"
+          aria-labelledby="{{ $id }}-tab"
+        >
+          {{- $content | safeHTML -}}
+        </div>
+      {{- end }}
+    </div>
+
+  </div>
+
+  {{- /* Clear scratch to avoid leaking state */ -}}
+  {{- $page.Scratch.Delete $tabsKey -}}
+
+{{- else -}}
+  {{/* Fallback: no tabs were registered; just render inner content as-is. */}}
+  <div class="tabs-wrapper{{ if $wrapperClass }} {{ $wrapperClass }}{{ end }}">
+    {{ .Inner }}
+  </div>
+{{- end -}}

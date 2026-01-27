@@ -1,114 +1,156 @@
 {{/*
   card shortcode
 
-  Represents a single card, typically used inside the `cards` container shortcode.
+  Theme-aware card component that emits Bootstrap grid + card markup.
+
+  This shortcode is designed to be used inside the `cards` shortcode, which
+  provides the surrounding Bootstrap `row`. Each `card` renders a column
+  (`col-*`) wrapper plus the inner `.card` element.
 
   Basic usage:
 
-    {{< card title="Download Models" icon="download" link="https://huggingface.co/ApertusLLM" >}}
-    Access both 8B and 70B models on Hugging Face with free download options.
-    {{< /card >}}
+    {{< cards >}}
+      {{< card
+          title="Download Models"
+          icon="cloud_download"
+          href="https://huggingface.co/ApertusLLM"
+      >}}
+      Access both 8B and 70B models on Hugging Face with free download options.
+      {{< /card >}}
+
+      {{< card
+          title="Try the Demo"
+          icon="rocket_launch"
+          href="https://publicai.co"
+      >}}
+      Experience Apertus through our interactive chat and API interface.
+      {{< /card >}}
+
+      {{< card
+          title="Read the Docs"
+          icon="menu_book"
+          href="/docs/"
+      >}}
+      Comprehensive documentation for deployment, fine-tuning, and integration.
+      {{< /card >}}
+    {{< /cards >}}
 
   Parameters:
 
-    - title      : Card title (string)
-    - subtitle   : Optional subtitle / description line (string)
-    - icon       : Optional icon name, used as CSS class `icon-{{ icon }}`
-    - link / href: Optional URL. When present, the card is rendered as a link (`<a>`).
-    - external   : "true" / "1" to open links in a new tab with rel attributes
-    - badge      : Optional badge text rendered above the title
-    - tag        : Optional small tag/label element
-    - align      : Optional alignment modifier ("left" | "center" | "right")
-    - class      : Extra CSS classes for the outer card element
-    - id         : Optional id for the outer card element
+    - title        : Card title (string)
+    - subtitle     : Optional subtitle / supporting line (string)
+    - icon         : Optional Material Icon name (e.g. "rocket_launch")
+    - href / link  : Optional URL. When present, the card is rendered as a link.
+    - external     : "true" / "1" => opens in new tab with rel="noopener noreferrer"
+    - badge        : Optional badge text rendered above the title.
+    - tag          : Optional small tag/label rendered next to the title.
+    - align        : Content alignment within card body:
+                     "left" | "center" | "right" / "start" | "end"
+    - col_class    : Override grid column classes (default:
+                     "col-12 col-md-6 col-lg-4 d-flex")
+    - class        : Extra CSS classes for the inner `.card` element.
+    - id           : Optional id for the inner `.card` element.
 
   Notes:
 
-    - The body content (`.Inner`) is passed through `markdownify` to allow Markdown.
-    - Icons are purely presentational and use `<i class="icon icon-{{ icon }}">`.
+    - The body content (`.Inner`) is passed through `markdownify` so that
+      you can use standard Markdown for descriptions and links.
+    - When `href`/`link` is set, the `.card` becomes an `<a>` element with
+      `text-reset text-decoration-none` to match the theme style.
 */}}
 
-{{- $title     := .Get "title" -}}
-{{- $subtitle  := .Get "subtitle" | default "" -}}
-{{- $icon      := .Get "icon" | default "" -}}
-{{- $link      := or (.Get "link") (.Get "href") -}}
-{{- $external  := .Get "external" | default "" -}}
-{{- $badge     := .Get "badge" | default "" -}}
-{{- $tag       := .Get "tag" | default "" -}}
-{{- $align     := .Get "align" | default "" -}}
-{{- $class     := .Get "class" | default "" -}}
-{{- $id        := .Get "id" | default "" -}}
+{{- $title    := .Get "title" -}}
+{{- $subtitle := .Get "subtitle" | default "" -}}
+{{- $icon     := .Get "icon" | default "" -}}
+{{- $href     := or (.Get "href") (.Get "link") -}}
+{{- $extArg   := .Get "external" | default "" -}}
+{{- $badge    := .Get "badge" | default "" -}}
+{{- $tag      := .Get "tag" | default "" -}}
+{{- $alignRaw := .Get "align" | default "" -}}
+{{- $class    := .Get "class" | default "" -}}
+{{- $id       := .Get "id" | default "" -}}
+{{- $colClass := .Get "col_class" | default "col-12 col-md-6 col-lg-4 d-flex" -}}
 
-{{- $isExternal := or (eq (lower $external) "true") (eq $external "1") -}}
+{{- $isExternal := or (eq (lower $extArg) "true") (eq $extArg "1") -}}
 
-{{- $cardClasses := slice "card" -}}
-{{- if $align }}
-  {{- $cardClasses = $cardClasses | append (printf "card--align-%s" $align) -}}
-{{- end }}
-{{- if $link }}
-  {{- $cardClasses = $cardClasses | append "card--link" -}}
-{{- end }}
+{{/* Determine alignment classes for card body */}}
+{{- $align := lower $alignRaw -}}
+{{- $alignClass := "" -}}
+{{- if eq $align "center" -}}
+  {{- $alignClass = "text-center" -}}
+{{- else if or (eq $align "right") (eq $align "end") -}}
+  {{- $alignClass = "text-end" -}}
+{{- end -}}
+
+{{/* Build card classes */}}
+{{- $cardClasses := slice "card" "h-100" "shadow-sm" -}}
 {{- if $class }}
   {{- $cardClasses = $cardClasses | append $class -}}
 {{- end }}
 
 {{- $body := .Inner | markdownify -}}
 
-{{- if $link }}
-<a
-  href="{{ $link | safeURL }}"
-  class="{{ delimit $cardClasses " " }}"
-  {{- if $id }} id="{{ $id }}"{{ end -}}
-  {{- if $isExternal }} target="_blank" rel="noopener noreferrer"{{ end -}}
->
-{{- else }}
-<div
-  class="{{ delimit $cardClasses " " }}"
-  {{- if $id }} id="{{ $id }}"{{ end -}}
->
-{{- end }}
-  <div class="card__body">
-    {{- with $badge }}
-      <div class="card__badge">
-        {{ . }}
-      </div>
-    {{- end }}
+<div class="{{ $colClass }}">
+  {{- if $href }}
+    <a
+      href="{{ $href | safeURL }}"
+      class="{{ delimit $cardClasses " " }} text-reset text-decoration-none w-100"
+      {{- if $id }} id="{{ $id }}"{{ end -}}
+      {{- if $isExternal }} target="_blank" rel="noopener noreferrer"{{ end -}}
+    >
+  {{- else }}
+    <div
+      class="{{ delimit $cardClasses " " }} w-100"
+      {{- if $id }} id="{{ $id }}"{{ end -}}
+    >
+  {{- end }}
 
-    {{- if or $title $tag }}
-      <header class="card__header">
-        {{- with $title }}
-          <h3 class="card__title">
-            {{ . }}
-          </h3>
+      <div class="card-body{{ if $alignClass }} {{ $alignClass }}{{ end }}">
+
+        {{- with $badge }}
+          <span class="badge bg-soft-primary mb-2">{{ . }}</span>
         {{- end }}
-        {{- with $tag }}
-          <span class="card__tag">
-            {{ . }}
-          </span>
+
+        {{- if or $title $tag }}
+          <div class="d-flex align-items-center mb-2">
+            {{- with $title }}
+              <h3 class="h5 mb-0">
+                {{ . }}
+              </h3>
+            {{- end }}
+            {{- with $tag }}
+              <span class="badge bg-light text-muted ms-2">
+                {{ . }}
+              </span>
+            {{- end }}
+          </div>
         {{- end }}
-      </header>
-    {{- end }}
 
-    {{- with $subtitle }}
-      <p class="card__subtitle">
-        {{ . }}
-      </p>
-    {{- end }}
+        {{- with $subtitle }}
+          <p class="text-muted small mb-2">
+            {{ . }}
+          </p>
+        {{- end }}
 
-    {{- with $body }}
-      <div class="card__content">
-        {{ . }}
+        {{- with $body }}
+          <div class="text-muted mb-0">
+            {{ . }}
+          </div>
+        {{- end }}
+
+        {{- with $icon }}
+          <div class="mt-3">
+            <span class="material-icons align-middle text-primary">
+              {{ . }}
+            </span>
+          </div>
+        {{- end }}
+
       </div>
-    {{- end }}
 
-    {{- with $icon }}
-      <div class="card__icon" aria-hidden="true">
-        <i class="icon icon-{{ . }}"></i>
-      </div>
-    {{- end }}
-  </div>
-{{- if $link }}
-</a>
-{{- else }}
+  {{- if $href }}
+    </a>
+  {{- else }}
+    </div>
+  {{- end }}
 </div>
-{{- end }}

@@ -1,5 +1,118 @@
 {{ define "main" }}
-<main id="home" class="container my-5">
-  {{ .Content }}
+<main id="home">
+
+  {{/* ------------------------------------------------------------------
+       Hero section: uses page params when available, with sensible defaults
+       Front matter example for content/_index.md:
+
+       ---
+       title: "Apertus"
+       description: "Switzerland's first large-scale open, multilingual language model"
+       subtitle: "Switzerland's first large-scale open, multilingual language model"
+       hero_badge: "Open Multilingual AI"
+       hero_primary_label: "Try the Demo"
+       hero_primary_url: "https://publicai.co"
+       hero_secondary_label: "Read the Docs"
+       hero_secondary_url: "/docs/"
+       hero_note: "Open source, Apache 2.0 licensed models from the Swiss AI Initiative (EPFL, ETH Zurich, CSCS)."
+       hero_image: "images/apertus_hero.webp"
+       hero_image_alt: "Apertus model illustration"
+       ---
+     ------------------------------------------------------------------ */}}
+
+  {{- $title        := .Title -}}
+  {{- $subtitle     := .Params.subtitle | default "" -}}
+  {{- $description  := .Params.description | default .Description -}}
+  {{- $badge        := .Params.hero_badge | default "Open Multilingual AI" -}}
+  {{- $heroNote     := .Params.hero_note | default "Open source, Apache 2.0 licensed models from the Swiss AI Initiative (EPFL, ETH Zurich, CSCS)." -}}
+
+  {{- $primaryLabel := .Params.hero_primary_label | default "Try the Demo" -}}
+  {{- $primaryURL   := .Params.hero_primary_url   | default "https://publicai.co" -}}
+
+  {{- $secondaryLabel := .Params.hero_secondary_label | default "Read the Docs" -}}
+  {{- $secondaryURL   := .Params.hero_secondary_url   | default "/docs/" -}}
+
+  {{- $image      := .Params.hero_image -}}
+  {{- $imageAlt   := .Params.hero_image_alt | default (printf "%s illustration" $title) -}}
+
+  <section id="hero" class="d-table w-100 overflow-hidden hero">
+    <div class="container">
+      <div class="row mt-5 align-items-center">
+
+        <div class="col-lg-6 col-md-6">
+          <div class="title-heading">
+
+            {{ with $badge }}
+              <span class="badge bg-soft-primary mb-1">{{ . }}</span>
+            {{ end }}
+
+            {{ with $title }}
+              <h1 class="heading mt-0 mb-3">
+                {{ . }}
+              </h1>
+            {{ end }}
+
+            {{ with $subtitle }}
+              <h2 class="h5 text-muted fw-normal mb-2">
+                {{ . }}
+              </h2>
+            {{ end }}
+
+            {{ with $description }}
+              <p class="para-desc text-muted mb-0">
+                {{ . }}
+              </p>
+            {{ end }}
+
+            <div class="mt-3">
+              {{ with $primaryURL }}
+                <a href="{{ . }}" class="btn btn-lg btn-primary me-2 mt-2">
+                  <span class="material-icons align-middle">rocket_launch</span>
+                  {{ $primaryLabel }}
+                </a>
+              {{ end }}
+
+              {{ with $secondaryURL }}
+                <a href="{{ . }}" class="btn btn-lg btn-outline-primary mt-2">
+                  <span class="material-icons align-middle">description</span>
+                  {{ $secondaryLabel }}
+                </a>
+              {{ end }}
+            </div>
+
+            {{ with $heroNote }}
+              <p class="text-muted mb-0 mt-3">
+                {{ . }}
+              </p>
+            {{ end }}
+
+          </div>
+        </div>
+
+        {{ if $image }}
+          <div class="col-lg-6 col-md-6 mt-4 pt-4 mt-sm-0 pt-sm-0">
+            <div class="ms-lg-4">
+              <div class="classic-hero-image">
+                <img src="{{ $image | relURL }}" class="shadow-lg mx-auto d-block rounded-top-4" alt="{{ $imageAlt }}">
+              </div>
+            </div>
+          </div>
+        {{ end }}
+
+      </div>
+    </div>
+  </section>
+
+  {{/* ------------------------------------------------------------------
+       Page content: render the remainder of the home page Markdown below
+       the hero, using the theme’s standard section/container classes.
+     ------------------------------------------------------------------ */}}
+
+  <section id="page-content">
+    <div class="container mt-100 mt-60">
+      {{ .Content }}
+    </div>
+  </section>
+
 </main>
 {{ end }}

@@ -1,7 +1,9 @@
 {{/*
   columns shortcode
 
-  Usage:
+  Updated to use Bootstrap / Lotus Docs grid classes.
+
+  Usage (simple three columns):
 
     {{< columns >}}
     ### Column One
@@ -16,41 +18,101 @@
     Content for the third column.
     {{< /columns >}}
 
-  Optional parameters:
+  Usage (explicit two columns, centered text, custom row classes):
 
-    {{< columns class="my-columns" stack="true" >}}
+    {{< columns columns="2" align="center" class="gy-4" >}}
+    ### Users
+    Content for users.
 
-  - class: extra CSS classes for the outer container
-  - stack: "true" / "1" to add a modifier class for stacked layout on small screens
+    <--->
+    ### Developers
+    Content for developers.
+    {{< /columns >}}
+
+  Parameters:
+
+    - columns / cols : number of columns at larger breakpoints (string: "1", "2", "3", "4"; default "3")
+    - col_class      : override column classes completely (e.g. "col-12 col-md-6 col-lg-3")
+    - class          : extra classes for the row container (e.g. "gy-4 g-lg-5")
+    - align          : horizontal text alignment for columns ("left" | "center" | "right")
+    - v_align        : vertical alignment of columns ("top" | "center" | "bottom")
+    - gap            : Bootstrap gutter utility for the row (e.g. "3" => "g-3")
+    - stack          : "true"/"1" – kept for backwards-compat; you can still combine with `class` if needed
 
   Notes:
-  - Columns are separated by a literal line containing `<--->`.
-  - Each column segment is passed through `markdownify`, so you can use Markdown inside.
+
+    - Columns are separated by a literal line containing `<--->`.
+    - Each column segment is passed through `markdownify`, so you can use Markdown inside.
 */}}
 
-{{- $class := .Get "class" | default "" -}}
-{{- $stackParam := .Get "stack" | default "" -}}
+{{- $class       := .Get "class" | default "" -}}
+{{- $columnsStr  := .Get "columns" | default (.Get "cols") | default "3" -}}
+{{- $colOverride := .Get "col_class" | default "" -}}
+{{- $align       := .Get "align" | default "" -}}
+{{- $vAlign      := .Get "v_align" | default "" -}}
+{{- $gap         := .Get "gap" | default "" -}}
+{{- $stackParam  := .Get "stack" | default "" -}}
+
 {{- $stack := or (eq (lower $stackParam) "true") (eq $stackParam "1") -}}
 
 {{- $cols := split .Inner "<--->" -}}
 
-{{- $containerClass := "columns" -}}
-{{- if $stack }}
-  {{- $containerClass = printf "%s columns--stack" $containerClass -}}
-{{- end }}
-{{- if $class }}
-  {{- $containerClass = printf "%s %s" $containerClass $class -}}
+{{/* Build row classes */}}
+{{- $rowClasses := slice "row" -}}
+
+{{- if $gap }}
+  {{- $rowClasses = $rowClasses | append (printf "g-%s" $gap) -}}
 {{- end }}
 
-<div class="{{ $containerClass }}">
-  <div class="columns__inner">
-    {{- range $index, $raw := $cols }}
-      {{- $content := trim $raw " \t\r\n" -}}
-      {{- if $content }}
-        <div class="columns__item columns__item--{{ add $index 1 }}">
-          {{- $content | markdownify -}}
-        </div>
-      {{- end }}
+{{- if $stack }}
+  {{- $rowClasses = $rowClasses | append "row-cols-1" -}}
+{{- end }}
+
+{{- if $class }}
+  {{- $rowClasses = $rowClasses | append $class -}}
+{{- end }}
+
+{{/* Build column classes */}}
+{{- $colClasses := slice "col-12" -}}
+
+{{- if $colOverride }}
+  {{- $colClasses = split $colOverride " " -}}
+{{- else }}
+  {{- if eq $columnsStr "1" -}}
+    {{- /* single column: already col-12 */ -}}
+  {{- else if eq $columnsStr "2" -}}
+    {{- $colClasses = $colClasses | append "col-md-6" -}}
+  {{- else if eq $columnsStr "4" -}}
+    {{- $colClasses = $colClasses | append "col-md-6" "col-lg-3" -}}
+  {{- else -}}
+    {{- /* default and "3" => 3 columns on md and up */ -}}
+    {{- $colClasses = $colClasses | append "col-md-4" -}}
+  {{- end -}}
+{{- end }}
+
+{{/* Text alignment */}}
+{{- if eq (lower $align) "center" -}}
+  {{- $colClasses = $colClasses | append "text-center" -}}
+{{- else if or (eq (lower $align) "right") (eq (lower $align) "end") -}}
+  {{- $colClasses = $colClasses | append "text-end" -}}
+{{- end }}
+
+{{/* Vertical alignment */}}
+{{- if eq (lower $vAlign) "center" -}}
+  {{- $rowClasses = $rowClasses | append "align-items-center" -}}
+{{- else if or (eq (lower $vAlign) "bottom") (eq (lower $vAlign) "end") -}}
+  {{- $rowClasses = $rowClasses | append "align-items-end" -}}
+{{- else if or (eq (lower $vAlign) "top") (eq (lower $vAlign) "start") -}}
+  {{- $rowClasses = $rowClasses | append "align-items-start" -}}
+{{- end }}
+
+<div class="{{ delimit $rowClasses " " }}">
+  {{- range $index, $raw := $cols }}
+    {{- $content := trim $raw " \t\r\n" -}}
+    {{- if $content }}
+      <div class="{{ delimit $colClasses " " }}">
+        {{- $content | markdownify -}}
+      </div>
     {{- end }}
-  </div>
+  {{- end }}
 </div>

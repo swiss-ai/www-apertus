@@ -1,80 +1,100 @@
 {{/*
   button shortcode
 
+  Theme-aware button component that uses the Lotus Docs / Bootstrap styling.
+
   Usage (link button):
 
     {{< button
         href="https://publicai.co"
-        icon="rocket"           # optional: icon name (CSS-based)
-        style="primary"         # optional: primary | secondary | outline | ghost
-        size="lg"               # optional: sm | md | lg
-        external="true"         # optional: "true" to open in new tab with rel attrs
-        id="hero-demo-btn"      # optional: element id
-        class="my-extra-class"  # optional: extra classes
+        icon="rocket_launch"
+        style="primary"           # e.g. primary, secondary, outline-primary, link
+        size="lg"                 # sm | md | lg
+        external="true"           # "true" / "1" => target="_blank" rel="noopener noreferrer"
+        id="hero-demo-btn"
+        class="me-2 mt-2"
     >}}
       Try the Demo
     {{< /button >}}
 
   Usage (button element, no href):
 
-    {{< button style="secondary" size="sm" id="scroll-down" >}}
+    {{< button style="outline-primary" size="sm" type="button" >}}
       Learn More
     {{< /button >}}
 
   Notes:
-  - The inner content is used as the button label and can contain inline Markdown.
-  - For external links, set external="true" to add target and rel attributes.
+  - Uses Bootstrap-style classes: e.g. "btn btn-lg btn-primary", "btn btn-lg btn-outline-primary".
+  - `style` is appended as-is after "btn-". For example:
+      style="primary"         => class="btn btn-lg btn-primary"
+      style="outline-primary" => class="btn btn-lg btn-outline-primary"
+  - The inner content becomes the button label and can contain inline HTML.
 */}}
 
-{{- $href      := .Get "href" -}}
-{{- $style     := .Get "style" | default "primary" -}}
-{{- $size      := .Get "size" | default "" -}}
-{{- $icon      := .Get "icon" | default "" -}}
-{{- $id        := .Get "id" | default "" -}}
-{{- $class     := .Get "class" | default "" -}}
-{{- $external  := .Get "external" | default "" -}}
+{{- $href        := .Get "href" | default "" -}}
+{{- $style       := .Get "style" | default "primary" -}}
+{{- $size        := .Get "size" | default "lg" -}}
+{{- $icon        := .Get "icon" | default "" -}}
+{{- $iconPos     := .Get "icon_position" | default "left" -}}
+{{- $id          := .Get "id" | default "" -}}
+{{- $class       := .Get "class" | default "" -}}
+{{- $externalArg := .Get "external" | default "" -}}
+{{- $type        := .Get "type" | default "button" -}}
+{{- $blockArg    := .Get "block" | default "" -}}
 
-{{- $isExternal := or (eq (lower $external) "true") (eq $external "1") -}}
+{{- $isExternal := or (eq (lower $externalArg) "true") (eq $externalArg "1") -}}
+{{- $isBlock    := or (eq (lower $blockArg) "true") (eq $blockArg "1") -}}
 
-{{- $btnClass := printf "btn btn--%s" $style -}}
-{{- if $size }}
-  {{- $btnClass = printf "%s btn--%s" $btnClass $size -}}
-{{- end }}
+{{- $btnClasses := slice "btn" -}}
+
+{{- if or (eq $size "sm") (eq $size "lg") -}}
+  {{- $btnClasses = $btnClasses | append (printf "btn-%s" $size) -}}
+{{- end -}}
+
+{{- if $style }}
+  {{- $btnClasses = $btnClasses | append (printf "btn-%s" $style) -}}
+{{- end -}}
+
+{{- if $isBlock }}
+  {{- $btnClasses = $btnClasses | append "w-100" -}}
+{{- end -}}
+
 {{- if $class }}
-  {{- $btnClass = printf "%s %s" $btnClass $class -}}
-{{- end }}
+  {{- $btnClasses = $btnClasses | append $class -}}
+{{- end -}}
 
-{{- $label := .Inner -}}
+{{- $label := (trim .Inner " \n\r\t") -}}
+
+{{- $renderIconLeft := and $icon (ne (lower $iconPos) "right") -}}
+{{- $renderIconRight := and $icon (eq (lower $iconPos) "right") -}}
 
 {{- if $href }}
 <a
   href="{{ $href | safeURL }}"
-  class="{{ $btnClass }}"
+  class="{{ delimit $btnClasses " " }}"
   {{- if $id }} id="{{ $id }}"{{ end -}}
   {{- if $isExternal }} target="_blank" rel="noopener noreferrer"{{ end -}}
 >
-  {{- if $icon }}
-    <span class="btn__icon" aria-hidden="true">
-      <i class="icon icon-{{ $icon }}"></i>
-    </span>
+  {{- if $renderIconLeft }}
+    <span class="material-icons align-middle me-1">{{ $icon }}</span>
   {{- end }}
-  <span class="btn__label">
-    {{- $label | safeHTML -}}
-  </span>
+  <span class="align-middle">{{ $label | safeHTML }}</span>
+  {{- if $renderIconRight }}
+    <span class="material-icons align-middle ms-1">{{ $icon }}</span>
+  {{- end }}
 </a>
 {{- else }}
 <button
-  type="button"
-  class="{{ $btnClass }}"
+  type="{{ $type }}"
+  class="{{ delimit $btnClasses " " }}"
   {{- if $id }} id="{{ $id }}"{{ end -}}
 >
-  {{- if $icon }}
-    <span class="btn__icon" aria-hidden="true">
-      <i class="icon icon-{{ $icon }}"></i>
-    </span>
+  {{- if $renderIconLeft }}
+    <span class="material-icons align-middle me-1">{{ $icon }}</span>
   {{- end }}
-  <span class="btn__label">
-    {{- $label | safeHTML -}}
-  </span>
+  <span class="align-middle">{{ $label | safeHTML }}</span>
+  {{- if $renderIconRight }}
+    <span class="material-icons align-middle ms-1">{{ $icon }}</span>
+  {{- end }}
 </button>
 {{- end }}

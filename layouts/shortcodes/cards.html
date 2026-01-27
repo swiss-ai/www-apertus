@@ -1,61 +1,120 @@
 {{/*
   cards shortcode
 
-  Container for a group of `card` shortcodes or card-like content.
+  Theme-aware container for a group of card components.
 
-  Usage:
+  This shortcode is designed to work with the Lotus Docs / Bootstrap-based
+  layout. It provides a responsive Bootstrap grid row and expects the
+  inner content (typically `card` shortcodes) to render individual cards.
+
+  Basic usage:
 
     {{< cards >}}
-      {{< card title="Download Models" icon="download" link="https://huggingface.co/ApertusLLM" >}}
+      {{< card title="Download Models" icon="cloud_download" href="https://huggingface.co/ApertusLLM" >}}
       Access both 8B and 70B models on Hugging Face with free download options.
       {{< /card >}}
 
-      {{< card title="Try the Demo" icon="play" link="https://publicai.co" >}}
+      {{< card title="Try the Demo" icon="rocket_launch" href="https://publicai.co" >}}
       Experience Apertus through our interactive chat and API interface at PublicAI.co.
       {{< /card >}}
 
-      {{< card title="Read the Docs" icon="book" link="/docs" >}}
+      {{< card title="Read the Docs" icon="menu_book" href="/docs/" >}}
       Comprehensive documentation for deployment, fine-tuning, and integration.
       {{< /card >}}
     {{< /cards >}}
 
-  Optional parameters:
+  Parameters:
 
-    {{< cards columns="3" align="stretch" stack="true" class="my-card-grid" >}}
-
-  - columns: number of columns at larger breakpoints (e.g. "2", "3", "4")
-  - align: alignment of cards ("top" | "center" | "stretch")
-  - stack: "true" / "1" to add a modifier class for stacked layout on small screens
-  - class: extra CSS classes for the outer container
+    - columns / cols : string, number of columns at larger breakpoints
+                       "1", "2", "3", "4" (default: "3")
+                       This controls Bootstrap's `row-cols-*` classes.
+    - gap            : string, Bootstrap gutter size for the row (e.g. "3" => "g-3")
+                       default: "4"
+    - align          : horizontal alignment of columns in the row
+                       "start" | "center" | "end"
+                       maps to: justify-content-start|center|end
+    - v_align        : vertical alignment of columns in the row
+                       "top" | "center" | "bottom"
+                       maps to: align-items-start|center|end
+    - class          : extra classes for the row (e.g. "mt-4 gy-4")
+    - row_class      : full override for row classes. If set, all automatic
+                       row/columns-related classes are still applied, but this
+                       value is appended at the end. Use with care.
 
   Notes:
-  - This shortcode does not parse individual cards; it just wraps `.Inner`.
-  - Individual cards should be provided via a `card` shortcode or equivalent markup.
+
+    - This shortcode **does not** wrap each card in its own column.
+      The inner `card` shortcode should be updated to emit `col-*` classes
+      (for example: `col-12 col-md-6 col-lg-4`) so that Bootstrap can lay
+      out the grid correctly.
+
+      A typical `card` shortcode implementation would be something like:
+
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+          <div class="card h-100">...</div>
+        </div>
+
+    - `.Inner` is output with `safeHTML` so nested shortcodes can render
+      full HTML structures.
 */}}
 
-{{- $columnsParam := .Get "columns" | default "3" -}}
-{{- $alignParam   := .Get "align"   | default "stretch" -}}
-{{- $stackParam   := .Get "stack"   | default "" -}}
-{{- $class        := .Get "class"   | default "" -}}
+{{- $columnsStr := .Get "columns" | default (.Get "cols") | default "3" -}}
+{{- $gap        := .Get "gap"     | default "4" -}}
+{{- $align      := .Get "align"   | default "" -}}
+{{- $vAlign     := .Get "v_align" | default "" -}}
+{{- $class      := .Get "class"   | default "" -}}
+{{- $rowClass   := .Get "row_class" | default "" -}}
 
-{{- $stack := or (eq (lower $stackParam) "true") (eq $stackParam "1") -}}
+{{/* Build base row classes */}}
+{{- $rowClasses := slice "row" -}}
 
-{{- $containerClass := slice "cards" -}}
-{{- if $columnsParam }}
-  {{- $containerClass = $containerClass | append (printf "cards--cols-%s" $columnsParam) -}}
+{{- if $gap }}
+  {{- $rowClasses = $rowClasses | append (printf "g-%s" $gap) -}}
 {{- end }}
-{{- if $alignParam }}
-  {{- $containerClass = $containerClass | append (printf "cards--align-%s" $alignParam) -}}
+
+{{/* Responsive column count: row-cols utilities */}}
+{{- if eq $columnsStr "1" -}}
+  {{- /* Single column: just row-cols-1 for consistency */ -}}
+  {{- $rowClasses = $rowClasses | append "row-cols-1" -}}
+{{- else if eq $columnsStr "2" -}}
+  {{- /* 2 columns from md and up */ -}}
+  {{- $rowClasses = $rowClasses | append "row-cols-1" "row-cols-md-2" -}}
+{{- else if eq $columnsStr "4" -}}
+  {{- /* 4 columns on lg and up, 2 on md */ -}}
+  {{- $rowClasses = $rowClasses | append "row-cols-1" "row-cols-md-2" "row-cols-lg-4" -}}
+{{- else -}}
+  {{- /* Default and "3": 3 columns on lg, 2 on md */ -}}
+  {{- $rowClasses = $rowClasses | append "row-cols-1" "row-cols-md-2" "row-cols-lg-3" -}}
 {{- end }}
-{{- if $stack }}
-  {{- $containerClass = $containerClass | append "cards--stack" -}}
+
+{{/* Horizontal alignment (justify-content-*) */}}
+{{- $alignLower := lower $align -}}
+{{- if eq $alignLower "center" -}}
+  {{- $rowClasses = $rowClasses | append "justify-content-center" -}}
+{{- else if or (eq $alignLower "end") (eq $alignLower "right") -}}
+  {{- $rowClasses = $rowClasses | append "justify-content-end" -}}
+{{- else if or (eq $alignLower "start") (eq $alignLower "left") -}}
+  {{- $rowClasses = $rowClasses | append "justify-content-start" -}}
 {{- end }}
+
+{{/* Vertical alignment (align-items-*) */}}
+{{- $vAlignLower := lower $vAlign -}}
+{{- if or (eq $vAlignLower "center") (eq $vAlignLower "middle") -}}
+  {{- $rowClasses = $rowClasses | append "align-items-center" -}}
+{{- else if or (eq $vAlignLower "bottom") (eq $vAlignLower "end") -}}
+  {{- $rowClasses = $rowClasses | append "align-items-end" -}}
+{{- else if or (eq $vAlignLower "top") (eq $vAlignLower "start") -}}
+  {{- $rowClasses = $rowClasses | append "align-items-start" -}}
+{{- end }}
+
+{{/* User-specified additional classes */}}
 {{- if $class }}
-  {{- $containerClass = $containerClass | append $class -}}
+  {{- $rowClasses = $rowClasses | append $class -}}
+{{- end }}
+{{- if $rowClass }}
+  {{- $rowClasses = $rowClasses | append $rowClass -}}
 {{- end }}
 
-<div class="{{ delimit $containerClass " " }}">
-  <div class="cards__inner">
-    {{- .Inner | safeHTML -}}
-  </div>
+<div class="{{ delimit $rowClasses " " }}">
+  {{- .Inner | safeHTML -}}
 </div>

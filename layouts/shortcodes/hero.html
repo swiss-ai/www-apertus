@@ -1,0 +1,183 @@
+{{/*
+  hero shortcode
+
+  Theme-style hero section matching Lotus Docs / Bootstrap layout.
+
+  Example usage (simple, parameter-only):
+
+    {{< hero
+        title="Apertus"
+        subtitle="Switzerland's First Open Multilingual AI"
+        description="Switzerland's first large-scale open, multilingual language model."
+        badge="Open Multilingual AI"
+        primary_label="Try the Demo"
+        primary_url="https://publicai.co"
+        primary_icon="rocket_launch"
+        secondary_label="Read the Docs"
+        secondary_url="/docs/"
+        secondary_icon="description"
+        note="Open source, Apache 2.0 licensed. A collaboration between EPFL, ETH Zurich, and CSCS."
+    >}}
+
+  Example usage (with custom inner content for actions):
+
+    {{< hero
+        title="Apertus"
+        subtitle="Switzerland's First Open Multilingual AI"
+        description="Switzerland's first large-scale open, multilingual language model."
+        badge="Open Multilingual AI"
+    >}}
+      {{< button href="https://publicai.co" style="primary" size="lg" icon="rocket_launch" class="me-2 mt-2" >}}
+        Try the Demo
+      {{< /button >}}
+
+      {{< button href="/docs/" style="outline-primary" size="lg" icon="description" class="mt-2" >}}
+        Read the Docs
+      {{< /button >}}
+    {{< /hero >}}
+
+  Parameters:
+
+    - title            : Main heading text. Defaults to .Page.Title.
+    - subtitle         : Secondary heading line under title.
+    - description      : Short description paragraph. Defaults to page description.
+    - badge            : Small badge text shown above title.
+    - note             : Small text line below the CTAs (e.g. licensing / initiative blurb).
+
+    - primary_label    : Label of the primary CTA button.
+    - primary_url      : URL of the primary CTA button.
+    - primary_icon     : Material icon name for the primary button (e.g. "rocket_launch").
+
+    - secondary_label  : Label of the secondary CTA button.
+    - secondary_url    : URL of the secondary CTA button.
+    - secondary_icon   : Material icon name for the secondary button (e.g. "description").
+
+    - image            : Optional hero image path (relative to site root or processed via relURL).
+    - image_alt        : Alt text for the hero image. Defaults to "{{ title }} illustration".
+    - image_class      : Extra CSS classes for the image element.
+    - no_image         : "true"/"1" to force-hide the image even if `image` is set.
+
+    - align            : Not currently used for layout (kept for future extension).
+    - id               : Optional id attribute for the <section>. Defaults to "hero".
+    - class            : Extra CSS classes for the <section>.
+
+  Notes:
+
+    - If you provide inner content to the shortcode, that content will be rendered
+      as the "actions" area instead of auto-generated CTA buttons.
+    - The markup follows the theme’s built-in hero structure:
+        <section id="hero" class="d-table w-100 overflow-hidden hero">...
+      so it will pick up the same styling & background gradients from the theme.
+*/}}
+
+{{- $page         := .Page -}}
+{{- $title        := .Get "title" | default $page.Title -}}
+{{- $subtitle     := .Get "subtitle" | default $page.Params.subtitle -}}
+{{- $description  := .Get "description" | default $page.Description -}}
+{{- $badge        := .Get "badge" | default $page.Params.hero_badge -}}
+{{- $note         := .Get "note"  | default $page.Params.hero_note -}}
+
+{{- $primaryLabel := .Get "primary_label"    | default $page.Params.hero_primary_label -}}
+{{- $primaryURL   := .Get "primary_url"      | default $page.Params.hero_primary_url -}}
+{{- $primaryIcon  := .Get "primary_icon"     | default "rocket_launch" -}}
+
+{{- $secondaryLabel := .Get "secondary_label" | default $page.Params.hero_secondary_label -}}
+{{- $secondaryURL   := .Get "secondary_url"   | default $page.Params.hero_secondary_url -}}
+{{- $secondaryIcon  := .Get "secondary_icon"  | default "description" -}}
+
+{{- $image       := .Get "image"      | default $page.Params.hero_image -}}
+{{- $imageAlt    := .Get "image_alt"  | default (printf "%s illustration" $title) -}}
+{{- $imageClass  := .Get "image_class" | default "shadow-lg mx-auto d-block rounded-top-4" -}}
+{{- $noImageArg  := .Get "no_image" | default "" -}}
+
+{{- $sectionID   := .Get "id" | default "hero" -}}
+{{- $extraClass  := .Get "class" | default "" -}}
+
+{{- $noImage := or (eq (lower $noImageArg) "true") (eq $noImageArg "1") -}}
+
+{{- $inner := trim .Inner " \n\r\t" -}}
+
+<section id="{{ $sectionID }}" class="d-table w-100 overflow-hidden hero{{ if $extraClass }} {{ $extraClass }}{{ end }}">
+  <div class="container">
+    <div class="row mt-5 align-items-center">
+
+      <div class="col-lg-6 col-md-6">
+        <div class="title-heading">
+
+          {{- with $badge }}
+            <span class="badge bg-soft-primary mb-1">{{ . }}</span>
+          {{- end }}
+
+          {{- with $title }}
+            <h1 class="heading mt-0 mb-3">
+              {{ . }}
+            </h1>
+          {{- end }}
+
+          {{- with $subtitle }}
+            <h2 class="h5 text-muted fw-normal mb-2">
+              {{ . }}
+            </h2>
+          {{- end }}
+
+          {{- with $description }}
+            <p class="para-desc text-muted mb-0">
+              {{ . }}
+            </p>
+          {{- end }}
+
+          <div class="mt-3">
+            {{- if $inner }}
+              {{/* Use custom inner content for actions (e.g. button shortcodes) */}}
+              {{ $inner | safeHTML }}
+            {{- else }}
+              {{- with $primaryURL }}
+                <a href="{{ . | safeURL }}" class="btn btn-lg btn-primary me-2 mt-2">
+                  {{- with $primaryIcon }}
+                    <span class="material-icons align-middle">{{ . }}</span>
+                  {{- end }}
+                  {{- with $primaryLabel }}
+                    {{ . }}
+                  {{- end }}
+                </a>
+              {{- end }}
+
+              {{- with $secondaryURL }}
+                <a href="{{ . | safeURL }}" class="btn btn-lg btn-outline-primary mt-2">
+                  {{- with $secondaryIcon }}
+                    <span class="material-icons align-middle">{{ . }}</span>
+                  {{- end }}
+                  {{- with $secondaryLabel }}
+                    {{ . }}
+                  {{- end }}
+                </a>
+              {{- end }}
+            {{- end }}
+          </div>
+
+          {{- with $note }}
+            <p class="text-muted mb-0 mt-3">
+              {{ . }}
+            </p>
+          {{- end }}
+
+        </div>
+      </div>
+
+      {{- if and (not $noImage) $image }}
+        <div class="col-lg-6 col-md-6 mt-4 pt-4 mt-sm-0 pt-sm-0">
+          <div class="ms-lg-4">
+            <div class="classic-hero-image">
+              <img
+                src="{{ $image | relURL }}"
+                alt="{{ $imageAlt }}"
+                class="{{ $imageClass }}"
+              >
+            </div>
+          </div>
+        </div>
+      {{- end }}
+
+    </div>
+  </div>
+</section>

@@ -1,57 +1,13 @@
 ---
 title: "Apertus"
 description: "Switzerland's first large-scale open, multilingual language model"
-# Hero
-hero:
-  enable: true
-  weight: 10
-  template: hero
-
-  backgroundImage:
-    path: "images/templates/hero"
-    filename:
-      desktop: "gradient-desktop.webp"
-      mobile: "gradient-mobile.webp"
-
-  badge:
-    text: v0.1.0
-    color: primary # primary, secondary, success, danger, warning, info, light, dark
-    pill: false # boolean
-    soft: true # boolean
-
-  title: "Lotus Docs"
-  subtitle: A lightweight, **modern documentation** theme for Hugo. Easily customised for building **fast**, **secure**, and **SEO-friendly** documentation sites.
-
-  image:
-    path: "images" # path to image under configured assets directory. default 'images'
-    filename: "lotus_docs_screenshot.png" # filename of your hero image (including file extension)
-    alt: "Lotus Docs Screenshot" # Optional but recommended
-    boxShadow: true # default 'false' (excludes .svg images)
-    rounded: true # round the image corners? default 'false' (excludes .svg images)
-
-  ctaButton:
-    icon: rocket_launch
-    btnText: "Get Started"
-    url: "/docs/quickstart/#create-a-new-lotus-docs-site"
-  cta2Button:
-    icon: construction
-    btnText: "In Development"
-    url: "https://github.com/colinwilson/lotusdocs"
-
-  info: "**Open Source** MIT Licensed."
----
-
-{{< hero 
-    title="Apertus" 
-    subtitle="Switzerland's First Open Multilingual AI" 
-    description="A collaborative effort between EPFL, ETH Zurich, and CSCS – trained on 15 trillion tokens across 1,000+ languages, including Swiss German, Romansh, and many underrepresented languages."
->}}
-
-{{% button href="https://publicai.co" icon="rocket" %}}Try the Demo{{% /button %}}
-{{% button href="/docs" icon="book" style="secondary" %}}Read the Docs{{% /button %}}
-
-{{< /hero >}}
-
+subtitle: "Switzerland's First Open Multilingual AI"
+hero_badge: "Open Multilingual AI"
+hero_primary_label: "Try the Demo"
+hero_primary_url: "https://publicai.co"
+hero_secondary_label: "Read the Docs"
+hero_secondary_url: "/docs/"
+hero_note: "Open source, Apache 2.0 licensed. A collaborative effort between EPFL, ETH Zurich, and CSCS – trained on 15 trillion tokens across 1,000+ languages."
 ---
 
 ## Why Apertus?
@@ -81,15 +37,15 @@ Available in **8B** and **70B** parameter sizes under Apache 2.0 license – sui
 
 {{< cards >}}
 
-{{< card title="Download Models" icon="download" link="https://huggingface.co/ApertusLLM" >}}
+{{< card title="Download Models" icon="cloud_download" href="https://huggingface.co/ApertusLLM" >}}
 Access both 8B and 70B models on Hugging Face with free download options.
 {{< /card >}}
 
-{{< card title="Try the Demo" icon="play" link="https://publicai.co" >}}
+{{< card title="Try the Demo" icon="rocket_launch" href="https://publicai.co" >}}
 Experience Apertus through our interactive chat and API interface at PublicAI.co.
 {{< /card >}}
 
-{{< card title="Read the Docs" icon="book" link="/docs" >}}
+{{< card title="Read the Docs" icon="menu_book" href="/docs" >}}
 Comprehensive documentation for deployment, fine-tuning, and integration.
 {{< /card >}}
 
@@ -98,7 +54,6 @@ Comprehensive documentation for deployment, fine-tuning, and integration.
 ---
 
 ## News & Publications
-
 
 ### Technical Report Released
 Our comprehensive technical report detailing Apertus's architecture, training methodology, and benchmark results is now available.
@@ -112,16 +67,15 @@ Apertus is the flagship project of the Swiss AI Initiative, a joint effort betwe
 
 [Learn More →](/about/swiss-ai-initiative)
 
-
 ---
 
 ## For Every User
 
 Whether you're a developer, researcher, or just curious about AI, there's a path for you.
 
-{{< tabs >}}
+{{< tabs name="audiences" class="mt-4" >}}
 
-{{% tab title="Users" %}}
+{{% tab group="audiences" name="users" title="Users" active="true" %}}
 
 ### Start Using Apertus Today
 
@@ -131,7 +85,7 @@ Whether you're a developer, researcher, or just curious about AI, there's a path
 
 {{% /tab %}}
 
-{{% tab title="Developers" %}}
+{{% tab group="audiences" name="developers" title="Developers" %}}
 
 ### Build with Apertus
 
@@ -141,7 +95,7 @@ Whether you're a developer, researcher, or just curious about AI, there's a path
 
 {{% /tab %}}
 
-{{% tab title="Researchers" %}}
+{{% tab group="audiences" name="researchers" title="Researchers" %}}
 
 ### Advance the Science
 
@@ -151,7 +105,7 @@ Whether you're a developer, researcher, or just curious about AI, there's a path
 
 {{% /tab %}}
 
-{{% tab title="Contributors" %}}
+{{% tab group="audiences" name="contributors" title="Contributors" %}}
 
 ### Join the Community
 
@@ -182,9 +136,9 @@ Apertus is built on a foundation of ethical AI development and legal compliance.
 
 Apertus exemplifies Swiss collaboration – bringing together interdisciplinary expertise from research, engineering, and infrastructure across Switzerland's leading institutions.
 
-- EPFL
-- ETH Zurich  
-- CSCS (Swiss National Supercomputing Centre)
+- **EPFL** – École polytechnique fédérale de Lausanne
+- **ETH Zurich** – Swiss Federal Institute of Technology
+- **CSCS** – Swiss National Supercomputing Centre
 
 ---
 
@@ -194,9 +148,9 @@ We welcome feedback and contributions to drive Apertus's continued development.
 
 ### Ready to explore?
 
-{{% button href="https://publicai.co" icon="rocket" %}}Try the Demo{{% /button %}}
-{{% button href="https://huggingface.co/ApertusLLM" icon="download" style="secondary" %}}Download Models{{% /button %}}
-{{% button href="https://github.com/ApertusLLM" icon="github" style="outline" %}}View on GitHub{{% /button %}}
+{{< button href="https://publicai.co" style="primary" size="lg" icon="rocket_launch" class="me-2 mt-2" >}}Try the Demo{{< /button >}}
+{{< button href="https://huggingface.co/ApertusLLM" style="outline-primary" size="lg" icon="cloud_download" class="me-2 mt-2" >}}Download Models{{< /button >}}
+{{< button href="https://github.com/ApertusLLM" style="outline-secondary" size="lg" icon="code" class="mt-2" >}}View on GitHub{{< /button >}}
 
 ---
 
@@ -229,4 +183,4 @@ Switzerland's open multilingual AI model
 
 ---
 
-© 2026 Swiss AI Initiative. A collaboration between EPFL, ETH Zurich, and CSCS.
+© 2024 Swiss AI Initiative. A collaboration between EPFL, ETH Zurich, and CSCS.

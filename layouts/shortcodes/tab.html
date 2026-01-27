@@ -1,0 +1,69 @@
+{{/*
+  tab shortcode
+
+  Registers a single tab definition in .Page.Scratch for use by the
+  `tabs` container shortcode.
+
+  Expected usage (inside a `tabs` block):
+
+    {{< tabs name="audiences" >}}
+
+      {{% tab group="audiences" name="users" title="Users" active="true" %}}
+      Markdown content for the Users tab.
+      {{% /tab %}}
+
+      {{% tab group="audiences" name="developers" title="Developers" %}}
+      Markdown content for the Developers tab.
+      {{% /tab %}}
+
+    {{< /tabs >}}
+
+  Parameters:
+
+    - group   : string, required. Must match the `name` parameter of the
+                corresponding `tabs` container. Example: "audiences".
+    - name    : string, unique per tab within the group. Used to build DOM IDs.
+                If omitted, falls back to "tab-<ordinal>".
+    - title   : string, label shown in the tab navigation.
+                If omitted, falls back to `name`.
+    - active  : string, optional. "true"/"1"/"yes" => marks this tab as active.
+
+  Behavior:
+
+    - Renders no direct HTML output.
+    - Pushes a dictionary with keys:
+        "id", "title", "content", "active"
+      into a slice stored in `.Page.Scratch` under key:
+        "tabs-<group>"
+
+    - The `tabs` container shortcode is responsible for reading this slice
+      and rendering the Bootstrap nav + tab panes.
+
+*/}}
+
+{{- $page := .Page -}}
+
+{{- $group    := .Get "group" | default "tabs" -}}
+{{- $tabsKey  := printf "tabs-%s" $group -}}
+
+{{- $name     := .Get "name" | default (printf "tab-%d" .Ordinal) -}}
+{{- $rawTitle := .Get "title" | default $name -}}
+
+{{- $id       := printf "%s-%s" $group $name | urlize -}}
+
+{{- $activeArg := .Get "active" | default "" -}}
+{{- $active    := or (eq (lower $activeArg) "true") (eq $activeArg "1") (eq (lower $activeArg) "yes") -}}
+
+{{- $content := .Inner | markdownify -}}
+
+{{- $tabs := $page.Scratch.Get $tabsKey | default (slice) -}}
+
+{{- $tab := dict
+      "id"      $id
+      "title"   $rawTitle
+      "content" $content
+      "active"  $active
+-}}
+
+{{- $tabs = $tabs | append $tab -}}
+{{- $page.Scratch.Set $tabsKey $tabs -}}
