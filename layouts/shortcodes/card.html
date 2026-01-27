@@ -1,0 +1,114 @@
+{{/*
+  card shortcode
+
+  Represents a single card, typically used inside the `cards` container shortcode.
+
+  Basic usage:
+
+    {{< card title="Download Models" icon="download" link="https://huggingface.co/ApertusLLM" >}}
+    Access both 8B and 70B models on Hugging Face with free download options.
+    {{< /card >}}
+
+  Parameters:
+
+    - title      : Card title (string)
+    - subtitle   : Optional subtitle / description line (string)
+    - icon       : Optional icon name, used as CSS class `icon-{{ icon }}`
+    - link / href: Optional URL. When present, the card is rendered as a link (`<a>`).
+    - external   : "true" / "1" to open links in a new tab with rel attributes
+    - badge      : Optional badge text rendered above the title
+    - tag        : Optional small tag/label element
+    - align      : Optional alignment modifier ("left" | "center" | "right")
+    - class      : Extra CSS classes for the outer card element
+    - id         : Optional id for the outer card element
+
+  Notes:
+
+    - The body content (`.Inner`) is passed through `markdownify` to allow Markdown.
+    - Icons are purely presentational and use `<i class="icon icon-{{ icon }}">`.
+*/}}
+
+{{- $title     := .Get "title" -}}
+{{- $subtitle  := .Get "subtitle" | default "" -}}
+{{- $icon      := .Get "icon" | default "" -}}
+{{- $link      := or (.Get "link") (.Get "href") -}}
+{{- $external  := .Get "external" | default "" -}}
+{{- $badge     := .Get "badge" | default "" -}}
+{{- $tag       := .Get "tag" | default "" -}}
+{{- $align     := .Get "align" | default "" -}}
+{{- $class     := .Get "class" | default "" -}}
+{{- $id        := .Get "id" | default "" -}}
+
+{{- $isExternal := or (eq (lower $external) "true") (eq $external "1") -}}
+
+{{- $cardClasses := slice "card" -}}
+{{- if $align }}
+  {{- $cardClasses = $cardClasses | append (printf "card--align-%s" $align) -}}
+{{- end }}
+{{- if $link }}
+  {{- $cardClasses = $cardClasses | append "card--link" -}}
+{{- end }}
+{{- if $class }}
+  {{- $cardClasses = $cardClasses | append $class -}}
+{{- end }}
+
+{{- $body := .Inner | markdownify -}}
+
+{{- if $link }}
+<a
+  href="{{ $link | safeURL }}"
+  class="{{ delimit $cardClasses " " }}"
+  {{- if $id }} id="{{ $id }}"{{ end -}}
+  {{- if $isExternal }} target="_blank" rel="noopener noreferrer"{{ end -}}
+>
+{{- else }}
+<div
+  class="{{ delimit $cardClasses " " }}"
+  {{- if $id }} id="{{ $id }}"{{ end -}}
+>
+{{- end }}
+  <div class="card__body">
+    {{- with $badge }}
+      <div class="card__badge">
+        {{ . }}
+      </div>
+    {{- end }}
+
+    {{- if or $title $tag }}
+      <header class="card__header">
+        {{- with $title }}
+          <h3 class="card__title">
+            {{ . }}
+          </h3>
+        {{- end }}
+        {{- with $tag }}
+          <span class="card__tag">
+            {{ . }}
+          </span>
+        {{- end }}
+      </header>
+    {{- end }}
+
+    {{- with $subtitle }}
+      <p class="card__subtitle">
+        {{ . }}
+      </p>
+    {{- end }}
+
+    {{- with $body }}
+      <div class="card__content">
+        {{ . }}
+      </div>
+    {{- end }}
+
+    {{- with $icon }}
+      <div class="card__icon" aria-hidden="true">
+        <i class="icon icon-{{ . }}"></i>
+      </div>
+    {{- end }}
+  </div>
+{{- if $link }}
+</a>
+{{- else }}
+</div>
+{{- end }}

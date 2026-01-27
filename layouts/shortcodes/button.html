@@ -1,0 +1,80 @@
+{{/*
+  button shortcode
+
+  Usage (link button):
+
+    {{< button
+        href="https://publicai.co"
+        icon="rocket"           # optional: icon name (CSS-based)
+        style="primary"         # optional: primary | secondary | outline | ghost
+        size="lg"               # optional: sm | md | lg
+        external="true"         # optional: "true" to open in new tab with rel attrs
+        id="hero-demo-btn"      # optional: element id
+        class="my-extra-class"  # optional: extra classes
+    >}}
+      Try the Demo
+    {{< /button >}}
+
+  Usage (button element, no href):
+
+    {{< button style="secondary" size="sm" id="scroll-down" >}}
+      Learn More
+    {{< /button >}}
+
+  Notes:
+  - The inner content is used as the button label and can contain inline Markdown.
+  - For external links, set external="true" to add target and rel attributes.
+*/}}
+
+{{- $href      := .Get "href" -}}
+{{- $style     := .Get "style" | default "primary" -}}
+{{- $size      := .Get "size" | default "" -}}
+{{- $icon      := .Get "icon" | default "" -}}
+{{- $id        := .Get "id" | default "" -}}
+{{- $class     := .Get "class" | default "" -}}
+{{- $external  := .Get "external" | default "" -}}
+
+{{- $isExternal := or (eq (lower $external) "true") (eq $external "1") -}}
+
+{{- $btnClass := printf "btn btn--%s" $style -}}
+{{- if $size }}
+  {{- $btnClass = printf "%s btn--%s" $btnClass $size -}}
+{{- end }}
+{{- if $class }}
+  {{- $btnClass = printf "%s %s" $btnClass $class -}}
+{{- end }}
+
+{{- $label := .Inner -}}
+
+{{- if $href }}
+<a
+  href="{{ $href | safeURL }}"
+  class="{{ $btnClass }}"
+  {{- if $id }} id="{{ $id }}"{{ end -}}
+  {{- if $isExternal }} target="_blank" rel="noopener noreferrer"{{ end -}}
+>
+  {{- if $icon }}
+    <span class="btn__icon" aria-hidden="true">
+      <i class="icon icon-{{ $icon }}"></i>
+    </span>
+  {{- end }}
+  <span class="btn__label">
+    {{- $label | safeHTML -}}
+  </span>
+</a>
+{{- else }}
+<button
+  type="button"
+  class="{{ $btnClass }}"
+  {{- if $id }} id="{{ $id }}"{{ end -}}
+>
+  {{- if $icon }}
+    <span class="btn__icon" aria-hidden="true">
+      <i class="icon icon-{{ $icon }}"></i>
+    </span>
+  {{- end }}
+  <span class="btn__label">
+    {{- $label | safeHTML -}}
+  </span>
+</button>
+{{- end }}

@@ -1,0 +1,9 @@
+public/
+assets/scss/bootstrap/
+assets/js/bootstrap/
+resources/_gen/
+.vscode/
+.env
+.vercel
+node_modules
+.hugo_build.lock

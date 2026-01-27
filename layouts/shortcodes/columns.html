@@ -1,0 +1,56 @@
+{{/*
+  columns shortcode
+
+  Usage:
+
+    {{< columns >}}
+    ### Column One
+    Content for the first column.
+
+    <--->
+    ### Column Two
+    Content for the second column.
+
+    <--->
+    ### Column Three
+    Content for the third column.
+    {{< /columns >}}
+
+  Optional parameters:
+
+    {{< columns class="my-columns" stack="true" >}}
+
+  - class: extra CSS classes for the outer container
+  - stack: "true" / "1" to add a modifier class for stacked layout on small screens
+
+  Notes:
+  - Columns are separated by a literal line containing `<--->`.
+  - Each column segment is passed through `markdownify`, so you can use Markdown inside.
+*/}}
+
+{{- $class := .Get "class" | default "" -}}
+{{- $stackParam := .Get "stack" | default "" -}}
+{{- $stack := or (eq (lower $stackParam) "true") (eq $stackParam "1") -}}
+
+{{- $cols := split .Inner "<--->" -}}
+
+{{- $containerClass := "columns" -}}
+{{- if $stack }}
+  {{- $containerClass = printf "%s columns--stack" $containerClass -}}
+{{- end }}
+{{- if $class }}
+  {{- $containerClass = printf "%s %s" $containerClass $class -}}
+{{- end }}
+
+<div class="{{ $containerClass }}">
+  <div class="columns__inner">
+    {{- range $index, $raw := $cols }}
+      {{- $content := trim $raw " \t\r\n" -}}
+      {{- if $content }}
+        <div class="columns__item columns__item--{{ add $index 1 }}">
+          {{- $content | markdownify -}}
+        </div>
+      {{- end }}
+    {{- end }}
+  </div>
+</div>

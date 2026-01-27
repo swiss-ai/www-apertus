@@ -1,0 +1,61 @@
+{{/*
+  cards shortcode
+
+  Container for a group of `card` shortcodes or card-like content.
+
+  Usage:
+
+    {{< cards >}}
+      {{< card title="Download Models" icon="download" link="https://huggingface.co/ApertusLLM" >}}
+      Access both 8B and 70B models on Hugging Face with free download options.
+      {{< /card >}}
+
+      {{< card title="Try the Demo" icon="play" link="https://publicai.co" >}}
+      Experience Apertus through our interactive chat and API interface at PublicAI.co.
+      {{< /card >}}
+
+      {{< card title="Read the Docs" icon="book" link="/docs" >}}
+      Comprehensive documentation for deployment, fine-tuning, and integration.
+      {{< /card >}}
+    {{< /cards >}}
+
+  Optional parameters:
+
+    {{< cards columns="3" align="stretch" stack="true" class="my-card-grid" >}}
+
+  - columns: number of columns at larger breakpoints (e.g. "2", "3", "4")
+  - align: alignment of cards ("top" | "center" | "stretch")
+  - stack: "true" / "1" to add a modifier class for stacked layout on small screens
+  - class: extra CSS classes for the outer container
+
+  Notes:
+  - This shortcode does not parse individual cards; it just wraps `.Inner`.
+  - Individual cards should be provided via a `card` shortcode or equivalent markup.
+*/}}
+
+{{- $columnsParam := .Get "columns" | default "3" -}}
+{{- $alignParam   := .Get "align"   | default "stretch" -}}
+{{- $stackParam   := .Get "stack"   | default "" -}}
+{{- $class        := .Get "class"   | default "" -}}
+
+{{- $stack := or (eq (lower $stackParam) "true") (eq $stackParam "1") -}}
+
+{{- $containerClass := slice "cards" -}}
+{{- if $columnsParam }}
+  {{- $containerClass = $containerClass | append (printf "cards--cols-%s" $columnsParam) -}}
+{{- end }}
+{{- if $alignParam }}
+  {{- $containerClass = $containerClass | append (printf "cards--align-%s" $alignParam) -}}
+{{- end }}
+{{- if $stack }}
+  {{- $containerClass = $containerClass | append "cards--stack" -}}
+{{- end }}
+{{- if $class }}
+  {{- $containerClass = $containerClass | append $class -}}
+{{- end }}
+
+<div class="{{ delimit $containerClass " " }}">
+  <div class="cards__inner">
+    {{- .Inner | safeHTML -}}
+  </div>
+</div>
