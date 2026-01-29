@@ -3,41 +3,39 @@
 
   {{/* ------------------------------------------------------------------
        Hero section: uses page params when available, with sensible defaults
-       Front matter example for content/_index.md:
-
-       ---
-       title: "Apertus"
-       description: "Switzerland's first large-scale open, multilingual language model"
-       subtitle: "Switzerland's first large-scale open, multilingual language model"
-       hero_badge: "Open Multilingual AI"
-       hero_primary_label: "Try the Demo"
-       hero_primary_url: "https://publicai.co"
-       hero_secondary_label: "Read the Docs"
-       hero_secondary_url: "/docs/"
-       hero_note: "Open source, Apache 2.0 licensed models from the Swiss AI Initiative (EPFL, ETH Zurich, CSCS)."
-       hero_image: "images/apertus_hero.webp"
-       hero_image_alt: "Apertus model illustration"
-       ---
      ------------------------------------------------------------------ */}}
 
   {{- $title        := .Title -}}
   {{- $subtitle     := .Params.subtitle | default "" -}}
   {{- $description  := .Params.description | default .Description -}}
-  {{- $badge        := .Params.hero_badge | default "Open Multilingual AI" -}}
-  {{- $heroNote     := .Params.hero_note | default "Open source, Apache 2.0 licensed models from the Swiss AI Initiative (EPFL, ETH Zurich, CSCS)." -}}
+  {{- $badge        := .Params.hero_badge | default "" -}}
+  {{- $heroNote     := .Params.hero_note | default "" -}}
 
-  {{- $primaryLabel := .Params.hero_primary_label | default "Try the Demo" -}}
-  {{- $primaryURL   := .Params.hero_primary_url   | default "https://publicai.co" -}}
+  {{- $primaryLabel := .Params.hero_primary_label | default "" -}}
+  {{- $primaryURL   := .Params.hero_primary_url   | default "" -}}
 
-  {{- $secondaryLabel := .Params.hero_secondary_label | default "Read the Docs" -}}
-  {{- $secondaryURL   := .Params.hero_secondary_url   | default "/docs/" -}}
+  {{- $secondaryLabel := .Params.hero_secondary_label | default "" -}}
+  {{- $secondaryURL   := .Params.hero_secondary_url   | default "" -}}
 
   {{- $image      := .Params.hero_image -}}
   {{- $imageAlt   := .Params.hero_image_alt | default (printf "%s illustration" $title) -}}
 
-  <section id="hero" class="d-table w-100 overflow-hidden hero">
+  {{- $backgroundImage := .Params.hero_background_image -}}
+
+  <section id="hero" style="background: url('{{ $backgroundImage }}') center center no-repeat; background-size: cover;"
+        class="d-table p-5 w-100 overflow-hidden hero">
     <div class="container">
       <div class="row mt-5 align-items-center">
+
+        {{ if $image }}
+        <div class="col-lg-6 col-md-6 mt-4 pt-4 mt-sm-0 pt-sm-0">
+            <div class="ms-lg-4">
+            <div class="classic-hero-image">
+                <img src="{{ $image | relURL }}" width="200" class="mx-auto mr-6 d-block rounded-top-4" alt="{{ $imageAlt }}">
+            </div>
+            </div>
+        </div>
+        {{ end }}
 
         <div class="col-lg-6 col-md-6">
           <div class="title-heading">
@@ -88,16 +86,6 @@
 
           </div>
         </div>
-
-        {{ if $image }}
-          <div class="col-lg-6 col-md-6 mt-4 pt-4 mt-sm-0 pt-sm-0">
-            <div class="ms-lg-4">
-              <div class="classic-hero-image">
-                <img src="{{ $image | relURL }}" class="shadow-lg mx-auto d-block rounded-top-4" alt="{{ $imageAlt }}">
-              </div>
-            </div>
-          </div>
-        {{ end }}
 
       </div>
     </div>

@@ -1,20 +1,23 @@
 ---
 title: "Apertus"
-description: "Switzerland's first large-scale open, multilingual language model"
-subtitle: "Switzerland's First Open Multilingual AI"
-hero_badge: "Open Multilingual AI"
+subtitle: "Lighthouse project of the Swiss AI Initiative"
+hero_badge: "Open Large Language Model"
 hero_primary_label: "Try the Demo"
 hero_primary_url: "https://publicai.co"
 hero_secondary_label: "Read the Docs"
 hero_secondary_url: "/docs/"
-hero_note: "Open source, Apache 2.0 licensed. A collaborative effort between EPFL, ETH Zurich, and CSCS – trained on 15 trillion tokens across 1,000+ languages."
+hero_image: "images/path3.png"
+hero_background_image: "images/5.jpg"
+hero_note: "Open source, open weights, open data. A collaborative effort between EPFL, ETH Zurich, and CSCS – trained on 15 trillion tokens across 1,000+ languages."
+
+copyright: "**Open Source** MIT Licensed."
 ---
 
 ## Why Apertus?
 
 Apertus – Latin for "open" – reflects our commitment to transparency in AI development. All architecture, weights, and training data are openly documented and available.
 
-{{< columns >}}
+{{< columns class="p-4 mt-4" >}}
 
 ### Multilingual
 Trained on a diverse dataset with **40% non-English content**, supporting over 1,000 languages including underrepresented ones.
@@ -35,7 +38,7 @@ Available in **8B** and **70B** parameter sizes under Apache 2.0 license – sui
 
 ## Get Started
 
-{{< cards >}}
+{{< cards class="p-4" >}}
 
 {{< card title="Download Models" icon="cloud_download" href="https://huggingface.co/ApertusLLM" >}}
 Access both 8B and 70B models on Hugging Face with free download options.
@@ -55,12 +58,15 @@ Comprehensive documentation for deployment, fine-tuning, and integration.
 
 ## News & Publications
 
+September 1, 2025
 ### Technical Report Released
 Our comprehensive technical report detailing Apertus's architecture, training methodology, and benchmark results is now available.
 
 [Read the Tech Report →](/publications/tech-report)
 
 ---
+
+January 2025
 
 ### Swiss AI Initiative Launch
 Apertus is the flagship project of the Swiss AI Initiative, a joint effort between EPFL, ETH Zurich, and CSCS.
@@ -180,7 +186,3 @@ Switzerland's open multilingual AI model
 - [Privacy Policy](/legal/privacy)
 - [Terms of Use](/legal/terms)
 - [License (Apache 2.0)](/legal/license)
-
----
-
-© 2024 Swiss AI Initiative. A collaboration between EPFL, ETH Zurich, and CSCS.

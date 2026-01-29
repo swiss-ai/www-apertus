@@ -22,3 +22,8 @@ enableEmoji = true
   [markup.goldmark.parser]
     [markup.goldmark.parser.attribute]
       block = true
+
+[params]
+  [params.footer]
+    copyright = "© 2026 [Swiss AI Initiative](https://www.swiss-ai.org/)"
+    version = true
