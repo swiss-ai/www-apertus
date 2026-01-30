@@ -8,6 +8,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "license": "Apache 2.0",
+  "type": "commonjs",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
 }
