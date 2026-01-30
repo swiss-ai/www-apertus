@@ -22,15 +22,19 @@
 
   {{- $backgroundImage := .Params.hero_background_image -}}
 
-  <section id="hero" style="background: url('{{ $backgroundImage }}') center center no-repeat; background-size: cover;"
-        class="d-table p-5 w-100 overflow-hidden hero">
-    <div class="container">
+  <section id="hero" class="d-table p-5 w-100 overflow-hidden hero">
+
+    <div class="position-fixed top-0 start-0" style="z-index:-1">
+        {{ partial "bizzfuzz.html" . }}
+    </div>
+
+    <div class="container mb-5">
       <div class="row mt-5 align-items-center">
 
         {{ if $image }}
         <div class="col-lg-6 col-md-6 mt-4 pt-4 mt-sm-0 pt-sm-0">
             <div class="ms-lg-4">
-            <div class="classic-hero-image">
+            <div class="classic-hero-image opacity-75">
                 <img src="{{ $image | relURL }}" width="200" class="mx-auto mr-6 d-block rounded-top-4" alt="{{ $imageAlt }}">
             </div>
             </div>
@@ -78,11 +82,6 @@
               {{ end }}
             </div>
 
-            {{ with $heroNote }}
-              <p class="text-muted mb-0 mt-3">
-                {{ . }}
-              </p>
-            {{ end }}
 
           </div>
         </div>
@@ -96,11 +95,19 @@
        the hero, using the theme’s standard section/container classes.
      ------------------------------------------------------------------ */}}
 
-  <section id="page-content">
+  <section id="page-content" class="pt-1 bg-white">
+
+    {{ with $heroNote }}
+        <p class="text-muted m-5 w-75 ps-5 fs-2">
+        {{ . }}
+        </p>
+    {{ end }}
+
     <div class="container mt-100 mt-60">
       {{ .Content }}
     </div>
   </section>
 
 </main>
+
 {{ end }}

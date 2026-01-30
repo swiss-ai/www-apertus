@@ -136,7 +136,7 @@
       {{- end }}
     </ul>
 
-    <div class="tab-content{{ if $contentExtra }} {{ $contentExtra }}{{ end }}" id="{{ $contentId }}">
+    <div class="p-3 tab-content{{ if $contentExtra }} {{ $contentExtra }}{{ end }}" id="{{ $contentId }}">
       {{- range $index, $tab := $tabs -}}
         {{- $id      := index $tab "id" -}}
         {{- $content := index $tab "content" | default "" -}}

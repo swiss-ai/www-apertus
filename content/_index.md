@@ -3,9 +3,9 @@ title: "Apertus"
 subtitle: "Lighthouse project of the Swiss AI Initiative"
 hero_badge: "Open Large Language Model"
 hero_primary_label: "Try the Demo"
-hero_primary_url: "https://publicai.co"
-hero_secondary_label: "Read the Docs"
-hero_secondary_url: "/docs/"
+hero_primary_url: "https://publicai.ch"
+hero_secondary_label: "Read the Paper"
+hero_secondary_url: "https://arxiv.org/abs/2509.14233"
 hero_image: "images/path3.png"
 hero_background_image: "images/5.jpg"
 hero_note: "Open source, open weights, open data. A collaborative effort between EPFL, ETH Zurich, and CSCS – trained on 15 trillion tokens across 1,000+ languages."
@@ -40,12 +40,12 @@ Available in **8B** and **70B** parameter sizes under Apache 2.0 license – sui
 
 {{< cards class="p-4" >}}
 
-{{< card title="Download Models" icon="cloud_download" href="https://huggingface.co/ApertusLLM" >}}
+{{< card title="Download Models" icon="cloud_download" href="https://huggingface.co/collections/swiss-ai/apertus-llm" >}}
 Access both 8B and 70B models on Hugging Face with free download options.
 {{< /card >}}
 
-{{< card title="Try the Demo" icon="rocket_launch" href="https://publicai.co" >}}
-Experience Apertus through our interactive chat and API interface at PublicAI.co.
+{{< card title="Try the Demo" icon="rocket_launch" href="https://publicai.ch" >}}
+Experience Apertus through an interactive chat and API interface at Public AI.
 {{< /card >}}
 
 {{< card title="Read the Docs" icon="menu_book" href="/docs" >}}
@@ -75,17 +75,13 @@ Apertus is the flagship project of the Swiss AI Initiative, a joint effort betwe
 
 ---
 
-## For Every User
-
-Whether you're a developer, researcher, or just curious about AI, there's a path for you.
-
-{{< tabs name="audiences" class="mt-4" >}}
+{{< tabs name="audiences" class="mt-4 p-4" >}}
 
 {{% tab group="audiences" name="users" title="Users" active="true" %}}
 
 ### Start Using Apertus Today
 
-- **[Try the Demo](https://publicai.co)** – No setup required, start chatting immediately
+- **[Try the Demo](https://publicai.ch)** – No setup required, start chatting immediately
 - **[FAQ](/docs/faq)** – Common questions and quick answers
 - **[Use Cases](/docs/use-cases)** – Explore chatbots, translation, educational tools, and more
 
@@ -125,20 +121,14 @@ Whether you're a developer, researcher, or just curious about AI, there's a path
 
 ---
 
-## Transparency & Compliance
 
-Apertus is built on a foundation of ethical AI development and legal compliance.
+### Ready to explore?
 
-| Principle | Implementation |
-|-----------|----------------|
-| **Data Integrity** | Built only from publicly available data, respecting opt-outs and removing personal data |
-| **Swiss Regulations** | Compliant with Swiss data protection and copyright laws |
-| **EU AI Act** | Meets transparency requirements for foundation models |
-| **Reproducibility** | Full open-source code, weights, and training data documentation |
+{{< button href="https://publicai.ch" style="primary" size="lg" icon="rocket_launch" class="me-2 mt-2" >}}Try the Demo{{< /button >}}
+{{< button href="https://huggingface.co/collections/swiss-ai/apertus-llm" style="outline-primary" size="lg" icon="cloud_download" class="me-2 mt-2" >}}Download Models{{< /button >}}
+{{< button href="https://github.com/swiss-ai/apertus-tech-report" style="outline-secondary" size="lg" icon="code" class="mt-2" >}}Technical Report{{< /button >}}
 
 ---
-
-## Part of the Swiss AI Initiative
 
 Apertus exemplifies Swiss collaboration – bringing together interdisciplinary expertise from research, engineering, and infrastructure across Switzerland's leading institutions.
 
@@ -146,35 +136,20 @@ Apertus exemplifies Swiss collaboration – bringing together interdisciplinary 
 - **ETH Zurich** – Swiss Federal Institute of Technology
 - **CSCS** – Swiss National Supercomputing Centre
 
----
+Visit [Swiss-AI.org](https://swiss-ai.org) for more information.
 
-## Get Involved
 
-We welcome feedback and contributions to drive Apertus's continued development.
 
-### Ready to explore?
+{{< columns class="p-4 mt-4" >}}
 
-{{< button href="https://publicai.co" style="primary" size="lg" icon="rocket_launch" class="me-2 mt-2" >}}Try the Demo{{< /button >}}
-{{< button href="https://huggingface.co/ApertusLLM" style="outline-primary" size="lg" icon="cloud_download" class="me-2 mt-2" >}}Download Models{{< /button >}}
-{{< button href="https://github.com/ApertusLLM" style="outline-secondary" size="lg" icon="code" class="mt-2" >}}View on GitHub{{< /button >}}
+#### Quickstart
 
----
-
-### Apertus
-
-Switzerland's open multilingual AI model
-
-#### Quick Links
-- [Home](/)
 - [Documentation](/docs)
 - [Publications](/publications)
-- [About](/about)
+- [Hugging Face](https://huggingface.co/swiss-ai)
+- [GitHub](https://github.com/swiss-ai)
 
-#### Resources
-- [Hugging Face](https://huggingface.co/ApertusLLM)
-- [GitHub](https://github.com/ApertusLLM)
-- [Demo](https://publicai.co)
-- [API Docs](/docs/api)
+<--->
 
 #### Community
 - [Contributing](/community/contributing)
@@ -182,7 +157,11 @@ Switzerland's open multilingual AI model
 - [FAQ](/docs/faq)
 - [Contact](/contact)
 
+<--->
+
 #### Legal
 - [Privacy Policy](/legal/privacy)
 - [Terms of Use](/legal/terms)
 - [License (Apache 2.0)](/legal/license)
+
+{{< /columns >}}
