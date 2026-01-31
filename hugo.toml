@@ -12,15 +12,6 @@ enableEmoji = true
     [[module.imports]]
         path = "github.com/colinwilson/lotusdocs"
         disable = false
-    [[module.imports]]
-        path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
-        disable = false
-    [[module.mounts]]
-        source = "node_modules/bootstrap/scss"
-        target = "assets/scss/bootstrap"
-    [[module.mounts]]
-        source = "node_modules/bootstrap/js"
-        target = "assets/js/bootstrap"
 
 [markup]
     [markup.tableOfContents]
@@ -35,5 +26,5 @@ enableEmoji = true
 
 [params]
   [params.footer]
-    copyright = "© 2026 [Swiss AI Initiative](https://www.swiss-ai.org/)"
-    version = true
+    copyright = ""
+    version = false

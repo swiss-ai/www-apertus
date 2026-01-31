@@ -1,0 +1,183 @@
+{{ define "main" }}
+<main>
+  {{/* Navbar - always show logo on subpages */}}
+  {{ partial "navbar.html" (dict "showLogo" true "currentPage" .RelPermalink) }}
+
+  {{/* Page content with top padding to clear fixed navbar */}}
+  <section class="page-content bg-white" style="padding-top: 70px; padding-bottom: 3rem;">
+    <div class="container" style="max-width: 900px;">
+      <div class="content-body">
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
+</main>
+
+<style>
+  /* Base content styles */
+  .content-body h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+    text-align: center;
+  }
+  .content-body h2:first-child {
+    margin-top: 0;
+  }
+  .section-intro {
+    color: #6b7280;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+  .content-body p {
+    color: #374151;
+    margin-bottom: 1.25rem;
+  }
+  .content-body ul, .content-body ol {
+    color: #374151;
+    margin-bottom: 1.5rem;
+  }
+  .content-body li {
+    margin-bottom: 0.75rem;
+  }
+  .content-body a {
+    color: #49BED8;
+    text-decoration: none;
+  }
+  .content-body a:hover {
+    text-decoration: underline;
+  }
+  .content-body strong {
+    color: #1a1a1a;
+  }
+  .content-body hr {
+    margin: 2.5rem 0;
+    border: none;
+    border-top: 1px solid #e5e7eb;
+  }
+  .content-body em {
+    color: #6b7280;
+  }
+
+  /* Card grid - used by Get Started, Documentation, Research */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  .card {
+    display: block !important;
+    flex-direction: unset !important;
+    border: 2px solid #c0c4cc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    text-align: center;
+  }
+  .card:hover {
+    border-color: #49BED8;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .card h4 {
+    margin: 0 0 0.5rem 0;
+    color: #1a1a1a;
+    font-size: 1.05rem;
+    line-height: 1.4;
+  }
+  .card p {
+    margin: 0 0 1rem 0;
+    color: #6b7280;
+    font-size: 0.95rem;
+  }
+  .card .meta {
+    font-size: 0.85rem;
+    color: #9ca3af;
+  }
+  .card .authors {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+  .card-logo {
+    height: 32px !important;
+    width: auto !important;
+    margin-bottom: 1rem;
+    object-fit: contain;
+  }
+  .card img:not(.card-logo) {
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  /* Badges */
+  .badge {
+    display: inline-block;
+    width: auto;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+  .badge-free { background: #d1fae5; color: #065f46; }
+  .badge-swiss { background: #fee2e2; color: #991b1b; }
+  .badge-supported { background: #dbeafe; color: #1e40af; }
+
+  /* FAQ items */
+  .faq-item {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border: 2px solid #c0c4cc;
+    border-radius: 12px;
+  }
+  .faq-item:last-child {
+    margin-bottom: 0;
+  }
+  .faq-item h4 {
+    margin: 0 0 0.5rem 0;
+    color: #1a1a1a;
+    font-size: 1.1rem;
+  }
+  .faq-item p {
+    margin: 0;
+    color: #374151;
+    line-height: 1.6;
+  }
+
+  /* Charter styles */
+  .charter-meta {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 2rem;
+  }
+  .preamble {
+    color: #374151;
+    margin: 1.5rem 0;
+    line-height: 1.7;
+  }
+  .articles-list {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+    margin: 2rem 0;
+  }
+  .articles-list li {
+    margin-bottom: 0.5rem;
+    color: #374151;
+  }
+  .article {
+    margin: 2rem 0;
+  }
+  .article h4 {
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+  }
+  .article p {
+    color: #374151;
+    line-height: 1.7;
+  }
+</style>
+{{ end }}
