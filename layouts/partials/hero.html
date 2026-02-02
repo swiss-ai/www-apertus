@@ -15,8 +15,8 @@
 {{- $secondaryLabel := .Params.hero_secondary_label | default "" -}}
 {{- $secondaryURL   := .Params.hero_secondary_url | default "" -}}
 
-<section id="hero" class="d-flex align-items-center" style="background: linear-gradient(180deg, #c9eef5 0%, #ffffff 100%); padding: 240px 0 200px;">
-  <div class="container">
+<section id="hero" class="d-flex align-items-center pt-5 pb-5">
+  <div class="container mt-5 mb-5">
     <div class="row justify-content-center">
       <div class="col-lg-10 text-center">
 
@@ -45,7 +45,7 @@
           </a>
           {{ end }}
           {{ with $secondaryURL }}
-          <a href="{{ . }}" class="btn btn-lg btn-outline-secondary px-4 py-3" style="border-radius: 8px; border-color: #d1d5db; color: #374151;">
+          <a href="{{ . }}" class="btn btn-lg btn-outline-light px-4 py-3" style="border-radius: 8px; border-color: #d1d5db; color: #374151;">
             {{ $secondaryLabel }}
           </a>
           {{ end }}
