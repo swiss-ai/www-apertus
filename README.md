@@ -1,6 +1,6 @@
 # Apertus Website
 
-Official website for [Apertus](https://apertus-ai.org), a fully open foundation model for sovereign AI developed by the Swiss AI Initiative.
+Official website for [Apertus](https://apertvs.ai), a fully open foundation model for sovereign AI developed by the Swiss AI Initiative.
 
 ## Overview
 
@@ -17,31 +17,25 @@ This is a static website built with Hugo, featuring a minimal, research-focused 
 
 Before running locally, ensure you have:
 
-- **Hugo Extended** (v0.140 or later) - [Installation guide](https://gohugo.io/installation/)
-- **Go** (v1.21 or later) - Required for Hugo modules
-
-### Installing Hugo
+- **Go** (v1.21 or later, required by Hugo) - [Install the latest version](https://go.dev/learn/)
+- **Hugo** (v0.140 or later) - [Installation guide](https://gohugo.io/installation/)
 
 **Ubuntu/Debian:**
 ```bash
-# Via .deb (recommended for latest extended version)
-wget https://github.com/gohugoio/hugo/releases/download/v0.142.0/hugo_extended_0.142.0_linux-amd64.deb
-sudo dpkg -i hugo_extended_0.142.0_linux-amd64.deb
+sudo apt install golang-go hugo
 ```
 
 **macOS:**
 ```bash
-brew install hugo
+brew install golang hugo
 ```
 
 **Windows:**
 ```bash
-choco install hugo-extended
+choco install golang hugo-extended
 ```
 
 ## Getting Started
-
-### Quick Start
 
 ```bash
 cd www-apertus
