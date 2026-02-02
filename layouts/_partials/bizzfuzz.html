@@ -1,7 +1,7 @@
 <!--
-    intro partial
+    bizzfuzz!
 
-    Plays an animated "bizzfuzz" background, using CSS only.
+    Plays an animated background, using CSS only.
 -->
 <style>
 :root {
@@ -19,13 +19,111 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(180deg, #c9eef5 0%, #ffffff 100%);
+
+    /* Base + drifting snow-gradient */
+    background-image:
+        radial-gradient(
+            1200px 800px at 75% 25%,
+            rgba(255, 255, 255, 0.18),
+            rgba(255, 255, 255, 0) 60%
+        ),
+        radial-gradient(
+            900px 600px at 30% 10%,
+            rgba(255, 255, 255, 0.14),
+            rgba(255, 255, 255, 0) 62%
+        ),
+        linear-gradient(
+            135deg,
+            var(--c1) 0%,
+            var(--c2) 50%,
+            var(--c3) 50.2%,
+            var(--c3) 100%
+        ),
+        linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.12) 18%,
+            rgba(255, 255, 255, 0) 40%,
+            rgba(255, 255, 255, 0.1) 62%,
+            rgba(255, 255, 255, 0) 100%
+        );
+    background-size:
+        120% 120%,
+        140% 140%,
+        100% 100%,
+        240% 240%;
+    background-position:
+        60% 20%,
+        25% 10%,
+        50% 50%,
+        0% 40%;
+    background-repeat: no-repeat;
+    animation: drift 14s ease-in-out infinite;
 }
 
 /* Fuzz/noise overlay */
 .bizz > .fuzz {
     position: absolute;
     inset: -20%;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(
+            circle at 12% 18%,
+            rgba(255, 255, 255, 0.16) 0 1px,
+            transparent 1.5px
+        ),
+        radial-gradient(
+            circle at 68% 42%,
+            rgba(255, 255, 255, 0.12) 0 1px,
+            transparent 1.5px
+        ),
+        radial-gradient(
+            circle at 33% 71%,
+            rgba(255, 255, 255, 0.14) 0 1px,
+            transparent 1.6px
+        ),
+        radial-gradient(
+            circle at 82% 78%,
+            rgba(255, 255, 255, 0.1) 0 1px,
+            transparent 1.6px
+        ),
+        repeating-radial-gradient(
+            circle at 50% 50%,
+            rgba(255, 255, 255, 0.06) 0 1px,
+            rgba(255, 255, 255, 0) 2px 8px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.04) 0 1px,
+            rgba(255, 255, 255, 0) 2px 6px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.03) 0 1px,
+            rgba(255, 255, 255, 0) 2px 7px
+        );
+    background-size:
+        320px 320px,
+        420px 420px,
+        380px 380px,
+        520px 520px,
+        520px 520px,
+        260px 260px,
+        300px 300px;
+    background-position:
+        0% 0%,
+        100% 10%,
+        40% 100%,
+        80% 70%,
+        50% 50%,
+        0% 50%,
+        50% 0%;
+    mix-blend-mode: soft-light;
+    opacity: 0.26;
+    filter: blur(0.8px);
+    transform: translateZ(0);
+    animation: fuzz 5.2s ease-in-out infinite;
 }
 
 /* Circuit layer generator (shared look) */
@@ -39,7 +137,7 @@
     transform: translateZ(0);
 
     background-image:
-        /* nodes */
+/* nodes */
         radial-gradient(circle, var(--node) 0 2px, transparent 2.5px),
         radial-gradient(circle, var(--node2) 0 1.5px, transparent 2.2px),
         /* orthogonal traces */
@@ -63,6 +161,17 @@
             -45deg,
             rgba(40, 140, 155, 0.08) 0 1px,
             transparent 1px 52px
+        ),
+        /* occasional thicker busses */
+        repeating-linear-gradient(
+                0deg,
+                rgba(20, 110, 125, 0.18) 0 2px,
+                transparent 2px 120px
+            ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(20, 110, 125, 0.14) 0 2px,
+            transparent 2px 160px
         );
 
     background-size:
@@ -87,13 +196,23 @@
 
     background-repeat: repeat;
     mix-blend-mode: multiply;
+    filter: blur(0.15px);
+    animation: circuitFloat 10.5s ease-in-out infinite;
 }
 
 /* Left circuitry */
 .bizz::before {
     clip-path: polygon(0% 0%, 62% 0%, 0% 100%);
     opacity: 0.62;
-    animation: circuitFloat 10.5s ease-in-out infinite;
+}
+
+/* Right circuitry */
+.bizz::after {
+    clip-path: polygon(42% 0%, 100% 0%, 100% 100%, 0% 100%);
+    opacity: 0.35;
+    filter: blur(0.25px);
+    animation-duration: 12.5s;
+    animation-direction: reverse;
 }
 
 @keyframes drift {
@@ -152,6 +271,7 @@
     }
     100% {
         opacity: 0.22;
+        filter: blur(0.6px);
         transform: translate3d(-1.2%, -0.8%, 0) scale(1.01);
         background-position:
             0% 0%,
@@ -167,6 +287,7 @@
 @keyframes circuitFloat {
     0% {
         opacity: inherit;
+        filter: blur(0.18px);
         background-position:
             0 0,
             60px 30px,
@@ -179,6 +300,7 @@
         transform: translate3d(0, 0, 0);
     }
     50% {
+        filter: blur(0.45px);
         background-position:
             26px 18px,
             88px 56px,
@@ -192,6 +314,7 @@
     }
     100% {
         opacity: inherit;
+        filter: blur(0.18px);
         background-position:
             0 0,
             60px 30px,
@@ -205,6 +328,4 @@
     }
 }
 </style>
-<div class="position-fixed top-0 start-0" style="z-index:-1">
-    <div class="bizz"><div class="fuzz"></div></div>
-</div>
+<div class="bizz"><div class="fuzz"></div></div>

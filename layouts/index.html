@@ -1,46 +1,113 @@
 {{ define "main" }}
-<style>
-  body, #content, #home { margin: 0; padding: 0; }
-  #hero { margin-top: 0; }
-</style>
 <main id="home">
 
-  {{/* Animation */}}
-  {{ partial "intro.html" . }}
+  {{/* ------------------------------------------------------------------
+       Hero section: uses page params when available, with sensible defaults
+     ------------------------------------------------------------------ */}}
 
-  {{/* Hero */}}
-  {{ partial "hero.html" . }}
+  {{- $title        := .Title -}}
+  {{- $subtitle     := .Params.subtitle | default "" -}}
+  {{- $description  := .Params.description | default .Description -}}
+  {{- $badge        := .Params.hero_badge | default "" -}}
+  {{- $heroNote     := .Params.hero_note | default "" -}}
 
-  {{/* Navbar - fixed position on homepage, rendered after hero but appears at top due to position:fixed */}}
-  {{ partial "navbar.html" (dict "showLogo" false "fixed" true) }}
+  {{- $primaryLabel := .Params.hero_primary_label | default "" -}}
+  {{- $primaryURL   := .Params.hero_primary_url   | default "" -}}
 
-  {{/* Page content */}}
-  <section id="page-content" class="pt-0 pb-5 bg-white">
-    <div class="container" style="max-width: 1100px;">
+  {{- $secondaryLabel := .Params.hero_secondary_label | default "" -}}
+  {{- $secondaryURL   := .Params.hero_secondary_url   | default "" -}}
+
+  {{- $image      := .Params.hero_image -}}
+  {{- $imageAlt   := .Params.hero_image_alt | default (printf "%s illustration" $title) -}}
+
+  {{- $backgroundImage := .Params.hero_background_image -}}
+
+  <section id="hero" class="d-table p-5 w-100 overflow-hidden hero">
+
+    <div class="position-fixed top-0 start-0" style="z-index:-1">
+        {{ partial "bizzfuzz.html" . }}
+    </div>
+
+    <div class="container mb-5">
+      <div class="row mt-5 align-items-center">
+
+        {{ if $image }}
+        <div class="col-lg-6 col-md-6 mt-4 pt-4 mt-sm-0 pt-sm-0">
+            <div class="ms-lg-4">
+            <div class="classic-hero-image opacity-75">
+                <img src="{{ $image | relURL }}" width="200" class="mx-auto mr-6 d-block rounded-top-4" alt="{{ $imageAlt }}">
+            </div>
+            </div>
+        </div>
+        {{ end }}
+
+        <div class="col-lg-6 col-md-6">
+          <div class="title-heading">
+
+            {{ with $badge }}
+              <span class="badge bg-soft-primary mb-1">{{ . }}</span>
+            {{ end }}
+
+            {{ with $title }}
+              <h1 class="heading m-0" style="font-size: 100px !important">
+                {{ . }}
+              </h1>
+            {{ end }}
+
+            {{ with $subtitle }}
+              <h2 class="h5 text-muted fw-normal mb-2">
+                {{ . }}
+              </h2>
+            {{ end }}
+
+            {{ with $description }}
+              <p class="para-desc text-muted mb-0">
+                {{ . }}
+              </p>
+            {{ end }}
+
+            <div class="mt-3">
+              {{ with $primaryURL }}
+                <a href="{{ . }}" class="btn btn-lg btn-primary me-2 mt-2">
+                  <span class="material-icons align-middle">rocket_launch</span>
+                  {{ $primaryLabel }}
+                </a>
+              {{ end }}
+
+              {{ with $secondaryURL }}
+                <a href="{{ . }}" class="btn btn-lg btn-outline-primary mt-2">
+                  <span class="material-icons align-middle">description</span>
+                  {{ $secondaryLabel }}
+                </a>
+              {{ end }}
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {{/* ------------------------------------------------------------------
+       Page content: render the remainder of the home page Markdown below
+       the hero, using the theme’s standard section/container classes.
+     ------------------------------------------------------------------ */}}
+
+  <section id="page-content" class="pt-1 bg-white">
+
+    {{ with $heroNote }}
+        <p class="text-muted m-5 w-75 ps-5 fs-2">
+        {{ . }}
+        </p>
+    {{ end }}
+
+    <div class="container mt-100 mt-60">
       {{ .Content }}
     </div>
   </section>
 
 </main>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const nav = document.getElementById('main-nav');
-  const heroLogo = document.querySelector('#hero img');
-
-  function updateNav() {
-    const heroLogoBottom = heroLogo ? heroLogo.getBoundingClientRect().bottom : 0;
-    const scrolled = heroLogoBottom < 120;
-
-    if (scrolled) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  }
-
-  window.addEventListener('scroll', updateNav);
-  updateNav();
-});
-</script>
 {{ end }}
