@@ -12,25 +12,25 @@ hero_secondary_url: "https://arxiv.org/abs/2509.14233"
 
 ### Fully Open
 
-Training data, code, weights, methods, and alignment principles — all documented and accessible. Built for scientific reproducibility, not just open weights.
+Training data, code, weights, methods, and alignment principles — all documented and accessible. Built for scientific reproducibility.
 
 <--->
 
 ### Compliant at Scale
 
-Built to meet EU AI Act requirements from day one. Respects opt-outs, removes PII, prevents memorization. A foundation to build on.
+Built to meet EU AI Act requirements: the model respects opt-outs, removes PII, prevents memorization. A global foundation to build on.
 
 <--->
 
-### Leading in Class
+### Run for Performance
 
-Competitive with the best open models at equivalent scale. 8B and 70B variants. Multilingual from day one — trained on 1000+ languages.
+Competitive with top open models at an equivalent scale of 8B and 70B parameters. Multilingual from day one — trained on 1000+ languages.
 
 {{< /columns >}}
 
 <h2 style="text-align: center; margin-top: 3rem;">Stay Updated</h2>
 
-<p style="text-align: center; color: #6b7280; margin-bottom: 1.5rem;">Subscribe to our occasional newsletter for updates on Apertus releases, research, and community news.</p>
+<p style="text-align: center; color: #6b7280; margin-bottom: 1.5rem;">Subscribe to our newsletter for updates on Apertus releases, research, and community news.</p>
 
 <div style="max-width: 500px; margin: 0 auto 4rem auto;">
   <form action="#" method="post" style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
@@ -38,4 +38,3 @@ Competitive with the best open models at equivalent scale. 8B and 70B variants. 
     <button type="submit" style="padding: 0.75rem 1.5rem; background-color: #49BED8; color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 500; cursor: pointer;">Subscribe</button>
   </form>
 </div>
-

@@ -19,7 +19,7 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(180deg, #c9eef5 0%, #ffffff 100%);
+    background: linear-gradient(180deg, #c9eef5 0%, #ffffff 60%);
 }
 
 /* Fuzz/noise overlay */
@@ -35,8 +35,9 @@
     position: absolute;
     inset: -6%;
     pointer-events: none;
-    opacity: 0.55;
+    opacity: 0.7;
     transform: translateZ(0);
+    clip-path: polygon(0% 0%, 26% 0%, 0% 100%);
 
     background-image:
         /* nodes */
@@ -91,8 +92,8 @@
 
 /* Left circuitry */
 .bizz::before {
-    clip-path: polygon(0% 0%, 62% 0%, 0% 100%);
-    opacity: 0.62;
+    clip-path: polygon(0% 0%, 26% 0%, 0% 100%);
+    opacity: 0.7;
     animation: circuitFloat 10.5s ease-in-out infinite;
 }
 
