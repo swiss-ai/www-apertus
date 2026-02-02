@@ -1,0 +1,64 @@
+{{/*
+  Minimal navbar partial
+
+  Logo appears on scroll (controlled by JS in base layout)
+  Menu: Models → Research → Documentation → Governance
+*/}}
+
+<style>
+  .nav-link {
+    color: #374151 !important;
+    transition: color 0.2s ease;
+  }
+  .nav-link:hover {
+    color: #49BED8 !important;
+  }
+  .nav-link.active {
+    color: #49BED8 !important;
+  }
+
+  /* Navbar Scroll State */
+  #main-nav {
+    z-index: 100;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  #main-nav.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  #nav-brand {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  #main-nav.scrolled #nav-brand {
+    opacity: 1;
+    pointer-events: auto;
+  }
+</style>
+
+{{- $showLogo := .showLogo | default false -}}
+{{- $fixed := .fixed | default false -}}
+{{- $currentPage := .currentPage | default "" -}}
+<nav id="main-nav" class="navbar navbar-expand-lg {{ if $fixed }}position-fixed{{ else }}position-sticky{{ end }} top-0 w-100{{ if $showLogo }} scrolled{{ end }}">
+  <div class="container py-3" style="max-width: 1100px;">
+    <a id="nav-brand" class="navbar-brand" href="/">
+      <img src="{{ "images/apertus-wordmark.png" | relURL }}" alt="Apertus" height="28">
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav gap-4">
+        <li class="nav-item"><a class="nav-link{{ if eq $currentPage "/get-started/" }} active{{ end }}" href="/get-started/">Get Started</a></li>
+        <li class="nav-item"><a class="nav-link{{ if eq $currentPage "/documentation/" }} active{{ end }}" href="/documentation/">Documentation</a></li>
+        <li class="nav-item"><a class="nav-link{{ if eq $currentPage "/research/" }} active{{ end }}" href="/research/">Research</a></li>
+        <li class="nav-item"><a class="nav-link{{ if eq $currentPage "/charter/" }} active{{ end }}" href="/charter/">Swiss AI Charter</a></li>
+        <li class="nav-item"><a class="nav-link{{ if eq $currentPage "/faq/" }} active{{ end }}" href="/faq/">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link{{ if eq $currentPage "/about/" }} active{{ end }}" href="/about/">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
