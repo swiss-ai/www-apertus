@@ -2,25 +2,25 @@
 title: "Get Started"
 ---
 
-## Try Apertus — No Setup Required
+## Try Apertus
 
 <div class="card-grid">
-  <a href="https://chat.publicai.co" class="card" style="text-decoration: none;">
+  <a href="https://publicai.ch" class="card" style="text-decoration: none;">
     <img src="https://publicai.co/favicon.ico" alt="PublicAI" class="card-logo">
-    <h4>PublicAI Chat</h4>
-    <p>Third-party browser-based chat interface. Login for 70B access. Enable the search tool for web results.</p>
+    <h4>Public AI Switzerland</h4>
+    <p>A browser-based chat interface you can use for free. Login for access to larger models, search and more.</p>
     <span class="badge badge-free">Free</span>
     <span class="badge badge-swiss">Switzerland</span>
-    <span class="meta">Various regions</span>
   </a>
-  <a href="https://platform.publicai.co" class="card" style="text-decoration: none;">
-    <img src="https://publicai.co/favicon.ico" alt="PublicAI" class="card-logo">
-    <h4>PublicAI API</h4>
-    <p>Third-party OpenAI-compatible API access for developers</p>
+  <a href="https://oss.zuericitygpt.ch/" class="card" style="text-decoration: none;">
+    <img src="https://oss.zuericitygpt.ch/robot.png" alt="ZüriCityGPT" class="card-logo">
+    <h4>ZüriCityGPT OSS</h4>
+    <p>A RAG Chatbot from the City of Zürich developed on an open-source stack and our open model.</p>
     <span class="badge badge-free">Free</span>
     <span class="badge badge-swiss">Switzerland</span>
-    <span class="meta">Various regions</span>
   </a>
+</div>
+
 </div>
 
 ---
@@ -79,10 +79,10 @@ title: "Get Started"
 <p class="section-intro">Production-ready hosting from Swiss and international providers.</p>
 
 <div class="card-grid">
-  <a href="https://publicai.co" class="card" style="text-decoration: none;">
+  <a href="https://developer.publicai.co" class="card" style="text-decoration: none;">
     <img src="https://publicai.co/favicon.ico" alt="PublicAI" class="card-logo">
-    <h4>PublicAI</h4>
-    <p>Third-party API & Chat access</p>
+    <h4>Public AI</h4>
+    <p>Developer API & Chat access</p>
     <span class="badge badge-free">Free</span>
     <span class="badge badge-swiss">Switzerland</span>
     <span class="meta">Various regions</span>
