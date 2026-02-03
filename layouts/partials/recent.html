@@ -1,0 +1,14 @@
+{{- if .Site.Params.widgets.recent_articles }}
+< class="recent-articles">
+    {{ range first 5 (where .Site.RegularPages "Type" "post") }}
+        <headline
+            publishedDate="{{ .Date.Format "January 2, 2006" }}"
+            title="{{ .Title }}"
+            excerpt="{{ .Summary }}"
+            image="{{ .Params.image }}"
+            href="{{ .Permalink }}"
+            subtitle="{{ .Params.subtitle }}"
+        ></headline>
+    {{ end }}
+</div>
+{{- end }}

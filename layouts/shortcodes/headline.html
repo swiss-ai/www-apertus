@@ -4,10 +4,11 @@
   parameters:
 
     - title        : news post title (string)
+    - image        : optional image URL for the post (string)
     - subtitle     : optional subtitle or list of authors (string)
     - datePosted   : optional date of post (string)
     - excerpt      : optional excerpt or summary of post (string)
-    - href         : link to post (URL)
+    - href         : link to post URL (string)
     - class        : optional class for the post (string)
 
 */}}
@@ -19,19 +20,16 @@
 {{- $excerpt  := .Get "excerpt" | default "" -}}
 {{- $class    := .Get "class" | default "" -}}
 
-<div class="post-preview peer-reviewed">
+<div class="post-preview {{ $class }}">
     <div class="metadata">
-        <div class="publishedDate">Nov. 17, 2020</div>
-        <div class="tags">
-            <a class="tag peer-reviewed" title="View this article's reviews as Github issues." href="https://github.com/distillpub/post--understanding-rl-vision/issues?q=is%3Aissue+label%3Apeer-review"><span>Peer-reviewed</span></a>
-        </div>
+        <div class="publishedDate">{{ $datePosted }}</div>
     </div>
-    <a href="2020/understanding-rl-vision">
-        <div class="thumbnail"><img src="2020/understanding-rl-vision/thumbnail.jpg"></div>
+    <a href="{{ $href }}">
+        <div class="thumbnail"><img src="{{ $image }}"></div>
         <div class="description">
-            <h2 class="title">Understanding RL Vision</h2>
-            <p class="authors">Jacob&nbsp;Hilton, Nick&nbsp;Cammarata, Shan&nbsp;Carter, Gabriel&nbsp;Goh, and Chris&nbsp;Olah</p>
-            <p class="abstract">With diverse environments, we can analyze, diagnose and edit deep reinforcement learning models using attribution.</p>
+            <h2 class="title">{{ $title }}</h2>
+            <p class="authors">{{ $subtitle }}</p>
+            <p class="abstract">{{ $excerpt }}</p>
         </div>
     </a>
 </div>
