@@ -38,3 +38,11 @@ Competitive with top open models at an equivalent scale of 8B and 70B parameters
     <button type="submit" style="padding: 0.75rem 1.5rem; background-color: #49BED8; color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 500; cursor: pointer;">Subscribe</button>
   </form>
 </div>
+
+{{< columns cols="3" class="py-4 text-center" gap="5" >}}
+<img src="images/epfl_ai_center_black.avif">
+<--->
+<img src="images/eth_ai_center_logo.avif">
+<--->
+<img src="images/cscs-logo.svg">
+{{< /columns >}}

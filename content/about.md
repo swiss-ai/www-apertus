@@ -14,7 +14,7 @@ Apertus is not a product like ChatGPT. Apertus is foundational infrastructure â€
 
 ---
 
-## About the Swiss AI Initiative
+## Swiss AI Initiative
 
 The [Swiss AI Initiative](https://swiss-ai.org) is a national research effort to build capabilities for advanced, trustworthy AI systems for the benefit of society. Launched in December 2023, it is co-led by ETH Zurich and EPFL. Apertus is one of several projects within the Initiative, which spans research in foundation models, AI safety, applications, and education.
 
