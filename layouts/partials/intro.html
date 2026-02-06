@@ -1,7 +1,7 @@
 <!--
     intro partial
 
-    Plays an animated "bizzfuzz" background, using CSS only.
+    Plays an animated background, using CSS only.
 -->
 <style>
 :root {
@@ -9,10 +9,15 @@
     --c2: #7fd7e4;
     --c3: #c9f0f6;
 
-    --line: rgba(30, 120, 140, 0.22);
-    --node: rgba(60, 140, 155, 0.26);
-    --line2: rgba(60, 160, 175, 0.16);
-    --node2: rgba(100, 190, 205, 0.18);
+    --line: rgba(30, 120, 140, 0.1);
+    --line2: rgba(60, 160, 175, 0);
+    --line3: rgba(220, 40, 55, 0.1);
+    --node: rgba(250, 40, 40, 0.4);
+    --node2: rgba(0, 0, 0, 0.2);
+
+    --cross-size: 10px;
+    --cross-stroke: 2px;
+    --cross-stroke-color: #ff0000;
 }
 
 .bizz {
@@ -20,12 +25,6 @@
     width: 100vw;
     height: 100vh;
     background: linear-gradient(180deg, #c9eef5 0%, #ffffff 60%);
-}
-
-/* Fuzz/noise overlay */
-.bizz > .fuzz {
-    position: absolute;
-    inset: -20%;
 }
 
 /* Circuit layer generator (shared look) */
@@ -43,6 +42,18 @@
         /* nodes */
         radial-gradient(circle, var(--node) 0 2px, transparent 2.5px),
         radial-gradient(circle, var(--node2) 0 1.5px, transparent 2.2px),
+        /* crosses
+        linear-gradient(to bottom,
+            transparent 0%,
+            white 50%,
+            red 51%,
+            white 52%,
+            transparent 100%),
+        linear-gradient(to right,
+            red 0%,
+            transparent 2%,
+            white 50%,
+            transparent 100%), */
         /* orthogonal traces */
         repeating-linear-gradient(
                 0deg,
@@ -56,14 +67,14 @@
         ),
         /* diagonals / interconnect feel */
         repeating-linear-gradient(
-                45deg,
-                rgba(40, 140, 155, 0.1) 0 1px,
-                transparent 1px 44px
+                60deg,
+                var(--line3) 0 1px,
+                transparent 1px 32px
             ),
         repeating-linear-gradient(
-            -45deg,
-            rgba(40, 140, 155, 0.08) 0 1px,
-            transparent 1px 52px
+            -60deg,
+            var(--line3) 0 1px,
+            transparent 1px 20px
         );
 
     background-size:
@@ -94,7 +105,7 @@
 .bizz::before {
     clip-path: polygon(0% 0%, 26% 0%, 0% 100%);
     opacity: 0.7;
-    animation: circuitFloat 10.5s ease-in-out infinite;
+    animation: circuitFloat 15.5s ease-in-out infinite;
 }
 
 @keyframes drift {
@@ -124,47 +135,6 @@
     }
 }
 
-@keyframes fuzz {
-    0% {
-        opacity: 0.22;
-        filter: blur(0.6px);
-        transform: translate3d(-1.2%, -0.8%, 0) scale(1.01);
-        background-position:
-            0% 0%,
-            100% 10%,
-            40% 100%,
-            80% 70%,
-            50% 50%,
-            0% 50%,
-            50% 0%;
-    }
-    50% {
-        opacity: 0.34;
-        filter: blur(1.3px);
-        transform: translate3d(1.2%, 0.9%, 0) scale(1.015);
-        background-position:
-            16% 10%,
-            84% 20%,
-            55% 85%,
-            68% 62%,
-            52% 48%,
-            10% 54%,
-            54% 12%;
-    }
-    100% {
-        opacity: 0.22;
-        transform: translate3d(-1.2%, -0.8%, 0) scale(1.01);
-        background-position:
-            0% 0%,
-            100% 10%,
-            40% 100%,
-            80% 70%,
-            50% 50%,
-            0% 50%,
-            50% 0%;
-    }
-}
-
 @keyframes circuitFloat {
     0% {
         opacity: inherit;
@@ -177,19 +147,17 @@
             0 0,
             0 0,
             0 0;
-        transform: translate3d(0, 0, 0);
     }
     50% {
         background-position:
             26px 18px,
-            88px 56px,
+            -8px 148px,
             12px 18px,
             18px 8px,
             24px 24px,
             -12px 18px,
             0 34px,
             22px 0;
-        transform: translate3d(0.6%, -0.4%, 0);
     }
     100% {
         opacity: inherit;
@@ -202,10 +170,9 @@
             0 0,
             0 0,
             0 0;
-        transform: translate3d(0, 0, 0);
     }
 }
 </style>
 <div class="position-fixed top-0 start-0" style="z-index:-1">
-    <div class="bizz"><div class="fuzz"></div></div>
+    <div class="bizz"></div>
 </div>

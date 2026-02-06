@@ -1,0 +1,57 @@
+<!-- Recent Articles Grid -->
+<div class="mb-5">
+  <hr />
+  <h2 class="h2 fw-bold mt-5 mb-4 text-center">Announcements</h2>
+
+  <div class="row g-4 row-cols-1 row-cols-md-3">
+    {{ range first 5 (where .Site.RegularPages "Type" "articles") }}
+    <div class="col">
+      <article class="card h-100 shadow-sm border-0 overflow-hidden">
+        {{ with .Resources.GetMatch .Params.featured_image }}
+        <img
+          src="{{ .RelPermalink }}"
+          alt="{{ $.Title }}"
+          class="card-img-top"
+          style="height: 12rem; object-fit: cover; padding:5px"
+        >
+        {{ end }}
+
+        <div class="card-body p-4">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            {{ with .Params.categories }}
+              {{ range first 1 . }}
+              <a
+                href="/categories/{{ . | urlize }}"
+                class="badge rounded-pill text-bg-primary bg-opacity-10 text-primary text-decoration-none px-2 py-1"
+                style="font-size: .75rem;"
+              >{{ . }}</a>
+              {{ end }}
+            {{ end }}
+          </div>
+
+          <h3 class="h5 fw-bold mb-2">
+            <a href="{{ .RelPermalink }}" class="text-body text-decoration-none link-primary-hover">
+              {{ .Title }}
+            </a>
+          </h3>
+
+          <div class="d-flex align-items-center text-muted small mb-3">
+            <span class="me-4">
+              By
+              <a
+                href="/authors/{{ replace (lower .Params.author) "." "" | urlize }}"
+                class="link-primary text-decoration-none"
+              >{{ .Params.author }}</a>
+            </span>
+            <span>{{ .Date.Format "Jan 2" }}</span>
+          </div>
+
+          <p class="text-secondary small mb-0">
+            {{ .Description | default (.Summary | truncate 120) }}
+          </p>
+        </div>
+      </article>
+    </div>
+    {{ end }}
+  </div>
+</div>

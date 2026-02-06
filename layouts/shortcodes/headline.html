@@ -1,0 +1,36 @@
+{{/*
+  headline shortcode
+
+  parameters:
+
+    - title        : news post title (string)
+    - image        : optional image URL for the post (string)
+    - subtitle     : optional subtitle or list of authors (string)
+    - datePosted   : optional date of post (string)
+    - excerpt      : optional excerpt or summary of post (string)
+    - href         : link to post URL (string)
+    - class        : optional class for the post (string)
+
+*/}}
+
+{{- $title    := .Get "title" -}}
+{{- $subtitle := .Get "subtitle" | default "" -}}
+{{- $datePosted := .Get "datePosted" | default "" -}}
+{{- $href     := or (.Get "href") (.Get "link") -}}
+{{- $image    := .Get "image" | default "" -}}
+{{- $excerpt  := .Get "excerpt" | default "" -}}
+{{- $class    := .Get "class" | default "" -}}
+
+<div class="post-preview {{ $class }}">
+    <div class="metadata">
+        <div class="publishedDate">{{ $datePosted }}</div>
+    </div>
+    <a href="{{ $href }}">
+        <div class="thumbnail"><img src="{{ $image }}"></div>
+        <div class="description">
+            <h2 class="title">{{ $title }}</h2>
+            <p class="authors">{{ $subtitle }}</p>
+            <p class="abstract">{{ $excerpt }}</p>
+        </div>
+    </a>
+</div>

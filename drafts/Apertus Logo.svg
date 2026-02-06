@@ -21,15 +21,16 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.31891165"
-     inkscape:cx="1850.0422"
+     inkscape:cx="1567.8323"
      inkscape:cy="1160.1959"
      inkscape:window-width="1470"
      inkscape:window-height="923"
      inkscape:window-x="0"
      inkscape:window-y="33"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer5"
-     inkscape:document-units="mm" />
+     inkscape:current-layer="g11-5"
+     inkscape:document-units="mm"
+     showgrid="false" />
   <defs
      id="defs1">
     <mask
@@ -106,12 +107,15 @@
      id="layer2"
      inkscape:label="V2">
     <ellipse
-       style="fill:#d0e0e3;fill-opacity:1;stroke:#ffffff;stroke-width:3.40883;stroke-dasharray:none"
+       style="fill:#aaeeff;fill-opacity:1;stroke:#ffffff;stroke-width:3.40883;stroke-dasharray:none"
        id="path8-5"
        cx="1625.8521"
        cy="634.0708"
        rx="277.12088"
-       ry="271.52249" />
+       ry="271.52249"
+       inkscape:export-filename="path8-5.png"
+       inkscape:export-xdpi="88.141205"
+       inkscape:export-ydpi="88.141205" />
     <g
        id="g11-5"
        transform="matrix(0.68176678,0,0,0.68176678,738.25328,962.25647)"
@@ -125,14 +129,6 @@
          d="m 1209.7083,-695.56533 181.5655,300.71785 175.8916,-300.71785"
          id="path11-1" />
     </g>
-    <path
-       style="fill:#d0e0e3;fill-opacity:1;stroke:#ffffff;stroke-width:3.66308;stroke-dasharray:none"
-       d="m 1439.9813,805.45513 135.4693,-216.32344 131.2358,216.32344"
-       id="path9" />
-    <path
-       style="fill:#d0e0e3;fill-opacity:1;stroke:#ffffff;stroke-width:3.66308;stroke-dasharray:none"
-       d="M 1557.7418,473.51406 1693.2111,689.8375 1824.447,473.51406"
-       id="path12" />
   </g>
   <g
      inkscape:groupmode="layer"

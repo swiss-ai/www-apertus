@@ -27,14 +27,3 @@ Built to meet EU AI Act requirements: the model respects opt-outs, removes PII, 
 Competitive with top open models at an equivalent scale of 8B and 70B parameters. Multilingual from day one — trained on 1000+ languages.
 
 {{< /columns >}}
-
-<h2 style="text-align: center; margin-top: 3rem;">Stay Updated</h2>
-
-<p style="text-align: center; color: #6b7280; margin-bottom: 1.5rem;">Subscribe to our newsletter for updates on Apertus releases, research, and community news.</p>
-
-<div style="max-width: 500px; margin: 0 auto 4rem auto;">
-  <form action="#" method="post" style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
-    <input type="email" name="email" placeholder="your@email.com" required style="flex: 1; min-width: 250px; padding: 0.75rem 1rem; border: 2px solid #c0c4cc; border-radius: 8px; font-size: 1rem;">
-    <button type="submit" style="padding: 0.75rem 1.5rem; background-color: #49BED8; color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 500; cursor: pointer;">Subscribe</button>
-  </form>
-</div>
