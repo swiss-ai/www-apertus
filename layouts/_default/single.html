@@ -1,7 +1,7 @@
 {{ define "main" }}
 <main>
-  {{/* Navbar - always show logo on subpages */}}
-  {{ partial "navbar.html" (dict "showLogo" true "currentPage" .RelPermalink) }}
+  {{/* Navbar */}}
+  {{ partial "navbar.html" }}
 
   {{/* Page content with top padding to clear fixed navbar */}}
   <section class="page-content bg-white" style="padding-top: 70px; padding-bottom: 3rem;">
