@@ -1,0 +1,21 @@
+{
+    "items": [
+        {{- $regularPages := where .Site.RegularPages "Type" "articles" -}}
+        {{- $authorPages := .Site.GetPage "taxonomyTerm" "authors" -}}
+        {{- $authors := $authorPages.Pages -}}
+        {{- $allPages := union $regularPages $authors -}}
+        {{- range $index, $page := $allPages -}}
+        {{- if $index }},{{ end }}
+        {
+            "title": {{ .Title | jsonify }},
+            "content": {{ .Plain | jsonify }},
+            "permalink": {{ .Permalink | jsonify }},
+            "summary": {{ .Summary | jsonify }},
+            "tags": {{ .Params.tags | jsonify }},
+            "categories": {{ .Params.categories | jsonify }},
+            "type": {{ if eq .Kind "taxonomy" }}"authors"{{ else }}{{ .Type | jsonify }}{{ end }},
+            "date": {{ .Date.Format "2006-01-02" | jsonify }}
+        }
+        {{- end -}}
+    ]
+} 
