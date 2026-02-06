@@ -55,7 +55,7 @@ title: "Documentation"
     <h4>EU Code of Practice</h4>
     <p>Code of practice documentation</p>
   </a>
-  <a href="/charter" class="card" style="text-decoration: none;">
+  <a href="/pages/charter" class="card" style="text-decoration: none;">
     <img src="/images/square.png" alt="Apertus logo" style="height: 48px; margin-bottom: 0.75rem;">
     <h4>Swiss AI Charter</h4>
     <p>The internal constitution of Apertus</p>
