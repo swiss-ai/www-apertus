@@ -1,8 +1,7 @@
+<div class="container" style="max-width: 1100px;">
+
 <!-- Recent Articles Grid -->
 <div class="mb-5">
-  <hr />
-  <h2 class="h2 fw-bold mt-5 mb-4 text-center">Announcements</h2>
-
   <div class="row g-4 row-cols-1 row-cols-md-3">
     {{ range first 5 (where .Site.RegularPages "Type" "articles") }}
     <div class="col">
@@ -54,4 +53,6 @@
     </div>
     {{ end }}
   </div>
+</div>
+
 </div>

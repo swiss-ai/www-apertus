@@ -15,15 +15,17 @@
   {{ end }}
 
   {{/* Page content with top padding to clear fixed navbar */}}
-  <section class="page-content bg-white pb-5">
+  <section class="page-content bg-white mt-5 pt-5 pb-5">
     <div class="container" style="max-width: 900px;">
       <div class="content-body">
         {{ .Content }}
       </div>
-      <div class="mt-4">
+      {{ if .Params.author }}
+        <div class="mt-4">
           <span class="mr-4">-- <a href="/authors/{{ replace (lower .Params.author) "." "" | urlize }}" class="text-blue-600 hover:text-blue-800">{{ .Params.author }}</a></span>
           <span class="mr-4">{{ .Date.Format "January 2, 2006" }}</span>
-      </div>
+        </div>
+      {{ end }}
     </div>
   </section>
 </main>
