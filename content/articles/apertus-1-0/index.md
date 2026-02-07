@@ -10,22 +10,26 @@ summary: "We are thrilled to announce the rebranding of Apertus with a new domai
 comments: false
 ---
 
-With this first blog post, we would like to announce the rebranding of Apertus with a new domain name - **APERTVS.ai** and a refreshed logo, reinforcing the typography and name that embodies the project's core principles while embracing its roots in the heart of Switzerland.
+_With this first blog post, we announce the rebranding of Apertus, including a new domain name and a refreshed logo. The update reinforces the project’s typography and identity, while staying true to its core principles and roots in Switzerland._
 
-We invite you to join us in this new chapter. As a community-driven project, we value your input and engagement. How does the refreshed CI resonate with you? Does it reflect the spirit of openness and collaboration we aim for? Share your thoughts, feedback, and ideas on social media (#apertus) or our community forums. 
+Apertus is a fully open, community-driven AI project. Our commitment to openness, transparency, and reproducibility—through openly available weights, code, and training data under the Apache 2.0 license—remains unchanged. It's about time that we gave the project a dedicated website!
+
+As your new Community Manager, I highly value your input and engagement. How does this website resonate with you? Does it reflect the spirit of openness and collaboration we aim for? What kind of information and updates would you like to see here? 
+
+Please share your thoughts and feedback on social media (#apertus) or our community forums. 
 
 ### Background reflections
 
-Here are some further thoughts, generated with help of Apertus 70B 1.0:
+Here are some further thoughts, generated with help of Apertus 70B 1.0 as an exploration of the project's identity.
 
 The Latin word **Apertus** translates to "open" or "openly". This is a nod to the open-source and transparent nature of the AI project, which is fully open under the Apache 2.0 license, with weights, code, and training data openly available. The title aligns with the project’s philosophy of openness, transparency, and accessibility.
 
-The branding **APERTVS** subtly evokes Switzerland's Latin name, _Confederatio Helvetica_. The term is often used to refer to Switzerland, notably through the CH postal codes and web domains. APERTVS could be seen as a nod to this historical and cultural connection. 
+The branding **APERTVS** in the logo designed by Florian Molinari subtly evokes Switzerland's Latin name, _Confederatio Helvetica_. The term is often used to refer to Switzerland, notably through the CH postal codes and Internet '.ch' TLD. Our logo could be seen as a nod to this historical and cultural connection. The Latin root is an appeal to scholarly communities, reinforcing the project’s role as a tool for learning and inquiry.
 
-This exercise symbolically links our project to Switzerland’s rich history and its role as a global hub for innovation and precision. We hope the name bridges local heritage with global aspirations, making Apertus more approachable and recognizable, while maintaining a distinctive, thoughtful connection to its origins. The Latin root might appeal to the scholarly academic and research communities, reinforcing the project’s role as a tool for learning and inquiry, consistent with the intellectual traditions of the Swiss school and university system.
+The rebranding of Apertus in this new website reflects the project's values, its roots, and its global outlook. It signals a continued commitment to openness, transparency, and responsible AI development---principles shared by both the open-source AI community and the broader academic ecosystem.
 
-The rebranding of Apertus is a thoughtful reflection on the project's values, our roots, and global ambitions. It signifies a commitment to core principles that align with both globally-sovereign cultural values, and the open-source ethos of the AI community. The new logo is a nod to the project’s origins in scholarship, and role in the broader global conversation about responsible AI development and use.
-
-Let’s shape the future of APERTVS -- Apertus -- together. Whether you are a developer, a researcher, an educator, or an enthusiast, your voice matters. Help us to ensure that our project continues to be an AI that represents the best of Swiss heritage and global collaboration: a beacon of open, transparent, and inclusive AI innovation.
+Let us shape the future of APERTVS -- Apertus -- together. Whether you are a developer, a researcher, an educator, or an enthusiast, your perspective matters. Let us work together to ensure that the project continues to be one that represents the best of Swiss heritage and global collaboration: a beacon of open, transparent, and inclusive AI innovation.
 
 _Pax vobis_
+
+-- [Oleg](https://people.epfl.ch/oleg.lavrovsky)
