@@ -2,9 +2,11 @@
 title: "Research"
 ---
 
-## Publications
+## Research
 
-<p class="section-intro">Research papers and technical reports from the Apertus project.</p>
+<p class="section-intro">
+  Papers and technical reports from the Apertus project:
+</p>
 
 <div class="card-grid">
   <a href="https://arxiv.org/abs/2509.14233" class="card" style="text-decoration: none;">
@@ -43,3 +45,7 @@ title: "Research"
     <p>xIELU activation function used in Apertus architecture</p>
   </a>
 </div>
+
+<p>
+  See also: <a href="https://www.zotero.org/groups/6385576/apertus" target="_blank">Zotero group</a>.
+</p>

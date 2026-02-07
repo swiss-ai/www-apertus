@@ -39,25 +39,23 @@
   }
 </style>
 
-{{- $showLogo := .showLogo | default false -}}
-{{- $fixed := .fixed | default false -}}
 {{- $currentPage := .currentPage | default "" -}}
-<nav id="main-nav" class="navbar navbar-expand-lg {{ if $fixed }}position-fixed{{ else }}position-sticky{{ end }} top-0 w-100{{ if $showLogo }} scrolled{{ end }}">
-  <div class="container py-3" style="max-width: 1100px;">
+<nav id="main-nav" class="navbar navbar-expand-lg position-fixed scrolled top-0 w-100">
+  <div class="container-fluid" style="max-width: 1100px;">
     <a id="nav-brand" class="navbar-brand" href="/">
-      <img src="{{ "images/apertus-wordmark.png" | relURL }}" alt="Apertus" height="28">
+      <img src="{{ "images/apertvs.svg" | relURL }}" alt="Apertus" style="max-width: 95%; max-height: 18px">
     </a>
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav gap-4">
-        <li class="nav-item"><a class="nav-link{{ if eq $currentPage "/get-started/" }} active{{ end }}" href="/get-started/">Get Started</a></li>
-        <li class="nav-item"><a class="nav-link{{ if eq $currentPage "/documentation/" }} active{{ end }}" href="/documentation/">Documentation</a></li>
-        <li class="nav-item"><a class="nav-link{{ if eq $currentPage "/research/" }} active{{ end }}" href="/research/">Research</a></li>
-       <!--  <li class="nav-item"><a class="nav-link{{ if eq $currentPage "/charter/" }} active{{ end }}" href="/charter/">Swiss AI Charter</a></li> -->
-        <li class="nav-item"><a class="nav-link{{ if eq $currentPage "/faq/" }} active{{ end }}" href="/faq/">FAQ</a></li>
-        <li class="nav-item"><a class="nav-link{{ if eq $currentPage "/about/" }} active{{ end }}" href="/about/">Contact</a></li>
+        <li class="nav-item"><a class="nav-link{{ if eq $currentPage "/pages/get-started/" }} active{{ end }}" href="/pages/get-started/">Get Started</a></li>
+        <li class="nav-item"><a class="nav-link{{ if eq $currentPage "/pages/documentation/" }} active{{ end }}" href="/pages/documentation/">Documentation</a></li>
+        <li class="nav-item"><a class="nav-link{{ if eq $currentPage "/pages/research/" }} active{{ end }}" href="/pages/research/">Research</a></li>
+       <!--  <li class="nav-item"><a class="nav-link{{ if eq $currentPage "/pages/charter/" }} active{{ end }}" href="/pages/charter/">Swiss AI Charter</a></li> -->
+        <li class="nav-item"><a class="nav-link{{ if eq $currentPage "/pages/faq/" }} active{{ end }}" href="/pages/faq/">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link{{ if eq $currentPage "/pages/about/" }} active{{ end }}" href="/pages/about/">Contact</a></li>
       </ul>
     </div>
   </div>

@@ -21,11 +21,11 @@
       <div class="col-lg-10 text-center">
 
         {{/* Logo */}}
-        <img src="{{ "images/apertus-wordmark.png" | relURL }}" alt="Apertus" class="mb-5" style="height: 72px;">
+        <img src="{{ "images/apertvs.svg" | relURL }}" alt="Apertus" class="mb-5" style="min-height: 72px; max-width: 100%">
 
         {{/* Mission statement */}}
         {{ with $mission }}
-        <h1 class="display-4 fw-normal mb-4" style="font-size: 3rem; line-height: 1.2; color: #1a1a1a;">
+        <h1 class="display-4 fw-normal mb-4" style="line-height: 1.2; color: #1a1a1a;">
           {{ . }}
         </h1>
         {{ end }}

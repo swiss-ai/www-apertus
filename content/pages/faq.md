@@ -2,7 +2,7 @@
 title: "FAQ"
 ---
 
-<p class="section-intro">Common questions about Apertus and the Swiss AI Initiative.</p>
+<h2 class="section-intro">Common questions about Apertus and the Swiss AI Initiative</h2>
 
 <div class="faq-item">
 <h4>What makes Apertus different from other open models?</h4>
@@ -15,7 +15,7 @@ title: "FAQ"
 </div>
 
 <div class="faq-item">
-<h4>Can I use Apertus commercially?</h4>
+<h4>May I use Apertus commercially?</h4>
 <p>Yes. Apertus is released under Apache 2.0, allowing both research and commercial use without restrictions or royalties. Use it freely in any project, but abide by license terms and be aware of statutory limitations. Try the <a target="_blank" href="https://www.choosingalicense.com/license/apache-2.0">Open License Helper</a>.</p>
 </div>
 
@@ -33,5 +33,5 @@ title: "FAQ"
 <h4>How is Apertus aligned?</h4>
 <p>Apertus was trained with ethical and safety principles to align with Swiss values and EU AI Act goals (e.g., transparency, fairness, human oversight). 
 While we strive to minimize bias, users should be aware of inherent biases in language data and test for fairness in their applications.
-See the <a href="/charter">Swiss AI Charter</a> for details. 
+See the <a href="/pages/charter">Swiss AI Charter</a> for details.
 </div>

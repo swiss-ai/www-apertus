@@ -12,20 +12,23 @@
   {{ partial "hero.html" . }}
 
   {{/* Navbar */}}
-  {{ partial "navbar.html" (dict "showLogo" false "fixed" true) }}
+  {{ partial "navbar.html" }}
 
   {{/* Page content */}}
   <section id="page-content" class="pt-0 pb-5 bg-white">
     <div class="container" style="max-width: 1100px;">
       {{ .Content }}
-
-      {{/* News */}}
-      {{ partial "recent.html" . }}
     </div>
   </section>
 
   {{/* Newsletter */}}
   {{ partial "newsletter.html" . }}
+
+  {{/* News */}}
+  {{ partial "recent.html" . }}
+
+  {{/* Partners */}}
+  {{ partial "partners.html" . }}
 
 </main>
 

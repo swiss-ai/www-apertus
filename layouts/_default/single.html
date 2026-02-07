@@ -1,14 +1,31 @@
 {{ define "main" }}
 <main>
-  {{/* Navbar - always show logo on subpages */}}
-  {{ partial "navbar.html" (dict "showLogo" true "currentPage" .RelPermalink) }}
+  {{/* Navbar */}}
+  {{ partial "navbar.html" }}
+
+  {{ if .Params.featured_image }}
+    <header class="mb-8 mt-5 pt-5 pb-5">
+      <div class="container" style="max-width: 900px;">
+        <h1 class="text-4xl font-bold mb-4">{{ .Title }}</h1>
+        {{ with .Params.featured_image }}
+            <img src="{{ . }}" alt="{{ $.Title }}" class="w-100 h-96 object-cover rounded-lg mb-6">
+        {{ end }}
+      </div>
+    </header>
+  {{ end }}
 
   {{/* Page content with top padding to clear fixed navbar */}}
-  <section class="page-content bg-white" style="padding-top: 70px; padding-bottom: 3rem;">
+  <section class="page-content bg-white mt-5 pt-5 pb-5">
     <div class="container" style="max-width: 900px;">
       <div class="content-body">
         {{ .Content }}
       </div>
+      {{ if .Params.author }}
+        <div class="mt-4">
+          <span class="mr-4">-- <a href="/authors/{{ replace (lower .Params.author) "." "" | urlize }}" class="text-blue-600 hover:text-blue-800">{{ .Params.author }}</a></span>
+          <span class="mr-4">{{ .Date.Format "January 2, 2006" }}</span>
+        </div>
+      {{ end }}
     </div>
   </section>
 </main>

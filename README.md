@@ -143,8 +143,7 @@ www-apertus/
 ├── static/              # Static files (served as-is)
 │   ├── favicon.ico
 │   └── images/
-│       ├── apertus-wordmark.png  # Text logo
-│       └── apertus2.png          # Abstract logo mark
+│       ├── apertvs.svg  # Logo mark
 ├── hugo.toml            # Hugo configuration
 ├── go.mod               # Go module dependencies
 └── README.md

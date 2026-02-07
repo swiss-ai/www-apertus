@@ -41,7 +41,7 @@ title: "Documentation"
 
 <div class="card-grid">
   <a href="https://huggingface.co/swiss-ai/Apertus-70B-Instruct-2509/blob/main/USAGE_POLICY.md" class="card" style="text-decoration: none;">
-    <img src="/images/apertus2.png" alt="Apertus logo" style="height: 48px; margin-bottom: 0.75rem;">
+    <img src="/images/square.png" alt="Apertus logo" style="height: 48px; margin-bottom: 0.75rem;">
     <h4>Usage Policy</h4>
     <p>Terms and conditions for model use</p>
   </a>
@@ -55,8 +55,8 @@ title: "Documentation"
     <h4>EU Code of Practice</h4>
     <p>Code of practice documentation</p>
   </a>
-  <a href="/charter" class="card" style="text-decoration: none;">
-    <img src="/images/apertus2.png" alt="Apertus logo" style="height: 48px; margin-bottom: 0.75rem;">
+  <a href="/pages/charter" class="card" style="text-decoration: none;">
+    <img src="/images/square.png" alt="Apertus logo" style="height: 48px; margin-bottom: 0.75rem;">
     <h4>Swiss AI Charter</h4>
     <p>The internal constitution of Apertus</p>
   </a>
