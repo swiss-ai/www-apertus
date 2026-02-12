@@ -27,7 +27,7 @@ title: "Get Started"
   <div class="card">
     <h4>Apertus 8B</h4>
     <p>8 billion parameters · Full precision</p>
-    <a href="https://huggingface.co/swiss-ai/Apertus-8B">Download from Hugging Face →</a>
+    <a href="https://huggingface.co/swiss-ai/Apertus-8B">Download from Hugging Face</a>
   </div>
   <div class="card">
     <h4>Apertus 70B</h4>
@@ -73,10 +73,10 @@ title: "Get Started"
 ## API & Cloud Providers
 
 <div class="card-grid">
-  <a href="https://developer.publicai.co" class="card" style="text-decoration: none;">
+  <a href="https://platform.publicai.co" class="card" style="text-decoration: none;">
     <img src="https://publicai.co/favicon.ico" alt="PublicAI" class="card-logo">
     <h4>Public AI</h4>
-    <p>Developer API & Chat access</p>
+    <p>Rate limited API for testing</p>
     <span class="badge badge-swiss">Switzerland</span>
     <span class="meta">Various regions</span>
   </a>
@@ -88,8 +88,8 @@ title: "Get Started"
   </a>
   <a href="https://www.swisscom.ch/en/business/enterprise/offer/platforms-applications/data-driven-business/swiss-ai-platform.html" class="card" style="text-decoration: none;">
     <img src="https://rcp.scsstatic.ch/content/dam/assets/about/unternehmen/marke/content/base-logo-217x309.jpg" alt="Swisscom" class="card-logo">
-    <h4>Swisscom Swiss AI Platform</h4>
-    <p>Enterprise cloud</p>
+    <h4>Swisscom</h4>
+    <p>Swiss AI Platform</p>
     <span class="badge badge-swiss">Switzerland</span>
   </a>
   <a href="https://aws.amazon.com/blogs/alps/switzerlands-open-source-apertus-llms-now-available-on-amazon-sagemaker-ai/" class="card" style="text-decoration: none;">
@@ -110,15 +110,14 @@ title: "Get Started"
 
 ---
 
-## Codebase
+## For Developers
 
 <div class="card-grid">
   <a href="https://github.com/swiss-ai" class="card" style="text-decoration: none;">
     <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub" class="card-logo">
     <h4>Swiss AI on GitHub</h4>
-    <p>Training code, evaluation scripts, and model artifacts</p>
+    <p>Training code, evaluation scripts, and model artifacts for Apertus and related projects.</p>
   </a>
 </div>
 
 <p class="section-intro">Fully open training infrastructure.</p>
-
