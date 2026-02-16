@@ -2,6 +2,8 @@
 title: "Get Started"
 ---
 
+## Get Started
+
 <p class="section-intro">
   Download from the official 
   <a href="https://huggingface.co/swiss-ai">swiss-ai</a> account on Hugging Face to run in the cloud or on any infrastructure:
@@ -25,17 +27,6 @@ title: "Get Started"
     <a href="https://huggingface.co/swiss-ai/Apertus-70B-Instruct-2509">Instruct</a>
   </div>
 </div>
-
-<p class="section-intro">
-  'Instruct' versions are further trained on a dataset containing pairs of instructions.
-  <br /> Look for 
-  <a href="https://huggingface.co/models?sort=trending&search=apertus" target="_blank">
-    community builds</a> 
-  in other sizes and formats, like
-  <a href="https://huggingface.co/models?library=gguf&sort=trending&search=apertus" target="_blank">MLX</a>
-  and
-  <a href="https://huggingface.co/models?library=mlx&sort=trending&search=apertus" target="_blank">GGUF</a>.
-</p>
 
 ---
 

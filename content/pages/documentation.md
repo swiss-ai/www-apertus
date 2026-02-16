@@ -10,26 +10,12 @@ title: "Documentation"
   <a href="https://arxiv.org/abs/2509.14233" class="card" style="text-decoration: none;">
     <img src="https://info.arxiv.org/brand/images/brand-logo-primary.jpg" alt="arXiv" style="height: 72px; margin-bottom: 0.75rem;">
     <h4>Apertus Technical Report</h4>
-    <p>Full technical details on arXiv</p>
+    <p>arXiv:2509.14233 [cs.CL]</p>
   </a>
 </div>
 
----
+<p class="section-intro">Additional information governing model use is found in the compliance documents:</p>
 
-## Model Cards & Compliance
-
-<p class="section-intro">Detailed technical information and governance documents.</p>
-
-<div class="card-grid">
-  <a href="https://huggingface.co/swiss-ai/Apertus-8B-Instruct-2509" class="card" style="text-decoration: none;">
-    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" style="height: 48px; margin-bottom: 0.75rem;">
-    <h4>Apertus 8B Model Card</h4>
-  </a>
-  <a href="https://huggingface.co/swiss-ai/Apertus-70B-Instruct-2509" class="card" style="text-decoration: none;">
-    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" style="height: 48px; margin-bottom: 0.75rem;">
-    <h4>Apertus 70B Model Card</h4>
-  </a>
-</div>
 <div class="card-grid">
   <a href="https://huggingface.co/swiss-ai/Apertus-70B-Instruct-2509/blob/main/USAGE_POLICY.md" class="card" style="text-decoration: none;">
     <img src="/images/square.png" alt="Apertus logo" style="height: 48px; margin-bottom: 0.75rem;">
@@ -55,7 +41,21 @@ title: "Documentation"
 
 ---
 
-## Local Deployment
+## Deployment Guide
+
+<div class="card-grid">
+  <a href="https://huggingface.co/swiss-ai/Apertus-8B-Instruct-2509" class="card" style="text-decoration: none;">
+    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" style="height: 48px; margin-bottom: 0.75rem;">
+    <h4>Apertus 8B Model Card</h4>
+  </a>
+  <a href="https://huggingface.co/swiss-ai/Apertus-70B-Instruct-2509" class="card" style="text-decoration: none;">
+    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" style="height: 48px; margin-bottom: 0.75rem;">
+    <h4>Apertus 70B Model Card</h4>
+  </a>
+</div>
+<p class="section-intro">
+  'Instruct' versions are further trained on a dataset containing pairs of instructions.
+</p>
 
 <div class="card-grid">
   <div class="card">
@@ -81,12 +81,19 @@ title: "Documentation"
   <span class="badge badge-supported">Server</span>
   </div>
 </div>
+<p class="section-intro">
+  Look for 
+  <a href="https://huggingface.co/models?sort=trending&search=apertus" target="_blank">
+    community builds</a> 
+  in various sizes and formats, like
+  <a href="https://huggingface.co/models?library=gguf&sort=trending&search=apertus" target="_blank">MLX</a>
+  and
+  <a href="https://huggingface.co/models?library=mlx&sort=trending&search=apertus" target="_blank">GGUF</a> on Hugging Face.
+</p>
 
 ---
 
 ## Codebase
-
-<p class="section-intro">Fully open training infrastructure.</p>
 
 <div class="card-grid">
   <a href="https://github.com/orgs/swiss-ai/repositories?q=apertus" class="card" style="text-decoration: none;">
@@ -108,4 +115,6 @@ title: "Documentation"
     <p>Python library for the custom chat format.</p>
   </a>
 </div>
+
+<p class="section-intro">Fully open training infrastructure.</p>
 
