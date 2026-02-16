@@ -24,12 +24,10 @@ title: "Documentation"
   <a href="https://huggingface.co/swiss-ai/Apertus-8B-Instruct-2509" class="card" style="text-decoration: none;">
     <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" style="height: 48px; margin-bottom: 0.75rem;">
     <h4>Apertus 8B Model Card</h4>
-    <p>8 billion parameter model</p>
   </a>
   <a href="https://huggingface.co/swiss-ai/Apertus-70B-Instruct-2509" class="card" style="text-decoration: none;">
     <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" style="height: 48px; margin-bottom: 0.75rem;">
     <h4>Apertus 70B Model Card</h4>
-    <p>70 billion parameter model</p>
   </a>
 </div>
 
@@ -42,8 +40,13 @@ title: "Documentation"
 <div class="card-grid">
   <a href="https://huggingface.co/swiss-ai/Apertus-70B-Instruct-2509/blob/main/USAGE_POLICY.md" class="card" style="text-decoration: none;">
     <img src="/images/square.png" alt="Apertus logo" style="height: 48px; margin-bottom: 0.75rem;">
-    <h4>Usage Policy</h4>
+    <h4>Apertus Usage Policy</h4>
     <p>Terms and conditions for model use</p>
+  </a>
+  <a href="/pages/charter" class="card" style="text-decoration: none;">
+    <img src="/images/square.png" alt="Apertus logo" style="height: 48px; margin-bottom: 0.75rem;">
+    <h4>Swiss AI Charter</h4>
+    <p>The internal constitution of Apertus</p>
   </a>
   <a href="https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/Apertus_EU_Public_Summary.pdf" class="card" style="text-decoration: none;">
     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" alt="European Union" style="height: 48px; margin-bottom: 0.75rem;">
@@ -54,11 +57,6 @@ title: "Documentation"
     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" alt="European Union" style="height: 48px; margin-bottom: 0.75rem;">
     <h4>EU Code of Practice</h4>
     <p>Code of practice documentation</p>
-  </a>
-  <a href="/pages/charter" class="card" style="text-decoration: none;">
-    <img src="/images/square.png" alt="Apertus logo" style="height: 48px; margin-bottom: 0.75rem;">
-    <h4>Swiss AI Charter</h4>
-    <p>The internal constitution of Apertus</p>
   </a>
 </div>
 

@@ -2,6 +2,32 @@
 title: "Get Started"
 ---
 
+<div class="card-grid">
+  <div class="card">
+    <h2>Apertus 8B</h2>
+    <p>8 billion parameters · Full precision</p>
+    Download →
+    <a href="https://huggingface.co/swiss-ai/Apertus-8B-2509">Base</a> or
+    <a href="https://huggingface.co/swiss-ai/Apertus-8B-Instruct-2509">Instruct</a>
+  </div>
+  <div class="card">
+    <h2>Apertus 70B</h2>
+    <p>70 billion parameters · Full precision</p>
+    Download →
+    <a href="https://huggingface.co/swiss-ai/Apertus-70B-2509">Base</a> or
+    <a href="https://huggingface.co/swiss-ai/Apertus-70B-Instruct-2509">Instruct</a>
+  </div>
+</div>
+
+<p class="section-intro">Apache 2.0 license. Download from the official 
+  <a href="https://huggingface.co/swiss-ai">swiss-ai</a> account on Hugging Face to run in the cloud or on any infrastructure. Look for community builds in other sizes and formats, like
+  <a href="https://huggingface.co/models?search=apertus%20mlx" target="_blank">MLX</a>
+  and
+  <a href="https://huggingface.co/models?search=apertus%20gguf" target="_blank">GGUF</a>.
+</p>
+
+---
+
 ## Try Apertus
 
 <div class="card-grid">
@@ -18,35 +44,6 @@ title: "Get Started"
 </div>
 
 <p class="section-intro">We would love to hear about your project as we build out this showcase.</p>
-
----
-
-## Download the Models
-
-<div class="card-grid">
-  <div class="card">
-    <h4>Apertus 8B</h4>
-    <p>8 billion parameters · Full precision</p>
-    <a href="https://huggingface.co/swiss-ai/Apertus-8B">Download from Hugging Face</a>
-  </div>
-  <div class="card">
-    <h4>Apertus 70B</h4>
-    <p>70 billion parameters · Full precision</p>
-    <a href="https://huggingface.co/swiss-ai/Apertus-70B-Instruct-2509">Download from Hugging Face →</a>
-  </div>
-  <div class="card">
-    <h4>Apertus 8B MLX</h4>
-    <p>8 billion parameters · Apple Silicon</p>
-    <a href="https://huggingface.co/models?search=apertus%20mlx">Download from Hugging Face →</a>
-  </div>
-  <div class="card">
-    <h4>Apertus 70B MLX</h4>
-    <p>70 billion parameters · Apple Silicon</p>
-    <a href="https://huggingface.co/models?search=apertus%20mlx">Download from Hugging Face →</a>
-  </div>
-</div>
-
-<p class="section-intro">Apache 2.0 license. Run in the cloud or on any infrastructure.</p>
 
 ---
 
@@ -73,12 +70,12 @@ title: "Get Started"
 ## API & Cloud Providers
 
 <div class="card-grid">
-  <a href="https://platform.publicai.co" class="card" style="text-decoration: none;">
-    <img src="https://publicai.co/favicon.ico" alt="PublicAI" class="card-logo">
-    <h4>Public AI</h4>
-    <p>Rate limited API for testing</p>
+  <a href="https://docs.cloud.swisscom.ch/guide/cloud-services/aip/models/apertus.html" class="card" style="text-decoration: none;">
+    <img src="https://rcp.scsstatic.ch/content/dam/assets/about/unternehmen/marke/content/base-logo-217x309.jpg" alt="Swisscom" class="card-logo">
+    <h4>Swisscom</h4>
+    <p>Swiss AI Platform</p>
     <span class="badge badge-swiss">Switzerland</span>
-    <span class="meta">Various regions</span>
+    <span class="meta">Strategic Partner</span>
   </a>
   <a href="https://www.infomaniak.com/en/hosting/ai-services/open-source-models" class="card" style="text-decoration: none;">
     <img src="https://www.infomaniak.com/favicon.ico" alt="Infomaniak" class="card-logo">
@@ -86,11 +83,17 @@ title: "Get Started"
     <p>Pay-per-token API</p>
     <span class="badge badge-swiss">Switzerland</span>
   </a>
-  <a href="https://www.swisscom.ch/en/business/enterprise/offer/platforms-applications/data-driven-business/swiss-ai-platform.html" class="card" style="text-decoration: none;">
-    <img src="https://rcp.scsstatic.ch/content/dam/assets/about/unternehmen/marke/content/base-logo-217x309.jpg" alt="Swisscom" class="card-logo">
-    <h4>Swisscom</h4>
-    <p>Swiss AI Platform</p>
+  <a href="https://phoenix-technologies.ch/en/products-and-services/model-as-a-service/phoenix-model-service" class="card" style="text-decoration: none;">
+    <img src="https://phoenix-technologies.ch/img/technologies_favicon_48e9f7f64e.png?q=eyJyZXNpemUiOnsid2lkdGgiOjE2LCJoZWlnaHQiOjE2LCJmaXQiOiJjb250YWluIn19" alt="Phoenix" class="card-logo">
+    <h4>Phoenix Technologies</h4>
+    <p>Model-as-a-Service</p>
     <span class="badge badge-swiss">Switzerland</span>
+  </a>
+  <a href="https://platform.publicai.co" class="card" style="text-decoration: none;">
+    <img src="https://publicai.co/favicon.ico" alt="PublicAI" class="card-logo">
+    <h4>Public AI Platform</h4>
+    <p>Basic API access</p>
+    <span class="meta">Various regions</span>
   </a>
   <a href="https://aws.amazon.com/blogs/alps/switzerlands-open-source-apertus-llms-now-available-on-amazon-sagemaker-ai/" class="card" style="text-decoration: none;">
     <img src="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" alt="AWS" class="card-logo">

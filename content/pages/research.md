@@ -5,7 +5,8 @@ title: "Research"
 ## Research
 
 <p class="section-intro">
-  Papers and technical reports from the Apertus project:
+  Papers and technical reports from the Apertus project.
+  See also: <a href="https://www.zotero.org/groups/6385576/apertus" target="_blank">Zotero group</a>
 </p>
 
 <div class="card-grid">
@@ -46,6 +47,3 @@ title: "Research"
   </a>
 </div>
 
-<p>
-  See also: <a href="https://www.zotero.org/groups/6385576/apertus" target="_blank">Zotero group</a>.
-</p>
