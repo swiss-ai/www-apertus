@@ -2,28 +2,39 @@
 title: "Get Started"
 ---
 
+<p class="section-intro">
+  Download from the official 
+  <a href="https://huggingface.co/swiss-ai">swiss-ai</a> account on Hugging Face to run in the cloud or on any infrastructure:
+</p>
+
 <div class="card-grid">
   <div class="card">
-    <h2>Apertus 8B</h2>
-    <p>8 billion parameters · Full precision</p>
+    <img src="/images/square.png" alt="Apertus logo" style="height: 38px; margin-bottom: 10px">
+    <h3>Apertus 8B</h3>
+    <p>8 billion parameters · Apache 2.0 license</p>
     Download →
     <a href="https://huggingface.co/swiss-ai/Apertus-8B-2509">Base</a> or
     <a href="https://huggingface.co/swiss-ai/Apertus-8B-Instruct-2509">Instruct</a>
   </div>
   <div class="card">
-    <h2>Apertus 70B</h2>
-    <p>70 billion parameters · Full precision</p>
+    <img src="/images/square.png" alt="Apertus logo" style="height: 38px; margin-bottom: 10px">
+    <h3>Apertus 70B</h3>
+    <p>70 billion parameters · Apache 2.0 license</p>
     Download →
     <a href="https://huggingface.co/swiss-ai/Apertus-70B-2509">Base</a> or
     <a href="https://huggingface.co/swiss-ai/Apertus-70B-Instruct-2509">Instruct</a>
   </div>
 </div>
 
-<p class="section-intro">Apache 2.0 license. Download from the official 
-  <a href="https://huggingface.co/swiss-ai">swiss-ai</a> account on Hugging Face to run in the cloud or on any infrastructure. Look for community builds in other sizes and formats, like
-  <a href="https://huggingface.co/models?search=apertus%20mlx" target="_blank">MLX</a>
+<p class="section-intro">
+  'Instruct' versions are further trained on a dataset containing pairs of instructions.
+  <br /> Look for 
+  <a href="https://huggingface.co/models?sort=trending&search=apertus" target="_blank">
+    community builds</a> 
+  in other sizes and formats, like
+  <a href="https://huggingface.co/models?library=gguf&sort=trending&search=apertus" target="_blank">MLX</a>
   and
-  <a href="https://huggingface.co/models?search=apertus%20gguf" target="_blank">GGUF</a>.
+  <a href="https://huggingface.co/models?library=mlx&sort=trending&search=apertus" target="_blank">GGUF</a>.
 </p>
 
 ---
@@ -39,31 +50,11 @@ title: "Get Started"
   <a href="https://oss.zuericitygpt.ch/" class="card" style="text-decoration: none;">
     <img src="https://oss.zuericitygpt.ch/robot.png" alt="ZüriCityGPT" class="card-logo">
     <h4>ZüriCityGPT OSS</h4>
-    <p>A RAG Chatbot from the City of Zürich developed on an open-source stack and our open model.</p>
+    <p>A RAG Chatbot from the City of Zürich developed on an open-source stack with our open model.</p>
   </a>
 </div>
 
 <p class="section-intro">We would love to hear about your project as we build out this showcase.</p>
-
----
-
-## Local Deployment
-
-<div class="card-grid">
-  <div class="card">
-    <img src="https://lmstudio.ai/favicon.ico" alt="LM Studio" class="card-logo">
-    <h4>LM Studio</h4>
-    <p>Use MLX quantizations for Apple devices</p>
-    <span class="badge badge-supported">Desktop</span>
-  </div>
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/vllm-project/media-kit/main/vLLM-Full-Logo.png" alt="vLLM" class="card-logo" style="height: 32px; margin-right: 8px; display: inline;">
-    <img src="https://raw.githubusercontent.com/sgl-project/sglang/main/assets/logo.png" alt="SGLang" class="card-logo" style="height: 32px; display: inline;">
-    <h4>vLLM / SGLang</h4>
-    <p>Recommended for self-hosted inference at scale</p>
-    <span class="badge badge-supported">Server</span>
-  </div>
-</div>
 
 ---
 
@@ -111,16 +102,4 @@ title: "Get Started"
 
 <p class="section-intro">Production-ready hosting from Swiss and international providers. Please contact us to get featured.</p>
 
----
-
-## For Developers
-
-<div class="card-grid">
-  <a href="https://github.com/swiss-ai" class="card" style="text-decoration: none;">
-    <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub" class="card-logo">
-    <h4>Swiss AI on GitHub</h4>
-    <p>Training code, evaluation scripts, and model artifacts for Apertus and related projects.</p>
-  </a>
-</div>
-
-<p class="section-intro">Fully open training infrastructure.</p>
+<p class="section-intro">Visit the <a href="../documentation">Documentation area</a> for instructions on local deployment and how to contribute</p>

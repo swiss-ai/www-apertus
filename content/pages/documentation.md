@@ -16,9 +16,9 @@ title: "Documentation"
 
 ---
 
-## Model Cards
+## Model Cards & Compliance
 
-<p class="section-intro">Detailed model information on Hugging Face.</p>
+<p class="section-intro">Detailed technical information and governance documents.</p>
 
 <div class="card-grid">
   <a href="https://huggingface.co/swiss-ai/Apertus-8B-Instruct-2509" class="card" style="text-decoration: none;">
@@ -30,13 +30,6 @@ title: "Documentation"
     <h4>Apertus 70B Model Card</h4>
   </a>
 </div>
-
----
-
-## Usage Policy & Compliance
-
-<p class="section-intro">Governance documents and EU AI Act compliance.</p>
-
 <div class="card-grid">
   <a href="https://huggingface.co/swiss-ai/Apertus-70B-Instruct-2509/blob/main/USAGE_POLICY.md" class="card" style="text-decoration: none;">
     <img src="/images/square.png" alt="Apertus logo" style="height: 48px; margin-bottom: 0.75rem;">
@@ -62,19 +55,57 @@ title: "Documentation"
 
 ---
 
+## Local Deployment
+
+<div class="card-grid">
+  <div class="card">
+    <a href="https://lmstudio.ai/" style="text-decoration: none;">
+      <h4>
+        <img src="https://lmstudio.ai/favicon.ico" alt="LM Studio" class="card-logo">
+        LM Studio</h4>
+      <p>Quick inference on Mac, Linux and Windows.</p>
+    </a>
+    <p>Over 50 others at 
+      <a href="https://alternativeto.net/software/lm-studio/?license=opensource" target="_blank">AlternativeTo</a> ...</p>
+    <span class="badge badge-supported">Desktop</span>
+  </div>
+  <div class="card">
+  <a href="https://docs.vllm.ai/en/latest/" style="text-decoration: none;">
+    <img src="https://raw.githubusercontent.com/vllm-project/media-kit/main/vLLM-Full-Logo.png" alt="vLLM" class="card-logo" style="height: 32px; display: inline;">
+    <p>Recommended for self-hosted inference servers.</p>
+  </a>
+    <p>Use
+      <a href="https://www.sglang.io/">SGlang</a>
+      for advanced scaling needs.
+    </p>
+  <span class="badge badge-supported">Server</span>
+  </div>
+</div>
+
+---
+
 ## Codebase
 
 <p class="section-intro">Fully open training infrastructure.</p>
 
 <div class="card-grid">
-  <a href="https://github.com/swiss-ai" class="card" style="text-decoration: none;">
-    <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub" style="height: 32px; margin-bottom: 0.75rem;">
-    <h4>Training Code</h4>
-    <p>Training code, evaluation scripts, and model artifacts</p>
-  </a>
-  <a href="https://github.com/swiss-ai/pretrain-data" class="card" style="text-decoration: none;">
-    <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub" style="height: 32px; margin-bottom: 0.75rem;">
-    <h4>Training Data</h4>
-    <p>Scripts for reconstructing the training dataset</p>
+  <a href="https://github.com/orgs/swiss-ai/repositories?q=apertus" class="card" style="text-decoration: none;">
+    <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub" class="card-logo">
+    <h4>Swiss AI on GitHub</h4>
+    <p>Training code, evaluation scripts, and model artifacts for Apertus and related projects.</p>
   </a>
 </div>
+
+<div class="card-grid">
+  <a href="https://github.com/swiss-ai/pretrain-data" class="card" style="text-decoration: none;">
+    <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub" style="height: 32px; margin-bottom: 0.75rem;">
+    <h4>Pre-Training Data</h4>
+    <p>Scripts for reconstructing the training dataset.</p>
+  </a>
+  <a href="https://github.com/swiss-ai/apertus-format" class="card" style="text-decoration: none;">
+    <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub" style="height: 32px; margin-bottom: 0.75rem;">
+    <h4>Apertus Format</h4>
+    <p>Python library for the custom chat format.</p>
+  </a>
+</div>
+
