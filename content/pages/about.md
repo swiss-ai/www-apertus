@@ -20,6 +20,10 @@ The [Swiss AI Initiative](https://swiss-ai.org) is a national research effort to
 
 The Initiative represents the world's largest open science effort dedicated to AI foundation models. It pursues an open science approach to increase transparency and access for startups, SMEs, large companies, and the public sector — in Switzerland and beyond.
 
+**Contact:** [info@swiss-ai.org](mailto:info@swiss-ai.org)
+
 ---
 
-**Contact:** [info@swiss-ai.org](mailto:info@swiss-ai.org) | [GitHub](https://github.com/swiss-ai)
+<a href="https://www.swisscom.ch/en/business/enterprise/offer/platforms-applications/data-driven-business/swiss-ai-platform.html" target="_blank"><img src="https://static.wixstatic.com/media/4fb636_b44facb135f84adeb7394df825019ed3~mv2.png/v1/fill/w_375,h_90,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Swisscom_Horizontal_RGB_Colour_Navy.png" alt="Swisscom Logo" style="object-fit:cover" width="375" height="90" align="left"></a>
+
+[Swisscom](https://www.swisscom.ch/en/business/enterprise/offer/platforms-applications/data-driven-business/swiss-ai-platform.html) is a Strategic Partner of the Swiss AI Initiative. Please visit [our website](https://www.swiss-ai.org/) for information on how to join the Initiative with your organization.
