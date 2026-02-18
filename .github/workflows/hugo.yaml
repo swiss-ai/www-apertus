@@ -78,10 +78,6 @@ jobs:
           restore-keys: hugo-
       - name: Build the site
         run: |
-          # Create symlinks for Bootstrap SCSS (required by Lotus Docs theme)
-          ln -fs node_modules/bootstrap/scss assets/scss/bootstrap
-          ln -fs node_modules/bootstrap/scss assets/docs/scss/bootstrap
-          # Run the Hugo compiler
           hugo \
             --gc \
             --minify \

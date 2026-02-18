@@ -23,11 +23,6 @@
     {{- with .Description | default ($.Param "description") }}
     <meta name="description" content="{{ . }}">
     {{- end }}
-    <meta name="keywords" content="Documentation, Hugo, Hugo Theme, Bootstrap" />
-    <meta name="author" content="Colin Wilson - Lotus Labs" />
-    <meta name="email" content="support@aigis.uk" />
-    <meta name="website" content="https://lotusdocs.dev" />
-    <meta name="Version" content="v0.1.0" />
     <!-- favicon -->
     {{ block "favicon" . }}{{ partialCached (printf "%s/%s" ($.Scratch.Get "pathName") "head/favicon.html") . }}{{ end }}
     {{- partial (printf "%s/%s" ($.Scratch.Get "pathName") "head/opengraph") . }}
@@ -66,7 +61,12 @@
     {{- if hugo.IsProduction }}
         {{- $style = $style | minify | fingerprint "sha384" }}
     {{- end -}}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $style.Data.Integrity }}"{{ end -}} crossorigin="anonymous">
+    <!-- Obviously temporary: -->
+    <link rel="stylesheet" crossorigin="anonymous" href="https://lotusdocs.dev/docs/scss/style.min.4a462437da50a62800151a06b57c061fda43690e8dfbe78ebd3dfd8977be100923dbaa471c59f3512172678bce72dec2.css">
+    <style type="text/css">
+        body, p, h1, h2, h3, h4, h5, h6 { font-family: Geneva, Verdana, sans-serif;
+        table { border:1px solid grey; margin: 1em; }
+    </style>
     <!-- Katex CSS -->
     {{- if .Params.katex -}}
     {{- $options := dict "enableSourceMap" true }}
