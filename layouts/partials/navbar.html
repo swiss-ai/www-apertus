@@ -6,6 +6,25 @@
 */}}
 
 <style>
+  /* Force scrollbar to always be visible - prevents layout shift */
+  html {
+      overflow-y: scroll !important;
+  }
+  body {
+      font-size: 1.125rem;
+      min-height: calc(100vh + 1px);
+  }
+  .nav-link {
+      font-size: 1.1rem;
+      font-weight: 500;
+  }
+  p, li {
+      line-height: 1.75;
+  }
+  .row.g-5 {
+      --bs-gutter-x: 5rem;
+  }
+
   .nav-link {
     color: #374151 !important;
     transition: color 0.2s ease;

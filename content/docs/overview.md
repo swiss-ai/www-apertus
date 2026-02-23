@@ -14,6 +14,9 @@ author: "Apertus Project"
 Apertus is an open source Large Languag Model (LLM) developed in Switzerland.
 This documentation shows you how to get started with the LLM, whether as user, researcher, or advanced contributor: we are maintaining this knowledge base for you, and could [✉️ use your feedback](mailto:llm-requests@swiss-ai.org).
 
+About the project
+-----------------
+
 The model development team is part of the [Swiss AI Initiative](https://www.swiss-ai.org/), which started in late 2023. This is a platform for over 80 data science projects including the LLM development. Key highlights of the LLM project, as [announced in July](https://ethz.ch/en/news-and-events/eth-news/news/2025/07/a-language-model-built-for-the-public-good.html), include:
 
 -   **Multilingualism**: Trained on more than 15 trillion tokens across 1,500+ languages, 40% non-English - equal usage cost across languages - see [@epfml](http://huggingface.co/datasets/epfml)
@@ -47,9 +50,7 @@ See the [Evaluation section](https://huggingface.co/swiss-ai/Apertus-8B-2509#eva
 | Apertus-70B | 69.6% | 62.7% | 77.6% | 73.0% | 80.6% |
 | Apertus-8B | 60.9% | 55.7% | 62.9% | 67.0% | 69.5% |
 
-> "Notes on Comparability: The prompt setups differ between models (shot numbers and chain-of-thought configurations). Global-MMLU and RULER values are not available in the official documentation for the comparison models. The 70B variant convinces in general knowledge and multilingual tasks, but remains behind the top models in mathematics and programming."
-
-Source: [effektiv.ch](https://www.effektiv.ch/en/blog/apertus-release), [lifearchitect.ai](https://lifearchitect.ai/models-table/)
+---
 
 Performance comparison
 ----------------------
@@ -58,9 +59,11 @@ Performance comparison
 | --- | --- | --- | --- | --- | --- |
 | Swiss LLM | 8B / 70B | Open Source, Weights, Data | >1,500 | Alps: 10,752 GH200 GPUs | Linguistic diversity, data privacy, transparency |
 | GPT-4.5 | ~2T (estimated) | Proprietary | ~80 - 120 | Azure: ~25,000 A100 GPUs | Creativity, natural conversation, agentic planning |
-| Claude 4 | Not published | Proprietary | ? | Anthropic: Internal clusters | Adaptive reasoning, coding |
+| Claude 4 | Not published | Proprietary | ? | Anthropic: ? | Adaptive reasoning, coding |
 | Llama 4 | 109B / 400B | Open Weight | 12, with 200+ in training | Meta: ~20,000 H100 GPUs | Multimodality, large community, agentic tasks |
 | Grok 4 | ~1.8T MoE | Proprietary | ? | Colossus: 200,000 H100 GPUs | Reasoning, real-time data, humor... |
+
+---
 
 Source: [effektiv.ch](https://www.effektiv.ch/en/blog/swiss-llm)
 
@@ -75,8 +78,5 @@ For further information:
 -   [EPFL Machine Learning Lab](https://www.epfl.ch/labs/mlo/) (epfl.ch)
 -   [Apertus Tech Session](https://drive.google.com/file/d/1NYiK648rdX0ypRSfcIcSdnL36suGh9ce/preview) (swiss-ai-weeks.ch)
 -   [Can the Swiss LLM Compete?](https://www.effektiv.ch/en/blog/swiss-llm) (effektiv.ch)
--   [First experiences and tips for users of Ollama, LM Studio, vLLM](https://log.alets.ch/110/#using-ollama) (alets.ch)
 -   [AlgorithmWatch statement](https://algorithmwatch.ch/de/apartus-eth-epfl/) & [position paper](https://algorithmwatch.ch/en/ai-regulation/)
 -   [Alps Supercomputer ranking](https://top500.org/lists/top500/2024/06/) (TOP500.org)
--   [Modern Transformer Design Guide](https://rohitbandaru.github.io/blog/Transformer-Design-Guide-Pt2/) (Rohit Bandaru)
--   [GLU Variants Improve Transformer](https://arxiv.org/abs/2002.05202) (Shazeer 2020)

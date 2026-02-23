@@ -66,3 +66,7 @@ Here you can see that it takes about half a second to first token on a Macbook M
 
 You can also use other command line tools, like the [llm utility](https://llm.datasette.io/) or [anything-llm](https://github.com/Mintplex-Labs/anything-llm) that communicate with LM Studio using the API.
 
+
+## References
+
+-   [Tips for users of Ollama, LM Studio, vLLM](https://log.alets.ch/110/#using-ollama) (alets.ch)

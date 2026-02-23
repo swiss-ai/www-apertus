@@ -2,7 +2,7 @@
 title: "FAQ"
 ---
 
-<h2 class="section-intro">Common questions about Apertus and the Swiss AI Initiative</h2>
+<h2 class="section-intro">Common questions on Apertus</h2>
 
 <div class="faq-item">
 <h4>What makes Apertus different from other open models?</h4>

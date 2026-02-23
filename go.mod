@@ -1,5 +1,8 @@
-module github.com/gohugoio/hugo-mod-bootstrap-scss/v5
+module github.com/loleg/hello-lotus
 
-go 1.25.6
+go 1.25.0
 
-require github.com/colinwilson/lotusdocs v0.2.0 // indirect
+require (
+	github.com/colinwilson/lotusdocs v0.2.0 // indirect
+	github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20400 // indirect
+)

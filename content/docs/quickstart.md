@@ -30,3 +30,7 @@ Our focus is on open source software with low barrier of entry and high degree o
 - [LM Studio](guides/lmstudio)
 - Ollama
 - vLLM
+
+## References
+
+-   [Modern Transformer Design Guide](https://rohitbandaru.github.io/blog/Transformer-Design-Guide-Pt2/) (Rohit Bandaru)

@@ -1,5 +1,5 @@
 baseURL = 'https://apertvs.ai/'
-languageCode = 'en'
+languageCode = 'en-us'
 title = 'APERTVS.ai'
 contentDir = 'content'
 enableEmoji = true
@@ -29,5 +29,5 @@ enableEmoji = true
 
 [params]
   [params.footer]
-    copyright = "(C) Swiss AI Initiative"
+    copyright = "Swiss AI Initiative (C) 2026"
     version = false
