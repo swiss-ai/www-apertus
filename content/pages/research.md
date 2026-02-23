@@ -2,17 +2,16 @@
 title: "Research"
 ---
 
-## Research
+## Research News
 
 <p class="section-intro">
   Papers and technical reports from the Apertus project.
-  See also: <a href="https://www.zotero.org/groups/6385576/apertus" target="_blank">Zotero group</a>
 </p>
 
 <div class="card-grid">
   <a href="https://arxiv.org/abs/2509.14233" class="card" style="text-decoration: none;">
     <h4>Apertus: Democratizing Open and Compliant LLMs for Global Language Environments</h4>
-    <div class="authors">Hernandez-Cano et al.</div>
+    <div class="authors">Apertus Project</div>
     <p>Main technical report — architecture, training methodology, data pipeline, evaluation</p>
   </a>
 
@@ -46,4 +45,9 @@ title: "Research"
     <p>xIELU activation function used in Apertus architecture</p>
   </a>
 </div>
+
+<p class="section-intro">
+  Visit our <a href="https://www.zotero.org/groups/6385576/apertus" target="_blank">📖 Zotero group</a>
+  for further literature.
+</p>
 

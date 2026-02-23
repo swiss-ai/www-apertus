@@ -2,22 +2,19 @@
 title: "Documentation"
 ---
 
-## Technical Report
-
-<p class="section-intro">Comprehensive documentation of architecture, training methodology, data, and evaluation results.</p>
+## Technical Information
 
 <div class="card-grid">
-  <a href="https://arxiv.org/abs/2509.14233" class="card" style="text-decoration: none;">
-    <img src="https://info.arxiv.org/brand/images/brand-logo-primary.jpg" alt="arXiv" style="height: 72px; margin-bottom: 0.75rem;">
-    <h4>Apertus Technical Report</h4>
-    <p>arXiv:2509.14233 [cs.CL]</p>
+  <a href="/docs/overview" class="card" style="text-decoration: none;">
+    <h4>Developer area</h4>
+    <p>Visit our wiki-style documentation area for users of Apertus.</p>
+  </a>
+  <a href="/pages/research" class="card" style="text-decoration: none;">
+    <h4>Research papers</h4>
+    <p>Comprehensive documentation of architecture, training methodology, data, and evaluation results.</p>
   </a>
 </div>
 
-<p class="section-intro">
-We are working on a new area of this website to provider further support.
-<a href="/docs/overview">Preview here</a> ...
-</p>
 
 <p class="section-intro">Additional information governing model use is found in the compliance documents:</p>
 
