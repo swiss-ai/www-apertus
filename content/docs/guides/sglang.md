@@ -10,4 +10,10 @@ categories: [""]
 author: "Apertus Project"
 ---
 
-WIP
+SGLang is a high-performance serving framework for large language models and multimodal models. It is designed to deliver low-latency and high-throughput inference across a wide range of setups, from a single GPU to large distributed clusters. 
+
+It is recommended by the engineering team of Apertus, and more information will be added here later. For now, please visit the [official website](https://sglang.io/) and [documentation](https://docs.sglang.io/) for deployment instructions.
+
+See also:
+
+- https://github.com/swiss-ai/Scratchpad
