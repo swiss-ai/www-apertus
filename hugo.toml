@@ -28,6 +28,7 @@ enableEmoji = true
       block = true
 
 [params]
+  subtitle = 'Fully Open Foundation Model for Sovereign AI'
   [params.footer]
-    copyright = "Swiss AI Initiative (C) 2026"
+    copyright = 'Swiss AI Initiative (C) 2026'
     version = false

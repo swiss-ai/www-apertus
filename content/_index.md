@@ -12,7 +12,7 @@ hero_secondary_url: "/pages/documentation/"
 
 ### Fully Open
 
-Training data, code, weights, methods, and alignment principles — all documented and accessible. Built for scientific reproducibility.
+Training data, code, weights, methods, and alignment principles — all documented and reproducible. Apertus is to AI as Open is to Source.
 
 <--->
 
