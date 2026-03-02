@@ -68,7 +68,7 @@ title: "Documentation"
 
 <div class="card-grid">
   <div class="card">
-    <a href="https://lmstudio.ai/" style="text-decoration: none;">
+    <a href="/docs/guides/lmstudio/" style="text-decoration: none;">
       <h4>
         <img src="https://lmstudio.ai/favicon.ico" alt="LM Studio" class="card-logo">
         LM Studio</h4>
@@ -79,7 +79,7 @@ title: "Documentation"
     <span class="badge badge-supported">Desktop</span>
   </div>
   <div class="card">
-  <a href="https://docs.vllm.ai/en/latest/" style="text-decoration: none;">
+  <a href="/docs/guides/vllm/" style="text-decoration: none;">
     <img src="https://raw.githubusercontent.com/vllm-project/media-kit/main/vLLM-Full-Logo.png" alt="vLLM" class="card-logo" style="height: 32px; display: inline;">
     <p>Recommended for self-hosted inference servers.</p>
   </a>
