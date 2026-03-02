@@ -10,11 +10,12 @@ title: "Research"
 
 <div class="card-grid">
   <a href="https://arxiv.org/abs/2509.14233" class="card" style="text-decoration: none;">
+    <img src="/images/tech-report.jpg" align="left" height="80"/>
     <h4>Apertus: Democratizing Open and Compliant LLMs for Global Language Environments</h4>
-    <div class="authors">Apertus Project</div>
     <p>Main technical report — architecture, training methodology, data pipeline, evaluation</p>
   </a>
-
+</div>
+<div class="card-grid">
   <a href="https://arxiv.org/abs/2504.06219" class="card" style="text-decoration: none;">
     <h4>Can Performant LLMs Be Ethical? Quantifying the Impact of Web Crawling Opt-Outs</h4>
     <div class="authors">Fan, Sabolčec, Ansaripour, Tarun, Jaggi, Bosselut, Schlag</div>
@@ -44,10 +45,13 @@ title: "Research"
     <div class="authors">Huang, Schlag</div>
     <p>xIELU activation function used in Apertus architecture</p>
   </a>
+  
+  <i>This is not a complete list ... more to come soon!</i>
 </div>
 
+<!--
 <p class="section-intro">
   Visit our <a href="https://www.zotero.org/groups/6385576/apertus" target="_blank">📖 Zotero group</a>
   for further literature.
 </p>
-
+-->

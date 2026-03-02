@@ -11,7 +11,6 @@ title: "Get Started"
 
 <div class="card-grid">
   <div class="card">
-    <img src="/images/square.png" alt="Apertus logo" style="height: 38px; margin-bottom: 10px">
     <h3>Apertus 8B</h3>
     <p>8 billion parameters · Apache 2.0 license</p>
     Download →
@@ -19,7 +18,6 @@ title: "Get Started"
     <a href="https://huggingface.co/swiss-ai/Apertus-8B-Instruct-2509">Instruct</a>
   </div>
   <div class="card">
-    <img src="/images/square.png" alt="Apertus logo" style="height: 38px; margin-bottom: 10px">
     <h3>Apertus 70B</h3>
     <p>70 billion parameters · Apache 2.0 license</p>
     Download →
@@ -33,10 +31,10 @@ title: "Get Started"
 ## Try Apertus
 
 <div class="card-grid">
-  <a href="https://publicai.ch" class="card" style="text-decoration: none;">
+  <a href="https://chat.publicai.co" class="card" style="text-decoration: none;">
     <img src="https://publicai.co/favicon.ico" alt="PublicAI" class="card-logo">
     <h4>Public AI Switzerland</h4>
-    <p>A browser-based chat interface you can use for free. Login for access to larger models, search and more.</p>
+    <p>A browser-based chat interface you can use for free. Login for access to open models, web search, and more.</p>
   </a>
   <a href="https://oss.zuericitygpt.ch/" class="card" style="text-decoration: none;">
     <img src="https://oss.zuericitygpt.ch/robot.png" alt="ZüriCityGPT" class="card-logo">
@@ -60,7 +58,7 @@ title: "Get Started"
     <span class="meta">Strategic Partner</span>
   </a>
   <a href="https://www.infomaniak.com/en/hosting/ai-services/open-source-models" class="card" style="text-decoration: none;">
-    <img src="https://www.infomaniak.com/favicon.ico" alt="Infomaniak" class="card-logo">
+    <img src="/images/logos/infomaniak-logo.svg" alt="Infomaniak" class="card-logo" style="height:1em !important; margin:0.85em">
     <h4>Infomaniak</h4>
     <p>Pay-per-token API</p>
     <span class="badge badge-swiss">Switzerland</span>
