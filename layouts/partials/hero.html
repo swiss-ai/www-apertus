@@ -15,7 +15,7 @@
 {{- $secondaryLabel := .Params.hero_secondary_label | default "" -}}
 {{- $secondaryURL   := .Params.hero_secondary_url | default "" -}}
 
-<section id="hero" class="d-flex align-items-center m-5 p-5 mx-auto px-auto">
+<section id="hero" class="d-flex align-items-center {{ if not .Params.subscribe }}m-5 p-5{{ end }} mx-auto px-auto">
   <div class="container mt-5 mb-5 pt-5">
     <div class="row justify-content-center">
       <div class="col-lg-10 text-center">

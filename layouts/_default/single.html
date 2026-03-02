@@ -1,7 +1,19 @@
 {{ define "main" }}
 <main>
   {{/* Navbar */}}
-  {{ if not .Params.minimal }}{{ partial "navbar.html" }}{{ end }}
+  {{ if not .Params.subscribe }}
+    {{ partial "navbar.html" }}
+  {{ else }}
+    {{ partial "hero.html" }}
+    {{ partial "newsletter.html" }}
+  {{ end }}
+
+  <div class="mt-5 mb-0 pt-4 pb-2 alert alert-warning text-center" role="alert">
+      Our new website is under construction: have any feedback?
+      <a href="/feedback">
+          Please let us know!
+      </a>
+  </div>
 
   {{ if .Params.featured_image }}
     <header class="mb-8 mt-5 pt-5 pb-5">
@@ -15,7 +27,7 @@
   {{ end }}
 
   {{/* Page content with top padding to clear fixed navbar */}}
-  <section class="page-content bg-white mt-5 pt-5 pb-5">
+  <section class="page-content bg-white mt-5 pb-5">
     <div class="container" style="max-width: 900px;">
       <div class="content-body">
         {{ .Content }}
