@@ -60,7 +60,7 @@ title: "Get Started"
     <span class="meta">Strategic Partner</span>
   </a>
   <a href="https://www.infomaniak.com/en/hosting/ai-services/open-source-models" class="card" style="text-decoration: none;">
-    <img src="https://www.infomaniak.com/favicon.ico" alt="Infomaniak" class="card-logo">
+    <img src="/images/logos/infomaniak-logo.svg" alt="Infomaniak" class="card-logo" style="height:1em !important; margin:0.8em">
     <h4>Infomaniak</h4>
     <p>Pay-per-token API</p>
     <span class="badge badge-swiss">Switzerland</span>
