@@ -1,7 +1,7 @@
 {{ define "main" }}
 <main>
   {{/* Navbar */}}
-  {{ partial "navbar.html" }}
+  {{ if not .Params.minimal }}{{ partial "navbar.html" }}{{ end }}
 
   {{ if .Params.featured_image }}
     <header class="mb-8 mt-5 pt-5 pb-5">
