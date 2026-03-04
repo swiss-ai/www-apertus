@@ -5,10 +5,57 @@ sitemap:
   disable: true
 ---
 
-<form method="post" action="https://newsletter.infomaniak.com/v3/api/1/newsletters/webforms/23334/submit" class="inf-form"><input type="email" name="email" style="display:none" /><input type="hidden" name="key" value="eyJpdiI6IkdjVEtGTnU3dTFxZHQrSXRSS1RJYlVON0IrNGk3b1BWVWtscmQ3Y3JSazA9IiwibWFjIjoiYTNhNTAxMDRmMmFkMGJhMDQzNzVmZjM0NjIxMmFlYTVjYTFkOGZjMmNkNmI2YjdlODQwZDFmMGQ4NGEyMTllNiIsInZhbHVlIjoiRUdFWFFoSFFEWmdwd0NsOHVwdm03YUlWK2h4R2ZiTWl5RHJKZ2lmR1VsRT0ifQ=="><input type="hidden" name="webform_id" value="23334"><style> .inf-main_4b7e4e5378747e86b6e55470411ccee2{ background-color:#F6E191; padding:25px 20px; margin:25px auto; } .inf-main_4b7e4e5378747e86b6e55470411ccee2 .inf-content { margin-top:13px;} .inf-main_4b7e4e5378747e86b6e55470411ccee2 h4, .inf-main_4b7e4e5378747e86b6e55470411ccee2 span, .inf-main_4b7e4e5378747e86b6e55470411ccee2 label, .inf-main_4b7e4e5378747e86b6e55470411ccee2 input, .inf-main_4b7e4e5378747e86b6e55470411ccee2 .inf-submit, .inf-main_4b7e4e5378747e86b6e55470411ccee2 .inf-success p a { color:#555; font-size:14px; } .inf-main_4b7e4e5378747e86b6e55470411ccee2 h4{ font-size:18px; margin:0px 0px 13px 0px; } .inf-main_4b7e4e5378747e86b6e55470411ccee2 h4, .inf-main_4b7e4e5378747e86b6e55470411ccee2 label{ font-weight:bold; } .inf-main_4b7e4e5378747e86b6e55470411ccee2 .inf-input { margin-bottom:7px; } .inf-main_4b7e4e5378747e86b6e55470411ccee2 label { display:block;} .inf-main_4b7e4e5378747e86b6e55470411ccee2 input{ height:35px; color:#999999; border: 1px solid #E9E9E9; padding-left:7px; } .inf-main_4b7e4e5378747e86b6e55470411ccee2 .inf-input.inf-error label, .inf-main_4b7e4e5378747e86b6e55470411ccee2 .inf-input.inf-error span.inf-message{ color: #cc0033; } .inf-main_4b7e4e5378747e86b6e55470411ccee2 .inf-input.inf-error input{ border: 1px solid #cc0033; } .inf-main_4b7e4e5378747e86b6e55470411ccee2 .inf-input input { width:100%;} .inf-main_4b7e4e5378747e86b6e55470411ccee2 .inf-input.inf-error span.inf-message { display: block; } .inf-main_4b7e4e5378747e86b6e55470411ccee2 .inf-submit { text-align:right;} .inf-main_4b7e4e5378747e86b6e55470411ccee2 .inf-submit input{ background-color:#2C4348; color:#ffffff; border:none; font-weight: normal; height:auto; padding:7px; } .inf-main_4b7e4e5378747e86b6e55470411ccee2 .inf-submit input.disabled{ opacity: 0.4; } .inf-btn { color: rgb(85, 85, 85); border: medium none; font-weight: normal; height: auto; padding: 7px; display: inline-block; background-color: white; box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.24); border-radius: 2px; line-height: 1em; } .inf-rgpd { margin:25px 0px 15px 0px; color:#555; } .altcha-label span { color: #555 } </style><div class="inf-main_4b7e4e5378747e86b6e55470411ccee2"> <h4>Feedback</h4> <span>Tell us about your vision for Apertus: which challenges are you facing? Is there any information missing here? We will try to answer any question that interests you about the project.</span> <div class="inf-success" style="display:none"> <h4>Thanks - much appreciated!</h4> <p> <a href="#" class="inf-btn">&laquo;</a> </p> </div> <div class="inf-content"> <div class="inf-input inf-input-text"><p>Rate the site from 1 (least) to 5 (most) helpful:</p> <input type="range" min="1" max="5" list="markers" name="inf[82177]" data-inf-meta="82177" data-inf-error="" style="max-width:400px; width:100%"><datalist id="markers" style="display: flex; flex-direction: column; justify-content: space-between; writing-mode: vertical-lr; max-width:400px; width:100%; margin-bottom: 2em">
+## Feedback
+
+Tell us about your vision for Apertus: which challenges are you facing? Is there any information missing here? We will try to answer any question that interests you about the project. We are using [Framaforms](https://framaforms.org/) to process your response, to which [separate conditions](https://framasoft.org/en/legals) apply.
+
+---
+
+<form action="https://framaforms.org/feedback-1772632019" method="post" accept-charset="UTF-8"><div>
+<div class="m-2">     
+    <div class="inf-input inf-input-text"><label for="siteRate" style="display:block">Rate the site from 1 (least) to 5 (most) helpful:</label> <input required="required" id="siteRate" type="range" min="1" max="5" list="markers" name="submitted[new_1772632051600]" data-inf-meta="82177" data-inf-error="" style="max-width:400px; width:100%"><datalist id="markers" style="display: flex; flex-direction: column; justify-content: space-between; writing-mode: vertical-lr; max-width:400px; width:100%; margin-bottom: 2em">
   <option value="1" label="1" style="transform: rotate(-90deg);"></option>
   <option value="2" label="2" style="transform: rotate(-90deg);"></option>
   <option value="3" label="3" style="transform: rotate(-90deg);"></option>
   <option value="4" label="4" style="transform: rotate(-90deg);"></option>
   <option value="5" label="5" style="transform: rotate(-90deg);"></option>
-</datalist> </div> <div class="inf-input inf-input-text"> <textarea name="inf[82179]" data-inf-meta="82179" data-inf-error="" placeholder="Any comments or improvements " style="width:100%;height:5em;padding:1em"></textarea> </div>  <div class="inf-input inf-input-text"> <input type="text" name="inf[82178]" data-inf-meta="82178" data-inf-error="" placeholder="I am mostly interested in ... " > </div> <p>(Collaborating as an individual; Learning reference architectures; Joining the community; Signing up to meetups & events; Being an early adopter; Working at Swiss AI; something else..?)</p> <div class="inf-input inf-input-text"> <input type="email" name="inf[1]" data-inf-meta="1" data-inf-error="" required="required" placeholder="Email *" > </div> <div class="inf-rgpd">Your email will only be used if we have a reply.</div> <script src="https://eu.altcha.org/js/latest/altcha.min.js" type="module" defer></script> <altcha-widget hidelogo hidefooter floating challengeurl="https://newsletter.infomaniak.com/v3/altcha-challenge" ></altcha-widget> <script src="https://newsletter.storage5.infomaniak.com/mcaptcha/altcha.js" defer> </script> <script type="text/javascript" src="https://newsletter.infomaniak.com/v3/static/webform_index.js?v=1772483531"></script> <div class="inf-submit"> <input type="submit" style="margin-top: 25px;" name="" value="Confirm"> </div> </div> </div> </form>
+</datalist> </div>
+</div>
+<div class="m-2">
+  <label for="edit-submitted-new-1772632079220">Any comments or improvements <span class="form-required" title="Ce champ est requis.">*</span></label>
+ <div class="form-textarea-wrapper resizable textarea-processed resizable-textarea"><textarea required="required" id="edit-submitted-new-1772632079220" name="submitted[new_1772632079220]" cols="60" style="height:5em" class="mt-2 form-control form-textarea required"></textarea><div class="grippie"></div></div>
+</div>
+<div class="m-2 mt-4">
+  <label for="edit-submitted-new-1772632188391">I am mostly interested in ... </label>
+ <div id="edit-submitted-new-1772632188391" class="form-checkboxes mt-2">
+ <div class="ms-2 me-2">
+ <input type="checkbox" id="edit-submitted-new-1772632188391-1" name="submitted[new_1772632188391][1]" value="1" class="form-checkbox">  <label class="option" for="edit-submitted-new-1772632188391-1">Collaborating as an individual </label>
+ </div><div class="ms-2 me-2">
+ <input type="checkbox" id="edit-submitted-new-1772632188391-2" name="submitted[new_1772632188391][2]" value="2" class="form-checkbox">  <label class="option" for="edit-submitted-new-1772632188391-2">Learning reference architectures </label>
+ </div><div class="ms-2 me-2">
+ <input type="checkbox" id="edit-submitted-new-1772632188391-3" name="submitted[new_1772632188391][3]" value="3" class="form-checkbox">  <label class="option" for="edit-submitted-new-1772632188391-3"> Joining the community </label>
+ </div><div class="ms-2 me-2">
+ <input type="checkbox" id="edit-submitted-new-1772632188391-4" name="submitted[new_1772632188391][Signing up to meetups &amp; events]" value="Signing up to meetups &amp; events" class="form-checkbox">  <label class="option" for="edit-submitted-new-1772632188391-4">Signing up to meetups &amp; events </label>
+ </div><div class="ms-2 me-2">
+ <input type="checkbox" id="edit-submitted-new-1772632188391-5" name="submitted[new_1772632188391][Being an early adopter]" value="Being an early adopter" class="form-checkbox">  <label class="option" for="edit-submitted-new-1772632188391-5">Being an early adopter </label>
+ </div><div class="ms-2 me-2">
+ <input type="checkbox" id="edit-submitted-new-1772632188391-6" name="submitted[new_1772632188391][Working at Swiss AI]" value="Working at Swiss AI" class="form-checkbox">  <label class="option" for="edit-submitted-new-1772632188391-6">Working at Swiss AI </label>
+ </div><div class="ms-2 me-2">
+ <input type="checkbox" id="edit-submitted-new-1772632188391-7" name="submitted[new_1772632188391][Something else.. (specify above)]" value="Something else.. (specify above)" class="form-checkbox">  <label class="option" for="edit-submitted-new-1772632188391-7">Something else.. (specify above) </label>
+
+</div>
+</div>
+</div>
+<div class="m-2 mt-3">
+  <label for="edit-submitted-new-1772632137250">E-mail address: </label>
+ <input class="email form-text form-email" type="email" id="edit-submitted-new-1772632137250" name="submitted[new_1772632137250]" size="60">
+ <div class="description text-center fst-italic">Only if you would like to hear back from us.</div>
+</div>
+<input type="hidden" name="details[sid]">
+<input type="hidden" name="details[page_num]" value="1">
+<input type="hidden" name="details[page_count]" value="1">
+<input type="hidden" name="details[finished]" value="0">
+<input type="hidden" name="form_build_id" value="form-QeGP47PQVRYwsjp5U4aranNnm6UI3j1kcvBQgSZEm4Q">
+<input type="hidden" name="form_token" value="HWBzKRRt8UXKnDtcyDBWNCRWH39BSY4tX2gJDrmNRPY">
+<input type="hidden" name="form_id" value="webform_client_form_1403242">
+<div class="form-actions text-center"><input class="webform-submit button-primary form-submit btn btn-primary" type="submit" name="op" value="Send feedback"></div></div></form>
