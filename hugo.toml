@@ -1,6 +1,7 @@
 baseURL = 'https://apertvs.ai/'
 languageCode = 'en-us'
 title = 'APERTVS.ai'
+description = 'Fully Open Foundation Model for Sovereign AI'
 contentDir = 'content'
 enableEmoji = true
 
@@ -28,7 +29,8 @@ enableEmoji = true
       block = true
 
 [params]
-  subtitle = 'Fully Open Foundation Model for Sovereign AI'
+  description = 'Fully Open Foundation Model for Sovereign AI'
+  author = 'Swiss AI Initiative'
   [params.footer]
     copyright = 'Swiss AI Initiative (C) 2026'
     version = false
