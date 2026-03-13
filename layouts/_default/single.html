@@ -30,9 +30,11 @@
   {{ end }}
 
   {{/* Page content with top padding to clear fixed navbar */}}
-  <section class="page-content bg-white pb-5">
+  <section class="page-content bg-white pb-5 mt-4">
     <div class="container" style="max-width: 900px;">
-      <div class="fs-5 mr-4 mb-4">{{ .Date.Format "January 2, 2006" }}</div>
+      {{ if .Params.author }}
+        <div class="fs-5 mr-4 mb-4">{{ .Date.Format "January 2, 2006" }}</div>
+      {{ end }}
       <div class="content-body">
         {{ .Content }}
       </div>
