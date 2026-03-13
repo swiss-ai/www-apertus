@@ -18,24 +18,27 @@
   {{ if .Params.featured_image }}
     <header class="mb-8 mt-5 pt-5 pb-5">
       <div class="container" style="max-width: 900px;">
-        <h1 class="text-4xl font-bold mb-4">{{ .Title }}</h1>
+        <h1 class="text-4xl mb-4">{{ .Title }}</h1>
         {{ with .Params.featured_image }}
             <img src="{{ . }}" alt="{{ $.Title }}" class="w-100 h-96 object-cover rounded-lg mb-6">
+        {{ end }}
+        {{ with .Params.summary }}
+          <div class="article-summary fs-4 m-4">{{ $.Summary }}</div>
         {{ end }}
       </div>
     </header>
   {{ end }}
 
   {{/* Page content with top padding to clear fixed navbar */}}
-  <section class="page-content bg-white mt-5 pb-5">
+  <section class="page-content bg-white pb-5">
     <div class="container" style="max-width: 900px;">
+      <div class="fs-5 mr-4 mb-4">{{ .Date.Format "January 2, 2006" }}</div>
       <div class="content-body">
         {{ .Content }}
       </div>
       {{ if .Params.author }}
         <div class="mt-4">
           <span class="mr-4">-- <a href="/authors/{{ replace (lower .Params.author) "." "" | urlize }}" class="text-blue-600 hover:text-blue-800">{{ .Params.author }}</a></span>
-          <span class="mr-4">{{ .Date.Format "January 2, 2006" }}</span>
         </div>
       {{ end }}
     </div>
@@ -86,6 +89,9 @@
   }
   .content-body em {
     color: #6b7280;
+  }
+  .content-body img {
+    max-width: 100%;
   }
 
   /* Card grid - used by Get Started, Documentation, Research */

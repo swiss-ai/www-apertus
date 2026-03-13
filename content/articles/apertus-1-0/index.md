@@ -9,12 +9,7 @@ summary: "A fully open, transparent, multilingual language model"
 comments: false
 ---
 
-Apertus:
-===============================================================
-
-EPFL, ETH Zurich and CSCS released Apertus today, Switzerland's first large-scale, open, multilingual language model --- a milestone in generative AI for transparency and diversity.
-
-*September 2, 2025 - by ETH, EPFL and CSCS*
+##### EPFL, ETH Zurich and CSCS released Apertus today, Switzerland's first large-scale, open, multilingual language model --- a milestone in generative AI for transparency and diversity.
 
 In July, EPFL, ETH Zurich, and CSCS announced their joint initiative to build a large language model (LLM). Now, this model is available and serves as a building block for developers and organisations for future applications such as chatbots, translation systems, or educational tools.
 
