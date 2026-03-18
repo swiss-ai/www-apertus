@@ -1,6 +1,6 @@
 ---
 title: "Open Source LLM Builders"
-date: 2026-03-04T10:00:00+01:00
+date: 2026-02-09T10:00:00+01:00
 draft: false
 author: "ETH EPFL CSCS"
 tags: ["Apertus", "Community", "Event"]
@@ -9,7 +9,7 @@ summary: "What It Will Take to Enable Global Collaboration"
 comments: false
 ---
 
-The second [Open-Source LLM Builders Summit](https://luma.com/oj4e1fq8) concluded in Lausanne with a final plenary discussion led by the Scientific Committee (Antoine Bosselut, EPFL; Joost VandeVondele, CSCS; Imanol Schlag, ETHZ; Valentina Pyatkin, Ai2) synthesizing insights from the afternoon's breakout sessions. The goal of the workshop was to explore how meaningful global collaboration on open large language models (LLMs) could move from aspiration to implementation.
+##### The second [Open-Source LLM Builders Summit](https://luma.com/oj4e1fq8) concluded in Lausanne with a final plenary discussion led by the Scientific Committee (Antoine Bosselut, EPFL; Joost VandeVondele, CSCS; Imanol Schlag, ETHZ; Valentina Pyatkin, Ai2) synthesizing insights from the afternoon's breakout sessions. The goal of the workshop was to explore how meaningful global collaboration on open large language models (LLMs) could move from aspiration to implementation.
 
 ![](https://ai.epfl.ch/wp-content/uploads/LLMbuilderevent2026.webp)
 

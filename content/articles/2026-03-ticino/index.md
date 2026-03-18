@@ -9,7 +9,7 @@ summary: "Fine-tuned model powers in-house AI translation"
 comments: false
 ---
 
-Multiple languages, sensitive documents, and strict privacy rules: for employees of the Canton of Ticino, automated translation is not trivial. The administration is now in the process of introducing an in-house translation system based on Switzerland's Apertus---keeping both sensitive data and the underlying technology under its own control.
+##### Multiple languages, sensitive documents, and strict privacy rules: for employees of the Canton of Ticino, automated translation is not trivial. The administration is now in the process of introducing an in-house translation system based on Switzerland's Apertus---keeping both sensitive data and the underlying technology under its own control.
 
 Italian, German, French, Spanish, Romanian, Ukrainian---these are just some of the languages that employees of the Canton of Ticino need to translate between. As one of only two Swiss cantons with Italian as official language, Ticino handles a large volume of documents that require translation. Often, the information in these documents is sensitive and must remain confidential. For this reason, the cantonal administration is in the process of introducing a closed, secure in-house solution. The Ticino Computer Systems Centre [(Centro sistemi informativi, CSI)](https://www4.ti.ch/dfe/dr/csi/centro/) has now installed an AI translation tool that uses Apertus as its underlying large language model (LLM).
 
