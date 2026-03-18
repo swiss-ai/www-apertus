@@ -28,11 +28,9 @@ For the Canton of Ticino, this Apertus-based translation tool builds on an ongoi
 
 Until now, Artificialy's translation tool within its "PrivateAI Suite" used Mixtral as the underlying LLM, a model from the French company Mistral AI. However, it is only partially open source: while the model weights are released, the full training data and training pipeline are not. In contrast, Apertus is fully open source, with model weights, training code, training data, and full training pipeline documented and publicly available.
 
-[![Screenshot of Apertus-based translation tool with example text.](data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
+![Screenshot of Apertus-based translation tool with example text.](https://www.cscs.ch/fileadmin/_processed_/e/4/csm_Tool-interface-example_10e2fb9b72.png) 
 
-Looks just like DeepL but provides confidentiality and data protection: Artificialy's translation tool for the Canton of Ticino based on Apertus. (Image: CSI TI)
-
-](https://www.cscs.ch/fileadmin/_processed_/e/4/csm_Tool-interface-example_10e2fb9b72.png "Looks just like DeepL but provides confidentiality and data protection: Artificialy's translation tool for the Canton of Ticino based on Apertus. (Image: CSI TI)")
+<small>Looks just like DeepL but provides confidentiality and data protection: Artificialy's translation tool for the Canton of Ticino based on Apertus. (Image: CSI TI)</small>
 
 "This was another important reason why we decided to switch to Apertus," says Rudi Belotti. "As a public administration, we feel obligated to use ethical software applications. With Apertus we can be sure the model was trained in Switzerland and in accordance with the highest ethical standards, meaning it uses data that were not proprietary or copyright-protected but released for AI training." In addition, with this solution the canton gains sovereignty over its translation procedures, as both the hardware and the AI solution are located on-site rather than in data centres outside Switzerland.
 
