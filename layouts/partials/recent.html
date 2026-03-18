@@ -14,9 +14,9 @@
           style="height: 12rem; object-fit: cover; padding:5px"
         >
         {{ end }}
-
+        <a href="{{ .RelPermalink }}">
         <div class="card-body p-4">
-          <div class="d-flex flex-wrap gap-2 mb-3">
+          <div class="d-flex flex-wrap gap-2 mb-0 pb-0">
             {{ with .Params.categories }}
               {{ range first 1 . }}
               <a
@@ -27,28 +27,18 @@
               {{ end }}
             {{ end }}
           </div>
+          <span class="text-muted small mb-3">{{ .Date.Format "Jan 2" }}</span>
 
           <h3 class="h5 fw-bold mb-2">
-            <a href="{{ .RelPermalink }}" class="text-body text-decoration-none link-primary-hover">
+            <b class="text-body text-decoration-none link-primary-hover">
               {{ .Title }}
-            </a>
+            </b>
           </h3>
-
-          <div class="d-flex align-items-center text-muted small mb-3">
-            <span class="me-4">
-              By
-              <a
-                href="/authors/{{ replace (lower .Params.author) "." "" | urlize }}"
-                class="link-primary text-decoration-none"
-              >{{ .Params.author }}</a>
-            </span>
-            <span>{{ .Date.Format "Jan 2" }}</span>
-          </div>
 
           <p class="text-secondary small mb-0">
             {{ .Description | default (.Summary | truncate 120) }}
           </p>
-        </div>
+        </div></a>
       </article>
     </div>
     {{ end }}
