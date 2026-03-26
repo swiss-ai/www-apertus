@@ -5,9 +5,9 @@ sitemap:
   disable: true
 ---
 
-## Feedback
+# Feedback area
 
-Tell us about your vision for Apertus: which challenges are you facing? Is there any information missing here? We will try to answer any question that interests you about the project. We are using [Framaforms](https://framaforms.org/) to process your response, to which [separate conditions](https://framasoft.org/en/legals) apply.
+Tell us about your vision for Apertus: which challenges are you facing? Is there any information missing here? We will try to answer any question that interests you about the project. See also our [contact page](/contact). 
 
 ---
 
@@ -49,7 +49,7 @@ Tell us about your vision for Apertus: which challenges are you facing? Is there
 <div class="m-2 mt-3">
   <label for="edit-submitted-new-1772632137250">E-mail address: </label>
  <input class="email form-text form-email" type="email" id="edit-submitted-new-1772632137250" name="submitted[new_1772632137250]" size="60">
- <div class="description text-center fst-italic">Only if you would like to hear back from us.</div>
+ <div class="description text-center fst-italic text-small mb-4">(Only if you would like to hear back from us)</div>
 </div>
 <input type="hidden" name="details[sid]">
 <input type="hidden" name="details[page_num]" value="1">
@@ -59,3 +59,7 @@ Tell us about your vision for Apertus: which challenges are you facing? Is there
 <input type="hidden" name="form_token" value="HWBzKRRt8UXKnDtcyDBWNCRWH39BSY4tX2gJDrmNRPY">
 <input type="hidden" name="form_id" value="webform_client_form_1403242">
 <div class="form-actions text-center"><input class="webform-submit button-primary form-submit btn btn-primary" type="submit" name="op" value="Send feedback"></div></div></form>
+
+---
+
+Nota Bene: we are using [Framaforms](https://framaforms.org/) to process your response, to which [separate conditions](https://framasoft.org/en/legals) apply.

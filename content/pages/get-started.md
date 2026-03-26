@@ -36,8 +36,8 @@ title: "Get Started"
   <a href="https://docs.cloud.swisscom.ch/guide/cloud-services/aip/models/apertus.html" class="card" style="text-decoration: none;">
     <h4>Swisscom</h4>
     <p>Swiss AI Platform</p>
+    <span class="badge badge-partner">Strategic Partner</span>
     <span class="badge badge-swiss">Switzerland</span>
-    <span class="meta">Strategic Partner</span>
   </a>
   <a href="https://www.infomaniak.com/en/hosting/ai-services/open-source-models" class="card" style="text-decoration: none;">
     <h4>Infomaniak</h4>

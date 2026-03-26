@@ -4,7 +4,6 @@ title: "Legal Notice"
 
 ## Legal Notice
 
-
 Websites www.apertvs.ai and other *.apertvs.ai domains are the property of Ecole polytechnique fédérale de Lausanne (EPFL).
 
 EPFL takes great care when presenting information on its websites. EPFL cannot be held responsible for third-party content, even if EPFL websites link or refer to them.

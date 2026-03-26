@@ -4,29 +4,24 @@ title: "About"
 
 ## About Apertus
 
-Apertus is Switzerland's first large-scale, fully open, multilingual language model. Developed by researchers at ETH Zurich, EPFL, and the Swiss National Supercomputing Centre (CSCS), it represents a new approach to foundation model development: built by public institutions, designed for the public good.
+**Apertus is Switzerland's first large-scale, fully open, multilingual language model. Developed by researchers at ETH Zurich, EPFL, and the Swiss National Supercomputing Centre (CSCS), it represents a new approach to foundation model development: built by public institutions, designed for the public good.**
 
-The name comes from the Latin word for "open" — reflecting the model's defining characteristic. Unlike commercial models developed behind closed doors, Apertus makes its architecture, weights, training data, and methods fully accessible and documented.
+The name comes from the Latin word for "open" — reflecting the model's defining characteristic. Unlike commercial models developed behind closed doors, Apertus makes its architecture, weights, training data, and methods [fully accessible and documented](/pages/documentation). Our identity and domain name reflect the Helvetic-Roman heritage of our nation and scholarship.
 
 Apertus is not in itself a product: this is foundational infrastructure: designed to support innovation across research, education, government, and industry — while remaining aligned with Swiss and European values of transparency, neutrality, and accountability.
 
-This website is open source too, running on the [Hugo](https://gohugo.io/) static site engine and [Lotus docs](https://lotusdocs.dev/) theme. The name and logo behind `APERTVS.ai` reflect the [Helvetic-Roman heritage](https://en.wikipedia.org/wiki/Switzerland_in_the_Roman_era) of our nation and scholarship.
+This website is [open source](https://github.com/swiss-ai/www-apertus) too, running on the [Hugo](https://gohugo.io/) static site engine and [Lotus docs](https://lotusdocs.dev/) theme.
 
-##### For questions and requests: [llm-requests@swiss-ai.org](mailto:llm-requests@swiss-ai.org)
+You can use [our Contact page](/feedback) to share ideas and questions with the Apertus team. 
 
 ---
 
 ## Swiss AI Initiative
 
-The [Swiss AI Initiative](https://swiss-ai.org) is a national research effort to build capabilities for advanced, trustworthy AI systems for the benefit of society. Launched in December 2023, it is co-led by ETH Zurich and EPFL. Apertus is one of several projects within the Initiative, which spans research in foundation models, AI safety, applications, and education.
+**The [Swiss AI Initiative](https://swiss-ai.org) is a national research effort to build capabilities for advanced, trustworthy AI systems for the benefit of society. Launched in December 2023, it is co-led by ETH Zurich and EPFL. Apertus is one of several projects within the Initiative, which spans research in foundation models, AI safety, applications, and education.**
 
 The Initiative represents one of the world's largest open science efforts dedicated to AI foundation models. It pursues an open science approach to increase transparency and access for startups, SMEs, large companies, and the public sector in Switzerland and beyond.
 
-Please visit [swiss-ai.org](https://www.swiss-ai.org/) for information on how to contact us, or to join the Initiative with your organization.
+Please visit [swiss-ai.org](https://www.swiss-ai.org/) to learn more.
 
----
-
-
-<a href="https://www.swisscom.ch/en/business/enterprise/offer/platforms-applications/data-driven-business/swiss-ai-platform.html" target="_blank"><img src="https://static.wixstatic.com/media/4fb636_b44facb135f84adeb7394df825019ed3~mv2.png/v1/fill/w_375,h_90,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Swisscom_Horizontal_RGB_Colour_Navy.png" alt="Swisscom Logo" style="object-fit:cover" width="375" height="90"></a>
-
-[Swisscom](https://www.swisscom.ch/en/business/enterprise/offer/platforms-applications/data-driven-business/swiss-ai-platform.html) is a Strategic Partner of the Swiss AI Initiative
+_We are grateful to the support of all our strategic partners, members, and community._
