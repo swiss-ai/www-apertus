@@ -1,10 +1,6 @@
-# Apertus Website
+# APERTVS.ai
 
-Official website for [Apertus](https://apertvs.ai), a fully open foundation model for sovereign AI developed by the Swiss AI Initiative.
-
-## Overview
-
-This is a static website built with Hugo, featuring a minimal, research-focused design. The site serves as the public face of the Apertus project, providing information about the models, research, documentation, and governance.
+Official website for [Apertus](https://apertvs.ai), a fully open foundation model for sovereign AI developed by the Swiss AI Initiative. This is a static website featuring a minimal, research-focused design. It serves as the public face of the Apertus project, providing information about the models, research, documentation, and governance.
 
 ## Tech Stack
 
@@ -276,10 +272,3 @@ The deployment workflow is configured in `.github/workflows/hugo.yaml`. It:
 ## License
 
 This website is licensed under [Apache 2.0](LICENSE).
-
-## Links
-
-- **Website:** [apertus-ai.org](https://apertus-ai.org)
-- **Models:** [Hugging Face](https://huggingface.co/swiss-ai)
-- **Paper:** [arXiv](https://arxiv.org/abs/2509.14233)
-- **Swiss AI Initiative:** [swiss-ai.org](https://swiss-ai.org)
