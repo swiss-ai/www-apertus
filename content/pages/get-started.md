@@ -13,12 +13,12 @@ title: "Get Started"
   <a href="https://chat.publicai.co" class="card" style="text-decoration: none;">
     <img src="/images/logos/public_ai-logo.ico" alt="PublicAI" class="card-logo">
     <h4>Public AI Switzerland</h4>
-    <p>A browser-based chat interface you can use for free. Login for access to open models, web search, and more.</p>
+    <p>A chat interface you can use for free. Login for access to open models, web search, and more.</p>
   </a>
   <a href="https://oss.zuericitygpt.ch/" class="card" style="text-decoration: none;">
     <img src="/images/logos/zuericitygpt-robot.png" alt="ZüriCityGPT" class="card-logo">
     <h4>ZüriCityGPT OSS</h4>
-    <p>A RAG Chatbot from the City of Zürich developed on an open-source stack with our open model.</p>
+    <p>A RAG Chatbot demo developed by Liip to ask questions about city laws with the Apertus model.</p>
   </a>
 </div>
 

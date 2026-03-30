@@ -1,9 +1,28 @@
-<div class="container" style="max-width: 1100px;">
+{{ define "main" }}
+<main>
+  {{/* Navbar */}}
+  {{ if not .Params.subscribe }}
+    {{ partial "navbar.html" }}
+  {{ else }}
+    {{ partial "hero.html" }}
+    {{ partial "newsletter.html" }}
+  {{ end }}
+
+  <div class="mt-5 mb-0 pt-4 pb-2 alert alert-warning text-center" role="alert">
+      Our new website is under construction: have any feedback?
+      <a href="/feedback">
+          Please let us know!
+      </a>
+  </div>
+
+<div class="container mt-5" style="max-width: 1100px;">
+
+<h1>Latest news</h1>
 
 <!-- Recent Articles Grid -->
 <div class="mb-5">
-  <div class="row g-4 row-cols-1 row-cols-md-3">
-    {{ range first 3 (where .Site.RegularPages "Type" "articles") }}
+  <div class="row g-4 row-cols-1 row-cols-md-12">
+    {{ range first 50 (where .Site.RegularPages "Type" "articles") }}
     <div class="col">
       <article class="card h-100 shadow-sm border-0 overflow-hidden">
         {{ with .Resources.GetMatch .Params.featured_image }}
@@ -43,9 +62,6 @@
     </div>
     {{ end }}
   </div>
-  <div class="text-center">
-    <a href="/news" class="btn btn-primary btn-lg mt-5">
-      View all news
-    </a>
-  </div>
 </div>
+
+{{ end }}

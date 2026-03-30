@@ -45,6 +45,13 @@
       {{ end }}
     </div>
   </section>
+
+  <div class="social-icons text-center">
+    <a title="Post on Mastodon" href="https://share.joinmastodon.org/#text=#Apertus+{{ .Permalink }}" target="_blank" rel="noopener" class="icon-button"><i class="bi bi-mastodon"></i><span></span></a>
+    <a title="Post on Hugging Face" href="https://huggingface.co/?post=true&url={{ .Permalink }}" target="_blank" rel="noopener" class="icon-button"><i class="bi bi-emoji-laughing"></i><span></span></a>
+    <a title="Post on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?text=%23Apertus+{{ .Permalink }}" target="_blank" rel="noopener" class="icon-button"><i class="bi bi-linkedin"></i><span></span></a>
+  </div>
+
 </main>
 
 <style>
@@ -216,6 +223,66 @@
   .article p {
     color: #374151;
     line-height: 1.7;
+  }
+
+  /* Social icons */
+  .icon-button {
+    background-color: white;
+    border-radius: 3.6rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 2.0rem;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    margin: 0 5px;
+    position: relative;
+    text-align: center;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 3.6rem;
+  }
+  /* Circle */
+  .icon-button span {
+    background-color: #4099ff;
+    border-radius: 0;
+    display: block;
+    height: 0;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: all 0.3s;
+       -moz-transition: all 0.3s;
+         -o-transition: all 0.3s;
+            transition: all 0.3s;
+    width: 0;
+  }
+  .icon-button:hover span {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 3.6rem;
+    margin: -1.8rem;
+  }
+  /* Icons */
+  .icon-button:hover i {
+    color: white;
+  }
+  .icon-button i {
+    background: none;
+    color: #4099ff;
+    height: 3.6rem;
+    left: 0;
+    line-height: 3.6rem;
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 0.3s;
+       -moz-transition: all 0.3s;
+         -o-transition: all 0.3s;
+            transition: all 0.3s;
+    width: 3.6rem;
+    z-index: 10;
   }
 </style>
 {{ end }}

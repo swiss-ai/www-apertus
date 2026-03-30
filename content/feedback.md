@@ -29,19 +29,19 @@ Tell us about your vision for Apertus: which challenges are you facing? Is there
   <label for="edit-submitted-new-1772632188391">I am mostly interested in ... </label>
  <div id="edit-submitted-new-1772632188391" class="form-checkboxes mt-2">
  <div class="ms-2 me-2">
- <input type="checkbox" id="edit-submitted-new-1772632188391-1" name="submitted[new_1772632188391][1]" value="1" class="form-checkbox">  <label class="option" for="edit-submitted-new-1772632188391-1">Collaborating as an individual </label>
+ <input type="checkbox" id="edit-submitted-new-1772632188391-1" name="submitted[new_1772632188391][1]" value="1" class="form-checkbox">  <label class="option" for="edit-submitted-new-1772632188391-1">Sharing a new use case with Apertus</label>
  </div><div class="ms-2 me-2">
  <input type="checkbox" id="edit-submitted-new-1772632188391-2" name="submitted[new_1772632188391][2]" value="2" class="form-checkbox">  <label class="option" for="edit-submitted-new-1772632188391-2">Learning reference architectures </label>
  </div><div class="ms-2 me-2">
  <input type="checkbox" id="edit-submitted-new-1772632188391-3" name="submitted[new_1772632188391][3]" value="3" class="form-checkbox">  <label class="option" for="edit-submitted-new-1772632188391-3"> Joining the community </label>
  </div><div class="ms-2 me-2">
- <input type="checkbox" id="edit-submitted-new-1772632188391-4" name="submitted[new_1772632188391][Signing up to meetups &amp; events]" value="Signing up to meetups &amp; events" class="form-checkbox">  <label class="option" for="edit-submitted-new-1772632188391-4">Signing up to meetups &amp; events </label>
+ <input type="checkbox" id="edit-submitted-new-1772632188391-4" name="submitted[new_1772632188391][Signing up to meetups &amp; events]" value="Signing up to meetups &amp; events" class="form-checkbox">  <label class="option" for="edit-submitted-new-1772632188391-4">Signing up to events </label>
  </div><div class="ms-2 me-2">
  <input type="checkbox" id="edit-submitted-new-1772632188391-5" name="submitted[new_1772632188391][Being an early adopter]" value="Being an early adopter" class="form-checkbox">  <label class="option" for="edit-submitted-new-1772632188391-5">Being an early adopter </label>
  </div><div class="ms-2 me-2">
- <input type="checkbox" id="edit-submitted-new-1772632188391-6" name="submitted[new_1772632188391][Working at Swiss AI]" value="Working at Swiss AI" class="form-checkbox">  <label class="option" for="edit-submitted-new-1772632188391-6">Working at Swiss AI </label>
+ <input type="checkbox" id="edit-submitted-new-1772632188391-6" name="submitted[new_1772632188391][Working at Swiss AI]" value="Working at Swiss AI" class="form-checkbox">  <label class="option" for="edit-submitted-new-1772632188391-6">Working on Swiss AI </label>
  </div><div class="ms-2 me-2">
- <input type="checkbox" id="edit-submitted-new-1772632188391-7" name="submitted[new_1772632188391][Something else.. (specify above)]" value="Something else.. (specify above)" class="form-checkbox">  <label class="option" for="edit-submitted-new-1772632188391-7">Something else.. (specify above) </label>
+ <input type="checkbox" id="edit-submitted-new-1772632188391-7" name="submitted[new_1772632188391][Something else.. (specify above)]" value="Something else.. (specify above)" class="form-checkbox">  <label class="option" for="edit-submitted-new-1772632188391-7">Something else.. (specify in the comments above) </label>
 
 </div>
 </div>
