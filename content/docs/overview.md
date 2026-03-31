@@ -12,7 +12,9 @@ author: "Apertus Project"
 ---
 
 Apertus is an open source Large Language Model (LLM) developed in Switzerland.
-This documentation shows you how to get started with the LLM, whether as user, researcher, or advanced contributor: we are maintaining this knowledge base for you, and could [✉️ use your feedback](mailto:llm-requests@swiss-ai.org).
+This documentation shows you how to get started with the LLM, whether as user, researcher, or advanced contributor: we are maintaining this knowledge base for you, and could [✉️ use your feedback](/feedback/).
+
+This website is running on the [Hugo](https://gohugo.io/) static site engine and [Lotus docs](https://lotusdocs.dev/) theme.
 
 About the project
 -----------------

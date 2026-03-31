@@ -9,9 +9,7 @@ title: "About"
 The name comes from the Latin word for "open" — reflecting the model's defining characteristic. Unlike commercial models developed behind closed doors, Apertus makes its architecture, weights, training data, and methods fully accessible.
 Please visit the <a href="/docs/faq">Frequently Asked Questions</a> and our [Documentation](/pages/documentation) section for details. 
 
-This website is [open source](https://github.com/swiss-ai/www-apertus) too, running on the [Hugo](https://gohugo.io/) static site engine and [Lotus docs](https://lotusdocs.dev/) theme.
-
-You can use [our Contact page](/feedback) to share ideas and questions with the Apertus team. 
+Use the [Contact page](/contact) to share ideas and questions with the Apertus team. 
 
 ---
 
