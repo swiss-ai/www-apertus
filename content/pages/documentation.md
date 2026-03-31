@@ -5,9 +5,9 @@ title: "Documentation"
 ## Technical Information
 
 <p class="section-intro">
-  The <a href="/docs/faq">Frequently Asked Questions</a> tap into common issues.
-  See our <a href="/pages/research">Research collection</a> for an in-depth look at the architecture, training methodology, data mix, and evaluation results.
-  Additional information governing model use is found in the compliance documents:</p>
+  The <a href="/docs/faq">Frequently Asked Questions</a> cover common issues.
+  See our <a href="/pages/research">Research collection</a> for an in-depth look at the architecture, training, data mix, and evaluation results.
+  Deployment &amp; compliance information follows:</p>
 
 <div class="card-grid">
   <a href="https://huggingface.co/swiss-ai/Apertus-70B-Instruct-2509/blob/main/USAGE_POLICY.md" class="card" style="text-decoration: none;">
@@ -27,10 +27,6 @@ title: "Documentation"
     <p>Code of practice documentation</p>
   </a>
 </div>
-
----
-
-## Deployment Guide
 
 <p class="section-intro">
   Download from the <b>official 
@@ -57,12 +53,6 @@ title: "Documentation"
 </div>
 <p class="section-intro">
   'Instruct' versions are further trained for chat support.
-  <a href="https://huggingface.co/models?sort=trending&search=apertus" target="_blank">
-    Community builds</a> 
-  exist in formats like
-  <a href="https://huggingface.co/models?library=gguf&sort=trending&search=apertus" target="_blank">MLX</a>
-  and
-  <a href="https://huggingface.co/models?library=mlx&sort=trending&search=apertus" target="_blank">GGUF</a>.
 </p>
 
 <div class="card-grid">
@@ -81,12 +71,21 @@ title: "Documentation"
       <p>Recommended for self-hosted inference servers.</p>
     </a>
     <p>Use
-      <a href="https://www.sglang.io/">SGlang</a>
+      <a href="/docs/guides/sglang/">SGlang</a>
       for advanced scaling needs.
     </p>
   <span class="badge badge-supported">Server</span>
   </div>
 </div>
+
+<p class="section-intro">
+  <a href="https://huggingface.co/models?sort=trending&search=apertus" target="_blank">
+    Community builds</a> 
+  exist in formats like
+  <a href="https://huggingface.co/models?library=gguf&sort=trending&search=apertus" target="_blank">MLX</a>
+  and
+  <a href="https://huggingface.co/models?library=mlx&sort=trending&search=apertus" target="_blank">GGUF</a>.
+</p>
 
 ---
 

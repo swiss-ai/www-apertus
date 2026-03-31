@@ -6,6 +6,7 @@ title: "Research"
 
 <p class="section-intro">
   Papers and technical reports from the Apertus project.
+  See the <a href="/news">News area</a> for general announcements.
 </p>
 
 <div class="card-grid">
@@ -127,5 +128,5 @@ title: "Research"
 </div>
 
 <p class="section-intro">
-  This list is continuously expanded ... <i>stay tuned!</i> Visit our <a href="https://www.zotero.org/groups/6385576/apertus" target="_blank">📖 Zotero group</a> for further literature.
+  This list is continuously expanded: please visit our <a href="https://www.zotero.org/groups/6385576/apertus" target="_blank">📖 Zotero group</a> for further literature.
 </p>
