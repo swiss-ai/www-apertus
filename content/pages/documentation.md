@@ -29,8 +29,8 @@ title: "Documentation"
 </div>
 
 <p class="section-intro">
-  Download from the <b>official 
-  <a href="https://huggingface.co/swiss-ai">swiss-ai</a> account</b> on Hugging Face to run in the cloud or on any infrastructure.
+  Download the <b>official 
+  <a href="https://huggingface.co/swiss-ai">swiss-ai</a> releases</b> on Hugging Face.
 </p>
 
 <div class="card-grid">
@@ -85,13 +85,13 @@ title: "Documentation"
   <a href="https://huggingface.co/models?library=gguf&sort=trending&search=apertus" target="_blank">MLX</a>
   and
   <a href="https://huggingface.co/models?library=mlx&sort=trending&search=apertus" target="_blank">GGUF</a>.
+  Please be aware if you are using a downstream version of Apertus, and seek technical support from the publisher in case of issues.
+  <br><a href="/contact">Contact us</a> in case of security, legal, or other concerns.
 </p>
 
 ---
 
 ## Codebase
-
-<p class="section-intro">Fully open training infrastructure.</p>
 
 <div class="card-grid">
   <a href="https://github.com/orgs/swiss-ai/repositories?q=apertus" class="card" style="text-decoration: none;">
@@ -111,3 +111,7 @@ title: "Documentation"
     <p>Python library for the custom chat format.</p>
   </a>
 </div>
+
+<p class="section-intro">
+    Fully open training infrastructure. We look forward to hear about your efforts to build on our models!
+</p>
