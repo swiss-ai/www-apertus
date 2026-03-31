@@ -5,7 +5,8 @@ title: "Documentation"
 ## Technical Information
 
 <p class="section-intro">
-  See our <a href="/pages/research">Research collection</a> for comprehensive documentation of architecture, training methodology, data, and evaluation results.
+  The <a href="/docs/faq">Frequently Asked Questions</a> tap into common issues.
+  See our <a href="/pages/research">Research collection</a> for an in-depth look at the architecture, training methodology, data mix, and evaluation results.
   Additional information governing model use is found in the compliance documents:</p>
 
 <div class="card-grid">

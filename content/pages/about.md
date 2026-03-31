@@ -6,9 +6,8 @@ title: "About"
 
 **Apertus is Switzerland's first large-scale, fully open, multilingual language model. Developed by researchers at ETH Zurich, EPFL, and the Swiss National Supercomputing Centre (CSCS), it represents a new approach to foundation model development: built by public institutions, designed for the public good.**
 
-The name comes from the Latin word for "open" — reflecting the model's defining characteristic. Unlike commercial models developed behind closed doors, Apertus makes its architecture, weights, training data, and methods [fully accessible and documented](/pages/documentation). Our identity and domain name reflect the Helvetic-Roman heritage of our nation and scholarship.
-
-Apertus is not in itself a product: this is foundational infrastructure: designed to support innovation across research, education, government, and industry — while remaining aligned with Swiss and European values of transparency, neutrality, and accountability.
+The name comes from the Latin word for "open" — reflecting the model's defining characteristic. Unlike commercial models developed behind closed doors, Apertus makes its architecture, weights, training data, and methods fully accessible.
+Please visit the <a href="/docs/faq">Frequently Asked Questions</a> and our [Documentation](/pages/documentation) section for details. 
 
 This website is [open source](https://github.com/swiss-ai/www-apertus) too, running on the [Hugo](https://gohugo.io/) static site engine and [Lotus docs](https://lotusdocs.dev/) theme.
 

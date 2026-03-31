@@ -1,12 +1,30 @@
 ---
 title: "FAQ"
+weight: 500
+description: "Frequently Asked Questions"
+icon: "information"
+date: "2026-02-11T11:11:00+01:00"
+lastmod: "2026-02-17T15:11:45+01:00"
+toc: true
+tags: ["Introduction"]
+categories: [""]
+author: "Apertus Project"
 ---
 
-<h2 class="section-intro">Common questions on Apertus</h2>
+<p>Is there a question you would like to see answered here? Please
+<a href="/feedback/">drop us a line</a>.
+</p><hr />
 
 <div class="faq-item">
 <h4>What makes Apertus different from other open models?</h4>
 <p>Apertus is fully open — offering complete access to training data, code, and alignment principles, not just open weights. This openness supports research, collaboration and informed use, creating a valuable tool for the global AI community. See <a target="_blank" href="https://swiss-ai.org">Swiss AI Initiative</a>.</p>
+</div>
+
+<div class="faq-item">
+<h4>Can I use Apertus just like other AI systems?</h4>
+<p>Apertus is not a consumer product: this is foundational infrastructure. Designed to support innovation across research, education, government, and industry — while remaining aligned with Swiss and European values of transparency, neutrality, and accountability.
+Many organizations are currently piloting solutions with the model, and we will update <a href="/pages/get-started/">our showcase</a> as new products based on Apertus become available.
+</p>
 </div>
 
 <div class="faq-item">
@@ -35,3 +53,12 @@ title: "FAQ"
 While we strive to minimize bias, users should be aware of inherent biases in language data and test for fairness in their applications.
 See the <a href="/pages/charter">Swiss AI Charter</a> for details.
 </div>
+
+<div class="faq-item">
+<h4>Why the name Apertus?</h4>
+<p>Our identity and domain name reflect the <a href="https://en.wikipedia.org/wiki/Switzerland_in_the_Roman_era" target="_blank">Helvetic-Roman heritage</a> of our nation, and the history of Swiss scholarship. The APERTVS logo was designed by 
+<a href="http://www.molinaridesign.ch/" target="_blank">Florian Molinari</a>.</p>
+</div>
+
+<div class="faq-item">
+<h4>
