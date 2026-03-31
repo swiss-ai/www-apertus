@@ -27,9 +27,10 @@ We will add instructions here for several popular applications that allow you to
 
 Our focus is on open source software with low barrier of entry and high degree of accessibility or versatility. Please don't hesitate to contact us if you would like to see instructions added for another platform.
 
+- [vLLM](guides/vllm)
+- [SGlang](guides/sglang)
+- [Ollama](guides/ollama)
 - [LM Studio](guides/lmstudio)
-- Ollama
-- vLLM
 
 ## References
 

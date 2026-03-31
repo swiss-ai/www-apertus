@@ -34,6 +34,6 @@ Sources
 For further information:
 
 -   [Swiss AI Initiative](https://www.swiss-ai.org/apertus) (swiss-ai.org)
--   [Initial Announcement](https://ethz.ch/en/news-and-events/eth-news/news/2025/07/a-language-model-built-for-the-public-good.html) (ethz.ch)
--   [ETH Zurich AI Center](https://ai.ethz.ch/) (ai.ethz.ch)
--   [EPFL Machine Learning Lab](https://www.epfl.ch/labs/mlo/) (epfl.ch)
+-   [Initial Announcement](https://www.cscs.ch/science/computer-science-hpc/2025/apertus-a-fully-open-transparent-multilingual-language-model) (cscs.ch)
+-   [EPFL AI Center](https://ai.epfl.ch/) (ai.epfl.ch)
+-   [ETH AI Center](https://ai.ethz.ch/) (ai.ethz.ch)
