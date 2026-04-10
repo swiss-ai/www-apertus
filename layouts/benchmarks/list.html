@@ -18,84 +18,90 @@
   <article>
     <section class="page-content bg-white pb-5 mt-4">
       <div class="container" style="max-width: 900px;">
-
-        <div class="row mb-5">
-    <div class="col-lg-8">
-        <p class="lead">Language model benchmarks provide standardized metrics for comparing model capabilities, but understanding their strengths, limitations, and proper interpretation is essential for making informed decisions.</p>
-        
-        <p>This site offers transparent, reproducible evaluations across multiple dimensions of LLM performance, helping you navigate the complex landscape of open weights language models.</p>
-    </div>
-    <div class="col-lg-4">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Quick Links</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="/benchmarks/general/">View General Benchmarks</a></li>
-                    <li class="mb-2"><a href="/about/">Learn About Evaluation</a></li>
-                    <li class="mb-2"><a href="/benchmarks/third-party/">Third-Party Results</a></li>
-                    <li class="mb-2"><a href="/benchmarks/compliance/">Safety & Compliance</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row mb-4">
-    <div class="col-md-6 mb-4">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title"><i class="bi bi-graph-up"></i> Performance Comparison</h5>
-                <p class="card-text">Standardized metrics enable fair comparison between different models and architectures.</p>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-md-6 mb-4">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title"><i class="bi bi-clipboard-data"></i> Reproducible Results</h5>
-                <p class="card-text">Transparent methodology ensures results can be verified and replicated independently.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row mb-5">
-    <div class="col-md-6 mb-4">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title"><i class="bi bi-eye"></i> Identifying Strengths</h5>
-                <p class="card-text">Benchmarks reveal where models excel across different task types and domains.</p>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-md-6 mb-4">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title"><i class="bi bi-flag"></i> Flagging Limitations</h5>
-                <p class="card-text">Systematic testing uncovers weaknesses and areas needing improvement.</p>
-            </div>
-        </div>
-    </div>
-</div>
         <header class="mb-5">
-          <h1>Benchmarks</h1>
-          <p class="lead">Comprehensive evaluation across multiple dimensions of LLM performance</p>
+            <h1>Benchmarks</h1>
+            <p class="lead">Comprehensive evaluation across multiple dimensions of LLM performance</p>
         </header>
 
         <div class="row mb-5">
-          {{ range .Pages }}
-          <div class="col-md-6 mb-4">
-              <div class="card h-100">
-                  <div class="card-body">
-                      <h5 class="card-title">{{ .Title }}</h5>
-                      <a href="{{ .RelPermalink }}" class="btn btn-primary">View Benchmarks</a>
-                  </div>
-              </div>
-          </div>
-          {{ end }}
+            <div class="col-lg-8">
+                <p class="lead">Language model benchmarks provide standardized metrics for comparing model capabilities, but understanding their strengths, limitations, and proper interpretation is essential for making informed decisions.</p>
+
+                <p>This site offers transparent, reproducible evaluations across multiple dimensions of LLM performance, helping you navigate the complex landscape of open weights language models.</p>
+
+                <p>Evaluation from the <a href="https://huggingface.co/swiss-ai/Apertus-70B-Instruct-2509" target="_blank">Apertus Technical Report</a>:
+                    <br><br><img src="https://cdn-uploads.huggingface.co/production/uploads/654baf61d625e083383dfd00/gKDv_6dpIpvmgyquenbXt.png" width="100%"></p>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="/benchmarks/introduction/">Introduction</a></li>
+                            <li class="mb-2"><a href="/pages/research">Publications</a></li>
+                            <li class="mb-2"><a href="/docs/faq/">Frequently Asked</a></li>
+                            <li class="mb-2"><a href="/pages/about/">About Apertus</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div class="row mb-4">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-graph-up"></i> Performance Comparison</h5>
+                        <p class="card-text">Standardized metrics enable fair comparison between different models and architectures.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-clipboard-data"></i> Reproducible Results</h5>
+                        <p class="card-text">Transparent methodology ensures results can be verified and replicated independently.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-eye"></i> Identifying Strengths</h5>
+                        <p class="card-text">Benchmarks reveal where models excel across different task types and domains.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-flag"></i> Flagging Limitations</h5>
+                        <p class="card-text">Systematic testing uncovers weaknesses and areas needing improvement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p>In the following sections we list reports across evaluation dimensions:</p>
+
+        <div class="row mb-5">
+            {{ range .Pages }}
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ .Title }}</h5>
+                        <a href="{{ .RelPermalink }}" class="btn btn-primary">View Benchmarks</a>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+
     </section>
 </article>
 {{ end }}

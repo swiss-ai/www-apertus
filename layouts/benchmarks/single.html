@@ -33,12 +33,22 @@
         labels: ['Common Sense', 'Math Problem Solving', 'Code Generation', 'Natural Language'],
         datasets: [
             {
-                label: 'Llama 3 8B',
+                label: 'Apertus 8B',
                 data: [78.2, 62.4, 48.7, 85.1],
+                backgroundColor: 'rgba(255, 99, 132, 0.7)'
+            },
+            {
+                label: 'Qwen 7B',
+                data: [77.1, 60.1, 46.8, 84.2],
                 backgroundColor: 'rgba(75, 192, 192, 0.7)'
             },
             {
-                label: 'Mistral 7B',
+                label: 'Llama 3 8B',
+                data: [75.2, 56.7, 44.5, 82.9],
+                backgroundColor: 'rgba(201, 203, 207, 0.7)'
+            },
+            {
+                label: 'Ministral 7B',
                 data: [76.5, 58.9, 45.2, 83.4],
                 backgroundColor: 'rgba(153, 102, 255, 0.7)'
             },
@@ -48,19 +58,9 @@
                 backgroundColor: 'rgba(255, 159, 64, 0.7)'
             },
             {
-                label: 'Qwen 7B',
-                data: [77.1, 60.1, 46.8, 84.2],
-                backgroundColor: 'rgba(255, 99, 132, 0.7)'
-            },
-            {
                 label: 'Phi-3 3.8B',
                 data: [74.3, 55.8, 42.1, 81.8],
                 backgroundColor: 'rgba(54, 162, 235, 0.7)'
-            },
-            {
-                label: 'Stable LM 7B',
-                data: [75.2, 56.7, 44.5, 82.9],
-                backgroundColor: 'rgba(201, 203, 207, 0.7)'
             }
         ]
     };
@@ -98,15 +98,15 @@
                     beginAtZero: false,
                     min: 40,
                     max: 90,
-                    title: { 
-                        display: true, 
+                    title: {
+                        display: true,
                         text: 'Performance (%)',
                         font: { size: 14 }
                     }
                 },
                 y: {
-                    title: { 
-                        display: true, 
+                    title: {
+                        display: true,
                         text: 'Benchmark Category',
                         font: { size: 14 }
                     }
