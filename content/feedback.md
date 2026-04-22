@@ -9,6 +9,8 @@ sitemap:
 
 Tell us about your vision for Apertus: which challenges are you facing? Is there any information missing here? We will try to answer any question that interests you about the project. See also our [contact page](/contact). 
 
+_We thank all our partners, members, contributors and community for your support!_
+
 ---
 
 <form action="https://framaforms.org/feedback-1772632019" method="post" accept-charset="UTF-8"><div>

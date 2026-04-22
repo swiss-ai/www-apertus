@@ -13,7 +13,7 @@ author: "Apertus Project"
 
 Fine-tuning is essential to adapt Apertus to your domain or task, whether you are working on specialized knowledge, improving performance on a certain dataset, or creating a custom application. We have crafted this guide to make the process accessible and flexible.
 
-Our team has prepared recipes in the a fine-tuning repository, which in the future will also provide more references from the community, and diverse configurations for training to ensure you can tailor Apertus to your specific use cases efficiently. 
+Our team has [prepared these recipes](https://github.com/swiss-ai/apertus-finetuning-recipes), and in the future we will also provide more references from the community. These are sample configurations for training to ensure you can tailor Apertus to your specific use cases efficiently. 
 
 ### 🚀 Getting Started
 

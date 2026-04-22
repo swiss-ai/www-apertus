@@ -1,5 +1,5 @@
 ---
-title: "FAQ"
+title: "F.A.Q."
 weight: 500
 description: "Frequently Asked Questions"
 icon: "information"
@@ -23,7 +23,7 @@ author: "Apertus Project"
 <div class="faq-item">
 <h4>Can I use Apertus just like other AI systems?</h4>
 <p>Apertus is not a consumer product: this is foundational infrastructure. Designed to support innovation across research, education, government, and industry — while remaining aligned with Swiss and European values of transparency, neutrality, and accountability.
-Many organizations are currently piloting solutions with the model, and we will update <a href="/pages/get-started/">our showcase</a> as new products based on Apertus become available.
+Many organizations are currently piloting solutions with the model, and we will update <a href="/pages/get-started/">our showcase</a> as new products based on Apertus become available. See also <a href="https://www.swissinfo.ch/eng/swiss-ai/fact-and-fiction-about-the-swiss-ai-model-apertus/90110034" target="_blank">swissinfo 10.2025</a>.
 </p>
 </div>
 
@@ -56,7 +56,7 @@ See the <a href="/pages/charter">Swiss AI Charter</a> for details.
 
 <div class="faq-item">
 <h4>Why the name Apertus?</h4>
-<p>Our identity and domain name reflect the <a href="https://en.wikipedia.org/wiki/Switzerland_in_the_Roman_era" target="_blank">Helvetic-Roman heritage</a> of our nation, and the history of Swiss scholarship. The APERTVS logo was designed by 
+<p>Our identity and domain name reflect the <a href="https://en.wikipedia.org/wiki/Switzerland_in_the_Roman_era" target="_blank">Helvetic-Roman heritage</a> of our nation, and the history of Swiss scholarship. The <tt>APERTVS</tt> logo was designed by 
 <a href="http://www.molinaridesign.ch/" target="_blank">Florian Molinari</a>.</p>
 </div>
 

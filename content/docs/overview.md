@@ -16,6 +16,8 @@ This documentation shows you how to get started with the LLM, whether as user, r
 
 This website is running on the [Hugo](https://gohugo.io/) static site engine and [Lotus docs](https://lotusdocs.dev/) theme.
 
+⬅️ [Back to the home page](https://APERTVS.ai)
+
 About the project
 -----------------
 
