@@ -35,20 +35,26 @@ What you’ll need:
 - Use **standard file formats** (e.g., CSV for tabular data, JSON for structured data).
 - If your dataset is large, consider **splitting it into smaller files** for easier download.
 
-### Step 2: Check for Bias and Quality
+### Step 2: Quality Control
 
 - Review your dataset for **biases, errors, or missing values**.
-- Ensure it is **ethically sourced** and complies with privacy regulations (e.g., GDPR).
+- Ensure it is **ethically sourced** and is **reproducible**:  
+  1. The dataset should be version-controlled (e.g., hosted on Hugging Face, GitHub, or Zenodo) to enable traceability.  
+     - If not version-controlled, use tools like Xet to version your data (e.g., add a version in the filename if using hf download).
+  2. Check for legal compliance:  
+     - Ensure the dataset has a permissive license (e.g., Apache 2.0, MIT, CC-BY, CC0).  
+     - Avoid datasets with restrictive licenses (SA, NC) unless explicitly permitted. Check Apertus license guidelines.  
+     - If the dataset is not compliant, consider republishing it under an open license or reaching out to the authors.
+  3. Ethical Considerations:  
+      - Your datasets complies with Swiss/EU privacy regulations (e.g., DVSO, GDPR) and moral codes.
+      - Apertus data guidelines have further recommendations (e.g., respecting `robots.txt` for web scraped data).  
 
-### Step 3: Prepare for LLMs (Optional)
-
-If your dataset is intended for **Large Language Models (LLMs)**:
+### Step 3: Prepare for use in LLMs
 
 - Follow best practices for **tokenization and formatting** (e.g., JSONL for text data).
 - Include **metadata** such as language, domain, and intended use cases.
-- For inspiration, see:
-  - [Llama-Ready Data Guide](https://www.marktechpost.com/2025/04/17/uploading-datasets-to-hugging-face-a-step-by-step-guide/)
-  - [Jianglong’s Blog Post](https://jaron-u.github.io/posts/upload_dataset_huggingface/)
+
+...
 
 ## 3. Documenting Your Dataset
 
@@ -160,3 +166,10 @@ Your feedback helps us improve! Let us know:
 ---
 
 Thank you for contributing to open science with Apertus! 🚀
+
+---
+
+# References
+
+- [Llama-Ready Data Guide](https://www.marktechpost.com/2025/04/17/uploading-datasets-to-hugging-face-a-step-by-step-guide/)
+- [Jianglong’s Blog Post](https://jaron-u.github.io/posts/upload_dataset_huggingface/)
