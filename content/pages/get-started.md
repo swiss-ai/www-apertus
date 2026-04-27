@@ -23,7 +23,7 @@ title: "Get Started"
 </div>
 
 <p class="section-intro">We would love to 
-  <a href="/feedback">hear about your projects</a> 
+  <a href="/showcase" target="_blank">hear about your projects</a> 
   as we build out this showcase.</p>
 
 ---
