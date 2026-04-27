@@ -17,6 +17,12 @@ comments: false
 
 Again, note that this evaluation strictly relates to the documentation, and makes no judgement of the performance, accessibility or openness of the model described.
 
+![Screenshot of a table](gpai-table4.png)
+
+The [Quality Assessment paper](https://arxiv.org/abs/2603.13270) goes into further detail on the methodology and background of this work.
+
+### Research findings
+
 Their key observation was that many AI companies are not complying with the [EU’s AI Act](https://en.wikipedia.org/wiki/Artificial_Intelligence_Act) requirement to publish summaries on their model training data. The AI Act mandates this information to help copyright holders enforce their rights and to ensure transparency. However, the lack of a unified system for sharing these summaries has made them hard to locate, and companies are not facing consequences for non-compliance until enforcement begins in August 2026\. 
 
 The researchers also noted that the existing EU template for summaries led to inconsistent submissions that made it challenging to assess compliance. They recommend the UK AI Office create a centralized portal to host these summaries, which would improve transparency and enforcement. While some smaller organizations like Switzerland’s national Apertus model have provided summaries, larger companies like Microsoft’s have been underwhelming, with missing details in their submissions.
