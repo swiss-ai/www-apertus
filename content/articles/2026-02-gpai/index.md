@@ -47,6 +47,10 @@ The researchers have recently been in touch with the Apertus team, and made a se
 
 We aim to have Apertus as a model with a "perfect" data summary, and will do our best to comply with this, while encouraging the whole community to be aware as well.
 
+![Table of analytics](gpai-ratingscard-apertus.png)
+
+You can find these and further notes in the [Results of Evaluation for Apertus](https://aial.ie/research/gpai-training-transparency/evals/apertus/).
+
 See also:
 
 * [AI Accountability Lab](https://aial.ie/)
