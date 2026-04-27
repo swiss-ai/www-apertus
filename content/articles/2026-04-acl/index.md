@@ -22,14 +22,14 @@ To address these limitations, the Apertus team developed a novel approach that:
 - Adopts the "Goldfish objective" during pretraining to suppress verbatim memorization of data, while maintaining model performance.
 - Trains on 15 trillion tokens of text from over 1,800 languages, with approximately 40% of pretraining data allocated to non-English content.
 
-The report introduces two models, both available on the **@swiss-ai** [Hugging Face page](https://huggingface.co/collections/swiss-ai/apertus-llm), each in the Base and Instruct (further trained for chat support) variants at the 8B- and 70B-scale. All of them are trained on the 15T token datamix with similar training parameters.
+The report introduces two models, both available on the **@swiss-ai** [Hugging Face page](https://huggingface.co/collections/swiss-ai/apertus-llm), each in the Base and Instruct (further trained for chat support) variants, at the 8B- and 70B-scale. All of them are trained on the 15T token datamix with similar training parameters.
 
 The report also includes safety considerations, warning that LLM models such as Apertus may hallucinate and generate unsafe or toxic outputs. Deployment requires additional testing and alignment for specific use cases.
 
-The ACL 2026 conference acceptance is a significant recognition of the Apertus project's technological prowess in global NLP academia. The conference, which accepts [around 20%](https://www.aclweb.org/aclwiki/Conference_acceptance_rates) from thousands of submitted papers, and is considered a world-class venue for AI research.
+The ACL 2026 invitation is a significant recognition of the Apertus project's technological prowess in global NLP academia. The conference, which accepts [around 20%](https://www.aclweb.org/aclwiki/Conference_acceptance_rates) from thousands of submitted papers, is considered a world-class venue for AI research.
 
 Our accepted paper will be presented at the [ACL 2026 Main Conference](https://2026.aclweb.org/) in San Diego on July 2-7, 2026 - this is where the Apertus team will share their findings and discuss potential applications of the model. The research was already [available as a pre-print](https://arxiv.org/abs/2509.14233) since the model release date, listed along with other relevant publications on our [Research page](https://apertvs.ai/pages/research/).
 
 ### About Apertus
 
-Apertus is a fully open suite of large language models designed to address the systemic shortcomings in today's open model ecosystem. The project is part of the Swiss National AI Initiative, committed to advancing open and responsible AI research. The Apertus team is comprised of researchers from leading Swiss institutions, including ETH Zurich, EPFL, and Swiss universities. For more information and contact details, please [visit our website](https://apertvs.ai).
+Apertus is a fully open suite of large language models designed to address systemic shortcomings in today’s AI model ecosystem. The project is part of the [Swiss National AI Initiative](https://swiss-ai.org), committed to advancing open and responsible AI research. The Apertus team is composed of researchers from leading Swiss institutions, including [ETH Zurich](https://ai.ethz.ch), [EPFL](https://ai.epfl.ch), and Swiss universities in collaboration with engineers from the [Swiss National Supercomputing Centre](https://cscs.ch) (CSCS). For more information and contact details, please [visit our website](https://apertvs.ai).
