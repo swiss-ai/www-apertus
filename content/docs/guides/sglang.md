@@ -23,19 +23,41 @@ _Diagram from [Getting started with SGLang](https://wilsonwu.me/en/blog/2025/get
 
 ### Overview
 
-Key features of SGLang include:
+For LLM developers on the Apertus team, SGLang streamlines the deployment process with quick server setup, leveraging GPU resources efficiently. Detailed control over model parameters (e.g., max context length, temperature, batch size) allows us to fine-tune performance and behavior.
 
-- **Efficient Backend Runtime**: Uses RadixAttention, prefix caching, and other optimizations to speed up inference. This reduces latency and increases throughput, making it ideal for production environments.
-- **Flexible Frontend Language**: Offers intuitive APIs for generating text, controlling model behavior, and managing complex prompts. This allows developers to craft detailed, context-dependent responses without diving into low-level details.
-- **Model Compatibility**: Supports a wide range of models (e.g., Llama, Gemma, Qwen), making it easy to experiment with different set-ups.
-- **Open-Source and Community-Driven**: Backed by a growing community, ensuring active development and support. This means frequent updates, new features, and access to community examples and troubleshooting resources.
+For production use, consider deploying SGLang with Kubernetes, e.g., using the [OME operator](https://github.com/sgl-project/ome) or [SkyPilot](https://docs.skypilot.co/en/latest/examples/serving/sglang.html) for cloud-scale setups. You can use the Python SDK or API tools like cURL to interact with SGLang, maintaining compatibility with existing workflows.
 
-For LLM developers, SGLang streamlines the deployment process with:
+To get started with SGLang:
 
-1. **Quick Deployment**: With minimal configuration, you can set up a server to serve a model, leveraging your GPU resources efficiently.
-2. **Customizable**: Provides control over model parameters (e.g., max context length, temperature, batch size) to fine-tune performance and behavior.
-3. **Streaming Support**: Ideal for real-time applications like chatbots or live interactions, allowing continuous generation without blocking.
-4. **Production-Ready**: Supports scaling, concurrency, and integration with cloud platforms (e.g., via Kubernetes), making it suitable for large-scale use cases.
+1. **Install SGLang**:  
+   ```  
+   pip install sglang huggingface-hub  
+   ```  
 
-For production use, consider deploying SGLang with Kubernetes, e.g., using the [OME operator](https://github.com/sgl-project/ome) or [SkyPilot](https://docs.skypilot.co/en/latest/examples/serving/sglang.html) for cloud-scale setups.
+2. **Start the Service**:  
+   - **Via CLI**:  
+     ```  
+     python -m sglang.launcher --model swiss-ai/Apertus-8B-Instruct-2509 --host 0.0.0.0 --port 30000 --tp 1 --max-model-len 8192  
+     ```  
+   - **Or with `sglang` command (if supported by your version):**  
+     ```  
+     sglang serve -m swiss-ai/Apertus-8B-Instruct-2509 --host 0.0.0.0 --port 30000  
+     ```  
 
+3. **Test Inference**:  
+   - **Example with cURL**:  
+     ```bash  
+     curl http://127.0.0.1:30000/v1/chat/completions\  
+       -H "Content-Type: application/json"\  
+       -H "Authorization: Bearer EMPTY"\  
+       -d '{"model": "swiss-ai/Apertus-8B-Instruct-2509",  
+            "messages": [  
+              {"role": "system", "content": "You are a helpful assistant."},  
+              {"role": "user", "content": "Explain SGLang in 3 sentences."}  
+            ],  
+            "max_tokens": 128,  
+            "temperature": 0.2  
+          }'  
+     ```  
+
+For more advanced use cases, explore the [official documentation](https://sglang.io/docs) and community resources.
