@@ -21,11 +21,13 @@ For more technical references, see the [Sources](#sources) further below.
 
 See the [Evaluation section](https://huggingface.co/swiss-ai/Apertus-8B-2509#evaluation) of the Apertus Model Card, and Section 5 of the [Tech Report](https://arxiv.org/abs/2509.14233) for more data. 
 
-You can find an initial independent evaluation at [effektiv.ch](https://www.effektiv.ch/en/blog/swiss-llm), and we will update this page with a shortlist of others soon.
+Please contact us if you are the author of an independent benchmark.
+We will soon update this page with a shortlist of other publications.
 
-# References
-
--   [Apertus Tech Session](https://drive.google.com/file/d/1NYiK648rdX0ypRSfcIcSdnL36suGh9ce/preview) (swiss-ai-weeks.ch)
--   [Can the Swiss LLM Compete?](https://www.effektiv.ch/en/blog/swiss-llm) (effektiv.ch)
--   [AlgorithmWatch statement](https://algorithmwatch.ch/de/apartus-eth-epfl/) & [position paper](https://algorithmwatch.ch/en/ai-regulation/)
--   [Alps Supercomputer ranking](https://top500.org/lists/top500/2024/06/) (TOP500.org)
+- [GPAI Training Transparency](https://apertvs.ai/articles/2026-02-gpai/)
+- [Flower Lizzy benchmark](https://flower.ai/blog/2026-04-15-releasing-lizzy7b-model/)
+- [Llama-GENBA-10B paper](https://arxiv.org/abs/2509.05668)
+- [Apertus Tech Session](https://drive.google.com/file/d/1NYiK648rdX0ypRSfcIcSdnL36suGh9ce/preview) (swiss-ai-weeks.ch)
+- [Can the Swiss LLM Compete?](https://www.effektiv.ch/en/blog/swiss-llm) (effektiv.ch)
+- [AlgorithmWatch statement](https://algorithmwatch.ch/de/apartus-eth-epfl/) & [position paper](https://algorithmwatch.ch/en/ai-regulation/)
+- [Alps Supercomputer ranking](https://top500.org/lists/top500/2024/06/) (TOP500.org)
