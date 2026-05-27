@@ -19,7 +19,7 @@ The message from the room was clear and consistent: Swiss businesses are ready t
 
 ![Presentation on stage](sme2.jpeg)
 
-The consensus is that Apertus---Switzerland's fully open, compliant, and multilingual large language model---is the key to unlocking this potential. Our community also highlighted that this potential must be matched with practicality.
+The consensus is that Apertus - Switzerland's fully open, compliant, and multilingual large language model - is the key to unlocking this potential. Our community also highlighted that this potential must be matched with practicality.
 
 The discussion, fueled by anonymous worksheets and lively debate, centered on several critical Roundtable Themes:
 
