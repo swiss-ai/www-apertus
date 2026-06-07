@@ -82,9 +82,9 @@ title: "Documentation"
   <a href="https://huggingface.co/models?sort=trending&search=apertus" target="_blank">
     Community builds</a> 
   exist in formats like
-  <a href="https://huggingface.co/models?library=gguf&sort=trending&search=apertus" target="_blank">MLX</a>
+  <a href="https://huggingface.co/models?library=mlx&sort=trending&search=apertus" target="_blank">MLX</a>
   and
-  <a href="https://huggingface.co/models?library=mlx&sort=trending&search=apertus" target="_blank">GGUF</a>.
+  <a href="https://huggingface.co/models?library=gguf&sort=trending&search=apertus" target="_blank">GGUF</a>.
   Please be aware if you are using a downstream version of Apertus, and seek technical support from the publisher in case of issues.
   <br><a href="/contact">Contact us</a> in case of security, legal, or other concerns.
 </p>
