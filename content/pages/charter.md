@@ -1,8 +1,8 @@
 ---
-title: "Swiss AI Charter"
+title: "Apertus Charter"
 ---
 
-<p class="section-intro">The Swiss AI Charter defines alignment principles for AI systems developed under the Swiss AI Initiative, rooted in Switzerland's constitutional values and democratic traditions.</p>
+<p class="section-intro">The Apertus Charter defines alignment principles for AI systems</p>
 
 <div class="charter-meta">
 <strong>Version 1.1 (draft)</strong><br>
@@ -14,7 +14,7 @@ June 2026
 ## Preamble
 
 <div class="preamble">
-This charter sets forth principles for the alignment of artificial intelligence systems developed under the Swiss AI Initiative. Rooted in Switzerland's constitutional values, democratic traditions, and shared commitment to human dignity, these principles are designed to translate abstract values into concrete alignment criteria for training large language models (LLMs). As AI capabilities advance and our understanding of alignment matures, this charter will adapt through participatory refinement, ensuring that our approach remains both principled and responsive to social and technological change.
+This charter sets forth principles for the alignment of artificial intelligence systems. These principles are designed to translate abstract values into concrete alignment criteria for training large language models (LLMs), and are inspired by Switzerland's constitutional values, democratic traditions, and shared commitment to human dignity. As AI capabilities advance and our understanding of alignment matures, this charter will adapt through participatory refinement, ensuring that our approach remains both principled and responsive to social and technological change.
 </div>
 
 ---
