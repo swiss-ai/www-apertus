@@ -4,7 +4,7 @@ date: 2026-03-17T10:00:00+01:00
 draft: false
 author: "ETH EPFL CSCS"
 tags: ["Apertus", "Community", "Announcement"]
-featured_image: "alps_computer.webp"
+featured_image: "Bellinzona_017.jpg"
 summary: "Fine-tuned model powers in-house AI translation"
 comments: false
 ---
@@ -41,3 +41,4 @@ In a first phase, the new Apertus-based tool will be tested by around 100 canton
 Author: Santina Russo, CSCS
 
 Republished from [cscs.ch/science/computer-science-hpc/..](https://www.cscs.ch/science/computer-science-hpc/2026/apertus-powers-in-house-ai-translation-for-ticino)
+Header photo of the [Palace of the Ticinese government](https://en.wikipedia.org/wiki/Grand_Council_of_Ticino#/media/File:Regierungsgeb%C3%A4ude_-_Bellinzona_017.jpg) in Bellinzona by Aliman5040, Public Domain.
