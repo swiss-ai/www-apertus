@@ -14,7 +14,7 @@ comments: false
 We release a set of 16 small models that we are calling the **[Apertus Mini collection](https://huggingface.co/collections/swiss-ai/apertus-mini)**, based on distillation and quantization techniques applied to the original Apertus v1 large language model. Base and instruct models are available in the following new sizes, along with 10 other quantization levels:
 
 - [Apertus 1.1 0.5B](https://huggingface.co/swiss-ai/Apertus-v1.1-0.5B) and [0.5B Instruct](https://huggingface.co/swiss-ai/Apertus-v1.1-0.5B-Instruct) (500 million parameters)
-- [Apertus 1.1 1.5B](https://huggingface.co/swiss-ai/Apertus-v1.1-1.5B) and [1.5B Instruct](https://huggingface.co/swiss-ai/Apertus-v1.1-1.5B-Instruct)
+- [Apertus 1.1 1.5B](https://huggingface.co/swiss-ai/Apertus-v1.1-1.5B) and [1.5B Instruct](https://huggingface.co/swiss-ai/Apertus-v1.1-1.5B-Instruct) (1.5 billion parameters)
 - [Apertus 1.1 4.0B](https://huggingface.co/swiss-ai/Apertus-v1.1-4B) and [4.0B Instruct](https://huggingface.co/swiss-ai/Apertus-v1.1-4B-Instruct) (4 billion parameters)
 
 These builds, created on the same infrastructure as our initial release, have been optimized for use in memory- or compute-constrained AI systems, such as portable or embedded devices. A linked technical report, being shared in an upcoming ICML workshop, describes the process used and evaluates the performance across a series of benchmarks.
