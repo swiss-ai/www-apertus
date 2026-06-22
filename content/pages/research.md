@@ -6,16 +6,24 @@ title: "Research"
 
 <p class="section-intro">
   Papers and technical reports from the Apertus project.
-  See the <a href="/news">News area</a> for general announcements.
+  This list is continuously expanded: please visit our <a href="https://www.zotero.org/groups/6385576/apertus" target="_blank">📖&nbsp;Zotero group</a> for other shared literature, and the 
+  <a href="/news">News area</a> for general announcements.
 </p>
 
 <div class="card-grid">
   <a href="https://arxiv.org/abs/2509.14233" class="card" target="_blank">
-    <img src="/images/tech-report.jpg" align="left" height="80"/>
+    <img src="/images/pub/tech-report.jpg" align="left" height="80"/>
     <h4>Apertus: Democratizing Open and Compliant LLMs for Global Language Environments</h4>
     <p>Main technical report — architecture, training methodology, data pipeline, evaluation.</p>
   </a>
 </div>
+
+<div class="card-grid">
+  <a href="https://apertus-claritas.org" class="card" target="_blank" style="padding: 2px;">
+    <img src="/images/pub/apertus-claritas.png" width="100%"/>
+  </a>
+</div>
+
 <div class="card-grid">
   <a href="https://arxiv.org/abs/2504.06219" class="card" target="_blank">
     <h4>Can Performant LLMs Be Ethical? Quantifying the Impact of Web Crawling Opt-Outs</h4>
@@ -126,7 +134,3 @@ title: "Research"
   </a>
     
 </div>
-
-<p class="section-intro">
-  This list is continuously expanded: please visit our <a href="https://www.zotero.org/groups/6385576/apertus" target="_blank">📖 Zotero group</a> for further literature.
-</p>
