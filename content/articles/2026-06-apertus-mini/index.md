@@ -19,6 +19,13 @@ We release a set of 16 small models that we are calling the **[Apertus Mini coll
 
 These builds, created on the same infrastructure as our initial release, have been optimized for use in memory- or compute-constrained AI systems, such as portable or embedded devices. A linked technical report, being shared in an upcoming ICML workshop, describes the process used and evaluates the performance across a series of benchmarks.
 
+### DEMO
+
+_Chat with the Apertus Mini models directly in your browser, with a space contributed by Nico Martin:_ <br>
+**[apertus-mini-webgpu](https://huggingface.co/spaces/swiss-ai/apertus-mini-webgpu)**
+
+## Details
+
 The training pipeline starts by very efficient distillation from the larger Apertus v1 8B teacher model, where we have recorded prediction logits for each next tokens, and wrote them to disk. of the  The smaller student models are then trained on these logits, for a training duration about 10x shorter than the regular pretraining. Finally, we apply advanced quantization techniques to further reduce computational requirements of running the models on a variety of devices. 
 
 The resulting Apertus-v1.1 models achieve strong performance while utilizing significantly less compute and memory compared to similar-sized models. The tech report also discusses the cost analysis, demonstrating that this approach is more efficient than pre-training from scratch or other methods. 
