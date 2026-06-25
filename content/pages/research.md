@@ -132,5 +132,11 @@ title: "Research"
     <div class="authors">Böther et al.</div>
     <p>Define and dynamically adjust data mixtures during training without performance bottlenecks.</p>
   </a>
+
+  <a href="https://arxiv.org/abs/2606.25971" class="card" target="_blank">
+    <h4>Improving Neural Network Training by Decoupling the Magnitude and Direction of Weight Vectors</h4>
+    <div class="authors">Hägele et al.</div>
+    <p>An optimizer modification to improve warmup, decay, training dynamics and performance across model scales.</p>
+  </a>
     
 </div>
