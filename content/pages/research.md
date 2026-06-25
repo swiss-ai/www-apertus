@@ -133,10 +133,29 @@ title: "Research"
     <p>Define and dynamically adjust data mixtures during training without performance bottlenecks.</p>
   </a>
 
+  <a href="https://arxiv.org/abs/2604.12973" class="card" target="_blank">
+    <h4>An Engineering Journey Training Large Language Models at Scale on Alps: The Apertus Experience</h4>
+    <div class="authors">Coles et al.</div>
+    <p>
+      Details the challenges encountered in readying HPC infrastructure for training AI models.
+    </p>
+  </a>
+
+  <a href="https://arxiv.org/abs/2605.29128" class="card" target="_blank">
+    <h4>
+      Apertus LLM Family Expansion via Distillation and Quantization
+    </h4>
+    <div class="authors">Panferov et al.</div>
+    <p>
+      Apertus-v1.1 is a distilled family of models trained on 1.7T permissive license tokens.
+    </p>
+  </a>
+
   <a href="https://arxiv.org/abs/2606.25971" class="card" target="_blank">
     <h4>Improving Neural Network Training by Decoupling the Magnitude and Direction of Weight Vectors</h4>
     <div class="authors">Hägele et al.</div>
     <p>An optimizer modification to improve warmup, decay, training dynamics and performance across model scales.</p>
   </a>
+
     
 </div>
