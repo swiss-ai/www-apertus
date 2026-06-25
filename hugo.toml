@@ -32,7 +32,7 @@ enableEmoji = true
   description = 'Fully Open Foundation Model for Sovereign AI'
   author = 'Swiss AI Initiative'
   [params.social]
-    github = 'swiss-ai'
+    github = 'swiss-ai/www-apertus/tree/main/content/docs'
   [params.footer]
     copyright = 'Swiss AI Initiative © 2026'
     version = false
