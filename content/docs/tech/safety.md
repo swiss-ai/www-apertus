@@ -15,7 +15,7 @@ In the Apertus LLM, various safety features are being designed to prevent the mo
 
 The goal is to create models that are safe, compliant, and reliable, while also respecting data privacy and ownership rights. This is an active area of research, that in practice very much depends on guardrails being implemented in the system within which the LLM is being deployed. For more information, visit these additional resources:
 
-- [Apertus Research papers](https://apertvs.ai/pages/research/)
+- [Apertus Research papers](/pages/research/)
 - [NVidia NeMo Guardrails](https://docs.nvidia.com/nemo/guardrails/latest/index.html)
 - [Meta LlamaFirewall](https://meta-llama.github.io/PurpleLlama/LlamaFirewall/)
 - [EvalGuard & alternatives](https://evalguard.ai/alternatives)
@@ -49,4 +49,3 @@ The safety advisory in the Apertus Tech Report and Model Card warns that the mod
 ### Open Source Transparency
 
 The Apertus project is committed to open source and transparency. The guardrail mechanisms are designed to be reproducible and transparent, allowing researchers and developers to understand how they work and apply them in their own projects.
-

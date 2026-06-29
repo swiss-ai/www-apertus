@@ -1,6 +1,6 @@
-baseURL = 'https://apertvs.ai/'
+baseURL = 'https://apertus-ai.org/'
 languageCode = 'en-us'
-title = 'APERTVS.ai'
+title = 'APERTVS'
 description = 'Fully Open Foundation Model for Sovereign AI'
 contentDir = 'content'
 enableEmoji = true

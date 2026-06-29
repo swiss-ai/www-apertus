@@ -24,7 +24,7 @@ See the [Evaluation section](https://huggingface.co/swiss-ai/Apertus-8B-2509#eva
 Please contact us if you are the author of an independent benchmark.
 We will soon update this page with a shortlist of other publications.
 
-- [GPAI Training Transparency](https://apertvs.ai/articles/2026-02-gpai/)
+- [GPAI Training Transparency](/articles/2026-02-gpai/)
 - [Flower Lizzy benchmark](https://flower.ai/blog/2026-04-15-releasing-lizzy7b-model/)
 - [Llama-GENBA-10B paper](https://arxiv.org/abs/2509.05668)
 - [Apertus Tech Session](https://drive.google.com/file/d/1NYiK648rdX0ypRSfcIcSdnL36suGh9ce/preview) (swiss-ai-weeks.ch)
