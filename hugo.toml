@@ -4,6 +4,7 @@ title = 'APERTVS.ai'
 description = 'Fully Open Foundation Model for Sovereign AI'
 contentDir = 'content'
 enableEmoji = true
+enableGitInfo = true
 
 [caches]
   [caches.images]
@@ -38,5 +39,7 @@ enableEmoji = true
     version = false
   [params.docs]
     repoURL = 'https://github.com/swiss-ai/www-apertus'
+    repoBranch = 'main'
+    editPage = true
     breadcrumbs = false
     darkMode = true

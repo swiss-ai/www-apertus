@@ -1,0 +1,57 @@
+{{ $repoURL := slice .Site.Params.docs.repoURL }}
+{{ $repoHostname := (urls.Parse (.Site.Params.docs.repoURL)).Hostname }}
+{{ $filePath := replace .File.Path "\\" "/" }}
+{{ $iconPath := "" }}
+
+{{ if strings.Contains ($repoHostname | lower) "github" }}
+    {{ $repoURL = $repoURL | append "edit" (.Site.Params.docs.repoBranch | default "main") }}
+    {{ $iconPath = "images/social/github_icon.svg" }}
+{{ else if strings.Contains ($repoHostname | lower) "gitlab" }}
+    {{ $repoURL = $repoURL | append "-/edit" (.Site.Params.docs.repoBranch | default "main") }}
+    {{ $iconPath = "images/social/gitlab_icon.svg" }}
+{{ else if strings.Contains ($repoHostname | lower) "bitbucket" }}
+    {{ $repoURL = $repoURL | append "src" (.Site.Params.docs.repoBranch | default "master") }}
+    {{ $iconPath = "images/social/bitbucket_icon.svg" }}
+{{ end }}
+
+{{ $repoURL = $repoURL | append "content" .Site.LanguagePrefix $filePath }}
+{{ $repoURL = delimit $repoURL "/" }}
+{{ $editPageURL := replaceRE "(https?://)|(/)+" "$1$2" $repoURL }}
+
+<div class="gitinfo d-flex flex-wrap justify-content-between align-items-center opacity-85 {{ if or .Site.Params.docs.lastMod .Site.Params.docs.editPage -}}pt-3{{ else }}visually-hidden{{ end }}">
+    {{ if .Site.Params.docs.editPage | default false -}}
+    <div id="edit-this-page" class="mt-1">
+        <a href="{{ $editPageURL }}" alt="{{ .Title }}" rel="noopener noreferrer" target="_blank">
+            <span class="me-1 align-text-bottom">
+                {{ with resources.Get $iconPath }}
+                    {{ .Content | safeHTML }}
+                {{ end }}
+            </span>
+            Edit this page on GitHub
+        </a>
+    </div>
+    {{ end }}
+    {{ if .Site.Params.docs.lastMod | default false -}}
+    <div id="last-modified" class="mt-1">
+        <p class="mb-0 fw-semibold">Last updated
+            <span
+                {{- if .Site.Params.docs.lastModRelative | default true }} id="relativetime"{{ end }}
+                {{- if .Params.lastmod }}
+                    data-authdate="{{ dateFormat "2006-01-02T15:04:05Z0700" .Params.lastmod }}"
+                {{- else if and (.Site.Params.docs.useLastmodTime | default false) (.Lastmod) }}
+                    data-authdate="{{ dateFormat "2006-01-02T15:04:05Z0700" .Lastmod }}"
+                {{- else }}
+                    data-authdate="{{ dateFormat "2006-01-02T15:04:05Z0700" .GitInfo.AuthorDate }}"
+                {{- end }}>
+                {{- if .Params.lastmod -}}
+                    {{ dateFormat "02 Jan 2006, 15:04 MST" .Params.lastmod }}
+                {{- else if and (.Site.Params.docs.useLastmodTime | default false) (.Lastmod) -}}
+                    {{ dateFormat "02 Jan 2006, 15:04 MST" .Lastmod }}
+                {{- else -}}
+                    {{ dateFormat "02 Jan 2006, 15:04 MST" .GitInfo.AuthorDate }}
+                {{- end -}}
+            </span>. <span class="material-icons size-20 align-text-bottom opacity-75">history</span>
+        </p>
+    </div>
+    {{ end }}
+</div>
