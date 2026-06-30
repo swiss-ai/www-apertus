@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.LanguageCode }}" dir="ltr">
+<html lang="{{ site.Language.Locale }}" dir="ltr">
     {{- partial "head.html" . -}}
     <body>
         <div id="content">
@@ -10,5 +10,6 @@
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.min.css"/>
+        {{- block "scripts" . }}{{- end }}
     </body>
 </html>
