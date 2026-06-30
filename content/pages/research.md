@@ -6,16 +6,24 @@ title: "Research"
 
 <p class="section-intro">
   Papers and technical reports from the Apertus project.
-  See the <a href="/news">News area</a> for general announcements.
+  This list is continuously expanded: please visit our <a href="https://www.zotero.org/groups/6385576/apertus" target="_blank">📖&nbsp;Zotero group</a> for other shared literature, and the 
+  <a href="/news">News area</a> for general announcements.
 </p>
 
 <div class="card-grid">
   <a href="https://arxiv.org/abs/2509.14233" class="card" target="_blank">
-    <img src="/images/tech-report.jpg" align="left" height="80"/>
+    <img src="/images/pub/tech-report.jpg" align="left" height="80"/>
     <h4>Apertus: Democratizing Open and Compliant LLMs for Global Language Environments</h4>
     <p>Main technical report — architecture, training methodology, data pipeline, evaluation.</p>
   </a>
 </div>
+
+<div class="card-grid">
+  <a href="https://apertus-claritas.org" class="card" target="_blank" style="padding: 2px;">
+    <img src="/images/pub/apertus-claritas.png" width="100%"/>
+  </a>
+</div>
+
 <div class="card-grid">
   <a href="https://arxiv.org/abs/2504.06219" class="card" target="_blank">
     <h4>Can Performant LLMs Be Ethical? Quantifying the Impact of Web Crawling Opt-Outs</h4>
@@ -124,9 +132,30 @@ title: "Research"
     <div class="authors">Böther et al.</div>
     <p>Define and dynamically adjust data mixtures during training without performance bottlenecks.</p>
   </a>
+
+  <a href="https://arxiv.org/abs/2604.12973" class="card" target="_blank">
+    <h4>An Engineering Journey Training Large Language Models at Scale on Alps: The Apertus Experience</h4>
+    <div class="authors">Coles et al.</div>
+    <p>
+      Details the challenges encountered in readying HPC infrastructure for training AI models.
+    </p>
+  </a>
+
+  <a href="https://arxiv.org/abs/2605.29128" class="card" target="_blank">
+    <h4>
+      Apertus LLM Family Expansion via Distillation and Quantization
+    </h4>
+    <div class="authors">Panferov et al.</div>
+    <p>
+      Apertus-v1.1 is a distilled family of models trained on 1.7T permissive license tokens.
+    </p>
+  </a>
+
+  <a href="https://arxiv.org/abs/2606.25971" class="card" target="_blank">
+    <h4>Improving Neural Network Training by Decoupling the Magnitude and Direction of Weight Vectors</h4>
+    <div class="authors">Hägele et al.</div>
+    <p>An optimizer modification to improve warmup, decay, training dynamics and performance across model scales.</p>
+  </a>
+
     
 </div>
-
-<p class="section-intro">
-  This list is continuously expanded: please visit our <a href="https://www.zotero.org/groups/6385576/apertus" target="_blank">📖 Zotero group</a> for further literature.
-</p>

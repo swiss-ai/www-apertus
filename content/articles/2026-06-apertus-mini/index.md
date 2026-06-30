@@ -4,14 +4,24 @@ date: 2026-06-15T10:00:00+01:00
 draft: false
 author: "ETH EPFL CSCS"
 tags: ["Apertus", "Announcement", "Research"]
-featured_image: "graph-mml-train.png"
+featured_image: "hf-mini.png"
 summary: "A set of 16 small language models released to demonstrate distillation and quantization techniques."
 comments: false
 ---
 
 ## Apertus LLM Family Expansion via Distillation and Quantization
 
-We release a set of 16 small models that we are calling the "Apertus Mini" collection, based on distillation and quantization techniques applied to the original Apertus v1 large language model. These builds, created on the same infrastructure, have been optimized for use in memory- or compute-constrained AI systems, such as portable or embedded devices. A linked technical report, being shared in an upcoming ICML workshop, describes the process used and evaluates the performance across a series of benchmarks.
+We release a set of 16 small models that we are calling the **[Apertus Mini collection](https://huggingface.co/collections/swiss-ai/apertus-mini)**, based on distillation and quantization techniques applied to the original Apertus v1 large language model. Base and instruct models are available in the following new sizes, along with 10 other quantization levels:
+
+- [Apertus 1.1 0.5B](https://huggingface.co/swiss-ai/Apertus-v1.1-0.5B) and [0.5B Instruct](https://huggingface.co/swiss-ai/Apertus-v1.1-0.5B-Instruct) (500 million parameters)
+- [Apertus 1.1 1.5B](https://huggingface.co/swiss-ai/Apertus-v1.1-1.5B) and [1.5B Instruct](https://huggingface.co/swiss-ai/Apertus-v1.1-1.5B-Instruct) (1.5 billion parameters)
+- [Apertus 1.1 4.0B](https://huggingface.co/swiss-ai/Apertus-v1.1-4B) and [4.0B Instruct](https://huggingface.co/swiss-ai/Apertus-v1.1-4B-Instruct) (4 billion parameters)
+
+These builds, created on the same infrastructure as our initial release, have been optimized for use in memory- or compute-constrained AI systems, such as portable or embedded devices. A linked technical report, being shared in an upcoming ICML workshop, describes the process used and evaluates the performance across a series of benchmarks.
+
+_Downloads and an online demo are available, and linked below._
+
+## Details
 
 The training pipeline starts by very efficient distillation from the larger Apertus v1 8B teacher model, where we have recorded prediction logits for each next tokens, and wrote them to disk. of the  The smaller student models are then trained on these logits, for a training duration about 10x shorter than the regular pretraining. Finally, we apply advanced quantization techniques to further reduce computational requirements of running the models on a variety of devices. 
 
@@ -29,11 +39,22 @@ Overall, the paper contributes a valuable resource for LLM practitioners interes
 
 This was a collaboration with a number of people involved \- thanks to Andrei, who led the project and Davit who helped with post-training. The ISTA’s Dan Alistarh and the EPFL's Martin Jaggi supervised the project through the ELLIS program, and the Apertus team made the training possible through the CSCS infrastructure supported by Swiss-AI grants.
 
-**Apertus LLM Family Expansion via Distillation and Quantization**  
-Andrei Panferov, Davit Melikidze, Martin Jaggi, Dan Alistarh  
-DOI: [10.48550/arXiv.2605.29128](https://ui.adsabs.harvard.edu/link_gateway/2026arXiv260529128P/doi:10.48550/arXiv.2605.29128)  arXiv: [2605.29128](https://arxiv.org/abs/2605.29128) OpenReview: [ICML2026](https://openreview.net/forum?id=G8G97TSBt7)
+### How to use Apertus Mini
 
-### Excerpts
+View and download the models in the [Apertus Mini collection](https://huggingface.co/collections/swiss-ai/apertus-mini). You can find further instructions on installing Apertus models in our [usage guides](https://apertus-ai.org/docs/guides/). Please note that certain [usage policies](https://apertus-ai.org/pages/documentation/) apply.
+
+Chat with the Apertus Mini models directly in your browser, with a demo space powered by [Transformers.js](https://huggingface.co/docs/transformers.js/index), contributed by Nico Martin from Hugging Face: <br>
+**[apertus-mini-webgpu](https://huggingface.co/spaces/swiss-ai/apertus-mini-webgpu)**
+
+---
+
+Citation:
+
+> **Apertus LLM Family Expansion via Distillation and Quantization**  
+> Andrei Panferov, Davit Melikidze, Martin Jaggi, Dan Alistarh  
+> DOI: [10.48550/arXiv.2605.29128](https://ui.adsabs.harvard.edu/link_gateway/2026arXiv260529128P/doi:10.48550/arXiv.2605.29128)  arXiv: [2605.29128](https://arxiv.org/abs/2605.29128) OpenReview: [ICML2026](https://openreview.net/forum?id=G8G97TSBt7)
+
+---
 
 ![](table-formats.png)
 

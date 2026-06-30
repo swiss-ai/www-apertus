@@ -5,8 +5,9 @@ title: "Get Started"
 ## Try Apertus
 
 <p class="section-intro">
-  Visit the <a href="/pages/documentation">Documentation page</a> for information
+  Visit the <a href="/docs/quickstart/">Quickstart page</a> for information
   on downloading Apertus models to your own computer.
+  Scroll down to see a list of verified cloud providers. The following applications have been built with Apertus:
 </p>
 
 <div class="card-grid">

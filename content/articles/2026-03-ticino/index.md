@@ -4,7 +4,7 @@ date: 2026-03-17T10:00:00+01:00
 draft: false
 author: "ETH EPFL CSCS"
 tags: ["Apertus", "Community", "Announcement"]
-featured_image: "alps_computer.webp"
+featured_image: "Bellinzona_017.jpg"
 summary: "Fine-tuned model powers in-house AI translation"
 comments: false
 ---
@@ -14,7 +14,7 @@ comments: false
 
 Italian, German, French, Spanish, Romanian, Ukrainian---these are just some of the languages that employees of the Canton of Ticino need to translate between. As one of only two Swiss cantons with Italian as official language, Ticino handles a large volume of documents that require translation. Often, the information in these documents is sensitive and must remain confidential. For this reason, the cantonal administration is in the process of introducing a closed, secure in-house solution. The Computer Systems Centre [(Centro sistemi informativi, CSI)](https://www4.ti.ch/dfe/dr/csi/centro/) within the canton's Department of Finance and Economy has now installed an AI translation tool that uses Apertus as its underlying large language model (LLM).
 
-[Apertus](https://apertvs.ai/), launched in September 2025, is Switzerland's transparent, fully open-source large language model. It was developed within the [Swiss AI Initiative](https://www.swiss-ai.org/) by [ETH Zürich](https://ethz.ch/en.html), [EPFL](https://www.epfl.ch/en/), and the [Swiss National Supercomputing Centre CSCS](https://www.cscs.ch/). The foundation model is freely available in two sizes---one with 8 billion parameters and the other with 70 billion. Both models are released under a permissive open-source license, allowing their use in education and research as well as in broader societal and commercial applications. A Ticino-based company, [Artificialy](https://www.artificialy.com/), has now built for the canton a fine-tuned version of the smaller model, Apertus 8b.
+[Apertus](/), launched in September 2025, is Switzerland's transparent, fully open-source large language model. It was developed within the [Swiss AI Initiative](https://www.swiss-ai.org/) by [ETH Zürich](https://ethz.ch/en.html), [EPFL](https://www.epfl.ch/en/), and the [Swiss National Supercomputing Centre CSCS](https://www.cscs.ch/). The foundation model is freely available in two sizes---one with 8 billion parameters and the other with 70 billion. Both models are released under a permissive open-source license, allowing their use in education and research as well as in broader societal and commercial applications. A Ticino-based company, [Artificialy](https://www.artificialy.com/), has now built for the canton a fine-tuned version of the smaller model, Apertus 8b.
 
 ### **The smaller Apertus model performs**
 
@@ -41,3 +41,4 @@ In a first phase, the new Apertus-based tool will be tested by around 100 canton
 Author: Santina Russo, CSCS
 
 Republished from [cscs.ch/science/computer-science-hpc/..](https://www.cscs.ch/science/computer-science-hpc/2026/apertus-powers-in-house-ai-translation-for-ticino)
+Header photo of the [Palace of the Ticinese government](https://en.wikipedia.org/wiki/Grand_Council_of_Ticino#/media/File:Regierungsgeb%C3%A4ude_-_Bellinzona_017.jpg) in Bellinzona by Aliman5040, Public Domain.
