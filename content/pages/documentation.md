@@ -37,7 +37,7 @@ title: "Documentation"
   <div class="card">
     <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" style="height:48px;margin-bottom:2rem;float:left">
     <h3>Apertus 8B</h3>
-    <p>8 billion parameters · Apache 2.0 license</p>
+    <p>8 billion parameters · Apache 2.0</p>
     Download →
     <a href="https://huggingface.co/swiss-ai/Apertus-8B-2509">Base</a> or
     <a href="https://huggingface.co/swiss-ai/Apertus-8B-Instruct-2509">Instruct</a>
@@ -45,10 +45,22 @@ title: "Documentation"
   <div class="card">
     <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" style="height:48px;margin-bottom:2rem;float:left">
     <h3>Apertus 70B</h3>
-    <p>70 billion parameters · Apache 2.0 license</p>
+    <p>70 billion parameters · Apache 2.0</p>
     Download →
     <a href="https://huggingface.co/swiss-ai/Apertus-70B-2509">Base</a> or
     <a href="https://huggingface.co/swiss-ai/Apertus-70B-Instruct-2509">Instruct</a>
+  </div>
+  <div class="card">
+    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" style="height:48px;margin-bottom:2rem;float:left">
+    <h3>Apertus Mini</h3>
+    <p>0.5, 1.5, 4 billion parameters · Apache 2.0</p>
+    Download →
+    <a href="https://huggingface.co/collections/swiss-ai/apertus-mini">View collection</a>
+  </div>
+  <div class="card card-grey">
+    <h3>Apertus 1.5</h3>
+    <p>8 + 70 billion parameters · Apache 2.0</p>
+    <i>Coming soon</i>
   </div>
 </div>
 <p class="section-intro">
@@ -82,9 +94,9 @@ title: "Documentation"
   <a href="https://huggingface.co/models?sort=trending&search=apertus" target="_blank">
     Community builds</a> 
   exist in formats like
-  <a href="https://huggingface.co/models?library=gguf&sort=trending&search=apertus" target="_blank">MLX</a>
+  <a href="https://huggingface.co/models?library=mlx&sort=trending&search=apertus" target="_blank">MLX</a>
   and
-  <a href="https://huggingface.co/models?library=mlx&sort=trending&search=apertus" target="_blank">GGUF</a>.
+  <a href="https://huggingface.co/models?library=gguf&sort=trending&search=apertus" target="_blank">GGUF</a>.
   Please be aware if you are using a downstream version of Apertus, and seek technical support from the publisher in case of issues.
   <br><a href="/contact">Contact us</a> in case of security, legal, or other concerns.
 </p>

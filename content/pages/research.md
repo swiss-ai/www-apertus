@@ -29,7 +29,7 @@ title: "Research"
     <p>Research on memorization patterns and copyright risks in LLMs.</p>
   </a>
 
-  <a href="https://infoscience.epfl.ch/handle/20.500.14299/241591" class="card" target="_blank">
+  <a href="https://infoscience.epfl.ch/entities/publication/bbf28e20-11df-45ad-b71f-1e710e1c79ef" class="card" target="_blank">
     <h4>Quantifying Training Data Retention in Large Language Models: An Analysis of Pretraining Factors and Mitigation Strategies</h4>
     <div class="authors">Yixuan Xu (Master Thesis)</div>
     <p>Analysis of memorization and mitigation strategies applied in Apertus.</p>
