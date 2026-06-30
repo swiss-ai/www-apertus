@@ -19,6 +19,10 @@ We release a set of 16 small models that we are calling the **[Apertus Mini coll
 
 These builds, created on the same infrastructure as our initial release, have been optimized for use in memory- or compute-constrained AI systems, such as portable or embedded devices. A linked technical report, being shared in an upcoming ICML workshop, describes the process used and evaluates the performance across a series of benchmarks.
 
+_Downloads and an online demo are available, and linked below._
+
+## Details
+
 The training pipeline starts by very efficient distillation from the larger Apertus v1 8B teacher model, where we have recorded prediction logits for each next tokens, and wrote them to disk. of the  The smaller student models are then trained on these logits, for a training duration about 10x shorter than the regular pretraining. Finally, we apply advanced quantization techniques to further reduce computational requirements of running the models on a variety of devices. 
 
 The resulting Apertus-v1.1 models achieve strong performance while utilizing significantly less compute and memory compared to similar-sized models. The tech report also discusses the cost analysis, demonstrating that this approach is more efficient than pre-training from scratch or other methods. 
@@ -35,9 +39,16 @@ Overall, the paper contributes a valuable resource for LLM practitioners interes
 
 This was a collaboration with a number of people involved \- thanks to Andrei, who led the project and Davit who helped with post-training. The ISTA’s Dan Alistarh and the EPFL's Martin Jaggi supervised the project through the ELLIS program, and the Apertus team made the training possible through the CSCS infrastructure supported by Swiss-AI grants.
 
-View and download the models in the [Apertus Mini collection](https://huggingface.co/collections/swiss-ai/apertus-mini)
+### How to use Apertus Mini
+
+View and download the models in the [Apertus Mini collection](https://huggingface.co/collections/swiss-ai/apertus-mini). You can find further instructions on installing Apertus models in our [usage guides](https://apertus-ai.org/docs/guides/). Please note that certain [usage policies](https://apertus-ai.org/pages/documentation/) apply.
+
+Chat with the Apertus Mini models directly in your browser, with a demo space powered by [Transformers.js](https://huggingface.co/docs/transformers.js/index), contributed by Nico Martin from Hugging Face: <br>
+**[apertus-mini-webgpu](https://huggingface.co/spaces/swiss-ai/apertus-mini-webgpu)**
 
 ---
+
+Citation:
 
 > **Apertus LLM Family Expansion via Distillation and Quantization**  
 > Andrei Panferov, Davit Melikidze, Martin Jaggi, Dan Alistarh  
