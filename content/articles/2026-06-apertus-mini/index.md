@@ -4,8 +4,8 @@ date: 2026-06-15T10:00:00+01:00
 draft: false
 author: "ETH EPFL CSCS"
 tags: ["Apertus", "Announcement", "Research"]
-featured_image: "hf-mini.png"
-summary: "A set of 16 small language models released to demonstrate distillation and quantization techniques."
+featured_image: "apertus-mini-chat.jpeg"
+summary: "16 small models to demonstrate distillation and quantization"
 comments: false
 ---
 
@@ -19,7 +19,9 @@ We release a set of 16 small models that we are calling the **[Apertus Mini coll
 
 These builds, created on the same infrastructure as our initial release, have been optimized for use in memory- or compute-constrained AI systems, such as portable or embedded devices. A linked technical report, being shared in an upcoming ICML workshop, describes the process used and evaluates the performance across a series of benchmarks.
 
-_Downloads and an online demo are available, and linked below._
+[![Screenshot of Hugging Face collection](hf-mini.png)](https://huggingface.co/collections/swiss-ai/apertus-mini)
+
+_Downloads and an online demo are available, keep reading for background details._
 
 ## Details
 
@@ -67,3 +69,7 @@ Figure 2\. Multilingual performance macro average during pretraining of Apertus-
 ![](screenshot-lmstudio.png)
 
 A screenshot of the LM Studio interface, showing the Apertus-v1.1 models in action.
+
+![](apertus-mini-chat.jpeg)
+
+A screenshot of the [Apertus Mini chat interface](https://huggingface.co/spaces/swiss-ai/apertus-mini-webgpu) on Hugging Face, by Nico Martin.

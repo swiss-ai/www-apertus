@@ -17,28 +17,30 @@ The SME Circle format is experiencing clear momentum, reflected in rising regist
 
 ![](image1.jpg)
 
-Bringing this case to point was a quick overview of the winners of the Spotlight award, announced last week at a premier business competition by Lea Firmin, CEO of [>>venture>>](https://www.venture.ch/). Among dozens of submissions, the most creative, high-impact applications of Apertus were recognized according to their innovation, technical excellence, and real-world impact. Learn more on their websites of the finalists [Noemon](https://www.noemon.com/), [Anyway Systems](https://www.anyway.dev/)and [Public AI Switzerland](https://publicai.ch/).
+Bringing this case to point was a quick overview of the winners of the Spotlight award, announced last week at a premier business competition by Lea Firmin, CEO of [>>venture>>](https://www.venture.ch/). Among dozens of submissions, the most creative, high-impact applications of Apertus were recognized according to their innovation, technical excellence, and real-world impact. Learn more on their websites of the finalists [Noemon](https://www.noemon.com/), [Anyway Systems](https://www.anyway.dev/) and [Public AI Switzerland](https://publicai.ch/).
 
 ![](image3.jpg)
 
 Next, we heard from [Prashanth](https://www.cscs.ch/publications/stories/2020/meet-the-staff-prashanth-kanduri), Research Software Engineer at CSCS, on how the ALPS infrastructure is evolving to meet a wider need for supercomputing in society. What was once considered a specialist field, used in predicting weather patterns and complex processes, is now one of the core tenets ensuring public value from public funding. Open models like Apertus are part of this return on investment, with far-reaching impacts.
 
-At [previous SME Circles](https://apertus-ai.org/articles/2026-03-sme-circle/), we heard about use cases for AI ranging from process automation and knowledge work to customer-facing applications. A strong underlying driver is the topic of digital sovereignty. Many organizations are actively seeking Swiss-based and open source models that provide training data, model weights, and access to system behavior. This transparency is increasingly seen as a strategic requirement rather than a technical preference.
+At [previous SME Circles](/articles/2026-03-sme-circle/), we heard about use cases for AI ranging from process automation and knowledge work to customer-facing applications. A strong underlying driver is the topic of digital sovereignty. Many organizations are actively seeking Swiss-based and open source models that provide training data, model weights, and access to system behavior. This transparency is increasingly seen as a strategic requirement rather than a technical preference.
 
 ![](image6.jpg)
 
-For scientific disclosure, we invited [Hanna](https://www.ayukh.com/). One of the senior engineers who works on our project at the AI Center, she joined us to share insights and answer questions about LLMs. Apertus 1.1 was uploaded earlier this week, bringing three more compact sizes for offline use, even on smartphones or embedded devices. We talked about the upcoming Apertus 1.5 release, with multimodal input, better instruction calling, and continued training with new data sources. There is lots to look forward to -- and many challenges on the road ahead.
+For insights on the science of Apertus, we invited [Hanna](https://www.ayukh.com/). One of the senior engineers who works on our project at the AI Center, she joined us to share insights and answer questions about LLMs. [Apertus 1.1 "Mini"](/articles/2026-06-apertus-mini/) was uploaded earlier this week, bringing three more compact sizes for offline use, even on smartphones or embedded devices. We talked about the upcoming **Apertus 1.5** release, with multimodal input, better instruction calling, and continued training with new data sources. 
 
-We invited everyone to get ready to get a boost to their initiatives in the months ahead through a submission to our [Showcase](https://apertus-ai.org/showcase/). We also announced [Apertus Claritas](https://apertus-claritas.org/), a new open access platform with tech notes on the interpretability of large language models (LLMs). Look for more content here and subscribe to the [Inside Apertus](https://apertus-ai.org/subscribe/) newsletter for a regular look behind the scenes of the R&D project.
+We also announced [Apertus Claritas](https://apertus-claritas.org/), a new open access platform with tech notes on the interpretability of large language models (LLMs). Look for more content here and subscribe to the [Inside Apertus](/subscribe/) newsletter for a regular look behind the scenes of the R&D project.
+
+There is lots to look forward to: and many challenges on the road ahead. We invited everyone to get ready to get a boost to their initiatives through our development program through a submission to our [Project Showcase](/showcase/). 
 
 ![](image5.jpg)
 
 Our Birds of a Feather sessions at SME Circle #4 focused on four areas:
 
--   Swiss-made AI as a competitive advantage
--   Deployment & integration of open LLMs
--   Cooperation opportunities around Apertus
--   Funding and business models for SMEs
+-   **Swiss-made AI as a competitive advantage**
+-   **Deployment & integration of open LLMs**
+-   **Cooperation opportunities around Apertus**
+-   **Funding and business models for SMEs**
 
 The conversations centered on the strategic advantages and practical applications of Swiss open-source AI, particularly highlighting how on-premises, self-hosted solutions offer a competitive edge due to their strong emphasis on privacy, safety, and agentic capabilities. A significant portion of the discussion detailed deployment and integration, covering practical aspects like GGUF deployment, optimizing RAG chunk sizes. Other groups spent the hour addressing complex use cases such as pension fund statements and insurance workflow automation.
 
@@ -63,6 +65,6 @@ In a few weeks, you can apply to the [Prototype Fund CH](https://prototypefund.o
 
 Review the slide presentations from SME Circle #4 here:
 
--   [SME Circle #4 introduction](https://drive.google.com/file/d/1RFSje2l-JqYej0ax0zGwIWLOjQEz5Gee/view?usp%3Ddrive_link)
--   [Spotlight Award Apertus](https://drive.google.com/file/d/1LN_zOVpM9944KQUjxMAaHhKXhFKXe9Cv/view?usp%3Ddrive_link)
--   [Robot Ross Miguel Rodriguez](https://drive.google.com/file/d/1yeP9H7deczULXiiSy56MfooVrQvrN_57/view?usp%3Ddrive_link)
+-   [SME Circle #4 introduction](https://drive.google.com/file/d/1RFSje2l-JqYej0ax0zGwIWLOjQEz5Gee/view?usp=sharing)
+-   [Spotlight Award Apertus](https://drive.google.com/file/d/1LN_zOVpM9944KQUjxMAaHhKXhFKXe9Cv/view?usp=drive_link)
+-   [Robot Ross Miguel Rodriguez](https://drive.google.com/file/d/1yeP9H7deczULXiiSy56MfooVrQvrN_57/view?usp=sharing)
