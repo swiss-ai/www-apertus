@@ -1,5 +1,4 @@
 baseURL = 'https://apertus-ai.org/'
-languageCode = 'en'
 title = 'APERTVS'
 description = 'Fully Open Foundation Model for Sovereign AI'
 contentDir = 'content'
