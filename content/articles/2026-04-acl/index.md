@@ -1,11 +1,11 @@
 ---
 title: "Apertus paper at ACL 2026"
-date: 2026-04-25T10:00:00+01:00
+date: 2026-07-06T10:00:00+01:00
 draft: false
 author: "ETH EPFL CSCS"
 tags: ["Apertus", "Announcement", "Research"]
-featured_image: "apertus-paper.jpg"
-summary: "Our technical report has been accepted at a leading conference for AI & NLP."
+featured_image: "ACL 2026 - Angelika Romanou - CC BY 4.0.jpeg"
+summary: "Our technical report presented at a leading conference for AI & NLP"
 comments: false
 ---
 
@@ -24,11 +24,13 @@ To address these limitations, the Apertus team developed a novel approach that:
 
 The report introduces two models, both available on the **@swiss-ai** [Hugging Face page](https://huggingface.co/collections/swiss-ai/apertus-llm), each in the Base and Instruct (further trained for chat support) variants, at the 8B- and 70B-scale. All of them are trained on the 15T token datamix with similar training parameters.
 
+[![Screenshot of the Apertus paper](apertus-paper.jpg)](https://arxiv.org/abs/2509.14233)
+
 The report also includes safety considerations, warning that LLM models such as Apertus may hallucinate and generate unsafe or toxic outputs. Deployment requires additional testing and alignment for specific use cases.
 
 The ACL 2026 invitation is a significant recognition of the Apertus project's technological prowess in global NLP academia. The conference, which accepts [around 20%](https://www.aclweb.org/aclwiki/Conference_acceptance_rates) from thousands of submitted papers, is considered a world-class venue for AI research.
 
-Our accepted paper will be presented at the [ACL 2026 Main Conference](https://2026.aclweb.org/) in San Diego on July 2-7, 2026 - this is where the Apertus team will share their findings and discuss potential applications of the model. The research was already [available as a pre-print](https://arxiv.org/abs/2509.14233) since the model release date, listed along with other relevant publications on our [Research page](/pages/research/).
+Our accepted paper is being presented at the [ACL 2026 Main Conference](https://2026.aclweb.org/) in San Diego on July 2-7, 2026, where the Apertus team looks forward to discuss their findings with the global research community. The research has already been [available as a pre-print](https://arxiv.org/abs/2509.14233) since the model release date, listed along with other relevant publications on our [Research page](/pages/research/).
 
 ### About Apertus
 
