@@ -2,9 +2,27 @@
 title: "Legal Notice"
 ---
 
-## Legal Notice
+# Legal Notice for Models
 
-Websites www.apertvs.ai apertus-ai.org apertus.swiss, and all other related domains are the property of Ecole polytechnique fédérale de Lausanne (EPFL).
+#### Transparency Documentation and Code of Practice
+
+-   [Apertus_EU_Public_Summary.pdf](https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/Apertus_EU_Public_Summary.pdf)
+-   [Apertus_EU_Code_of_Practice.pdf](https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/Apertus_EU_Code_of_Practice.pdf)
+
+#### Data Protection and Copyright Requests
+
+For removal requests of personally identifiable information (PII) or of copyrighted content, please contact the respective dataset owners or us directly
+
+-   <llm-privacy-requests@swiss-ai.org>
+-   <llm-copyright-requests@swiss-ai.org>
+
+#### Output Filter for PII
+
+-   Currently no output filter is provided. This may change in the future, so please check back for updates on our Hugging Face organization page and website.
+
+# Legal Notice for Websites
+
+The Internet sites apertus-ai.org apertvs.ai apertus.swiss, and all other related domains are the property of Ecole polytechnique fédérale de Lausanne (EPFL).
 
 EPFL takes great care when presenting information on its websites. EPFL cannot be held responsible for third-party content, even if EPFL websites link or refer to them.
 

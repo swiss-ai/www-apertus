@@ -48,7 +48,7 @@ Our dialogues explored various deployment scenarios, from small models for fruga
 
 ![](image4.jpg)
 
-The sessions were animated by our co-hosts Hanna Brahms (SwissICT), Prashanth Kanduri (CSCS), Alicia Rieckhoff and Mauricio Moncada (ETH), Ilaria Ricchi and Oleg Lavrovsky (EPFL).
+The sessions were animated by our co-hosts Hanna Brahme (SwissICT), Prashanth Kanduri (CSCS), Alicia Rieckhoff and Mauricio Moncada (ETH), Ilaria Ricchi and Oleg Lavrovsky (EPFL).
 
 Closing thoughts
 ----------------
