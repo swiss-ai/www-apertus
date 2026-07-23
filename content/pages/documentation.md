@@ -15,7 +15,7 @@ title: "Documentation"
     <p>Terms and conditions for model use</p>
   </a>
   <a href="/pages/charter" class="card" style="text-decoration: none;">
-    <h4>Swiss AI Charter</h4>
+    <h4>Apertus Charter</h4>
     <p>The internal constitution of Apertus</p>
   </a>
   <a href="https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/Apertus_EU_Public_Summary.pdf" class="card" style="text-decoration: none;">

@@ -51,7 +51,7 @@ Many organizations are currently piloting solutions with the model, and we will 
 <h4>How is Apertus aligned?</h4>
 <p>Apertus was trained with ethical and safety principles to align with Swiss values and EU AI Act goals (e.g., transparency, fairness, human oversight). 
 While we strive to minimize bias, users should be aware of inherent biases in language data and test for fairness in their applications.
-See the <a href="/pages/charter">Swiss AI Charter</a> for details.
+See the <a href="/pages/charter">Apertus Charter</a> for details.
 </div>
 
 <div class="faq-item">
