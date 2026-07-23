@@ -24,7 +24,7 @@
   {{ end }}
 
   {{/* Page content with top padding to clear fixed navbar */}}
-  <section class="page-content bg-white pb-5 mt-4">
+  <section class="page-content bg-white pb-5 {{ if .Params.featured_image }}mt-4{{ else }}mt-5 pt-5{{ end }}">
     <div class="container" style="max-width: 900px;">
       {{ if .Params.author }}
         <div class="fs-5 mr-4 mb-4">{{ .Date.Format "January 2, 2006" }}</div>
