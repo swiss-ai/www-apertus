@@ -1,46 +1,43 @@
 ---
 title: "Apertus 1.5"
-date: 2026-07-14T10:00:00+01:00
+date: 2026-07-24T10:00:00+01:00
 draft: false
 author: "ETH EPFL CSCS"
 tags: ["Apertus", "Release", "Announcement"]
 featured_image: "apertus-keyvisual-1-5.jpg"
-summary: "Update of our fully open, transparent, multilingual language model"
+summary: "Our fully open models become more useful in practice: multimodal input, reasoning, longer context, and better instruction following"
 comments: false
 ---
 
-#### Apertus 1.5, our latest model release, builds on the strengths of previous versions by focusing on three key areas: continued pretraining with strategic data, multimodal and instruction-following capabilities. 
+#### Apertus 1.5, our latest model release, extends the 8B and 70B Apertus 1.0 models with image understanding, an optional thinking mode, a four times longer context window, improved instruction-following, and better tool use.
 
-With a vision to support the creation of more robust, inclusive, and versatile AI systems, we have integrated two trillion additional tokens into our training pipeline. These new data points ensure that Apertus can better understand and respond to complex issues, reflecting the diverse needs of our downstream model builders and users. 
+Apertus 1.5 is a continued pretraining of Apertus 1.0: we added 4 trillion tokens of text and multimodal training data to the 8B model and 2 trillion tokens to the 70B model. As with every Apertus release, the models are fully open: open weights, open data, open values, and full training details.
 
-The 1.5 update of both the 8B and 70B parameter models is taking place on July 14, 2026. We are working with inference providers to ensure global availability on multiple platforms by this date.
+The updated 8B and 70B models are released on July 24, 2026. We are working with inference providers to make them available on multiple platforms.
 
 ### Key Enhancements
 
-- Continued Pretraining: The training base has been expanded by adding 2 trillion tokens of high-quality data. Data upsampling has been performed in strategic domains critical to public interest, including Health, Education, and Justice.
-- Native Audio & Image Input: Apertus 1.5 introduces multimodal support for processing audio and image inputs, enabling more intuitive and versatile interaction beyond text.
-- Advanced Reasoning: Enhanced logical reasoning capabilities allow the model to handle more complex, multi-step queries.
-- Improved Instruction-Following: Significant improvements in instruction adherence ensure more predictable and accurate responses to user prompts.
-- Tool-Use Capabilities: The model now demonstrates advanced proficiency in utilizing external tools effectively.
+- Native Image Understanding: Apertus 1.5 accepts images alongside text, bringing documents, diagrams, and photos into the conversation. The models can also process spoken language, though this remains experimental.
+- Thinking Mode: The models can be switched into a thinking mode to reason about the input before answering, which improves performance on reasoning problems.
+- Long Context: The context window grows to 262,144 tokens, a four-fold increase over Apertus 1.0.
+- Improved Instruction-Following: Better instruction adherence than Apertus 1.0 gives more predictable and accurate responses.
+- Improved Tool Use: The models are trained for better tool integration, allowing more effective use of external tools and APIs.
+- Open Values: Stronger adherence to the [Apertus Charter](/pages/charter/), which brings transparency to the model's values and principles.
 
 ![Screenshot of Apertus](Apertus-1.5-Wasserkraftwerks_Niederried-Radelfingen,_Schnittzeichnung.jpg)
 
-_Multimodal processing: Apertus 1.5 70B interprets the contents of a technical drawing of a [Water power plant](https://commons.wikimedia.org/wiki/File:Wasserkraftwerks_Niederried-Radelfingen,_Schnittzeichnung.jpg) (CC BY 4.0) based on an image and short prompt into OpenWebUI, replying with an accurate description in the form of a text response._
+_Multimodal processing: Apertus 1.5 70B interprets the contents of a technical drawing of a [Water power plant](https://commons.wikimedia.org/wiki/File:Wasserkraftwerks_Niederried-Radelfingen,_Schnittzeichnung.jpg) (CC BY 4.0) based on an image and short prompt, replying with a description in the form of a text response._
 
-To bridge the gap between text and the broader range of human communication, we have introduced multimodal support. Users can now interact with Apertus through spoken language, using text-to-speech technology for voice prompts, and also provide image inputs for text descriptions. This integration enables applications in fields like education, where learners can engage with interactive visual content, or in healthcare, where images can be analyzed alongside text descriptions for enhanced diagnostic support.
+A technical report with further details, along with detailed benchmark results, training pipelines, and intermediate checkpoints, will be published in the coming weeks. Technical instructions for running the models can be found in the model cards of the [Apertus 1.5 8B](https://huggingface.co/swiss-ai/Apertus-v1.5-8B) and [Apertus 1.5 70B](https://huggingface.co/swiss-ai/Apertus-v1.5-70B) releases on Hugging Face.
 
-The improved instruction following skills in Apertus 1.5 are designed to make the model more intuitive to work with, especially for developers and general users who need to integrate the model into more practical, tool-based workflows. AI systems that build on Apertus should be able to better understand and execute requests related to coding and data manipulation, allowing for more sophisticated use cases in research, development, and education. Developers of integrated solutions that rely on protocols like [MCP](https://modelcontextprotocol.io/docs/getting-started/intro), [UTCP](https://www.utcp.io/) or [A2A](https://a2a-protocol.org/latest/) particularly stand to benefit from these improvements.
+### How to Get Involved
 
-### How to get Involved
+If you build with or use Apertus, please reach out through our [Contact page](/contact/). We would love to highlight your work, learn what you are building, and hear how Apertus can be improved.
 
-We recognize the importance of community engagement and feedback in shaping the final product. Therefore, we have offered early access to select partners and contributors who have already demonstrated a commitment to the project through serving the original release of Apertus, or making visible contributions to the open-source codebase.
+Join the discussion in the community forums on Hugging Face and GitHub. At our regular [Swiss AI SME Circle](/articles/2026-06-sme-circle/) events, small and medium enterprises meet our engineers in person to exchange ideas and experiences.
 
-For all our users and interested parties, we provide detailed documentation on a newly launched website, a set of community forums on Hugging Face and GitHub, and email support from our team. We also host regular workshops and plan more webinars to showcase new features and gather feedback. 
-
-In terms of integration support, while we do not offer full-service training or on-site deployment, we are committed to providing code examples and guides to facilitate practical use cases and extensions. Our goal is to empower Apertus champions in a variety of applications, in a diversity of settings.
-
-Looking ahead, the Apertus 1.5 release is not just about introducing new capabilities but about fostering a collaborative, open, and inclusive AI ecosystem that reflects our shared values. We thank our contributors and partners for their ongoing support, and look forward to seeing the innovative ways you will use the models and tools. Let us see what the future holds for open source LLMs, and their impact on society.
+Want to help build fully open, responsibly trained, and truly global open source AI? The Apertus team is growing, with engineer positions open at ETH Zurich and EPFL \[[1](https://www.jobs.ethz.ch/job/view/JOPG_ethz_R5qUjBUy23vspsktAL), [2](https://www.jobs.ethz.ch/job/view/JOPG_ethz_HDwKLCU4qbu6ray4fL), [3](https://www.jobs.ethz.ch/job/view/JOPG_ethz_kWhKpJAIZB2OmXNQEH), [4](https://www.jobs.ethz.ch/job/view/JOPG_ethz_Z6YaLwO1IE0WjNz0Le), [5](https://careers.epfl.ch/job/Lausanne-Post-Training-Engineer-Apertus/1164610655/), [6](https://dlab.epfl.ch/2026-07-06-safety-pretraining-engineer-positions/)\].
 
 #### \* * * * *
 
-For updates and further information, subscribe to our [Inside Apertus newsletter](/subscribe) for the latest from the Swiss AI Initiative.
+For updates and further information, subscribe to our [Inside Apertus newsletter](/subscribe).

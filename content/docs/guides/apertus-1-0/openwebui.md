@@ -1,4 +1,5 @@
 ---
+aliases: ["/docs/guides/openwebui/"]
 title: "Open WebUI"
 description: "Instructions for users of Apertus"
 icon: "rocket_launch"

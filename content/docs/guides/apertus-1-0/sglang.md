@@ -1,4 +1,5 @@
 ---
+aliases: ["/docs/guides/sglang/"]
 title: "SGlang"
 description: "Instructions for users of Apertus"
 icon: "rocket_launch"

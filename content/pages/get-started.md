@@ -2,7 +2,34 @@
 title: "Get Started"
 ---
 
-## Try Apertus
+## Try Apertus 1.5
+
+<p class="section-intro">
+  Apertus 1.5 extends our fully open models with image understanding, a thinking mode, and a four times longer context window.
+  Technical instructions for running the models can be found in the model cards on Hugging Face.
+</p>
+
+<div class="card-grid">
+  <a href="https://huggingface.co/swiss-ai/Apertus-v1.5-8B" class="card" style="text-decoration: none;">
+    <h4>Apertus 1.5 8B</h4>
+    <p>Model card with technical instructions</p>
+  </a>
+  <a href="https://huggingface.co/swiss-ai/Apertus-v1.5-70B" class="card" style="text-decoration: none;">
+    <h4>Apertus 1.5 70B</h4>
+    <p>Model card with technical instructions</p>
+  </a>
+  <div class="card card-grey">
+    <h4>Third-Party Providers</h4>
+    <p><em>Coming soon</em></p>
+  </div>
+</div>
+
+<p class="section-intro">Would you like to showcase your Apertus project? 
+  <a href="/showcase" target="_blank">Let us know.</a></p>
+
+---
+
+## Try Apertus 1.0
 
 <p class="section-intro">
   Visit the <a href="/docs/quickstart/">Quickstart page</a> for information
@@ -22,14 +49,6 @@ title: "Get Started"
     <p>A RAG Chatbot demo developed by Liip to ask questions about city laws with the Apertus model.</p>
   </a>
 </div>
-
-<p class="section-intro">We would love to 
-  <a href="/showcase" target="_blank">hear about your projects</a> 
-  as we build out this showcase.</p>
-
----
-
-## API & Cloud Providers
 
 <p class="section-intro">Production-ready hosting from Swiss and international providers. Please contact us to get featured.</p>
 

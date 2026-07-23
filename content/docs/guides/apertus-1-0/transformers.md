@@ -1,4 +1,5 @@
 ---
+aliases: ["/docs/guides/transformers/"]
 title: "Transformers" 
 description: "Instructions for users of Apertus"
 icon: "rocket_launch"

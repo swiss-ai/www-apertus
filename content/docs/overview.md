@@ -26,7 +26,7 @@ The model development team is part of the [Swiss AI Initiative](https://www.swis
 -   **Multilingualism**: Trained on more than 15 trillion tokens across 1,500+ languages, 40% non-English - equal usage cost across languages - see [@epfml](http://huggingface.co/datasets/epfml)
 -   **Performance**: This is a large model (8 billion and 70 billion parameters), trained on a lot of tokens, and it will be continue to be actively optimized.
 -   **Open & Transparent**: Published under Apache-2.0 license - including source code, weights, and open training data.
--   **Data Privacy**: Compliant with GDPR, EU AI Act, and Swiss data protection laws - see [Fan et al 2025](https://arxiv.org/abs/2504.06219)
+-   **Data Privacy**: Developed with attention to the GDPR, the EU AI Act, and Swiss data protection law - see [Fan et al 2025](https://arxiv.org/abs/2504.06219)
 -   **Infrastructure**: Developed on the new Alps supercomputer at CSCS with over 10,000 NVIDIA GH200 Grace-Hopper chips
 -   **Global Reach**: Research and borderless applications in mind, for sovereign and international public-interest AI.
 

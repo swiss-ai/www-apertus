@@ -13,7 +13,7 @@ In the development and deployment of LLMs, guardrails are mechanisms used to sha
 
 In the Apertus LLM, various safety features are being designed to prevent the model from accessing or generating sensitive information, such as personal data, copyrighted content, or toxic material. Guardrails in the training process are based on data filtering, model features like the Goldfish objective, parameter unlearning, and data-influence unlearning to prevent models from accessing or generating sensitive information. 
 
-The goal is to create models that are safe, compliant, and reliable, while also respecting data privacy and ownership rights. This is an active area of research, that in practice very much depends on guardrails being implemented in the system within which the LLM is being deployed. For more information, visit these additional resources:
+We strive to create models that are safe and reliable, while also respecting data privacy and ownership rights. This is an active area of research, that in practice very much depends on guardrails being implemented in the system within which the LLM is being deployed. For more information, visit these additional resources:
 
 - [Apertus Research papers](/pages/research/)
 - [NVidia NeMo Guardrails](https://docs.nvidia.com/nemo/guardrails/latest/index.html)
@@ -40,7 +40,7 @@ In addition to parameter unlearning, Apertus models can also use data-influence 
 
 ### Model Evaluation
 
-Apertus models are evaluated on their ability to generate safe and compliant outputs, ensuring that they do not access or produce sensitive information. This evaluation process is an important part of the guardrail mechanism.
+Apertus models are evaluated on their ability to generate safe outputs, striving to ensure that they do not access or produce sensitive information. This evaluation process is an important part of the guardrail mechanism.
 
 ### Safety Advisory
 
