@@ -33,7 +33,7 @@ This result has now been featured in [Euractiv](https://www.euractiv.com/news/re
 
 *Screenshot of the [overall evaluation](https://aial.ie/research/gpai-training-transparency/) results, with each model assigned a grade. `A+` is the highest grade and `F` the lowest, with `N/A` shown for missing summaries. A detailed evaluation page has more information, a link to the summary, and evaluation notes. You can also see a detailed overview of scores for each section of the public summary.*
 
-—
+---
 
 The researchers have recently been in touch with the Apertus team, and made a series of recommendations, which include:
 

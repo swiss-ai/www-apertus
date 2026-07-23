@@ -17,12 +17,12 @@ author: "Apertus Project"
 
 <div class="faq-item">
 <h4>What makes Apertus different from other open models?</h4>
-<p>Apertus is fully open — offering complete access to training data, code, and alignment principles, not just open weights. This openness supports research, collaboration and informed use, creating a valuable tool for the global AI community. See <a target="_blank" href="https://swiss-ai.org">Swiss AI Initiative</a>.</p>
+<p>Apertus is fully open, offering complete access to training data, code, and alignment principles, not just open weights. This openness supports research, collaboration and informed use, creating a valuable tool for the global AI community. See <a target="_blank" href="https://swiss-ai.org">Swiss AI Initiative</a>.</p>
 </div>
 
 <div class="faq-item">
 <h4>Can I use Apertus just like other AI systems?</h4>
-<p>Apertus is not a consumer product: this is foundational infrastructure. Designed to support innovation across research, education, government, and industry — while remaining aligned with Swiss and European values of transparency, neutrality, and accountability.
+<p>Apertus is not a consumer product: this is foundational infrastructure. Designed to support innovation across research, education, government, and industry, while remaining aligned with Swiss and European values of transparency, neutrality, and accountability.
 Many organizations are currently piloting solutions with the model, and we will update <a href="/pages/get-started/">our showcase</a> as new products based on Apertus become available. See also <a href="https://www.swissinfo.ch/eng/swiss-ai/fact-and-fiction-about-the-swiss-ai-model-apertus/90110034" target="_blank">swissinfo 10.2025</a>.
 </p>
 </div>
