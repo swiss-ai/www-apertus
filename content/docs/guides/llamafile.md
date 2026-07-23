@@ -13,7 +13,7 @@ author: "Apertus Project"
 
 [Llamafiles](https://docs.mozilla.ai/llamafile) are open-source AI models packaged as a single file, that runs on your laptop, offline.
 
-Built on top of [llama.cpp](https://github.com/ggerganov/llama.cpp), this enables **offline, cross-platform inference** with minimal setup—no Python, CUDA, or complex dependencies required. A Llamafile bundles:
+Built on top of [llama.cpp](https://github.com/ggerganov/llama.cpp), this enables **offline, cross-platform inference** with minimal setup: no Python, CUDA, or complex dependencies required. A Llamafile bundles:
 - The model weights (quantized for efficiency).
 - The inference engine (llama.cpp).
 - A built-in server for serving the model via a REST API.
