@@ -12,6 +12,8 @@ author: "Apertus Project"
 
 This document outlines how to use the [Transformers library](https://huggingface.co/docs/transformers/index) with Apertus.
 
+_We are currently working on integrating changes for the Apertus 1.5 release. Please stay tuned for updated instructions here._
+
 Run a command like this first to install the library using a package manager:
 
 ```bash
@@ -53,5 +55,6 @@ output_ids = generated_ids[0][len(model_inputs.input_ids[0]) :]
 print(tokenizer.decode(output_ids, skip_special_tokens=True))
 ```
 
->[!TIP]
+**Tip**:
+
 > We recommend setting `temperature=0.8` and `top_p=0.9` in the sampling parameters.
