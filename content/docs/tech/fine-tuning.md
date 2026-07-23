@@ -125,7 +125,7 @@ tokenizer = AutoTokenizer.from_pretrained("Apertus-FT/output/apertus_full/")
 ### Safety Considerations
 
 - Avoid training on legally unclear, harmful or sensitive data.
-- Do not try to circumvent guardrails like the [Swiss AI Charter](/pages/charter/).
+- Do not try to circumvent guardrails like the [Apertus Charter](/pages/charter/).
 - Use the [official guidelines](/pages/documentation) for responsible AI development.
 
 See [Rethinking Safety in LLM Fine-tuning](https://arxiv.org/abs/2508.12531) ... and please share your insights!

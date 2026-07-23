@@ -41,7 +41,7 @@ SMEs don't just want a model; they want a solution they can integrate into exist
 
 ### 3\. Governance and Ethics
 
-The participants are not just looking for technology; they are looking for values. There is a strong alignment with the Swiss AI Charter, with participants emphasizing the need for AI that supports public good, reduces bias, and operates with transparency. Questions about the EU AI Act, compliance frameworks (MITRE, OWASP), and explainable AI (XAI) dominated the technical queries. The community wants to know how decisions are made, not just what the decisions are.
+The participants are not just looking for technology; they are looking for values. There is a strong alignment with the Apertus Charter, with participants emphasizing the need for AI that supports public good, reduces bias, and operates with transparency. Questions about the EU AI Act, compliance frameworks (MITRE, OWASP), and explainable AI (XAI) dominated the technical queries. The community wants to know how decisions are made, not just what the decisions are.
 
 ### 4\. Community and Collaboration
 
