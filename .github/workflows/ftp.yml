@@ -1,4 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
+# Builds the Hugo site and deploys the rendered output to the production web host via FTP
 name: Deploy static content via FTP
 
 on:
@@ -8,30 +8,67 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-    inputs:
-      sync:
-        description: "File synchronization"
-        required: true
-        default: "delta"
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# Allow only one concurrent FTP deployment, but do NOT cancel in-progress runs
+# as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
+  group: "ftp-deploy"
   cancel-in-progress: false
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
-    name: "Deploy main"
+    name: "Build and deploy main"
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
+    env:
+      DART_SASS_VERSION: 1.97.3
+      GO_VERSION: 1.25.6
+      HUGO_VERSION: 0.155.0
+      NODE_VERSION: 24.13.0
+      TZ: Europe/Zurich
     steps:
       - name: "Checkout"
         uses: actions/checkout@v6
         with:
+          submodules: recursive
           fetch-depth: 0
+      - name: Setup Go
+        uses: actions/setup-go@v6
+        with:
+          go-version: ${{ env.GO_VERSION }}
+          cache: false
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Install Dart Sass
+        run: |
+          mkdir -p "${HOME}/.local"
+          curl -sLJO "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
+          tar -C "${HOME}/.local" -xf "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
+          rm "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
+          echo "${HOME}/.local/dart-sass" >> "${GITHUB_PATH}"
+      - name: Install Hugo
+        run: |
+          curl -sLJO "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          mkdir "${HOME}/.local/hugo"
+          tar -C "${HOME}/.local/hugo" -xf "hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          rm "hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          echo "${HOME}/.local/hugo" >> "${GITHUB_PATH}"
+      - name: Install Node.js dependencies
+        run: |
+          [[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true
+      - name: Build the site
+        run: |
+          hugo \
+            --gc \
+            --minify \
+            --baseURL "https://apertus-ai.org/"
       - name: "Confirm"
         run: "echo Uploading to ${{ secrets.DEPLOY_REMOTE_HOST }}"
       - name: "Deploy"
@@ -42,4 +79,6 @@ jobs:
           remote-user: ${{ secrets.DEPLOY_REMOTE_USER }}
           remote-password: ${{ secrets.DEPLOY_PRIVATE_KEY }}
           remote-port: 21
+          local-path: "public"
           remote-path: "/"
+          sync: "full"
