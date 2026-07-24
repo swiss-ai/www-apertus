@@ -11,6 +11,13 @@ title: "Research"
 </p>
 
 <div class="card-grid">
+  <div class="card card-grey">
+    <h4>Apertus 1.5 Technical Report</h4>
+    <p><em>Coming soon</em></p>
+  </div>
+</div>
+
+<div class="card-grid">
   <a href="https://arxiv.org/abs/2509.14233" class="card" target="_blank">
     <img src="/images/pub/tech-report.jpg" align="left" height="80"/>
     <h4>Apertus: Democratizing Open and Compliant LLMs for Global Language Environments</h4>

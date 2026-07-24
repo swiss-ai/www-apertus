@@ -32,11 +32,6 @@
       <div class="content-body">
         {{ .Content }}
       </div>
-      {{ if .Params.author }}
-        <div class="mt-4">
-          <span class="mr-4">-- <a href="/authors/{{ replace (lower .Params.author) "." "" | urlize }}" class="text-blue-600 hover:text-blue-800">{{ .Params.author }}</a></span>
-        </div>
-      {{ end }}
     </div>
   </section>
 

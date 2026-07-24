@@ -29,7 +29,7 @@ Many organizations are currently piloting solutions with the model, and we will 
 
 <div class="faq-item">
 <h4>Is Apertus compliant with the EU AI Act?</h4>
-<p>Designed for compliance, Apertus is built to meet EU AI Act requirements from day one, including opt-out mechanisms, PII removal, and memorization prevention. Day-to-day compliance is still the responsibility of users deploying Apertus. Read <a target="_blank" href="https://arxiv.org/abs/2509.14233">Tech Report section 3.1</a> and <a href="https://arxiv.org/abs/2504.06219" target="_blank">Fan et al., 2025</a> for details.</p>
+<p>Apertus is designed with the EU AI Act in mind, including opt-out mechanisms, PII removal, and memorization prevention. An <a target="_blank" href="https://latticeflow.ai/news/is-swiss-llm-ready-for-enterprise-adoption">independent evaluation by LatticeFlow AI</a> found Apertus "EU AI Act-ready" and 99% secure with guardrails in place.</p>
 </div>
 
 <div class="faq-item">
@@ -49,7 +49,7 @@ Many organizations are currently piloting solutions with the model, and we will 
 
 <div class="faq-item">
 <h4>How is Apertus aligned?</h4>
-<p>Apertus was trained with ethical and safety principles to align with Swiss values and EU AI Act goals (e.g., transparency, fairness, human oversight). 
+<p>Apertus was trained with ethical and safety principles to align with public values (e.g., transparency, fairness, human oversight). 
 While we strive to minimize bias, users should be aware of inherent biases in language data and test for fairness in their applications.
 See the <a href="/pages/charter">Apertus Charter</a> for details.
 </div>

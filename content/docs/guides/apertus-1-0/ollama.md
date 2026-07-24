@@ -1,4 +1,5 @@
 ---
+aliases: ["/docs/guides/ollama/"]
 title: "Ollama" 
 description: "Instructions for users of Apertus"
 icon: "rocket_launch"

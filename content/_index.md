@@ -16,9 +16,9 @@ Training data, code, weights, methods, and alignment principles: all documented 
 
 <--->
 
-### Compliant at Scale
+### Responsible at Scale
 
-Built to meet EU AI Act requirements: the model respects opt-outs, removes PII, prevents memorization. A global foundation to build on.
+Developed with the EU AI Act in mind: the model respects opt-outs, removes PII, and prevents memorization. A global foundation to build on.
 
 <--->
 

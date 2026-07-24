@@ -2,6 +2,8 @@
 title: "Apertus Charter"
 ---
 
+## Apertus Charter
+
 <p class="section-intro">The Apertus Charter defines alignment principles for AI systems developed under the Swiss AI Initiative, rooted in Switzerland's constitutional values and democratic traditions.</p>
 
 <div class="charter-meta">

@@ -28,6 +28,6 @@ Further questions are [explored in the FAQ](/pages/faq/)
 
 The core philosophy of Apertus is rooted in transparency, accessibility, and community-driven development. At its foundation is the commitment to open source, with the explicit goal of fostering collaboration, innovation, and the widespread adoption of advanced artificial intelligence technologies in a responsible manner.
 
-The legal framework of the Apertus project aims to protect the project’s integrity while encouraging widespread adoption and innovation. For those seeking to use Apertus in applications involving sensitive information or high stakes, we can offer guidance on how ensure alignment with European Union's AI Act, General Data Protection Regulation (GDPR), Swiss Data Protection Law, and other relevant international standards, ensuring that the use of the model respects privacy and security standards.
+The legal framework of the Apertus project aims to protect the project’s integrity while encouraging widespread adoption and innovation.
 
 For current legal guidance, visit our [Documentation home page](/pages/documentation/).
