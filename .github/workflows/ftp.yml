@@ -80,5 +80,5 @@ jobs:
           remote-password: ${{ secrets.DEPLOY_PRIVATE_KEY }}
           remote-port: 21
           local-path: "public"
-          remote-path: "/"
+          remote-path: "/sites/apertus-ai.org"
           sync: "full"
