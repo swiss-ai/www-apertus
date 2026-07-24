@@ -1,5 +1,5 @@
 baseURL = 'https://apertus-ai.org/'
-title = 'APERTVS'
+title = 'Apertus AI'
 description = 'Fully Open Foundation Model for Sovereign AI'
 contentDir = 'content'
 enableEmoji = true
