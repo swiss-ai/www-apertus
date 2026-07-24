@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Install lftp
         run: sudo apt-get -qq update && sudo apt-get -qq --yes install lftp
-      - name: List remote directories
+      - name: List sites directory
         env:
           FTP_HOST: ${{ secrets.DEPLOY_REMOTE_HOST }}
           FTP_USER: ${{ secrets.DEPLOY_REMOTE_USER }}
@@ -19,8 +19,7 @@ jobs:
           set net:max-retries 1;
           set net:timeout 15;
           open -u '$FTP_USER','$FTP_PASS' 'ftp://$FTP_HOST:21';
-          echo '=== pwd ==='; pwd;
-          echo '=== ls root ==='; cls -la /;
-          echo '=== ls cwd ==='; cls -la;
+          echo '=== ls sites ==='; cls -la /sites/;
+          echo '=== ls sites sub ==='; cls -l /sites/*/ | head -30;
           quit;
-          "
+          " | sed -E 's#ftp://[^ ]*#[url-redacted]#g'
