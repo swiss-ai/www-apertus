@@ -14,14 +14,11 @@ jobs:
           FTP_USER: ${{ secrets.DEPLOY_REMOTE_USER }}
           FTP_PASS: ${{ secrets.DEPLOY_PRIVATE_KEY }}
         run: |
-          lftp -e "
+          lftp -u "$FTP_USER,$FTP_PASS" -e "
           set ssl:verify-certificate false;
           set net:max-retries 1;
           set net:timeout 15;
-          open ftp://\$FTP_USER:\$FTP_PASS@\$FTP_HOST:21;
           echo '=== pwd ==='; pwd;
-          echo '=== ls / ==='; cls -la /;
-          echo '=== ls . ==='; cls -la;
-          echo '=== ls /articles ==='; cls -l /articles || true;
-          echo '=== ls /pages ==='; cls -l /pages || true;
-          exit 0"
+          echo '=== ls root ==='; cls -la /;
+          echo '=== ls cwd ==='; cls -la;
+          quit" "ftp://$FTP_HOST:21"
