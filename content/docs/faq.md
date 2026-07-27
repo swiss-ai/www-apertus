@@ -11,8 +11,8 @@ categories: [""]
 author: "Apertus Project"
 ---
 
-<p>Is there a question you would like to see answered here? Please
-<a href="/feedback/">drop us a line</a>.
+<p>Is there a question you would like to see answered here, or any other concern? Please
+<a href="/contact">contact us</a>.
 </p><hr />
 
 <div class="faq-item">
@@ -32,6 +32,14 @@ Many organizations are currently piloting solutions with the model, and we will 
 <p>Apertus is designed with the EU AI Act in mind, including opt-out mechanisms, PII removal, and memorization prevention. An <a target="_blank" href="https://latticeflow.ai/news/is-swiss-llm-ready-for-enterprise-adoption">independent evaluation by LatticeFlow AI</a> found Apertus "EU AI Act-ready" and 99% secure with guardrails in place.</p>
 </div>
 
+<div class="faq-item">
+<h4>Why are some model weights gated?</h4>
+<p>
+While the Apertus 1.5 release remains fully open in its development process, the gating mechanism on Hugging Face is a legal requirement in order to help make sure that the Usage Terms and other policies are complied with. The approval process is automatic and immediate, not intended to prevent you from downloading the model. Your data will never be used for marketing, or any other purpose. 
+</p>
+</div>
+
+<div class="faq-item">
 <div class="faq-item">
 <h4>May I use Apertus commercially?</h4>
 <p>Yes. Apertus is released under Apache 2.0, allowing both research and commercial use without restrictions or royalties. Use it freely in any project, but abide by license terms and be aware of statutory limitations. Try the <a target="_blank" href="https://www.choosingalicense.com/license/apache-2.0">Open License Helper</a>.</p>
