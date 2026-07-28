@@ -26,9 +26,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      DART_SASS_VERSION: 1.97.3
-      GO_VERSION: 1.25.6
-      HUGO_VERSION: 0.155.0
+      DART_SASS_VERSION: 1.102.0
+      GO_VERSION: 1.26.5
+      HUGO_VERSION: 0.164.0
       NODE_VERSION: 24.13.0
       TZ: Europe/Zurich
     steps:
@@ -63,12 +63,26 @@ jobs:
       - name: Install Node.js dependencies
         run: |
           [[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true
+      - name: Cache restore
+        id: cache-restore
+        uses: actions/cache/restore@v5
+        with:
+          path: ${{ runner.temp }}/hugo_cache
+          key: hugo-${{ github.run_id }}
+          restore-keys: hugo-
       - name: Build the site
         run: |
           hugo \
             --gc \
             --minify \
-            --baseURL "https://apertus-ai.org/"
+            --baseURL "https://apertus-ai.org/" \
+            --cacheDir "${{ runner.temp }}/hugo_cache"
+      - name: Cache save
+        id: cache-save
+        uses: actions/cache/save@v5
+        with:
+          path: ${{ runner.temp }}/hugo_cache
+          key: ${{ steps.cache-restore.outputs.cache-primary-key }}
       - name: "Confirm"
         run: "echo Uploading to ${{ secrets.DEPLOY_REMOTE_HOST }}"
       - name: "Deploy"
