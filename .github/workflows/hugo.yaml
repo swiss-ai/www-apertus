@@ -18,9 +18,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      DART_SASS_VERSION: 1.97.3
-      GO_VERSION: 1.25.6
-      HUGO_VERSION: 0.155.0
+      DART_SASS_VERSION: 1.102.0
+      GO_VERSION: 1.26.5
+      HUGO_VERSION: 0.164.0
       NODE_VERSION: 24.13.0
       TZ: Europe/Zurich
     steps:
@@ -81,7 +81,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/" \
+            --baseURL "https://apertus-ai.org/" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
       - name: Cache save
         id: cache-save
@@ -93,13 +93,3 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./public
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
