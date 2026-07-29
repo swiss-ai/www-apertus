@@ -6,7 +6,7 @@ title: "Get Started"
 
 <p class="section-intro">
   Apertus 1.5 extends our fully open models with image understanding, a thinking mode, and a four times longer context window.
-  Technical instructions for running the models can be found in the model cards on Hugging Face.
+  Technical instructions for running the models can be found in the model cards on the official <a href="https://huggingface.co/swiss-ai" target="_blank">@swiss-ai</a> organization on Hugging Face.
 </p>
 
 <div class="card-grid">
@@ -18,39 +18,13 @@ title: "Get Started"
     <h4>Apertus 1.5 70B</h4>
     <p>Model card with technical instructions</p>
   </a>
-  <div class="card card-grey">
-    <h4>Third-Party Providers</h4>
-    <p><em>Coming soon</em></p>
-  </div>
 </div>
 
-<p class="section-intro">Would you like to showcase your Apertus project? 
-  <a href="/showcase" target="_blank">Let us know.</a></p>
 
----
+## Providers
 
-## Try Apertus 1.0
-
-<p class="section-intro">
-  Visit the <a href="/docs/quickstart/">Quickstart page</a> for information
-  on downloading Apertus models to your own computer.
-  Scroll down to see a list of verified cloud providers. The following applications have been built with Apertus:
-</p>
-
-<div class="card-grid">
-  <a href="https://chat.publicai.co" class="card" style="text-decoration: none;">
-    <img src="/images/logos/public_ai-logo.ico" alt="PublicAI" class="card-logo">
-    <h4>Public AI Switzerland</h4>
-    <p>A chat interface you can use for free. Login for access to open models, web search, and more.</p>
-  </a>
-  <a href="https://oss.zuericitygpt.ch/" class="card" style="text-decoration: none;">
-    <img src="/images/logos/zuericitygpt-robot.png" alt="ZüriCityGPT" class="card-logo">
-    <h4>ZüriCityGPT OSS</h4>
-    <p>A RAG Chatbot demo developed by Liip to ask questions about city laws with the Apertus model.</p>
-  </a>
-</div>
-
-<p class="section-intro">Production-ready hosting from Swiss and international providers. Please contact us to get featured.</p>
+<a name="providers"></a>
+<p class="section-intro">Production-ready hosting from Swiss and international providers. Please contact us to get featured:</p>
 
 <div class="card-grid">
   <a href="https://docs.cloud.swisscom.ch/guide/cloud-services/aip/models/apertus.html" class="card" style="text-decoration: none;">
@@ -86,4 +60,28 @@ title: "Get Started"
   </a>
 </div>
 
-<p class="section-intro">Visit the <a href="../documentation">Documentation area</a> for instructions on local deployment and how to contribute</p>
+---
+
+## Community applications
+
+<p class="section-intro">
+  Visit the <a href="/docs/quickstart/">Quickstart page</a> for information
+  on downloading Apertus models to your own computer, and how to contribute. The following applications have been built with Apertus:
+</p>
+
+<div class="card-grid">
+  <a href="https://chat.publicai.co" class="card" style="text-decoration: none;">
+    <img src="/images/logos/public_ai-logo.ico" alt="PublicAI" class="card-logo">
+    <h4>Public AI Switzerland</h4>
+    <p>A chat interface you can use for free. Login for access to open models, web search, and more.</p>
+  </a>
+  <a href="https://oss.zuericitygpt.ch/" class="card" style="text-decoration: none;">
+    <img src="/images/logos/zuericitygpt-robot.png" alt="ZüriCityGPT" class="card-logo">
+    <h4>ZüriCityGPT OSS</h4>
+    <p>A RAG Chatbot demo developed by Liip to ask questions about city laws with the Apertus model.</p>
+  </a>
+</div>
+
+<p class="section-intro">
+  Would you like to showcase your Apertus project here? 
+  <a href="/showcase" target="_blank">Let us know.</a></p>
