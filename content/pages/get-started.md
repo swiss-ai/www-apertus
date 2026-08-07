@@ -27,7 +27,7 @@ title: "Get Started"
 <p class="section-intro">Production-ready hosting from Swiss and international providers. Please contact us to get featured:</p>
 
 <div class="card-grid">
-  <a href="https://docs.cloud.swisscom.ch/guide/cloud-services/aip/models/apertus.html" class="card" style="text-decoration: none;">
+  <a href="https://docs.cloud.swisscom.ch/guide/cloud-services/aip/models/apertus-1_5_70B" class="card" style="text-decoration: none;">
     <h4>Swisscom</h4>
     <p>Swiss AI Platform</p>
     <span class="badge badge-partner">Strategic Partner</span>
