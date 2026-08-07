@@ -5,9 +5,9 @@ title: "Documentation"
 ## Technical Information
 
 <p class="section-intro">
-  The <a href="/docs/faq">Frequently Asked Questions</a> cover common issues.
   See our <a href="/pages/research">Research collection</a> for an in-depth look at the architecture, training, data mix, and evaluation results.
-  Deployment &amp; compliance information follows:</p>
+  The <a href="/docs/faq">Frequently Asked Questions</a> cover many common issues.
+</p>
 
 <div class="card-grid">
   <a href="https://huggingface.co/swiss-ai/Apertus-v1.5-70B/blob/main/USAGE_POLICY.pdf" class="card" style="text-decoration: none;">

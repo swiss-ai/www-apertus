@@ -7,8 +7,9 @@ title: "Apertus Charter"
 <p class="section-intro">The Apertus Charter defines alignment principles for AI systems developed under the Swiss AI Initiative, rooted in Switzerland's constitutional values and democratic traditions.</p>
 
 <div class="charter-meta">
-<strong>Version 1.0</strong><br>
-August 2025
+<p><i>(Previously referred to as the Swiss AI Charter)</i></p>
+<strong>Version 1.0</strong> &bull;
+August 2025 &bull; <a href="https://github.com/swiss-ai/apertus-charter/blob/main/charter-v1.0.md" target="_blank">Source</a>
 </div>
 
 ---

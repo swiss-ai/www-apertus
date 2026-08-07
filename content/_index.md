@@ -8,7 +8,7 @@ hero_secondary_label: "Technical Information"
 hero_secondary_url: "/pages/documentation/"
 ---
 
-{{< columns cols="3" class="py-4 text-center" gap="5" >}}
+{{< columns cols="3" class="py-4 text-left" gap="5" >}}
 
 ### Fully Open
 
@@ -18,7 +18,7 @@ Training data, code, weights, methods, and alignment principles: all documented 
 
 ### Responsible at Scale
 
-Developed with the EU AI Act in mind: the model respects opt-outs, removes PII, and prevents memorization. A global foundation to build on.
+Ready for the EU AI Act: the model respects opt-outs, removes PII, and prevents memorization. A global foundation to build on.
 
 <--->
 
