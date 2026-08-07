@@ -57,6 +57,7 @@
   .section-intro {
     color: #6b7280;
     margin-bottom: 4rem;
+    font-size: 110%;
     text-align: center;
   }
   .content-body p {
@@ -276,5 +277,34 @@
     width: 3.6rem;
     z-index: 10;
   }
+  /* Roadmap (About page) */
+  .roadmap { margin: 2rem 0 1rem; }
+  .roadmap-item { position: relative; padding: 0 0 1.75rem 2.5rem; }
+  .roadmap-item::before {
+    content: ""; position: absolute; left: 7px; top: 20px; bottom: -4px;
+    width: 2px; background: #e5e7eb;
+  }
+  .roadmap-item:last-child::before { display: none; }
+  .roadmap-item::after {
+    content: ""; position: absolute; left: 0; top: 4px;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: #49BED8; border: 3px solid #49BED8;
+  }
+  .roadmap-item.planned::after { background: #fff; border-color: #c0c4cc; }
+  .roadmap-item.latest .roadmap-content {
+    background: #f0f9fc; border: 1px solid #49BED8; border-radius: 12px;
+    padding: 1rem 1.25rem;
+  }
+  .roadmap-header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem; margin-bottom: 0.5rem; }
+  .roadmap-title { font-size: 1.15rem; font-weight: 600; color: #1a1a1a; }
+  .roadmap-weights { font-size: 0.85rem; white-space: nowrap; }
+  .roadmap .badge-released { background: #d1fae5; color: #065f46; }
+  .roadmap .badge-latest { background: #dbeafe; color: #1e40af; }
+  .roadmap .badge-planned { background: #f3f4f6; color: #6b7280; }
+  .roadmap-item p { margin-bottom: 0; }
+  .roadmap-item ul { margin: 0; padding-left: 1.1rem; }
+  .roadmap-item li { margin-bottom: 0.35rem; }
+  .roadmap-item li:last-child { margin-bottom: 0; }
+  .roadmap-note { color: #9ca3af; font-size: 0.9rem; margin-bottom: 2.5rem; }
 </style>
 {{ end }}

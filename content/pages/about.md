@@ -6,40 +6,15 @@ title: "About"
 
 **Apertus is Switzerland's first large-scale, fully open, multilingual language model. Developed by researchers at ETH Zurich, EPFL, and the Swiss National Supercomputing Centre (CSCS), it represents a new approach to foundation model development: built by public institutions, designed for the public good.**
 
-The name comes from the Latin word for "open", reflecting the model's defining characteristic. Unlike commercial models developed behind closed doors, Apertus makes its architecture, weights, training data, and methods fully accessible.
+The name comes from the Latin word for "open", reflecting the model's defining characteristic. Unlike commercial models developed behind closed doors, Apertus makes its architecture, weights, training data, and methods fully accessible. 
+
+Learn more about the [Apertus Roadmap](#roadmap) and [Swiss AI Initiative](#snai) in the following sections.
+
+---
+
+<a name="roadmap"></a>
 
 ## Roadmap
-
-<style>
-  .roadmap { margin: 2rem 0 1rem; }
-  .roadmap-item { position: relative; padding: 0 0 1.75rem 2.5rem; }
-  .roadmap-item::before {
-    content: ""; position: absolute; left: 7px; top: 20px; bottom: -4px;
-    width: 2px; background: #e5e7eb;
-  }
-  .roadmap-item:last-child::before { display: none; }
-  .roadmap-item::after {
-    content: ""; position: absolute; left: 0; top: 4px;
-    width: 16px; height: 16px; border-radius: 50%;
-    background: #49BED8; border: 3px solid #49BED8;
-  }
-  .roadmap-item.planned::after { background: #fff; border-color: #c0c4cc; }
-  .roadmap-item.latest .roadmap-content {
-    background: #f0f9fc; border: 1px solid #49BED8; border-radius: 12px;
-    padding: 1rem 1.25rem;
-  }
-  .roadmap-header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem; margin-bottom: 0.5rem; }
-  .roadmap-title { font-size: 1.15rem; font-weight: 600; color: #1a1a1a; }
-  .roadmap-weights { font-size: 0.85rem; white-space: nowrap; }
-  .roadmap .badge-released { background: #d1fae5; color: #065f46; }
-  .roadmap .badge-latest { background: #dbeafe; color: #1e40af; }
-  .roadmap .badge-planned { background: #f3f4f6; color: #6b7280; }
-  .roadmap-item p { margin-bottom: 0; }
-  .roadmap-item ul { margin: 0; padding-left: 1.1rem; }
-  .roadmap-item li { margin-bottom: 0.35rem; }
-  .roadmap-item li:last-child { margin-bottom: 0; }
-  .roadmap-note { color: #9ca3af; font-size: 0.9rem; margin-bottom: 2.5rem; }
-</style>
 
 <div class="roadmap">
   <div class="roadmap-item" id="apertus-1-0">
@@ -103,6 +78,8 @@ Please visit the <a href="/docs/faq">Frequently Asked Questions</a> and our [Doc
 Use the [Contact page](/contact) to share ideas and questions with the Apertus team. 
 
 ---
+
+<a name="snai"></a>
 
 ## Swiss AI Initiative
 
