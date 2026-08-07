@@ -4,10 +4,13 @@ title: "Legal Notice"
 
 # Legal Notice for Models
 
+- [Apertus LLM Acceptable Use Policy (AUP)](https://huggingface.co/swiss-ai/Apertus-v1.5-70B/blob/main/USAGE_POLICY.pdf)
+- [Apache 2.0 License](https://huggingface.co/swiss-ai/Apertus-v1.5-70B/blob/main/LICENSE.txt)
+
 #### Transparency Documentation and Code of Practice
 
--   [Apertus_EU_Public_Summary.pdf](https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/Apertus_EU_Public_Summary.pdf)
--   [Apertus_EU_Code_of_Practice.pdf](https://huggingface.co/swiss-ai/Apertus-70B-2509/blob/main/Apertus_EU_Code_of_Practice.pdf)
+-   [Apertus 1.5 EU Public Summary](https://github.com/swiss-ai/apertus-legal/blob/main/apertus_1.5/Apertus_1_5_EU_Public_Summary.pdf)
+-   [Apertus 1.5 EU Code of Practice](https://github.com/swiss-ai/apertus-legal/blob/main/apertus_1.5/Apertus_1_5_EU_Code_of_Practice.pdf)
 
 #### Data Protection and Copyright Requests
 

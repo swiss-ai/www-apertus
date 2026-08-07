@@ -2,11 +2,11 @@
 title: "Get Started"
 ---
 
-## Try Apertus 1.5
+## Try Apertus
 
 <p class="section-intro">
   Apertus 1.5 extends our fully open models with image understanding, a thinking mode, and a four times longer context window.
-  Technical instructions for running the models can be found in the model cards on the official <a href="https://huggingface.co/swiss-ai" target="_blank">@swiss-ai</a> organization on Hugging Face.
+  Technical instructions can be found in the model cards on the official <a href="https://huggingface.co/swiss-ai" target="_blank">@swiss-ai</a> organization on Hugging Face.
 </p>
 
 <div class="card-grid">
@@ -41,6 +41,11 @@ title: "Get Started"
   <a href="https://phoenix-technologies.ch/en/products-and-services/model-as-a-service/phoenix-model-service" class="card" style="text-decoration: none;">
     <h4>Phoenix Technologies</h4>
     <p>Model-as-a-Service</p>
+    <span class="badge badge-swiss">Switzerland</span>
+  </a>
+  <a href="https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/" class="card" style="text-decoration: none;">
+    <h4>OnPrem AI</h4>
+    <p>Model-as-a-Service, On premise deployment</p>
     <span class="badge badge-swiss">Switzerland</span>
   </a>
   <a href="https://platform.publicai.co" class="card" style="text-decoration: none;">
