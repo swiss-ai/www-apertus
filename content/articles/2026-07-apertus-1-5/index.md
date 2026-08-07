@@ -36,7 +36,15 @@ If you build with or use Apertus, please reach out through our [Contact page](/c
 
 Join the discussion in the community forums on Hugging Face and GitHub. At our regular [Swiss AI SME Circle](/articles/2026-06-sme-circle/) events, small and medium enterprises meet our engineers in person to exchange ideas and experiences.
 
-Want to help build fully open, responsibly trained, and truly global open source AI? The Apertus team is growing, with engineer positions open at ETH Zurich and EPFL \[[1](https://www.jobs.ethz.ch/job/view/JOPG_ethz_R5qUjBUy23vspsktAL), [2](https://www.jobs.ethz.ch/job/view/JOPG_ethz_HDwKLCU4qbu6ray4fL), [3](https://www.jobs.ethz.ch/job/view/JOPG_ethz_kWhKpJAIZB2OmXNQEH), [4](https://www.jobs.ethz.ch/job/view/JOPG_ethz_Z6YaLwO1IE0WjNz0Le), [5](https://careers.epfl.ch/job/Lausanne-Post-Training-Engineer-Apertus/1164610655/), [6](https://dlab.epfl.ch/2026-07-06-safety-pretraining-engineer-positions/)\].
+Want to help build fully open, responsibly trained, and truly global open source AI? The Apertus team is growing, with engineer positions open at ETH Zurich and EPFL.
+
+<a name="community"></a>
+
+### Community Posts
+
+- [onprem.ai - 3 August 2026](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/)
+
+\[[1](https://www.jobs.ethz.ch/job/view/JOPG_ethz_R5qUjBUy23vspsktAL), [2](https://www.jobs.ethz.ch/job/view/JOPG_ethz_HDwKLCU4qbu6ray4fL), [3](https://www.jobs.ethz.ch/job/view/JOPG_ethz_kWhKpJAIZB2OmXNQEH), [4](https://www.jobs.ethz.ch/job/view/JOPG_ethz_Z6YaLwO1IE0WjNz0Le), [5](https://careers.epfl.ch/job/Lausanne-Post-Training-Engineer-Apertus/1164610655/), [6](https://dlab.epfl.ch/2026-07-06-safety-pretraining-engineer-positions/)\]
 
 #### \* * * * *
 
