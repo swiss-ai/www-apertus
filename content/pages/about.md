@@ -88,4 +88,4 @@ Use the [Contact page](/contact) to share ideas and questions with the Apertus t
 The Initiative represents one of the world's largest open science efforts dedicated to AI foundation models. It pursues an open science approach to increase transparency and access for startups, SMEs, large companies, and the public sector in Switzerland and beyond.
 Please visit [swiss-ai.org](https://www.swiss-ai.org/) to learn more.
 
-_We are grateful to the support of all our strategic partners, members, and community._
+_We are grateful for the support of all our strategic partners, members, and community._
