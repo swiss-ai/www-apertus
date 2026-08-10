@@ -32,6 +32,13 @@ title: "Research"
 </div>
 
 <div class="card-grid">
+
+  <a href="https://www.usenix.org/conference/osdi26/presentation/yao" class="card" target="_blank">
+    <h4>OpenTela: Unifying Decentralized Computing Resources for Heterogeneous LLM Serving (Operational Systems)</h4>
+    <div class="authors">Xiaozhe Yao, Youhe Jiang, Ilia Badanin, Qinghao Hu, Robert Matthew Smith, Binhang Yuan, Imanol Schlag, Eiko Yoneki, Ana Klimovic</div>
+    <p>Builds a system for serving LLMs in decentralized, volatile and heterogeneous GPU clusters.</p>
+  </a>
+
   <a href="https://arxiv.org/abs/2504.06219" class="card" target="_blank">
     <h4>Can Performant LLMs Be Ethical? Quantifying the Impact of Web Crawling Opt-Outs</h4>
     <div class="authors">Fan, Sabolčec, Ansaripour, Tarun, Jaggi, Bosselut, Schlag</div>
