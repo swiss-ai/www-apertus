@@ -106,7 +106,6 @@
   .card {
     display: block !important;
     flex-direction: unset !important;
-    border: 2px solid #c0c4cc;
     border-radius: 12px;
     padding: 1.5rem;
     transition: box-shadow 0.2s, border-color 0.2s;
@@ -119,6 +118,9 @@
   .card.card-grey {
     border-color: lightgray !important;
     border-style: dashed;
+  }
+  .card a {
+    text-decoration: none;
   }
   .card h4 {
     margin: 0 0 0.5rem 0;
@@ -150,6 +152,11 @@
     width: auto;
     max-width: 100%;
     object-fit: contain;
+  }
+  .card-logo.card-logo-left {
+    float: left;
+    margin-bottom: 1em;
+    margin-right: -32px;
   }
 
   /* Badges */
