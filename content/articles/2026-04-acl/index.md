@@ -30,7 +30,7 @@ The report also includes safety considerations, warning that LLM models such as 
 
 The ACL 2026 invitation is a significant recognition of the Apertus project's technological prowess in global NLP academia. The conference, which accepts [around 20%](https://www.aclweb.org/aclwiki/Conference_acceptance_rates) from thousands of submitted papers, is considered a world-class venue for AI research.
 
-Our accepted paper is being presented at the [ACL 2026 Main Conference](https://2026.aclweb.org/) in San Diego on July 2-7, 2026, where the Apertus team looks forward to discuss their findings with the global research community. The research has already been [available as a pre-print](https://arxiv.org/abs/2509.14233) since the model release date, listed along with other relevant publications on our [Research page](/pages/research/).
+Our accepted paper is being presented at the [ACL 2026 Main Conference](https://2026.aclweb.org/) in San Diego on July 2-7, 2026, where the Apertus team looks forward to discussing their findings with the global research community. The research has already been [available as a pre-print](https://arxiv.org/abs/2509.14233) since the model release date, listed along with other relevant publications on our [Research page](/pages/research/).
 
 ### About Apertus
 

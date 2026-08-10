@@ -66,13 +66,13 @@ title: "Research"
   <a href="https://arxiv.org/abs/2412.03304" class="card" target="_blank">
     <h4>Global MMLU: Multilingual Evaluation</h4>
     <div class="authors">Singh et al.</div>
-    <p>Understanding addressing cultural, linguistic biases.</p>
+    <p>Understanding and addressing cultural and linguistic biases.</p>
   </a>
   
   <a href="https://arxiv.org/abs/2505.20524" class="card" target="_blank">
     <h4>Towards Fully FP8 GEMM LLM Training at Scale</h4>
     <div class="authors">Hernández-Cano et al.</div>
-    <p>A new LLM architecture, enables unprecedented throughput gains.</p>
+    <p>A new LLM architecture that enables unprecedented throughput gains.</p>
   </a>
   
   <a href="https://arxiv.org/abs/2405.19279" class="card" target="_blank">

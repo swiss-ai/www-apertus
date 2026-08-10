@@ -79,5 +79,5 @@ title: "Documentation"
 </div>
 
 <p class="section-intro">
-    Fully open training infrastructure. We look forward to hear about your efforts to build on our models!
+    Fully open training infrastructure. We look forward to hearing about your efforts to build on our models!
 </p>

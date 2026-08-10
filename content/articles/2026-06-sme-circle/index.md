@@ -11,13 +11,13 @@ comments: false
 
 #### Dive deeper into the world of open source with the Swiss AI Initiative. Our previous events from the series have highlighted that the AI our community wants is more than a technical solution. It is about exercising the right to understand what powers the tools we use every day.
 
-Our event at the ETH AI Center on June 17 was part of a platform of exchange with the wider community around the Swiss AI Initiative. Around seventy participants had a chance to see the latest use cases, learn about the research framework, and connect to the growing ecosystem around Apertus. The Swiss AI SME Circle is evolving into an execution-oriented ecosystem that brings together business, researchers, innovation partners, around a shared focus on locally impactful adoption of sovereign and transparent AI.
+Our event at the ETH AI Center on June 17 was part of a platform of exchange with the wider community around the Swiss AI Initiative. Around seventy participants had a chance to see the latest use cases, learn about the research framework, and connect to the growing ecosystem around Apertus. The Swiss AI SME Circle is evolving into an execution-oriented ecosystem that brings together businesses, researchers, and innovation partners around a shared focus on locally impactful adoption of sovereign and transparent AI.
 
 The SME Circle format is experiencing clear momentum, reflected in rising registrations (over a thousand newsletter subscribers, hundreds of attendees in our events), and an increasing number of direct requests for connections---both between participants and with the Apertus team. This indicates a shift from exploratory interest toward implementation-focused collaboration and real-world use cases.
 
 ![](image1.jpg)
 
-Bringing this case to point was a quick overview of the winners of the Spotlight award, announced last week at a premier business competition by Lea Firmin, CEO of [>>venture>>](https://www.venture.ch/). Among dozens of submissions, the most creative, high-impact applications of Apertus were recognized according to their innovation, technical excellence, and real-world impact. Learn more on their websites of the finalists [Noemon](https://www.noemon.com/), [Anyway Systems](https://www.anyway.dev/) and [Public AI Switzerland](https://publicai.ch/).
+Bringing this case to point was a quick overview of the winners of the Spotlight award, announced last week at a premier business competition by Lea Firmin, CEO of [>>venture>>](https://www.venture.ch/). Among dozens of submissions, the most creative, high-impact applications of Apertus were recognized according to their innovation, technical excellence, and real-world impact. Learn more on the websites of the finalists [Noemon](https://www.noemon.com/), [Anyway Systems](https://www.anyway.dev/) and [Public AI Switzerland](https://publicai.ch/).
 
 ![](image3.jpg)
 
@@ -31,7 +31,7 @@ For insights on the science of Apertus, we invited [Hanna](https://www.ayukh.com
 
 We also announced [Apertus Claritas](https://apertus-claritas.org/), a new open access platform with tech notes on the interpretability of large language models (LLMs). Look for more content here and subscribe to the [Inside Apertus](/subscribe/) newsletter for a regular look behind the scenes of the R&D project.
 
-There is lots to look forward to: and many challenges on the road ahead. We invited everyone to get ready to get a boost to their initiatives through our development program through a submission to our [Project Showcase](/showcase/). 
+There is a lot to look forward to, and many challenges on the road ahead. We invited everyone to get ready to get a boost to their initiatives through our development program through a submission to our [Project Showcase](/showcase/). 
 
 ![](image5.jpg)
 
