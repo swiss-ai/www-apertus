@@ -36,14 +36,21 @@ If you build with or use Apertus, please reach out through our [Contact page](/c
 
 Join the discussion in the community forums on Hugging Face and GitHub. At our regular [Swiss AI SME Circle](/articles/2026-06-sme-circle/) events, small and medium enterprises meet our engineers in person to exchange ideas and experiences.
 
-<a name="community"></a>
+<a name="coverage"></a>
 
-### Community Posts
+### Online Coverage
 
-- [onprem.ai - 3 August 2026](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/)
-
-\[[1](https://www.jobs.ethz.ch/job/view/JOPG_ethz_R5qUjBUy23vspsktAL), [2](https://www.jobs.ethz.ch/job/view/JOPG_ethz_HDwKLCU4qbu6ray4fL), [3](https://www.jobs.ethz.ch/job/view/JOPG_ethz_kWhKpJAIZB2OmXNQEH), [4](https://www.jobs.ethz.ch/job/view/JOPG_ethz_Z6YaLwO1IE0WjNz0Le), [5](https://careers.epfl.ch/job/Lausanne-Post-Training-Engineer-Apertus/1164610655/), [6](https://dlab.epfl.ch/2026-07-06-safety-pretraining-engineer-positions/)\]
+- [Apertus 1.5: Building the next generation of open AI infrastructure](https://actu.epfl.ch/news/apertus-15-building-the-next-generation-of-open--2/) - EPFL - 24.7.2026
+- [Apertus 1.5: Building the next generation of open AI infrastructure](https://ai.ethz.ch/news-and-events/ai-center-news/2026/07/apertus-15-building-the-next-generation-of-open-ai-infrastructure.html) - ETH Zurich - 24.7.2026
+- [Apertus 1.5: Building the next generation of open AI infrastructure](https://www.cscs.ch/science/computer-science-hpc/2026/apertus-15-building-the-next-generation-of-open-ai-infrastructure) - CSCS - 24.7.2026
+- [IA: l’EPFL et l’ETH Zurich lancent le modèle Apertus 1.5](https://www.xavierstuder.com/2026/07/apertus-1-5-llm-ia-intelligence-artificielle-epfl-eth-zurich/) - Xavier Studer - 25.7.2026
+- [Schweizer KI Apertus bekommt Update](https://www.inside-it.ch/schweizer-ki-apertus-bekommt-update-20260727) - inside-it.ch - 27.7.2026
+- [Apertus 1.5 : l’IA souveraine suisse lance sa nouvelle version](https://dcod.ch/2026/07/31/apertus-1-5-ia-souveraine-suisse/) - Marc Barbezat - 31.7.2026
+- [Run Apertus v1.5 70B on a single NVIDIA RTX 6000](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/) - onprem.ai - 3.8.2026
+- [The State of the Art in Open Source AI for Swiss Legal Tasks](https://github.com/JoelNiklaus/SwissLegalEvals/blob/main/blog/swiss-legal-evals-2026.md#the-state-of-the-art-in-open-source-ai-for-swiss-legal-tasks) - Joel Niklaus - 4.8.2026
 
 #### \* * * * *
+
+Please contact us if you would like to see your review or evaluation of Apertus 1.5 listed above.
 
 For updates and further information, subscribe to our [Inside Apertus newsletter](/subscribe).
