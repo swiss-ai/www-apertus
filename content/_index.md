@@ -12,13 +12,13 @@ hero_secondary_url: "/pages/documentation/"
 
 ### Fully Open
 
-Training data, code, weights, methods, and alignment principles: all documented and reproducible. Apertus is to AI as Open is to Source.
+Training data, code, weights, methods, alignment principles: all documented and reproducible. Apertus is to AI as Open is to Source.
 
 <--->
 
 ### Responsible at Scale
 
-Ready for the EU AI Act: the model respects opt-outs, removes PII, and prevents memorization. A global foundation to build on.
+A range of innovative techniques to respect opt-outs, remove PII, and prevent memorization. A global foundation to build on.
 
 <--->
 
