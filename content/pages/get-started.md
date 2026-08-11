@@ -31,9 +31,9 @@ title: "Get Started"
     <p>Pay-per-token API</p>
     <span class="badge badge-swiss">Switzerland</span>
   </a>
-  <a href="https://documentation.phoenix-technologies.ch/maas/active-models/#active-models" class="card" target="_blank">
-    <h4>Phoenix Technologies</h4>
-    <p>Model-as-a-Service</p>
+  <a href="https://documentation.kvant.cloud/maas/active-models/#active-models" class="card" target="_blank">
+    <h4>Phoeniqs</h4>
+    <p>Model-as-a-Service, Pay-per-token API</p>
     <span class="badge badge-swiss">Switzerland</span>
   </a>
   <a href="https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/" class="card" target="_blank">
