@@ -36,8 +36,6 @@ If you build with or use Apertus, please reach out through our [Contact page](/c
 
 Join the discussion in the community forums on Hugging Face and GitHub. At our regular [Swiss AI SME Circle](/articles/2026-06-sme-circle/) events, small and medium enterprises meet our engineers in person to exchange ideas and experiences.
 
-Want to help build fully open, responsibly trained, and truly global open source AI? The Apertus team is growing, with engineer positions open at ETH Zurich and EPFL.
-
 <a name="community"></a>
 
 ### Community Posts
