@@ -9,7 +9,7 @@ title: "Apertus Charter"
 <div class="charter-meta">
 <p><i>(Previously referred to as the Swiss AI Charter)</i></p>
 <strong>Version 1.0</strong> &bull;
-August 2025 &bull; <a href="https://github.com/swiss-ai/apertus-charter/blob/main/charter-v1.0.md" target="_blank">Source</a>
+August 2025
 </div>
 
 ---

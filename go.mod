@@ -1,6 +1,6 @@
 module github.com/loleg/hello-lotus
 
-go 1.25.0
+go 1.26.5
 
 require (
 	github.com/colinwilson/lotusdocs v0.3.0 // indirect
