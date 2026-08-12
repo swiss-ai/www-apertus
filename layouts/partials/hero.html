@@ -15,27 +15,56 @@
 {{- $secondaryLabel := .Params.hero_secondary_label | default "" -}}
 {{- $secondaryURL   := .Params.hero_secondary_url | default "" -}}
 
+<style type="text/css">
+  section#hero { 
+    margin-top: 0 !important; 
+    background-image: url("images/pub/apertus-background-05.jpg"); 
+    background-repeat: no-repeat; background-size: cover; 
+  }
+  section#hero .hero-banner {
+    min-height: 72px; 
+    max-width: 100%;
+  }
+  section#hero .lead { 
+    background: white; 
+    display: inline-block; 
+    padding: 0.8rem 1.2rem;   
+    max-width: 680px; 
+    line-height: 1.7;
+  }
+  section#hero .lead h1 {
+    color: #1a1a1a;
+    font-size: 2.0rem; 
+    line-height: 1.2; 
+  }
+  section#hero .lead a {
+    color: #E02D24; 
+    text-decoration: none; 
+    font-weight: 500;
+  }
+</style>
+
 <section id="hero" class="d-flex align-items-center {{ if not .Params.subscribe }}m-5 p-5{{ end }} mx-auto px-auto">
   <div class="container mt-5 mb-5 pt-5">
     <div class="row justify-content-center">
       <div class="col-lg-10 text-center">
 
         {{/* Logo */}}
-        <img src="{{ "images/apertvs.svg" | relURL }}" alt="Apertus" class="mb-5" style="min-height: 72px; max-width: 100%">
-
-        {{/* Mission statement */}}
-        {{ with $mission }}
-        <h1 class="display-4 fw-normal mb-4" style="line-height: 1.2; color: #1a1a1a;">
-          {{ . }}
-        </h1>
-        {{ end }}
+        <img src='{{ "images/apertvs.svg" | relURL }}' alt="Apertus" class="hero-banner mb-5" />
 
         {{/* Description */}}
-        {{ with $description }}
-        <p class="lead text-muted mb-5 mx-auto" style="max-width: 680px; font-size: 1.25rem; line-height: 1.7;">
-          Developed by the <a href="https://www.swiss-ai.org/" style="color: #E02D24; text-decoration: none; font-weight: 500;">Swiss AI Initiative</a> as a collaborative effort between EPFL, ETH Zurich, and CSCS. Open weights, open data, open science.
-        </p>
-        {{ end }}
+        <div class="lead text-muted mb-5 mx-auto">
+
+          <h1 class="display-4 fw-normal mb-2">
+            {{ $mission }}
+          </h1>
+
+          Developed by the 
+          <a href="https://www.swiss-ai.org/">Swiss AI Initiative</a> 
+          as a collaborative effort between EPFL, ETH Zurich, and CSCS.
+          Open weights, open data, open science.
+
+        </div>
 
         {{/* CTAs */}}
         <div class="d-flex justify-content-center gap-3 flex-wrap">
@@ -45,7 +74,7 @@
           </a>
           {{ end }}
           {{ with $secondaryURL }}
-          <a href="{{ . }}" class="btn btn-lg btn-outline-light px-4 py-3" style="border-radius: 8px; border-color: #d1d5db; color: #374151;">
+          <a href="{{ . }}" class="btn btn-lg btn-outline-light px-4 py-3" style="background-color: #ddd; border-radius: 8px; border-color: #d1d5db; color: #374151;">
             {{ $secondaryLabel }}
           </a>
           {{ end }}

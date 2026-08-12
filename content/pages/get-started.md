@@ -2,13 +2,6 @@
 title: "Get Started"
 ---
 
-<p class="section-intro">
-  <b>Apertus 1.5</b>
-  extends our fully open models with image understanding, a thinking mode, and a four times longer context window.
-  Visit our <a href="/pages/documentation">documentation site</a> for details, and use the 
-  <a href="https://huggingface.co/swiss-ai" target="_blank">@swiss-ai</a> organization on Hugging Face for downloading the official weights.
-</p>
-
 ## Inference Providers
 
 <a name="providers"></a>
@@ -62,3 +55,11 @@ title: "Get Started"
     <span class="meta">Various regions</span>
   </a>
 </div>
+
+<p class="section-intro">
+  <b>Apertus 1.5</b>
+  extends our fully open models with image understanding, a thinking mode, and a four times longer context window.
+  Visit our <a href="/pages/documentation">documentation site</a> for details, and use the 
+  <a href="https://huggingface.co/swiss-ai" target="_blank">@swiss-ai</a> organization on Hugging Face for downloading the official weights.
+</p>
+
