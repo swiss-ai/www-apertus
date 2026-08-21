@@ -1,5 +1,5 @@
 ---
-aliases: ["/docs/guides/transformers/"]
+aliases: ["/docs/guides/apertus-1-0/transformers/"]
 title: "Transformers" 
 description: "Instructions for users of Apertus"
 icon: "rocket_launch"

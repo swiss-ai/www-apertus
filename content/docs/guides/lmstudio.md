@@ -1,5 +1,5 @@
 ---
-aliases: ["/docs/guides/lmstudio/"]
+aliases: ["/docs/guides/apertus-1-0/lmstudio/"]
 title: "LM Studio"
 description: "Instructions for users of Apertus"
 icon: "rocket_launch"

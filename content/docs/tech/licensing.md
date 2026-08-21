@@ -22,7 +22,7 @@ The source code, model weights, and all other relevant material is available all
 
 These licenses are designed to support the sustainability of the project and encourage ethical and responsible deployment, ensuring that the model benefits society as a whole.
 
-Further questions are [explored in the FAQ](/pages/faq/)
+Further questions are [explored in the FAQ](/docs/faq/)
 
 ## Legal framework
 
