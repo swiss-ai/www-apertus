@@ -1,5 +1,5 @@
 ---
-aliases: ["/docs/guides/llamafile/"]
+aliases: ["/docs/guides/apertus-1-0/llamafile/"]
 title: "Llamafile" 
 description: "Instructions for users of Apertus"
 icon: "rocket_launch"
@@ -53,7 +53,7 @@ chmod +x llamafile
 ./llamafile --model /path/to/apertus-8b.gguf --out apertus.llamafile
 ```
 
-See our [ollama page](/docs/guides/apertus-1-0/ollama/) for some recommended GGUF builds.
+See our [ollama page](/docs/guides/ollama/) for some recommended GGUF builds.
 
 ### **Resources**
 

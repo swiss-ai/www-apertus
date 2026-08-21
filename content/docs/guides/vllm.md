@@ -1,5 +1,5 @@
 ---
-aliases: ["/docs/guides/vllm/"]
+aliases: ["/docs/guides/apertus-1-0/vllm/"]
 title: "vLLM"
 description: "Instructions for users of Apertus"
 icon: "rocket_launch"
