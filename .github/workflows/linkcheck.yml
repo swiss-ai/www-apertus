@@ -55,12 +55,15 @@ jobs:
           echo "${HOME}/.local/hugo" >> "${GITHUB_PATH}"
       - name: Build site
         run: hugo --gc --minify
+      # Fragment checking (--include-fragments) is intentionally off: lychee
+      # cannot resolve #anchors through directory-style pretty URLs like
+      # /docs/tech/evaluation/#sources (it checks the directory instead of
+      # its index.html), producing false positives on valid anchors.
       - name: Check internal links with lychee
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
             --offline
             --root-dir "${{ github.workspace }}/public"
-            --include-fragments
             "public/**/*.html"
           fail: true
