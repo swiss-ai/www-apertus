@@ -1,0 +1,69 @@
+# Builds the Hugo site and verifies internal links with lychee.
+# Catches broken aliases/links (e.g. #51) before they reach production.
+name: Check links
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions: read-all
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  linkcheck:
+    name: "Build and check internal links"
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DART_SASS_VERSION: 1.102.0
+      GO_VERSION: 1.26.5
+      HUGO_VERSION: 0.164.0
+      NODE_VERSION: 24.13.0
+      TZ: Europe/Zurich
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v6
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Setup Go
+        uses: actions/setup-go@v6
+        with:
+          go-version: ${{ env.GO_VERSION }}
+          cache: false
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Install Dart Sass
+        run: |
+          mkdir -p "${HOME}/.local"
+          curl -sLJO "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
+          tar -C "${HOME}/.local" -xf "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
+          rm "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
+          echo "${HOME}/.local/dart-sass" >> "${GITHUB_PATH}"
+      - name: Install Hugo
+        run: |
+          curl -sLJO "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          mkdir -p "${HOME}/.local/hugo"
+          tar -C "${HOME}/.local/hugo" -xf "hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          echo "${HOME}/.local/hugo" >> "${GITHUB_PATH}"
+      - name: Build site
+        run: hugo --gc --minify
+      # Fragment checking (--include-fragments) is intentionally off: lychee
+      # cannot resolve #anchors through directory-style pretty URLs like
+      # /docs/tech/evaluation/#sources (it checks the directory instead of
+      # its index.html), producing false positives on valid anchors.
+      - name: Check internal links with lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --offline
+            --root-dir "${{ github.workspace }}/public"
+            "public/**/*.html"
+          fail: true
