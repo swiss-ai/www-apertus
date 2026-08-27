@@ -10,7 +10,7 @@ title: "Documentation"
 </p>
 
 <div class="card-grid">
-  <a href="https://huggingface.co/swiss-ai/Apertus-v1.5-70B/blob/main/USAGE_POLICY.pdf" class="card" style="padding: 1rem" target="_blank">
+  <a href="https://github.com/swiss-ai/apertus-legal/raw/main/apertus_1.5/USAGE_POLICY.pdf" class="card" style="padding: 1rem" target="_blank">
     <h4>Apertus 1.5 Usage Policy</h4>
     <p>Terms and conditions for model use</p>
   </a>
@@ -18,11 +18,11 @@ title: "Documentation"
     <h4>Apertus Charter</h4>
     <p>The values and principles that guide Apertus</p>
   </a>
-  <a href="https://huggingface.co/swiss-ai/Apertus-v1.5-70B/blob/main/Apertus_1_5_EU_Public_Summary.pdf" class="card" style="padding: 1rem" target="_blank">
+  <a href="https://github.com/swiss-ai/apertus-legal/raw/main/apertus_1.5/Apertus_1_5_EU_Public_Summary.pdf" class="card" style="padding: 1rem" target="_blank">
     <h4>EU Public Summary</h4>
     <p>Public summary for EU AI Act compliance</p>
   </a>
-  <a href="https://huggingface.co/swiss-ai/Apertus-v1.5-70B/blob/main/Apertus_1_5_EU_Code_of_Practice.pdf" class="card" style="padding: 1rem" target="_blank">
+  <a href="https://github.com/swiss-ai/apertus-legal/raw/main/apertus_1.5/Apertus_1_5_EU_Code_of_Practice.pdf" class="card" style="padding: 1rem" target="_blank">
     <h4>EU Code of Practice</h4>
     <p>Code of practice documentation</p>
   </a>
