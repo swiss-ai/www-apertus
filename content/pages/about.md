@@ -58,7 +58,7 @@ Learn more about the [Apertus Roadmap](#roadmap) and [Swiss AI Initiative](#snai
         <span class="roadmap-title">Apertus 2.0</span>
         <span class="badge badge-planned">Planned · Q1 2027</span>
       </div>
-      <p>A magnitude larger model, developed to the same standard of transparency and trustworthiness: multimodal understanding, a more globally fair vocabulary, and more.</p>
+      <p>A magnitude larger scale of model, developed to the same standard of transparency and trustworthiness: a more globally fair vocabulary, and more.</p>
     </div>
   </div>
   <div class="roadmap-item planned" id="apertus-2-5">
