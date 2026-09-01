@@ -7,7 +7,7 @@ date: "2026-06-11T11:11:00+01:00"
 lastmod: "2026-06-17T15:11:45+01:00"
 toc: true
 tags: ["Users"]
-categories: [""]
+categories: ["guides"]
 author: "Apertus Project"
 ---
 
@@ -22,6 +22,7 @@ Built on top of [llama.cpp](https://github.com/ggerganov/llama.cpp), this enable
 ### Using Apertus Models with Llamafile
 
 Pre-built Llamafiles for the Apertus 8B model, and soon for smaller versions, are available here:
+
 - [Pre-built llamafiles](https://docs.mozilla.ai/llamafile/getting-started/pre-built-llamafiles)
 
 Example (Linux/macOS):
@@ -42,7 +43,7 @@ This starts a local server (default: `http://localhost:8080`). Interact via:
 
 ### Custom Builds (Advanced)
 
-To create a Llamafile from an Apertus model in GGUF format:
+To create your own Llamafile from an Apertus model in GGUF format:
 
 ```bash
 # Install llamafile (requires Docker or Podman)
@@ -59,5 +60,4 @@ See our [ollama page](/docs/guides/ollama/) for some recommended GGUF builds.
 
 - [Llamafile GitHub](https://github.com/Mozilla-Ocho/llamafile)
 - [llama.cpp](https://github.com/ggerganov/llama.cpp) (underlying engine)
-- [Simplon-Off](https://simplon-off.ch/), a friendly guide to Llamafiles made at a recent hackathon in Switzerland.
-
+- [Simplon-Off](https://simplon-off.ch/), a friendly guide to Llamafiles made at a hackathon in Switzerland.
