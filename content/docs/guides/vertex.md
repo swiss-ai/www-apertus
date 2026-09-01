@@ -12,51 +12,38 @@ author: "Apertus Project"
 
 
 
-Deploying Apertus 1.5 on Google Cloud Vertex AI Model Garden requires using a customized vLLM container image. Because Apertus 1.5 introduces a novel multimodal architecture for native image and audio processing, standard pre-built Model Garden containers may not yet fully support its capabilities.
+Deploying Apertus on Google Cloud [Vertex AI Model Garden](https://cloud.google.com/vertex-ai/model-garden) requires using a customized vLLM container image. Since Apertus 1.5 introduces a novel multimodal architecture for native image and audio processing, standard pre-built Model Garden containers may not yet fully support its capabilities.
 
-**1.Acquire Hugging Face Access:**Apertus models are gated.
+## 1. Hugging Face Access
 
-You must accept the model's usage license before the container can download the weights.
+Generate a Hugging Face Access Token with **Read** permissions to download the weights from your container.
 
-1.  Navigate to the `swiss-ai/Apertus-v1.5-8B` or `swiss-ai/Apertus-v1.5-70B` repository on Hugging Face.
+Note: some versions of the Apertus models have gated access. You may need to accept the usage terms on the model card before the container can download the weights. 
 
-2.  Accept the model terms.
+## 2. Build a Custom vLLM Container
 
-3.  Generate a Hugging Face Access Token with **Read** permissions.
+Vertex AI requires specific health and prediction routes. Custom containers can handle requests using the recommended structure. You must wrap the latest multimodal-capable vLLM release in a FastAPI server that routes `/health` for health checks and `/predict` for inferences.
 
-**2.Build and Push a Custom vLLM Container:**Vertex AI requires specific health and prediction routes.
+- Create a repository in Google Cloud Artifact Registry:
 
-Vertex AI expects custom containers to handle requests using a specific structure. You must wrap the latest multimodal-capable vLLM release in a FastAPI server that routes `/health` for health checks and `/predict` for inferences.
-
-1.  Create a repository in Google Cloud Artifact Registry:
-
-Bash
-
-```
+```bash
 gcloud artifacts repositories create vllm-repo\
   --repository-format=docker\
   --location=us-central1
-
 ```
 
-1.  Write a Dockerfile that installs `vllm` and copies in your FastAPI server script.
+- Write a Dockerfile that installs `vllm` and copies in your FastAPI server script (TODO: share an example)
+- Next, build and push the image using Cloud Build:
 
-2.  Build and push the image using Cloud Build:
-
-Bash
-
-```
+```bash
 gcloud builds submit --tag us-central1-docker.pkg.dev/YOUR_PROJECT/vllm-repo/vllm-apertus:latest
-
 ```
 
-**3.Register the Model in Vertex AI:**Link the custom image to the Hugging Face weights.
+## 3. Register the Model in Vertex AI
 
 Use the `google-cloud-aiplatform` Python SDK to upload your model configuration to the Model Registry. You will need to pass your Hugging Face token securely as an environment variable so the container can download the model at startup.
 
-Python
-
-```
+```python
 from google.cloud import aiplatform
 
 aiplatform.init(project="YOUR_PROJECT", location="us-central1")
@@ -73,16 +60,13 @@ model = aiplatform.Model.upload(
         "--trust-remote-code"
     ]
 )
-
 ```
 
-**4.Create an Endpoint and Deploy:**Allocate appropriate GPU hardware.
+## 4. Create an Endpoint and Deploy
 
-Create an online prediction endpoint and deploy the model. The 8B model fits on a single NVIDIA A100 GPU, but if you are deploying the 70B version or leveraging Apertus's full 262,144 token context window, you will need multiple GPUs.
+Create an online prediction endpoint and deploy the model with an appropriate resource allocation. The 8B model fits on a single NVIDIA A100 GPU, but if you are deploying the 70B version or leveraging Apertus's full 262,144 token context window, you will need multiple GPUs with at least 140 GB RAM - significantly less for quantized versions, such as NPV4 (TODO: link to example builds).
 
-Python
-
-```
+```python
 endpoint = aiplatform.Endpoint.create(display_name="apertus-endpoint")
 
 model.deploy(
@@ -92,5 +76,8 @@ model.deploy(
     accelerator_count=1,
     deploy_request_timeout=1800
 )
-
 ```
+
+## 5. Access your Endpoint via API
+
+Use the Google Vertex AI interface, or external tools to query your new edpoint.
