@@ -11,33 +11,29 @@ categories: ["guides"]
 author: "Apertus Project"
 ---
 
-vLLM is a community-driven, efficient library for deploying large language models (LLMs) for inference and serving. Initially developed by the Sky Computing Lab at UC Berkeley, vLLM has evolved through contributions from academia and industry. While the library itself is user-friendly, deployment can be challenging due to its reliance on NVIDIA libraries and CUDA tools. However, for IT teams using DevOps tools like Kubernetes, vLLM’s multiplatform support and integration capabilities are significant advantages.
+vLLM is a community-driven, efficient library for deploying large language models (LLMs) for inference and serving. Initially developed by the Sky Computing Lab at UC Berkeley, vLLM has evolved through contributions from academia and industry. While the library itself is user-friendly, deployment can be challenging due to its reliance on NVIDIA libraries and CUDA tools. For IT teams using DevOps tools like Kubernetes, vLLM’s multiplatform support and integration capabilities are significant advantages.
 
 For more information visit the [vLLM website](https://vllm.ai), where you will find the official documentation.
-
-Support work for vLLM compatibility is taking place in https://github.com/swiss-ai/vllm
+Support work for vLLM compatibility with Apertus is taking place in https://github.com/swiss-ai/vllm
 
 > **Information for Apertus 1.5** - we are currently working on integrating changes from the latest release. Please stay tuned for updated instructions here. See the [vLLM Omni Patch](#vllm-omni-patch) section below for early adopter details.
 
 # Quickstart
 
-We provide you with a quick script to set up Apertus in your environment with vLLM, which assumes you have:
+We provide you with a quick example script to set up Apertus in your environment with Docker. Information for users of [Kubernetes](https://docs.vllm.ai/en/latest/deployment/k8s/) and other platforms is available in the [vLLM documentation](https://docs.vllm.ai/en/latest/).
 
-- Docker and Docker Compose installed
-- NVIDIA drivers and CUDA toolkit - make adjustments for AMD or other accelerators
-
-This example assumes you are using the [Apertus 1.5 8B model](https://huggingface.co/swiss-ai/Apertus-v1.5-8B). We provide a simple `docker-compose.yml` for a basic setup. To configure your deployment, you will probably want to set the following environment variables:
+ Our script assumes that you have Docker and [Docker Compose](https://docs.docker.com/compose/) installed ([Podman Compose](https://docs.podman.io/en/v5.6.2/markdown/podman-compose.1.html) can also be used). You may also need NVIDIA drivers and CUDA toolkit - make adjustments for Intel, Mac, or other accelerators using the appropriate [Pre-built images](https://docs.vllm.ai/en/latest/deployment/docker/#pre-built-images). To configure your deployment, set the following environment variables:
 
 - **`HF_TOKEN`**: A Hugging Face API token with "Read access to contents of all repos you can access". Generate this in your [Hugging Face settings](https://huggingface.co/settings/token). You can also put this into an environment (`.env`) file.
 - **`HF_MODEL`**: Set to `swiss-ai/Apertus-v1.5-8B` or your preferred version of the Apertus model.
 
-Example `docker-compose.yml` for the Nightly (not for production!) build of vLLM:
+Example `docker-compose.yml` for a recent stable release of vLLM for Linux/AMD64:
 
 ```yaml
 version: '3'
 services:
   vllm:
-    image: ghcr.io/vllm/vllm:nightly
+    image: vllm/vllm-openai:v0.28.0
     environment:
       HF_TOKEN: $HF_TOKEN
       HF_MODEL: $HF_MODEL
@@ -58,9 +54,13 @@ Start your service as follows:
 docker-compose up -d
 ```
 
-Navigate to `http://localhost:8000` in your browser (or the server’s public IP if deployed elsewhere). 
+This server can be queried in the same format as OpenAI API. For example, to list the models:
 
-You will then need to configure an API key to interact with the model from software like OpenWebUI. See the vLLM documentation for details. You can also find an official guide to using vLLM with Docker in the [vLLM documentation](https://docs.vllm.ai/en/stable/deployment/docker/).
+```bash
+curl http://localhost:8000/v1/models
+```
+
+You can pass in the argument `--api-key` or environment variable `VLLM_API_KEY` to enable the server to check for API key in the header. See the vLLM documentation for details. You can also find an official guide to using vLLM with Docker in the [vLLM documentation](https://docs.vllm.ai/en/stable/deployment/docker/), as well as many more [deployment examples](https://docs.vllm.ai/en/latest/examples/).
 
 #### Tips
 
@@ -106,8 +106,8 @@ vllm serve ... --tool-call-parser apertus --tool-parser-plugin ./plugins/apertus
                --reasoning-parser apertus --reasoning-parser-plugin ./plugins/apertus_reasoning_parser.py
 ```
 
-If you are experiencing issues with tools (MCP), we recommend explicitly disabling thinking mode with this parameter:
+You can enable thinking mode (please note: currently not recommended in combination with tools) with this parameter:
 
 `--default-chat-template-kwargs.enable_thinking true`
 
-Please visit our [README](https://github.com/swiss-ai/apertus-omni-tokenizer/blob/main/parsers/vllm/README.md) for more deteails, and [contact us](/contact) if you have questions.
+Please visit our [README](https://github.com/swiss-ai/apertus-omni-tokenizer/blob/main/parsers/vllm/README.md) for more details on the above, and [contact us](/contact) if you have questions.
