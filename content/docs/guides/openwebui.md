@@ -60,8 +60,8 @@ If you'd rather not put the key in the `docker run` command, start the container
 
 Open WebUI auto-discovers everything served at `GET /v1/models`. Select one from the dropdown, for example:
 
--   `swiss-ai/Apertus-70B-Instruct-2509`
--   `swiss-ai/Apertus-8B-Instruct-2509`
+-   `swiss-ai/Apertus-v1.5-70B`
+-   `swiss-ai/Apertus-v1.5-8B`
 
 The available list changes over time --- the model picker always reflects what's live. You can also see the full list any time with:
 
@@ -79,7 +79,7 @@ curl -X POST $APERTUS_SERVING_URL/chat/completions\
   -H "Content-Type: application/json"\
   -H "Authorization: Bearer $APERTUS_SERVING_KEY"\
   -d '{
-    "model": "swiss-ai/Apertus-8B-Instruct-2509",
+    "model": "swiss-ai/Apertus-v1.5-8B",
     "messages": [{"role": "user", "content": "Who is Pablo Picasso?"}],
     "stream": false
   }'

@@ -21,10 +21,13 @@ Please visit the [official website](https://sglang.io/) and [documentation](http
 ![Architecture diagram](https://wilsonwu.me/en/blog/2025/getting-started-with-sglang/1-sglang-architecture.png)
 _Diagram from [Getting started with SGLang](https://wilsonwu.me/en/blog/2025/getting-started-with-sglang/) by Wilson Wu_
 
+> **Information for Apertus 1.5** - we are currently working on integrating changes from the latest release. Please stay tuned for updated instructions here. 
 
 ### Overview
 
 For LLM developers on the Apertus team, SGLang streamlines the deployment process with quick server setup, leveraging GPU resources efficiently. Detailed control over model parameters (e.g., max context length, temperature, batch size) allows us to fine-tune performance and behavior.
+
+Support work for SGLang compatibility is taking place in https://github.com/swiss-ai/sglang
 
 For production use, consider deploying SGLang with Kubernetes, e.g., using the [OME operator](https://github.com/sgl-project/ome) or [SkyPilot](https://docs.skypilot.co/en/latest/examples/serving/sglang.html) for cloud-scale setups. You can use the Python SDK or API tools like cURL to interact with SGLang, maintaining compatibility with existing workflows.
 
@@ -51,7 +54,7 @@ To get started with SGLang:
      curl http://127.0.0.1:30000/v1/chat/completions\  
        -H "Content-Type: application/json"\  
        -H "Authorization: Bearer EMPTY"\  
-       -d '{"model": "swiss-ai/Apertus-8B-Instruct-2509",  
+       -d '{"model": "swiss-ai/Apertus-v1.5-8B",  
             "messages": [  
               {"role": "system", "content": "You are a helpful assistant."},  
               {"role": "user", "content": "Explain SGLang in 3 sentences."}  

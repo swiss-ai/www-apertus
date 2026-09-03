@@ -13,7 +13,7 @@ author: "Apertus Project"
 
 This document outlines how to use the [Transformers library](https://huggingface.co/docs/transformers/index) with Apertus.
 
-_We are currently working on integrating changes for the Apertus 1.5 release. Please stay tuned for updated instructions here._
+> **Information for Apertus 1.5** - we are currently working on integrating changes from the latest release. Please stay tuned for updated instructions here. 
 
 Run a command like this first to install the library using a package manager:
 
@@ -26,7 +26,7 @@ With this sample Python code, you can load and prompt Apertus in the library fro
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-model_name = "swiss-ai/Apertus-8B-Instruct-2509"
+model_name = "swiss-ai/Apertus-v1.5-8B"
 device = "cuda"  # for GPU usage or "cpu" for CPU usage
 
 # load the tokenizer and the model

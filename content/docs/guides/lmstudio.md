@@ -20,7 +20,11 @@ This guide focuses on use with Mac, however everything shown here is also possib
 ![](/images/guides/lmstudio2.png)
 _Click the gear on the bottom right to bring up Mission Control_
 
-For use on a Mac with Apple Silicon (MLX), pick a community remix, such as Apertus 1.0 published by [mlx-community](https://huggingface.co/mlx-community), or the 1.1 or 1.5 releases from [Andreas Martin](https://huggingface.co/andreasmartin/apertus-v1.5-8b-text-mlx-fp16).
+For use on a Mac with Apple Silicon (MLX), pick a community remix, such as:
+
+- [Andreas Martin](https://huggingface.co/andreasmartin/apertus-v1.5-8b-text-mlx-fp16) (1.5 8B)
+- [Mirko Casu](https://huggingface.co/m1rkocasu/Apertus-v1.5-8B-text-MLX-mxfp4) (1.5 8B)
+- [mlx-community](https://huggingface.co/mlx-community) (1.0 8B, 70B)
 
 Click Download, noting that it is unquantized, offered here in the same BF16 (Brain Floating Point) precision as the stock 8B model. You can also use another version in the size that you prefer.
 
@@ -62,9 +66,3 @@ Here you can see that it takes about half a second to first token on a Macbook M
 ![](/images/guides/lmstudio7.png)
 
 You can also use other command line tools, like the [llm utility](https://llm.datasette.io/) or [anything-llm](https://github.com/Mintplex-Labs/anything-llm) that communicate with LM Studio using the API.
-
-
-## References
-
-- 
--   [Tips for users of Ollama, LM Studio, vLLM](https://log.alets.ch/110/#using-ollama) (alets.ch)
