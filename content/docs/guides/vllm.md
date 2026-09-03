@@ -80,6 +80,8 @@ You will then need to configure an API key to interact with the model from softw
 - **Something else**: Search through [GitHub issues](https://github.com/vllm/vllm/issues) and start a new one if you find a new bug.
 - **Get Help**: For production use, evaluate your specific needs and adjust configurations according to enterprise guidelines, and potentially seek professional support of the vLLM team.
 
+<a name="omni-patch"></a>
+
 ## vLLM Omni Patch
 
 The Apertus 1.5 release has not been completely merged in the Transformers and vLLM libraries. In particular to use multimodal features and tool calling capabilities, a custom configuration (i.e. Dockerfile) is recommended.
