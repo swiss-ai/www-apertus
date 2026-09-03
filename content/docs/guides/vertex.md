@@ -8,9 +8,10 @@ toc: true
 tags: ["Users"]
 categories: ["guides"]
 author: "Apertus Project"
+draft: true
 ---
 
-
+_THIS DOCUMENT IS A WORK IN PROGRESS_
 
 Deploying Apertus on Google Cloud [Vertex AI Model Garden](https://cloud.google.com/vertex-ai/model-garden) requires using a customized vLLM container image. Since Apertus 1.5 introduces a novel multimodal architecture for native image and audio processing, standard pre-built Model Garden containers may not yet fully support its capabilities.
 
