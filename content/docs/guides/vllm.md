@@ -17,7 +17,7 @@ For more information visit the [vLLM website](https://vllm.ai), where you will f
 
 Support work for vLLM compatibility is taking place in https://github.com/swiss-ai/vllm
 
-> **Information for Apertus 1.5** - we are currently working on integrating changes from the latest release. Please stay tuned for updated instructions here. See the [vLLM Omni Patch](#omni-patch) section below for early adopter details.
+> **Information for Apertus 1.5** - we are currently working on integrating changes from the latest release. Please stay tuned for updated instructions here. See the [vLLM Omni Patch](#vllm-omni-patch) section below for early adopter details.
 
 # Quickstart
 
@@ -79,8 +79,6 @@ You will then need to configure an API key to interact with the model from softw
 - **Docker Errors**: Verify your Docker setup and ensure permissions are correct.
 - **Something else**: Search through [GitHub issues](https://github.com/vllm/vllm/issues) and start a new one if you find a new bug.
 - **Get Help**: For production use, evaluate your specific needs and adjust configurations according to enterprise guidelines, and potentially seek professional support of the vLLM team.
-
-<a name="omni-patch"></a>
 
 ## vLLM Omni Patch
 
