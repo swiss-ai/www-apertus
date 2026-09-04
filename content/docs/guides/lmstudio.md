@@ -26,7 +26,7 @@ For use on a Mac with Apple Silicon (MLX), pick a community remix, such as:
 - [Mirko Casu](https://huggingface.co/m1rkocasu/Apertus-v1.5-8B-text-MLX-mxfp4) (1.5 8B)
 - [mlx-community](https://huggingface.co/mlx-community) (1.0 8B, 70B)
 
-Click Download, noting that it is unquantized, offered here in the same BF16 (Brain Floating Point) precision as the stock 8B model. You can also use another version in the size that you prefer.
+Click Download on the build and size of the model that you prefer. There is an indicator on the right side that shows if the weights are likely to fit in your available memory.
 
 ## Loading the model
 
