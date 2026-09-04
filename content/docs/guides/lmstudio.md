@@ -7,26 +7,26 @@ date: "2026-02-11T11:11:00+01:00"
 lastmod: "2026-02-17T15:11:45+01:00"
 toc: true
 tags: ["Users"]
-categories: [""]
+categories: ["guides"]
 author: "Apertus Project"
 ---
 
-Get LM Studio for free by navigating to the official website: <https://lmstudio.ai/> or the open source repositories: <https://github.com/lmstudio-ai> (MIT license) to run local AI models privately on your computer.
+Get LM Studio for free by navigating to the official website: <https://lmstudio.ai/> (not open source), or use the tools available in the GitHub repositories: <https://github.com/lmstudio-ai> (MIT license) to run local AI models privately on your computer. Configuration defaults for Apertus can be found in the LM Studio hub: <https://lmstudio.ai/swiss-ai>
 
 ## Installation
 
-This guide focuses on use with Mac, however everything shown here is also possible with the Windows and Linux editions. You can even run LM Studio on small devices with an ARM processor, like the Raspberry Pi.
-
-![Installation on a Mac is a breeze](/images/guides/lmstudio1.png)
-
-After the initial setup wizard, you should be presented with Mission Control, where you can search for models of your choice from the huge catalog at Hugging Face. Type 'Apertus' to see a list of 15 versions (at time of writing).
+This guide focuses on use with Mac, however everything shown here is also possible with the Windows and Linux editions. You can even run LM Studio on small devices with an ARM processor, like the Raspberry Pi. After the initial setup wizard, you should be presented with Mission Control, where you can search for models of your choice from the huge catalog at Hugging Face. Type 'Apertus' to see a list of the many community-built versions.
 
 ![](/images/guides/lmstudio2.png)
 _Click the gear on the bottom right to bring up Mission Control_
 
-For use on a Mac with Apple Silicon (MLX), pick the [Apertus-8B-Instruct-2509-bf16](https://huggingface.co/mlx-community/Apertus-8B-Instruct-2509-bf16) remix that is published by [mlx-community](https://huggingface.co/mlx-community). 
+For use on a Mac with Apple Silicon (MLX), pick a community remix, such as:
 
-Click Download, noting that it is unquantized, offered here in the same BF16 (Brain Floating Point) precision as the stock 8B model. You can also use another [Apertus-8B-Instruct-2509-mlx](https://huggingface.co/loleg/Apertus-8B-Instruct-2509-mlx) version in the size that you prefer.
+- [Andreas Martin](https://huggingface.co/andreasmartin/apertus-v1.5-8b-text-mlx-fp16) (1.5 8B)
+- [Mirko Casu](https://huggingface.co/m1rkocasu/Apertus-v1.5-8B-text-MLX-mxfp4) (1.5 8B)
+- [mlx-community](https://huggingface.co/mlx-community) (1.0 8B, 70B)
+
+Click Download on the build and size of the model that you prefer. There is an indicator on the right side that shows if the weights are likely to fit in your available memory.
 
 ## Loading the model
 
@@ -45,9 +45,9 @@ Watching memory consumption using the Activity Monitor or a similar tool is reco
 
 Now you can start chatting, uploading files to set up a RAG - all in the privacy of your local GPU. It may not work as quickly or comprehensively as you are used to, but at all times you remain in control of your algorithm.
 
-## Troubleshooting
+As mentioned above, we recommend using the system prompt and temperature settings specified in the [LM Studio hub](https://lmstudio.ai/swiss-ai).
 
-A few "gotchas"" to be aware of:
+## Troubleshooting
 
 When one runs out of context window (uploading too many files into the RAG, having a very long prompt / system prompt, or using tools), the message appears *"The AI has nothing to say"*. Keep an eye on the status bar, where it is clear what is going on - that's the 143.5% full message in the screenshot:
 
@@ -66,8 +66,3 @@ Here you can see that it takes about half a second to first token on a Macbook M
 ![](/images/guides/lmstudio7.png)
 
 You can also use other command line tools, like the [llm utility](https://llm.datasette.io/) or [anything-llm](https://github.com/Mintplex-Labs/anything-llm) that communicate with LM Studio using the API.
-
-
-## References
-
--   [Tips for users of Ollama, LM Studio, vLLM](https://log.alets.ch/110/#using-ollama) (alets.ch)

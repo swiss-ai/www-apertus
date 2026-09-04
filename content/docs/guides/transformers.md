@@ -4,58 +4,71 @@ title: "Transformers"
 description: "Instructions for users of Apertus"
 icon: "rocket_launch"
 date: "2026-02-11T11:11:00+01:00"
-lastmod: "2026-02-17T15:11:45+01:00"
+lastmod: "2026-09-03T15:11:45+01:00"
 toc: true
 tags: ["Users"]
-categories: [""]
+categories: ["guides"]
 author: "Apertus Project"
 ---
 
-This document outlines how to use the [Transformers library](https://huggingface.co/docs/transformers/index) with Apertus.
+This document outlines how to use the [Transformers library](https://huggingface.co/docs/transformers/index) from Hugging Face with Apertus.
 
-_We are currently working on integrating changes for the Apertus 1.5 release. Please stay tuned for updated instructions here._
-
-Run a command like this first to install the library using a package manager:
+> 🚧 **Information for Apertus 1.5** - we are currently working on integrating changes from the [latest release](https://huggingface.co/swiss-ai/Apertus-v1.5-8B#how-to-use). Apertus 1.5 accepts interleaved text, image, and audio inputs and generates text. The model does not generate audio or images. The integration is not yet part of a released Transformers version (upstreaming is in progress). Until then, install transformers from our branch:
 
 ```bash
-pip install -U transformers
+pip install "transformers[torch,vision,audio] @ git+https://github.com/swiss-ai/transformers.git@3797303dda74844e3d1f8977ff5518bb91f818b4"
 ```
 
-With this sample Python code, you can load and prompt Apertus in the library from Hugging Face:
+## Quickstart
+
+Run a command like this first to install the library, as well as PyTorch, using a package manager:
+
+```bash
+pip install -U transformers torch
+
+```
+
+With this sample Python code, you can load and prompt Apertus:
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
+from transformers import AutoModelForMultimodalLM, AutoProcessor
 
-model_name = "swiss-ai/Apertus-8B-Instruct-2509"
-device = "cuda"  # for GPU usage or "cpu" for CPU usage
+MODEL_ID = "swiss-ai/Apertus-v1.5-8B"  # or "swiss-ai/Apertus-v1.5-70B"
 
-# load the tokenizer and the model
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForCausalLM.from_pretrained(
-    model_name,
-).to(device)
+processor = AutoProcessor.from_pretrained(MODEL_ID)
+model = AutoModelForMultimodalLM.from_pretrained(
+    MODEL_ID, dtype="auto", device_map="auto"
+).eval()
+
+
+def generate(messages, max_new_tokens=256, **template_kwargs):
+    inputs = processor.apply_chat_template(
+        messages,
+        add_generation_prompt=True,
+        tokenize=True,
+        return_dict=True,
+        return_tensors="pt",
+        **template_kwargs,
+    ).to(model.device)
+    with torch.inference_mode():
+        output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
+    return processor.decode(
+        output_ids[0, inputs["input_ids"].shape[-1]:], skip_special_tokens=True
+    )
 
 # prepare the model input
 prompt = "Give me a brief explanation of gravity in simple terms."
-messages_think = [
+messages = [
+    {"role": "system", "content": "You are a concise and helpful assistant."},
     {"role": "user", "content": prompt}
 ]
-
-text = tokenizer.apply_chat_template(
-    messages_think,
-    tokenize=False,
-    add_generation_prompt=True,
-)
-model_inputs = tokenizer([text], return_tensors="pt", add_special_tokens=False).to(model.device)
-
-# Generate the output
-generated_ids = model.generate(**model_inputs, max_new_tokens=32768)
-
-# Get and decode the output
-output_ids = generated_ids[0][len(model_inputs.input_ids[0]) :]
-print(tokenizer.decode(output_ids, skip_special_tokens=True))
+print(generate(messages))
+```
+```
 ```
 
 **Tip**:
 
-> We recommend setting `temperature=0.8` and `top_p=0.9` in the sampling parameters.
+- Check the model card for instructions on using Image or Audio inputs.
+- We recommend setting `temperature=0.8` and `top_p=0.9` in the sampling parameters.
