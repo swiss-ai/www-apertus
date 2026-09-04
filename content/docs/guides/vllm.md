@@ -16,43 +16,57 @@ vLLM is a community-driven, efficient library for deploying large language model
 For more information visit the [vLLM website](https://vllm.ai), where you will find the official documentation.
 Support work for vLLM compatibility with Apertus is taking place in https://github.com/swiss-ai/vllm
 
-> **Information for Apertus 1.5** - we are currently working on integrating changes from the latest release. Please stay tuned for updated instructions here. See the [vLLM Omni Patch](#vllm-omni-patch) section below for early adopter details.
+> **Information for Apertus 1.5** - We are currently working on adding support for our models to upstream vLLM and transformers releases. In the meantime, you can use our modified version of [vLLM](https://github.com/swiss-ai/vllm/tree/a601a9d998ddeb488f0c17e8512874b116aa7658) and [transformers](https://github.com/swiss-ai/transformers/tree/3797303dda74844e3d1f8977ff5518bb91f818b4) to run the models. We have pre-installed the dependencies in a [Docker image](https://github.com/swiss-ai/model-launch/pkgs/container/vllm_apertus_1.5_release) which is available in the GitHub Container Registry. See the [Thinking Mode](#thinking-mode) and [Omni Patch](#omni-patch) sections below for additional early adopter details.
 
 # Quickstart
 
 We provide you with a quick example script to set up Apertus in your environment with Docker. Information for users of [Kubernetes](https://docs.vllm.ai/en/latest/deployment/k8s/) and other platforms is available in the [vLLM documentation](https://docs.vllm.ai/en/latest/).
 
- Our script assumes that you have Docker and [Docker Compose](https://docs.docker.com/compose/) installed ([Podman Compose](https://docs.podman.io/en/v5.6.2/markdown/podman-compose.1.html) can also be used). You may also need NVIDIA drivers and CUDA toolkit - make adjustments for Intel, Mac, or other accelerators using the appropriate [Pre-built images](https://docs.vllm.ai/en/latest/deployment/docker/#pre-built-images). To configure your deployment, set the following environment variables:
+You may also need NVIDIA drivers and CUDA toolkit - make adjustments for Intel, Mac, or other accelerators using the appropriate [Pre-built images](https://docs.vllm.ai/en/latest/deployment/docker/#pre-built-images). 
 
-- **`HF_TOKEN`**: A Hugging Face API token with "Read access to contents of all repos you can access". Generate this in your [Hugging Face settings](https://huggingface.co/settings/token). You can also put this into an environment (`.env`) file.
-- **`HF_MODEL`**: Set to `swiss-ai/Apertus-v1.5-8B` or your preferred version of the Apertus model.
+The source Dockerfile used to build the image is available in [this repository](https://github.com/swiss-ai/model-launch/blob/main/images/vllm_apertus_1.5_release/Dockerfile).
+You can pull the image with the following command:
 
-Example `docker-compose.yml` for a recent stable release of vLLM for Linux/AMD64:
-
-```yaml
-version: '3'
-services:
-  vllm:
-    image: vllm/vllm-openai:v0.28.0
-    environment:
-      HF_TOKEN: $HF_TOKEN
-      HF_MODEL: $HF_MODEL
-      # Optional: Adjust max-model-len based on your GPU VRAM
-      # Set to 8K for better results on smaller GPUs (default: 64K)
-      MAX_MODEL_LEN: 4096  # 4K tokens (adjust based on your system)
-    ports:
-      - "8000:8000"  # Expose port 8000 for the default API
-    volumes:
-      - ./models:/app/models  # Optional: mount local model directory
-```
-
-The `MAX_MODEL_LEN` option controls the maximum input length of the model. For a 16GB GPU, 4K tokens might be more practical. The default 64K requires more VRAM.
-
-Start your service as follows:
+- amd64 architecture:
 
 ```bash
-docker-compose up -d
+docker pull ghcr.io/swiss-ai/vllm_apertus_1.5_release:latest-amd64
 ```
+
+- arm64 architecture:
+
+```bash
+docker pull ghcr.io/swiss-ai/vllm_apertus_1.5_release:latest-arm64
+```
+
+You can use the following commands to run the models with vLLM:
+
+- 8B model:
+
+```bash
+vllm serve swiss-ai/Apertus-v1.5-8B \
+--chat-template-content-format string \
+--gpu-memory-utilization 0.6 \
+--max-model-len 262144 \
+--enable-auto-tool-choice \
+--tool-call-parser apertus
+```
+
+- 70B model:
+
+```bash
+vllm serve swiss-ai/Apertus-v1.5-70B \
+--chat-template-content-format string \
+--tensor-parallel-size 4 \
+--gpu-memory-utilization 0.8 \
+--max-model-len 262144 \
+--enable-auto-tool-choice \
+--tool-call-parser apertus
+```
+
+Depending on your hardware, you may need to adjust `--tensor-parallel-size`, `--gpu-memory-utilization`, and `--max-model-len` (e.g. lower `--max-model-len` if you run out of memory). On some hardware configurations, CUDA Graph capture may fail with `--tensor-parallel-size > 1` due to the fused all-reduce RMS optimization. If this occurs, launch vLLM with `--compilation-config.pass_config.fuse_allreduce_rms false`.
+
+### How to use
 
 This server can be queried in the same format as OpenAI API. For example, to list the models:
 
@@ -62,7 +76,7 @@ curl http://localhost:8000/v1/models
 
 You can pass in the argument `--api-key` or environment variable `VLLM_API_KEY` to enable the server to check for API key in the header. See the vLLM documentation for details. You can also find an official guide to using vLLM with Docker in the [vLLM documentation](https://docs.vllm.ai/en/stable/deployment/docker/), as well as many more [deployment examples](https://docs.vllm.ai/en/latest/examples/).
 
-#### Tips
+## Tips
 
 - The `swiss-ai/Apertus-v1.5-8B` model is optimized for smaller GPUs, you may wish to choose one of the other model alternatives depending on your hardware and needs.
 - **Software Licensing**: If using CUDA acceleration, ensure you comply with NVIDIA’s licensing terms for using their proprietary libraries.
@@ -80,7 +94,36 @@ You can pass in the argument `--api-key` or environment variable `VLLM_API_KEY` 
 - **Something else**: Search through [GitHub issues](https://github.com/vllm/vllm/issues) and start a new one if you find a new bug.
 - **Get Help**: For production use, evaluate your specific needs and adjust configurations according to enterprise guidelines, and potentially seek professional support of the vLLM team.
 
-## vLLM Omni Patch
+### Thinking Mode
+
+To enable thinking mode, set `--reasoning-parser` and `--default-chat-template-kwargs.enable_thinking` as shown below. The tool-call flags are intentionally omitted: tool calling is unsupported in thinking mode, so we don't recommend combining the two.
+
+- 8B model:
+
+```bash
+vllm serve swiss-ai/Apertus-v1.5-8B \
+--served-model-name swiss-ai/Apertus-v1.5-8B-thinking \
+--chat-template-content-format string \
+--gpu-memory-utilization 0.6 \
+--max-model-len 262144 \
+--reasoning-parser apertus \
+--default-chat-template-kwargs.enable_thinking true
+```
+
+- 70B model:
+
+```bash
+vllm serve swiss-ai/Apertus-v1.5-70B \
+  --served-model-name swiss-ai/Apertus-v1.5-70B-thinking \
+  --chat-template-content-format string \
+  --tensor-parallel-size 4 \
+  --gpu-memory-utilization 0.8 \
+  --max-model-len 262144 \
+  --reasoning-parser apertus \
+  --default-chat-template-kwargs.enable_thinking true
+```
+
+### Omni Patch
 
 The Apertus 1.5 release has not been completely merged in the Transformers and vLLM libraries. In particular to use multimodal features and tool calling capabilities, a custom configuration (i.e. Dockerfile) is recommended.
 
