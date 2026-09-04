@@ -25,12 +25,7 @@ In the case of **Public AI**, you can immediately chat with the smaller 8B model
 
 We will add instructions here for several popular applications that allow you to download and access the Apertus model, along with tips on how to configure it properly to maximize the quality of your experience. Our focus is on open source software with low barrier of entry and high degree of accessibility or versatility. Please don't hesitate to contact us if you would like to see instructions added for another platform.
 
-- [vLLM](guides/vllm)
-- [SGlang](guides/sglang)
-- [Ollama](guides/ollama)
-- [LM Studio](guides/lmstudio)
-- [LlamaFile](guides/llamafile)
-- [OpenWebUI](guides/openwebui)
+➡️ [Continue to the Guides](guides/)
 
 ## References
 
