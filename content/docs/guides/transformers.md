@@ -65,8 +65,6 @@ messages = [
 ]
 print(generate(messages))
 ```
-```
-```
 
 **Tip**:
 
