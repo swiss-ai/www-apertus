@@ -17,11 +17,13 @@ Deploying Apertus on Google Cloud [Vertex AI Model Garden](https://cloud.google.
 
 This guidance is based on the [Deploy a custom vLLM model](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/open-models/deploy-custom-vllm) guide. Please refer to the official documentation for the latest updates.
 
-## 1. Hugging Face Access
+## 1. Cloud Setup
+
+You'll need to have a [Google Cloud account](https://docs.cloud.google.com/docs/get-started) and the `gcloud` [CLI installed](https://docs.cloud.google.com/sdk/docs/install-sdk).
 
 Generate a Hugging Face Access Token with **Read** permissions to download the weights from your container.
 
-Note: some versions of the Apertus models have gated access. You may need to accept the usage terms on the model card before the container can download the weights. 
+_Note: some versions of the Apertus models have gated access. You may need to accept the usage terms on the model card before the container can download the weights._
 
 ## 2. Build a Custom vLLM Container
 
