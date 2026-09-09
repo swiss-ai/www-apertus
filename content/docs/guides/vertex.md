@@ -15,6 +15,8 @@ _THIS DOCUMENT IS A WORK IN PROGRESS_
 
 Deploying Apertus on Google Cloud [Vertex AI Model Garden](https://cloud.google.com/vertex-ai/model-garden) requires using a customized vLLM container image. Since Apertus 1.5 introduces a novel multimodal architecture for native image and audio processing, standard pre-built Model Garden containers may not yet fully support its capabilities.
 
+This guidance is based on the [Deploy a custom vLLM model](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/open-models/deploy-custom-vllm) guide. Please refer to the official documentation for the latest updates.
+
 ## 1. Hugging Face Access
 
 Generate a Hugging Face Access Token with **Read** permissions to download the weights from your container.
