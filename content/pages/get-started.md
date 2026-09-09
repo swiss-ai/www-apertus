@@ -51,14 +51,15 @@ title: "Get Started"
     <p>Basic API access</p>
     <span class="meta">Various regions</span>
   </a>
-  <a href="https://aws.amazon.com/blogs/alps/switzerlands-open-source-apertus-llms-now-available-on-amazon-sagemaker-ai/" class="card" target="_blank">
-    <h4>AWS SageMaker</h4>
-    <p>Cloud deployment</p>
-    <span class="meta">Various regions</span>
-  </a>
-  <a href="https://github.com/Azure-Samples/swiss-llm-quickstart#how-to-run-apertus---the-swiss-llm-model---on-microsoft-azure" class="card" target="_blank">
-    <h4>Microsoft Azure</h4>
-    <p>Cloud deployment</p>
-    <span class="meta">Various regions</span>
-  </a>
 </div>
+
+<p>
+    Consult our technical documentation for deploying Apertus on cloud providers and hyperscalers:
+    <ul>
+        <li><a href="/docs/guides/vllm">vLLM / Docker</a></li>
+        <li><a href="/docs/guides/sglang">SGlang</a></li>
+        <li><a href="/docs/guides/sagemaker">AWS SageMaker</a></li>
+        <li><a href="/docs/guides/azure">Microsoft Azure</a></li>
+        <li><a href="/docs/guides/vertex">Google Vertex AI</a></li>
+    </ul>
+</p>
