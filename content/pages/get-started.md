@@ -57,7 +57,7 @@ title: "Get Started"
     Consult our technical documentation for deploying Apertus on cloud providers and hyperscalers:
     <ul>
         <li><a href="/docs/guides/vllm">vLLM / Docker</a></li>
-        <li><a href="/docs/guides/sglang">SGlang</a></li>
+        <li><a href="/docs/guides/sglang">SGlang / Kubernetes</a></li>
         <li><a href="/docs/guides/sagemaker">AWS SageMaker</a></li>
         <li><a href="/docs/guides/azure">Microsoft Azure</a></li>
         <li><a href="/docs/guides/vertex">Google Vertex AI</a></li>
