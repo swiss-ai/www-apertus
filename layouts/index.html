@@ -1,12 +1,6 @@
 {{ define "main" }}
-<style>
-  body, #content, #home { margin: 0; padding: 0; }
-  #hero { margin-top: 0; }
-</style>
+<style type="text/css">body, #content, #home { margin: 0; padding: 0; }</style>
 <main id="home">
-
-  {{/* Animation */}}
-  {{ partial "intro.html" . }}
 
   {{/* Hero */}}
   {{ partial "hero.html" . }}
