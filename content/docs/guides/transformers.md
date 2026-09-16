@@ -16,7 +16,7 @@ This document outlines how to use the [Transformers library](https://huggingface
 > 🚧 **Information for Apertus 1.5** - we are currently working on integrating changes from the [latest release](https://huggingface.co/swiss-ai/Apertus-v1.5-8B#how-to-use). Apertus 1.5 accepts interleaved text, image, and audio inputs and generates text. The model does not generate audio or images. The integration is not yet part of a released Transformers version (upstreaming is in progress). Until then, install transformers from our branch:
 
 ```bash
-pip install "transformers[torch,vision,audio] @ git+https://github.com/swiss-ai/transformers.git@3797303dda74844e3d1f8977ff5518bb91f818b4"
+pip install "transformers[torch,vision,audio] @ git+https://github.com/swiss-ai/transformers.git@apertusv1p5-release-pre-upstream"
 ```
 
 ## Quickstart
@@ -68,5 +68,5 @@ print(generate(messages))
 
 **Tip**:
 
-- Check the model card for instructions on using Image or Audio inputs.
+- Check the [model card](https://huggingface.co/swiss-ai/Apertus-v1.5-8B#transformers) for further examples on using Image or Audio inputs.
 - We recommend setting `temperature=0.8` and `top_p=0.9` in the sampling parameters.

@@ -4,7 +4,7 @@ date: 2026-07-24T00:00:00+01:00
 draft: false
 author: "ETH EPFL CSCS"
 tags: ["Apertus", "Release", "Announcement"]
-featured_image: "apertus-keyvisual-1-5.jpg"
+featured_image: "inference-ecosystem-2026-09.jpeg"
 summary: "Multimodal input, reasoning, longer context, and better instruction following"
 comments: false
 ---

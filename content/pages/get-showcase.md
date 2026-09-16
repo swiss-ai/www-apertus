@@ -20,16 +20,29 @@ title: "Get Started"
 
 <div class="card-grid">
 
-  <a href="https://chat.publicai.co" class="card">
-    <img src="/images/showcase/public_ai-logo.ico" alt="PublicAI" class="card-logo">
-    <h4>Public AI Switzerland</h4>
-    <p>A chat interface you can use for free. Login for access to open models, web search, and more.</p>
+
+<!-- TEMPLATE:
+  <a href="" class="card">
+    <img src="/images/showcase/" alt="" class="card-logo">
+    <h4></h4>
+    <p>
+    </p>
+  </a>
+-->
+
+  <a href="" class="card">
+    <img src="/images/showcase/" alt="" class="card-logo">
+    <h4></h4>
+    <p>
+    </p>
   </a>
 
-  <a href="https://oss.zuericitygpt.ch/" class="card">
-    <img src="/images/showcase/zuericitygpt-robot.png" alt="ZüriCityGPT" class="card-logo">
-    <h4>ZüriCityGPT OSS</h4>
-    <p>A RAG Chatbot demo developed by Liip to ask questions about city laws with the Apertus model.</p>
+  <a href="" class="card">
+    <img src="/images/showcase/" alt="" class="card-logo">
+    <h4>Euria</h4>
+    <p>
+      Switch to Apertus 1.5 in the Euria app, or work with it directly in kSuite: Infomaniak's collaborative suite.
+    </p>
   </a>
 
   <a href="https://helvetra.ch/" class="card">
@@ -55,15 +68,17 @@ title: "Get Started"
       A coalition of organizations that share what gets built: a foundation model, fine-tuning capabilities, a benchmarking framework, safety tools, funding.    </p>
   </a>
 
-
-<!-- TEMPLATE:
-  <a href="" class="card">
-    <img src="/images/showcase/" alt="" class="card-logo">
-    <h4></h4>
-    <p>
-    </p>
+  <a href="https://chat.publicai.co" class="card">
+    <img src="/images/showcase/public_ai-logo.ico" alt="PublicAI" class="card-logo">
+    <h4>Public AI Switzerland</h4>
+    <p>A chat interface you can use for free. Login for access to open models, web search, and more.</p>
   </a>
--->
+
+  <a href="https://oss.zuericitygpt.ch/" class="card">
+    <img src="/images/showcase/zuericitygpt-robot.png" alt="ZüriCityGPT" class="card-logo">
+    <h4>ZüriCityGPT OSS</h4>
+    <p>A RAG Chatbot demo developed by Liip to ask questions about city laws with the Apertus model.</p>
+  </a>
 
 
 </div>
