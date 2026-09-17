@@ -1,7 +1,7 @@
 ---
-weight: 325
-title: "Developer Guides"
-description: "Guides to working on Apertus with developer tools."
+weight: 300
+title: "User Guides"
+description: "Guides to installing software compatible with Apertus."
 icon: menu_book
 date: 2026-01-22T12:36:15+00:00
 lastmod: 2026-01-22T12:36:15+00:00

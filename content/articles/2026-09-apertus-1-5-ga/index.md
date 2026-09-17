@@ -1,6 +1,6 @@
 ---
-title: "Apertus 1.5"
-date: 2026-07-24T00:00:00+01:00
+title: "Inference Ecosystem"
+date: 2026-09-17T00:00:00+01:00
 draft: false
 author: "ETH EPFL CSCS"
 tags: ["Apertus", "Release", "Announcement"]
@@ -14,13 +14,19 @@ comments: false
 
 Being among the best fully open models at this scale for following instructions, Apertus 1.5 adds image understanding competitive with leading open-weight models at this scale, audio understanding, stronger tool use, and reasoning capability from our second-generation post-training pipeline. You can read more about this in our [July announcement](https://apertus-ai.org/articles/2026-07-apertus-1-5/).
 
-Some of these capabilities need to be enabled through configuration changes and upgrades on the inference side. We would like to express our gratitude to a group of pioneering organizations going above-and-beyond to support our work over the summer, in some cases contributing their engineer's expertise and code commits to key open source components to benefit the entire community.
+Some of these capabilities need to be enabled through configuration changes and upgrades on the inference side. A group of pioneering organizations has gone above-and-beyond to support our work over the summer, in some cases contributing their engineer's expertise and code commits to key open source components to benefit the entire community.
 
-The fully open model is available for download on Hugging Face since July in two configurations - an 8B version that runs on many laptops and workstations, and the full-scale 70B parameter model for server-class hardware. For most people who do not wish to bother with installing and configuring an LLM, we are glad to announce general availability of cloud services that provide it. Here is an overview of the third-party platforms currently available for accessing Apertus 1.5. You can also find the links to them on our [dedicated web page](https://apertus-ai.org/pages/get-started/). Please contact us if there are others that you are aware of, and we will add them.
+We would like to express our gratitude to evaluators and contributors at Artificialy, Begasoft, Exoscale, Federal Court (BGER), Infomaniak, Liip, Metagov, On Premise, Phoeniqs, Puzzle AG, stepping stone, Swisscom, Switch and VSHN who participated in the pre-release feedback round.
+
+# General availability
+
+The fully open model is available for download since July in two configurations - an 8B version that runs on many laptops and workstations, and the full-scale 70B parameter model for server-class hardware. For most people who do not wish to bother with installing and configuring an LLM, we are glad to announce general availability of third-party services that provide Apertus 1.5. 
+
+You can find the links to them at any time on our [home page](https://apertus-ai.org/pages/get-started/). Instructions for deploying our models to several cloud providers are also available in the technical [deployment guides](/docs/deploy/). Please contact us if there are others that you are using.
 
 ### Swisscom
 
-"The Enterprise Service Cloud (ESC) is the Swiss private cloud for companies, offering IT infrastructure, security, and managed services from a single source -- fully integrated, automated, locally hosted, and flexibly scalable."
+> "The Enterprise Service Cloud (ESC) is the Swiss private cloud for companies, offering IT infrastructure, security, and managed services from a single source -- fully integrated, automated, locally hosted, and flexibly scalable."
 
 Swisscom is offering 1000 API keys during the Swiss {ai} Weeks
 

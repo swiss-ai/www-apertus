@@ -309,7 +309,7 @@ curl http://localhost:8000/v1/chat/completions \
 
 If the installation completes successfully, you should see something similar to this:
 
-<img src="../assets/images/azure-virtual-machine-test.png" alt="Test Result" width="auto"/>
+<img src="https://github.com/Azure-Samples/swiss-llm-quickstart/raw/main/assets/images/azure-virtual-machine-test.png" alt="Test Result" width="auto"/>
 
 ### Clean Up
 

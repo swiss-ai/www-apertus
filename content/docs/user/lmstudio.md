@@ -15,16 +15,18 @@ Get LM Studio for free by navigating to the official website: <https://lmstudio.
 
 ## Installation
 
-This guide focuses on use with Mac, however everything shown here is also possible with the Windows and Linux editions. You can even run LM Studio on small devices with an ARM processor, like the Raspberry Pi. After the initial setup wizard, you should be presented with Mission Control, where you can search for models of your choice from the huge catalog at Hugging Face. Type 'Apertus' to see a list of the many community-built versions.
+This guide focuses on use with Mac, however everything shown here is also possible with the Windows and Linux editions. You can even run LM Studio on small devices with an ARM processor, like the Raspberry Pi.
 
-![](/images/guides/lmstudio2.png)
-_Click the gear on the bottom right to bring up Mission Control_
+After the initial setup wizard, you should be presented with Mission Control, where you can search for models of your choice from the huge catalog at Hugging Face. Type 'Apertus 1.5' to see a list of the many community-built versions.
 
 For use on a Mac with Apple Silicon (MLX), pick a community remix, such as:
 
 - [Andreas Martin](https://huggingface.co/andreasmartin/apertus-v1.5-8b-text-mlx-fp16) (1.5 8B)
 - [Mirko Casu](https://huggingface.co/m1rkocasu/Apertus-v1.5-8B-text-MLX-mxfp4) (1.5 8B)
-- [mlx-community](https://huggingface.co/mlx-community) (1.0 8B, 70B)
+- [mlx-community](https://huggingface.co/mlx-community) 
+
+![](/images/guides/lmstudio2.png)
+_Click the gear on the bottom right to bring up Mission Control_
 
 Click Download on the build and size of the model that you prefer. There is an indicator on the right side that shows if the weights are likely to fit in your available memory.
 
