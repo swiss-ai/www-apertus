@@ -30,18 +30,11 @@ title: "Get Started"
   </a>
 -->
 
-  <a href="" class="card">
-    <img src="/images/showcase/" alt="" class="card-logo">
-    <h4></h4>
-    <p>
-    </p>
-  </a>
-
-  <a href="" class="card">
-    <img src="/images/showcase/" alt="" class="card-logo">
+  <a href="https://www.infomaniak.com/en/euria" class="card">
+    <img src="/images/showcase/euria_logo.png" alt="Euria logo" class="card-logo">
     <h4>Euria</h4>
     <p>
-      Switch to Apertus 1.5 in the Euria app, or work with it directly in kSuite: Infomaniak's collaborative suite.
+      Switch to Apertus 1.5 in the Euria assistant, or work directly in kSuite: Infomaniak's collaborative suite.
     </p>
   </a>
 
@@ -65,14 +58,23 @@ title: "Get Started"
     </svg>
     <h4>AI Potluck</h4>
     <p>
-      A coalition of organizations that share what gets built: a foundation model, fine-tuning capabilities, a benchmarking framework, safety tools, funding.    </p>
+      Alpha is a chatbot powered by Apertus that gives you XRAY vision on the inference process.</p>
   </a>
 
-  <a href="https://chat.publicai.co" class="card">
+  <a href="https://publicai.co" class="card">
     <img src="/images/showcase/public_ai-logo.ico" alt="PublicAI" class="card-logo">
-    <h4>Public AI Switzerland</h4>
-    <p>A chat interface you can use for free. Login for access to open models, web search, and more.</p>
+    <h4>Public AI</h4>
+    <p>Chat with Apertus for free. Log in for access to larger models, web search, and more.</p>
   </a>
+
+  <a href="https://huggingface.co/spaces/swiss-ai/apertus-mini-webgpu" class="card">
+    <img src="/images/logos/huggingface_logo-noborder.svg" alt="Hugging Face logo" class="card-logo">
+    <h4>Hugging Face</h4>
+    <p>
+      Try Apertus Mini running in your browser, with an app based on Transformers.js and WebGPU.
+    </p>
+  </a>
+
 
   <a href="https://oss.zuericitygpt.ch/" class="card">
     <img src="/images/showcase/zuericitygpt-robot.png" alt="ZüriCityGPT" class="card-logo">
