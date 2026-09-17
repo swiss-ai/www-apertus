@@ -8,10 +8,9 @@ toc: true
 tags: ["Users"]
 categories: ["guides"]
 author: "Apertus Project"
-draft: true
 ---
 
-_THIS DOCUMENT IS A WORK IN PROGRESS_
+`DRAFT` _THIS DOCUMENT IS A WORK IN PROGRESS_
 
 This guide will help you get up and running with the Apertus models on Microsoft Azure.
 

@@ -8,10 +8,9 @@ toc: true
 tags: ["Users"]
 categories: ["guides"]
 author: "Apertus Project"
-draft: true
 ---
 
-_THIS DOCUMENT IS A WORK IN PROGRESS_
+`DRAFT` _THIS DOCUMENT IS A WORK IN PROGRESS_
 
 Deploying Apertus currently requires a customized vLLM container or environment. Since Apertus 1.5 introduces a novel multimodal architecture for native image and audio processing, the model dependencies are not yet fully merged into upstream vLLM and Transformers releases. The Apertus team provides pre-built Docker images and custom forks of [vLLM](https://github.com/swiss-ai/vllm) and [Transformers](https://github.com/swiss-ai/transformers) that you can use in the meantime.
 

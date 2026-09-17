@@ -19,6 +19,8 @@ This document outlines how to use the [Transformers library](https://huggingface
 pip install "transformers[torch,vision,audio] @ git+https://github.com/swiss-ai/transformers.git@apertusv1p5-release-pre-upstream"
 ```
 
+Transformers acts as the model-definition framework for state-of-the-art machine learning models in text, computer vision, audio, video, and multimodal models, for both inference and training. Visit the [official documentation](https://huggingface.co/docs/transformers/index) for further information.
+
 ## Quickstart
 
 Run a command like this first to install the library, as well as PyTorch, using a package manager:

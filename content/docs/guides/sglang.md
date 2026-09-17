@@ -13,9 +13,9 @@ author: "Apertus Project"
 
 **SGLang** is a high-performance [open source](https://github.com/sgl-project/sglang) serving framework for large language models and multimodal models. It is designed to deliver low-latency and high-throughput inference across a wide range of setups, from a single GPU to large distributed clusters. 
 
-It is recommended by the engineering team of Apertus - our [Scratchpad repo](https://github.com/swiss-ai/Scratchpad) has an example configuration. You can also find usage guidelines from [Hugging Face](https://huggingface.co/docs/inference-endpoints/main/en/engines/sglang).
-
 > 🚧 **Information for Apertus 1.5** - we are currently working on integrating changes from the latest release. Please stay tuned for updated instructions here soon. Support work for SGLang compatibility is taking place in https://github.com/swiss-ai/sglang
+
+SGLang is well supported by the engineering team of Apertus - our [Scratchpad repo](https://github.com/swiss-ai/Scratchpad) has an example configuration. You can also find usage guidelines from [Hugging Face](https://huggingface.co/docs/inference-endpoints/main/en/engines/sglang).
 
 For practical examples and tutorials, open the [SGLang quickstart](https://docs.sglang.io/quickstart). 
 
