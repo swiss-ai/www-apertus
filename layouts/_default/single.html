@@ -8,12 +8,6 @@
     {{ partial "newsletter.html" }}
   {{ end }}
 
-  <div class="mt-5 mb-0 pt-4 pb-2 alert alert-warning text-center" role="alert">
-      Our new website is under construction: have any feedback?
-      <a href="/feedback">
-          Please let us know!
-      </a>
-  </div>
 
   {{ if .Params.featured_image }}
     <header class="mb-8 mt-5 pt-5 pb-5">
@@ -30,7 +24,7 @@
   {{ end }}
 
   {{/* Page content with top padding to clear fixed navbar */}}
-  <section class="page-content bg-white pb-5 mt-4">
+  <section class="page-content bg-white pb-5 {{ if .Params.featured_image }}mt-4{{ else }}mt-5 pt-5{{ end }}">
     <div class="container" style="max-width: 900px;">
       {{ if .Params.author }}
         <div class="fs-5 mr-4 mb-4">{{ .Date.Format "January 2, 2006" }}</div>
@@ -38,11 +32,6 @@
       <div class="content-body">
         {{ .Content }}
       </div>
-      {{ if .Params.author }}
-        <div class="mt-4">
-          <span class="mr-4">-- <a href="/authors/{{ replace (lower .Params.author) "." "" | urlize }}" class="text-blue-600 hover:text-blue-800">{{ .Params.author }}</a></span>
-        </div>
-      {{ end }}
     </div>
   </section>
 
@@ -68,6 +57,7 @@
   .section-intro {
     color: #6b7280;
     margin-bottom: 4rem;
+    font-size: 110%;
     text-align: center;
   }
   .content-body p {
@@ -123,7 +113,17 @@
   .card {
     display: block !important;
     flex-direction: unset !important;
-    border: 2px solid #c0c4cc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    text-align: center;
+  }
+  .card:hover {
+    border-color: #49BED8;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .card.card-grey {
+    border-color: lightgray !important;
     border-style: dashed;
   }
   .card a {
@@ -290,9 +290,35 @@
             transition: all 0.3s;
     width: 3.6rem;
     z-index: 10;
-            transition: all 0.3s;
-    width: 3.6rem;
-    z-index: 10;
   }
+  /* Roadmap (About page) */
+  .roadmap { margin: 2rem 0 1rem; }
+  .roadmap-item { position: relative; padding: 0 0 1.75rem 2.5rem; }
+  .roadmap-item::before {
+    content: ""; position: absolute; left: 7px; top: 20px; bottom: -4px;
+    width: 2px; background: #e5e7eb;
+  }
+  .roadmap-item:last-child::before { display: none; }
+  .roadmap-item::after {
+    content: ""; position: absolute; left: 0; top: 4px;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: #49BED8; border: 3px solid #49BED8;
+  }
+  .roadmap-item.planned::after { background: #fff; border-color: #c0c4cc; }
+  .roadmap-item.latest .roadmap-content {
+    background: #f0f9fc; border: 1px solid #49BED8; border-radius: 12px;
+    padding: 1rem 1.25rem;
+  }
+  .roadmap-header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem; margin-bottom: 0.5rem; }
+  .roadmap-title { font-size: 1.15rem; font-weight: 600; color: #1a1a1a; }
+  .roadmap-weights { font-size: 0.85rem; white-space: nowrap; }
+  .roadmap .badge-released { background: #d1fae5; color: #065f46; }
+  .roadmap .badge-latest { background: #dbeafe; color: #1e40af; }
+  .roadmap .badge-planned { background: #f3f4f6; color: #6b7280; }
+  .roadmap-item p { margin-bottom: 0; }
+  .roadmap-item ul { margin: 0; padding-left: 1.1rem; }
+  .roadmap-item li { margin-bottom: 0.35rem; }
+  .roadmap-item li:last-child { margin-bottom: 0; }
+  .roadmap-note { color: #9ca3af; font-size: 0.9rem; margin-bottom: 2.5rem; }
 </style>
 {{ end }}

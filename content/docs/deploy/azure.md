@@ -14,7 +14,7 @@ author: "Apertus Project"
 
 This guide will help you get up and running with the Apertus models on Microsoft Azure.
 
-Deploying Apertus currently requires a customized vLLM container or environment. Since Apertus 1.5 introduces a novel multimodal architecture for native image and audio processing, the model dependencies are not yet fully merged into upstream vLLM and Transformers releases. The Apertus team provides pre-built Docker images and custom forks of [vLLM](/docs/deploy/vllm) and [Transformers](/docs/deploy/transformers) that you can use in the meantime.
+Deploying Apertus currently requires a customized vLLM container or environment. Since Apertus 1.5 introduces a novel multimodal architecture for native image and audio processing, the model dependencies are not yet fully merged into upstream vLLM and Transformers releases. The Apertus team provides pre-built Docker images and custom forks of [vLLM](/docs/guides/vllm) and [Transformers](/docs/guides/transformers) that you can use in the meantime.
 
 The following guide is based on the [Azure Samples Swiss LLM Quickstart](https://github.com/Azure-Samples/swiss-llm-quickstart/blob/main/azure-virtual-machine/README.md) (MIT license) developed by [Francesco Sodano](https://github.com/francesco-sodano) and [Dominique Broeglin](https://github.com/dbroeglin) at Microsoft.
 
@@ -158,7 +158,7 @@ nvcc --version || echo "nvcc not found; ensure CUDA toolkit installed"
 
 ### Prepare the Python Environment
 
-> **Information for Apertus 1.5** — We are currently working on adding support for our models to upstream [vLLM](/docs/deploy/vllm) and [Transformers](/docs/deploy/transformers) releases. See the [Docker deployment](#deploy-with-a-docker-container) section below as an alternative to a manual Python environment.
+> **Information for Apertus 1.5** — We are currently working on adding support for our models to upstream [vLLM](/docs/guides/vllm) and [Transformers](/docs/guides/transformers) releases. See the [Docker deployment](#deploy-with-a-docker-container) section below as an alternative to a manual Python environment.
 
 Log in again into the VM and execute the following commands to install `uv` and prepare a Python environment:
 
