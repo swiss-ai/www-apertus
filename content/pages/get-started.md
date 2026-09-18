@@ -33,12 +33,12 @@ title: "Get Started"
   </a>
   <a href="https://documentation.kvant.cloud/maas/active-models/#active-models" class="card" target="_blank">
     <h4>Phoeniqs</h4>
-    <p>Model-as-a-Service, Pay-per-token API</p>
+    <p>Pay-per-token API</p>
     <span class="badge badge-swiss">Switzerland</span>
   </a>
   <a href="https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/" class="card" target="_blank">
     <h4>OnPrem AI</h4>
-    <p>Model-as-a-Service, On premise deployment</p>
+    <p>On premise deployment</p>
     <span class="badge badge-swiss">Switzerland</span>
   </a>
   <a href="https://www.stepping-stone.ch/en/products/artificial-intelligence/ai-on-demand-powered-by-swiss-ai-initiative" class="card" target="_blank">
@@ -46,19 +46,18 @@ title: "Get Started"
     <p>Model-as-a-Service</p>
     <span class="badge badge-swiss">Switzerland</span>
   </a>
-  <a href="https://publicai.co/stories/apertus-1-5" class="card" target="_blank">
+  <a href="https://featherless.ai/models?query=apertus" class="card" target="_blank">
+    <h4>Featherless</h4>
+    <p>Pay-per-token API</p>
+    <span class="meta">Various regions</span>
+  </a>
+  <a href="https://platform.publicai.co/" class="card" target="_blank">
     <h4>Public AI Platform</h4>
     <p>Basic API access</p>
     <span class="meta">Various regions</span>
   </a>
-  <a href="https://aws.amazon.com/blogs/alps/switzerlands-open-source-apertus-llms-now-available-on-amazon-sagemaker-ai/" class="card" target="_blank">
-    <h4>AWS SageMaker</h4>
-    <p>Cloud deployment</p>
-    <span class="meta">Various regions</span>
-  </a>
-  <a href="https://github.com/Azure-Samples/swiss-llm-quickstart#how-to-run-apertus---the-swiss-llm-model---on-microsoft-azure" class="card" target="_blank">
-    <h4>Microsoft Azure</h4>
-    <p>Cloud deployment</p>
-    <span class="meta">Various regions</span>
-  </a>
 </div>
+
+<p>
+    Please consult our <a href="/docs/guides">tech guides</a> for deploying Apertus on other cloud providers.
+</p>

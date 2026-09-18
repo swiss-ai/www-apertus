@@ -4,8 +4,8 @@ mission: "Fully Open Foundation Model for Sovereign AI"
 description: "Developed by the Swiss AI Initiative as a collaborative effort between EPFL, ETH Zurich, and CSCS. Open weights, open data, open science. Trained on 15 trillion tokens across 1,000+ languages."
 hero_primary_label: "Get Started"
 hero_primary_url: "/pages/get-started/"
-hero_secondary_label: "Technical Information"
-hero_secondary_url: "/pages/documentation/"
+hero_secondary_label: "Showcase"
+hero_secondary_url: "/pages/get-showcase/"
 ---
 
 {{< columns cols="3" class="py-4 text-left" gap="5" >}}

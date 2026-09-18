@@ -15,21 +15,35 @@ title: "Get Started"
   Visit the <a href="/pages/get-started">Get Started</a> page for a list of inference providers.
   Our <a href="/docs/quickstart/">Quickstart</a> has technical information
   on downloading Apertus models to your own computer, and on how to contribute. 
-  The following applications have been built with Apertus:
+  The following is a selection of production applications with Apertus built-in:
 </p>
 
 <div class="card-grid">
 
-  <a href="https://chat.publicai.co" class="card">
-    <img src="/images/showcase/public_ai-logo.ico" alt="PublicAI" class="card-logo">
-    <h4>Public AI Switzerland</h4>
-    <p>A chat interface you can use for free. Login for access to open models, web search, and more.</p>
+
+<!-- TEMPLATE:
+  <a href="" class="card">
+    <img src="/images/showcase/" alt="" class="card-logo">
+    <h4></h4>
+    <p>
+    </p>
+  </a>
+-->
+
+  <a href="https://proton.me/blog/lumo-apertus-partnership" class="card">
+    <img src="/images/showcase/lumo-logo.svg" alt="Proton Lumo AI Logo" class="card-logo">
+    <h4>Lumo by Proton</h4>
+    <p>The zero-access encrypted AI assistant, now featuring Apertus 1.5.
+    </p>
   </a>
 
-  <a href="https://oss.zuericitygpt.ch/" class="card">
-    <img src="/images/showcase/zuericitygpt-robot.png" alt="ZüriCityGPT" class="card-logo">
-    <h4>ZüriCityGPT OSS</h4>
-    <p>A RAG Chatbot demo developed by Liip to ask questions about city laws with the Apertus model.</p>
+
+  <a href="https://www.infomaniak.com/en/euria" class="card">
+    <img src="/images/showcase/euria_logo.png" alt="Euria logo" class="card-logo">
+    <h4>Euria</h4>
+    <p>
+      Switch to Apertus 1.5 in the Euria assistant, or work directly in kSuite: Infomaniak's collaborative suite.
+    </p>
   </a>
 
   <a href="https://helvetra.ch/" class="card">
@@ -52,18 +66,35 @@ title: "Get Started"
     </svg>
     <h4>AI Potluck</h4>
     <p>
-      A coalition of organizations that share what gets built: a foundation model, fine-tuning capabilities, a benchmarking framework, safety tools, funding.    </p>
+      Alpha is a chatbot powered by Apertus that gives you XRAY vision on the inference process.</p>
   </a>
 
+  <a href="https://publicai.co" class="card">
+    <img src="/images/showcase/public_ai-logo.ico" alt="PublicAI" class="card-logo">
+    <h4>Public AI</h4>
+    <p>Chat with Apertus for free. Log in for access to larger models, web search, and more.</p>
+  </a>
 
-<!-- TEMPLATE:
-  <a href="" class="card">
-    <img src="/images/showcase/" alt="" class="card-logo">
-    <h4></h4>
-    <p>
+  <a href="https://opendataeditor.okfn.org/" class="card">
+    <img src="https://storage.googleapis.com/django-statics-okf-website-production/headers/images/ODE-notext-full-rgb3x.png" alt="Open Data Editor" class="card-logo">
+    <h4>Open Data Editor</h4>
+    <p>A no-code app for working with spreadsheets, that features an AI component to help users better understand FAIR data with Apertus Mini.
     </p>
   </a>
--->
+
+  <a href="https://huggingface.co/spaces/swiss-ai/apertus-mini-webgpu" class="card">
+    <img src="/images/logos/huggingface_logo-noborder.svg" alt="Hugging Face logo" class="card-logo">
+    <h4>Hugging Face</h4>
+    <p>
+      Try Apertus Mini running in your browser, with a web chat based on Transformers.js and WebGPU.
+    </p>
+  </a>
+
+  <a href="https://oss.zuericitygpt.ch/" class="card">
+    <img src="/images/showcase/zuericitygpt-robot.png" alt="ZüriCityGPT" class="card-logo">
+    <h4>ZüriCityGPT OSS</h4>
+    <p>A RAG Chatbot demo developed by Liip to ask questions about city laws with the Apertus model.</p>
+  </a>
 
 
 </div>
