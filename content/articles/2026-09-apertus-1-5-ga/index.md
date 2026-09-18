@@ -5,7 +5,7 @@ draft: false
 author: "ETH EPFL CSCS"
 tags: ["Apertus", "Release", "Announcement"]
 featured_image: "inference-ecosystem-2026-09.jpeg"
-summary: "Multimodal input, reasoning, longer context, and better instruction following"
+summary: "Getting started with Apertus is easier than ever"
 comments: false
 ---
 
@@ -20,7 +20,7 @@ We are grateful to evaluators and contributors at [Artificialy](https://huggingf
 
 # General availability
 
-The fully open model is [available for download](https://huggingface.co/collections/swiss-ai/apertus-v15) since July 2026 in two configurations - an 8B version that runs on many laptops and workstations, and the full-scale 70B parameter model for server-class hardware. For most people who do not wish to bother with installing and configuring an LLM, we are glad to announce general availability of third-party services that provide Apertus 1.5. 
+The fully open model is [available for download](https://huggingface.co/collections/swiss-ai/apertus-v15) in two configurations - an 8B version that runs on many laptops and workstations, and the full-scale 70B parameter model for server-class hardware. For most people who do not wish to bother with installing and configuring an LLM, we are glad to announce general availability of third-party services that provide Apertus 1.5. 
 
 You can find the links to them at any time on our [home page](https://apertus-ai.org/pages/get-started/). Instructions for deploying our models to several cloud providers are also available in the technical [deployment guides](/docs/deploy/). Please contact us if there are others that you are using.
 
