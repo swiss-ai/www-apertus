@@ -5,7 +5,7 @@ draft: false
 author: "ETH EPFL CSCS"
 tags: ["Apertus", "Release", "Announcement"]
 featured_image: "inference-ecosystem-2026-09.jpeg"
-summary: "Getting started with Apertus is easier than ever"
+summary: "Getting started with Apertus is easier than ever."
 comments: false
 ---
 
@@ -44,7 +44,7 @@ Documentation: [cloud.swisscom.ch](https://docs.cloud.swisscom.ch/guide/cloud-se
 
 Get started: [AI services](https://www.infomaniak.com/en/hosting/ai-services/open-source-models)
 
-### OnPrem.ai
+### OnPrem AI
 
 > "Replace any cloud AI with local enterprise AI servers. It is literally plug&play, thanks to compatible APIs and the latest LLM models, managed through a user-friendly interface."
 
@@ -54,11 +54,11 @@ Get started: [AI services](https://www.infomaniak.com/en/hosting/ai-services/ope
 
 Details: [Blog post](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/)
 
-### Stepping Stone
+### stepping stone
 
 > "Use AI models directly on Swiss infrastructure --- without sending data abroad. stepping stone offers leading open-source models as a managed service: ready to use, with data sovereignty and personalised support."
 
-🏃🏻‍♂️ The model deployment is [openly documented](https://wiki.stoney-cloud.com/wiki/AI_on_demand:_apertus-ai/Apertus-v1.5-8B) and operated by stepping stone on Swiss infrastructure.
+🏃🏻‍♂️ The model deployment is [openly documented](https://wiki.stoney-cloud.com/wiki/AI_on_demand:_apertus-ai/Apertus-v1.5-8B) and operated on Swiss infrastructure.
 
 8B  ✅ Swiss data center  ✅ ISO certification  ✅ Consulting support
 
