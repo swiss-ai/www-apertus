@@ -26,9 +26,9 @@ You can find the links to them at any time on our [home page](https://apertus-ai
 
 ### Swisscom
 
-> "The Enterprise Service Cloud (ESC) is the Swiss private cloud for companies, offering IT infrastructure, security, and managed services from a single source -- fully integrated, automated, locally hosted, and flexibly scalable."
+> "Switzerland shouldn't only consume AI, it should be able to build it. Apertus 1.5 shows the Swiss research community can deliver a genuinely open, genuinely capable model — and Swisscom's job is to make it usable: hosted in Switzerland, hardened for regulated industries, available from day one." &emdash; _Sarah Levy, Head of Swiss AI Platform_
 
-🇨🇭 Swisscom is offering 1000 API keys during the Swiss {ai} Weeks
+🇨🇭 Swisscom is offering 1000 keys for Apertus during the [Swiss {ai} Weeks](https://ai-weeks.ch/events?tag=Hackathon) hackathons
 
 70B  ✅ High availability  ✅ Security certification  ✅ Strategic Partner
 
@@ -42,7 +42,18 @@ Documentation: [cloud.swisscom.ch](https://docs.cloud.swisscom.ch/guide/cloud-se
 
 70B  ✅ Swiss data center  ✅ Sustainable design ✅ Code contributor
 
-Get started: [AI services](https://www.infomaniak.com/en/hosting/ai-services/open-source-models)
+To get started: [Discover Euria](https://www.infomaniak.com/en/support/faq/2924/discover-euria-and-the-apertus-model), connect to [AI services](https://www.infomaniak.com/en/hosting/ai-services/open-source-models)
+
+### PHOENIQS
+
+> "With Apertus 1.5's support for agents, tools and out-of-the-box EU AI Act compliance, thanks to Switzerland, the Continent now joins the race hereby dominated by the Americans and Chinese."
+
+🪽 The PHOENIQS AI platform brings Apertus to regulated enterprise and public sector workloads.
+
+70B  ✅ Swiss data center  ✅ Enterprise scalability  ✅ Consulting support
+
+See [model documentation](https://documentation.kvant.cloud/maas/active-models/)
+
 
 ### OnPrem AI
 
@@ -54,6 +65,7 @@ Get started: [AI services](https://www.infomaniak.com/en/hosting/ai-services/ope
 
 Details: [Blog post](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/)
 
+
 ### stepping stone
 
 > "Use AI models directly on Swiss infrastructure --- without sending data abroad. stepping stone offers leading open-source models as a managed service: ready to use, with data sovereignty and personalised support."
@@ -64,28 +76,6 @@ Details: [Blog post](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single
 
 Consult the [solution offer](https://www.stepping-stone.ch/en/products/artificial-intelligence/ai-on-demand-powered-by-swiss-ai-initiative)
 
-### PHOENIQS
-
-> "A Swiss sovereign cloud and AI provider that gives organizations full control over their digital infrastructure and data, enabling secure innovation, strategic independence, and scalable growth."
-
-🪽 The PHOENIQS AI platform brings Apertus to regulated enterprise and public sector workloads.
-
-70B  ✅ Swiss data center  ✅ Enterprise scalability  ✅ Consulting support
-
-See [model documentation](https://documentation.kvant.cloud/maas/active-models/)
-
-
-### Public AI 
-
-> "The Public AI Inference Utility is a nonprofit, open-source project. Our team builds products and organizes advocacy to support the work of public AI model builders like the Swiss National AI Initiative, AI Singapore, AI Sweden, and the Barcelona Supercomputing Center."
-
-🤗 Apertus is freely accessible to users of Hugging Face and the wider public, while a not-for-profit [Swiss data cooperative](https://publicai.ch) brings focus to the vision.
-
-8B & 70B  ✅ Free demo  ✅ Large community ✅ Social enterprise
-
-Join the [growing community](https://publicai.co/stories/apertus-1-5)
-
-
 ### Safe Swiss Cloud
 
 > "Choose from a rich catalog of sovereign LLMs -- all with the same strict privacy and compliance guarantees. Safe Swiss Cloud's Private AI (PAI) services combine a broad selection of open-source LLMs with a consistent security, privacy and compliance foundation. You keep full control over data, infrastructure and model choice, while we provide the sovereign hosting and operational excellence"
@@ -95,6 +85,17 @@ Join the [growing community](https://publicai.co/stories/apertus-1-5)
 70B  ✅ Swiss data center  ✅ ISO certification  ✅ Integration support
 
 Get started with fully [private AI](https://safeswisscloud.com/en/private-ai/)
+
+
+### Public AI 
+
+> "The Public AI Inference Utility is a nonprofit, open-source project. Our team builds products and organizes advocacy to support the work of public AI model builders like the Swiss National AI Initiative, AI Singapore, AI Sweden, and the Barcelona Supercomputing Center."
+
+🤗 An Apertus demo is freely accessible on Hugging Face and on [publicai.co](https://publicai.co), while a not-for-profit [cooperative](https://publicai.ch) brings local focus to the vision.
+
+8B & 70B  ✅ Free demo  ✅ Large community ✅ Social enterprise
+
+Join the active &amp; [growing community](https://publicai.co/stories/apertus-1-5)
 
 
 ---
