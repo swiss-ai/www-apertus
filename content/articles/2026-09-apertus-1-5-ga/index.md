@@ -16,7 +16,26 @@ Apertus 1.5 adds image understanding competitive with leading open-weight models
 
 Some of these capabilities need to be enabled through configuration changes and upgrades on the inference side. Pioneering organizations have gone above-and-beyond to support our work this summer, in some cases contributing their engineer's expertise and code commits to key open source components to benefit the entire community.
 
-<small>§ &nbsp; All logos shown above are trademarks of their respective owners.</small>
+<small>§ &nbsp; <i>All logos shown above are trademarks of their respective owners.</i></small>
+
+
+Over the summer, we became thanks to our enthusiastic community the highest downloaded model from Europe on Hugging Face, with over 4 million downloads in total across official Apertus releases [@swiss-ai](https://huggingface.co/swiss-ai)
+
+![A graph of Apertus Model downloads over time](/images/pub/huggingface-stats-0926.png)
+
+| Model               | Release | Downloads/month |
+|---------------------|---------|-----------------|
+| **Apertus 8B Instruct** | 2025    | 472k            |
+| Mistral Small 3.1 24B | 2025    | 462k            |
+| Ministral 3 14B Instruct | 2025    | 417k            |
+| Devstral Small 2 24B   | 2025    | 275k            |
+| **Apertus v1.5 8B**       | 2026    | 201k            |
+| Mistral Medium 3.5 128B| 2026    | 89k             |
+| Mistral Small 4        | 2026    | 54k             |
+| **Apertus 70B Instruct**  | 2025    | 22k             |
+| **Apertus v1.5 70B**      | 2026    | 17k             |
+
+<small>Monthly top model downloads, main official repositories, as of 20.9.2026 from <a href="https://huggingface.co/docs/hub/models-download-stats">Hugging Face</a></small>
 
 # Community Evaluation
 
@@ -43,7 +62,9 @@ A limited-scale performance evaluation was run with several providers of the 70B
 
 # General Availability
 
-The fully open model is [available for download](https://huggingface.co/collections/swiss-ai/apertus-v15) in two configurations - an 8B version that runs on many laptops and workstations, and the full-scale 70B parameter model for server-class hardware. We are glad to announce general availability of third-party services that provide access and support of Apertus 1.5: 
+The fully open model is [available for download](https://huggingface.co/collections/swiss-ai/apertus-v15) in two configurations - an 8B version that runs on many laptops and workstations, and the full-scale 70B parameter model for server-class hardware. 
+
+We are glad to announce general availability of third-party services that provide access and support of Apertus 1.5: 
 
 
 | Provider         | Models | Location¹ | Per-Token² | Docs |
