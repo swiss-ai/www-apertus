@@ -10,7 +10,7 @@ comments: false
 ---
 
 
-## No longer limited to the research lab or the local workstation, Apertus is being deployed across a vibrant ecosystem from on‑premise deployments to high‑throughput APIs. Find out more in this update.
+#### No longer limited to the research lab or the local workstation, Apertus is being deployed across a vibrant ecosystem from on‑premise deployments to high‑throughput APIs. Find out more in this update.
 
 Apertus 1.5 adds image understanding competitive with leading open-weight models at scale, experimental audio understanding, stronger tool use, and thinking mode from our second-generation post-training pipeline. You can read more about this in our [July announcement](https://apertus-ai.org/articles/2026-07-apertus-1-5/).
 
@@ -18,17 +18,38 @@ Some of these capabilities need to be enabled through configuration changes and 
 
 We are grateful to evaluators and contributors at [Artificialy](https://huggingface.co/artificialy), [Begasoft](https://www.begasoft.ch/themenbeitraege/zukunft-der-ki), [Exoscale](https://huggingface.co/exoscale), [Federal Court](https://bger.ch/) (BGER), [Infomaniak](https://huggingface.co/Infomaniak-AI), [Liip](https://www.liip.ch/en/blog/apertus-1-5-first-impressions-from-using-switzerland-s-updated-ai-model), [OnPrem.ai](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/), [Phoeniqs](https://phoeniqs.com/en), [Public AI](https://publicai.co/stories/apertus-1-5), [Puzzle AG](https://www.puzzle.ch/service-products/ai), [stepping stone](https://www.stepping-stone.ch/en/products/artificial-intelligence/ai-on-demand-powered-by-swiss-ai-initiative), [Swisscom](https://docs.cloud.swisscom.ch/guide/cloud-services/aip/models/apertus-1_5_70B), [Switch](https://www.switch.ch/en) and [VSHN](https://www.vshn.ch/en/) who participated in the pre-release feedback round.
 
-# General availability
+# General Availability
 
-The fully open model is [available for download](https://huggingface.co/collections/swiss-ai/apertus-v15) in two configurations - an 8B version that runs on many laptops and workstations, and the full-scale 70B parameter model for server-class hardware. For most people who do not wish to bother with installing and configuring an LLM, we are glad to announce general availability of third-party services that provide Apertus 1.5. 
+The fully open model is [available for download](https://huggingface.co/collections/swiss-ai/apertus-v15) in two configurations - an 8B version that runs on many laptops and workstations, and the full-scale 70B parameter model for server-class hardware. We are glad to announce general availability of third-party services that provide access and support of Apertus 1.5: 
 
-You can find the links to them at any time on our [home page](https://apertus-ai.org/pages/get-started/). Instructions for deploying our models to several cloud providers are also available in the technical [deployment guides](/docs/deploy/). Please contact us if there are others that you are using.
+
+| Provider         | Models | Location¹ | Per-Token² | Docs |
+|------------------|--------|----------|------------------|------|
+| [Swisscom](#swisscom)         | 70B | 🇨🇭 |  | [`cloud.swisscom.ch`](https://docs.cloud.swisscom.ch/guide/cloud-services/aip/models/apertus-1_5_70B) |
+| [Infomaniak](#infomaniak)       | 70B | 🇨🇭 | ✅ | [`infomaniak.com`](https://www.infomaniak.com/en/hosting/ai-services/open-source-models) |
+| [PHOENIQS](#phoeniqs)         | 70B | 🇨🇭 | ✅ | [`kvant.cloud`](https://documentation.kvant.cloud/maas/active-models/) |
+| [Safe Swiss Cloud](#safe-swiss-cloud) | 70B | 🇨🇭 | ✅ | [`safeswisscloud.com`](https://safeswisscloud.com/en/private-ai/) |
+| [OnPrem.ai](#onprem-ai)        | 70B | 🇨🇭 |  | [`onprem.ai`](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/) |
+| [stepping stone](#stepping-stone)    | 8B | 🇨🇭 |  | [`stepping-stone.ch`](https://www.stepping-stone.ch/en/products/artificial-intelligence/ai-on-demand-powered-by-swiss-ai-initiative) |
+| [Public AI](#public-ai)        | 8B, 70B | 🌍 | ✅ | [`publicai.co`](https://platform.publicai.co) |
+| [Featherless](/docs/deploy/featherless/)        | 70B | 🌍 | ✅ | [`featherless.ai`](https://featherless.ai/models?query=apertus) |
+| [AWS Sagemaker](/docs/deploy/sagemaker/) | 8B, 70B | 🌍 |  | [`aws.amazon.com`](https://aws.amazon.com/blogs/alps/switzerlands-open-source-apertus-llms-now-available-on-amazon-sagemaker-ai/) |
+| [Microsoft Azure](/docs/deploy/azure/) | 8B, 70B | 🌍 |  | [`github.com`](https://github.com/Azure-Samples/swiss-llm-quickstart/blob/main/azure-virtual-machine/README.md) |
+| [Google Vertex AI](/docs/deploy/vertex/) | 8B, 70B | 🌍 |  | [`cloud.google.com`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/open-models/deploy-custom-vllm) |
+
+Information is current as of September 2026. Notes:
+1. Physical location of the datacenter where user data is processed.
+2. Per-token rates are available for metered Apertus 1.5 model usage.
+
+# Providers
+
+You can find the links to current providers in the future on our [Get Started page](https://apertus-ai.org/pages/get-started/). Instructions for deploying our models to several cloud providers are also available in the technical [deployment guides](/docs/deploy/). Please contact us if there are others that you are using.
 
 ### Swisscom
 
-> "Switzerland shouldn't only consume AI, it should be able to build it. Apertus 1.5 shows the Swiss research community can deliver a genuinely open, genuinely capable model — and Swisscom's job is to make it usable: hosted in Switzerland, hardened for regulated industries, available from day one." &emdash; _Sarah Levy, Head of Swiss AI Platform_
+> "Switzerland shouldn't only consume AI, it should be able to build it. Apertus 1.5 shows the Swiss research community can deliver a genuinely open, genuinely capable model — and Swisscom's job is to make it usable: hosted in Switzerland, hardened for regulated industries, available from day one." — _Sarah Levy, Head of [Swiss AI Platform](https://www.swisscom.ch/en/business/enterprise/offer/platforms-applications/data-driven-business/swiss-ai-platform.html)_
 
-🇨🇭 Swisscom is offering 1000 keys for Apertus during the [Swiss {ai} Weeks](https://ai-weeks.ch/events?tag=Hackathon) hackathons
+Swisscom is offering 1000 keys for Apertus during the [Swiss {ai} Weeks](https://ai-weeks.ch/events?tag=Hackathon) hackathons
 
 70B  ✅ High availability  ✅ Security certification  ✅ Strategic Partner
 
@@ -38,9 +59,9 @@ Documentation: [cloud.swisscom.ch](https://docs.cloud.swisscom.ch/guide/cloud-se
 
 > "Robust and sovereign European cloud offering LLM access with full data protection, 100 % renewable energy, and a clear no‑logs policy---letting you integrate any open‑source model into your applications while keeping your data securely hosted in Swiss data centers."
 
-📲 The [Euria app](https://euria.infomaniak.com/) supports Apertus 1.5 on mobile phones and in kSuite
+The [Euria app](https://euria.infomaniak.com/) supports Apertus 1.5 on mobile phones and in kSuite
 
-70B  ✅ Swiss data center  ✅ Sustainable design ✅ Code contributor
+70B  ✅ Swiss data center  ✅ Per-token rates ✅ Code contributor
 
 To get started: [Discover Euria](https://www.infomaniak.com/en/support/faq/2924/discover-euria-and-the-apertus-model), connect to [AI services](https://www.infomaniak.com/en/hosting/ai-services/open-source-models)
 
@@ -48,9 +69,9 @@ To get started: [Discover Euria](https://www.infomaniak.com/en/support/faq/2924/
 
 > "With Apertus 1.5's support for agents, tools and out-of-the-box EU AI Act compliance, thanks to Switzerland, the Continent now joins the race hereby dominated by the Americans and Chinese."
 
-🪽 The PHOENIQS AI platform brings Apertus to regulated enterprise and public sector workloads.
+The PHOENIQS AI platform brings Apertus to regulated enterprise and public sector workloads.
 
-70B  ✅ Swiss data center  ✅ Enterprise scalability  ✅ Consulting support
+70B  ✅ Swiss data center ✅ Enterprise scalability ✅ Consulting support
 
 See [model documentation](https://documentation.kvant.cloud/maas/active-models/)
 
@@ -59,9 +80,9 @@ See [model documentation](https://documentation.kvant.cloud/maas/active-models/)
 
 > "Replace any cloud AI with local enterprise AI servers. It is literally plug&play, thanks to compatible APIs and the latest LLM models, managed through a user-friendly interface."
 
-🏆 Offers quantized, full-featured [Apertus builds](https://huggingface.co/onprem-ai/) at roughly half the rated GPU power of the reference deployment, approximately 35% less energy per generated token than the FP8 alternative, and 99% of FP8 MMLU quality in a 48 GiB checkpoint.
+Offers quantized, full-featured [Apertus builds](https://huggingface.co/onprem-ai/) at roughly half the rated GPU power of the reference deployment, approximately 35% less energy per generated token than the FP8 alternative, and 99% of FP8 MMLU quality in a 48 GiB checkpoint.
 
-70B  ✅ On premise deployment  ✅ Consulting support  ✅ Code contributor
+70B  ✅ On premise deployment ✅ Consulting support ✅ Code contributor
 
 Details: [Blog post](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/)
 
@@ -70,9 +91,9 @@ Details: [Blog post](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single
 
 > "Use AI models directly on Swiss infrastructure --- without sending data abroad. stepping stone offers leading open-source models as a managed service: ready to use, with data sovereignty and personalised support."
 
-🏃🏻‍♂️ The model deployment is [openly documented](https://wiki.stoney-cloud.com/wiki/AI_on_demand:_apertus-ai/Apertus-v1.5-8B) and operated on Swiss infrastructure.
+The model deployment is [openly documented](https://wiki.stoney-cloud.com/wiki/AI_on_demand:_apertus-ai/Apertus-v1.5-8B) and operated on Swiss infrastructure.
 
-8B  ✅ Swiss data center  ✅ ISO certification  ✅ Consulting support
+8B  ✅ Swiss data center ✅ ISO certification ✅ Consulting support
 
 Consult the [solution offer](https://www.stepping-stone.ch/en/products/artificial-intelligence/ai-on-demand-powered-by-swiss-ai-initiative)
 
@@ -80,20 +101,20 @@ Consult the [solution offer](https://www.stepping-stone.ch/en/products/artificia
 
 > "Choose from a rich catalog of sovereign LLMs -- all with the same strict privacy and compliance guarantees. Safe Swiss Cloud's Private AI (PAI) services combine a broad selection of open-source LLMs with a consistent security, privacy and compliance foundation. You keep full control over data, infrastructure and model choice, while we provide the sovereign hosting and operational excellence"
 
-🌤️ Apertus 1.5 is available, optimized for multilingual dialogue use cases.
+Apertus 1.5 is available, optimized for multilingual dialogue use cases.
 
-70B  ✅ Swiss data center  ✅ ISO certification  ✅ Integration support
+70B  ✅ Swiss data center ✅ ISO certification ✅ Per-token rates
 
 Get started with fully [private AI](https://safeswisscloud.com/en/private-ai/)
 
 
-### Public AI 
+### Public AI
 
 > "The Public AI Inference Utility is a nonprofit, open-source project. Our team builds products and organizes advocacy to support the work of public AI model builders like the Swiss National AI Initiative, AI Singapore, AI Sweden, and the Barcelona Supercomputing Center."
 
-🤗 An Apertus demo is freely accessible on Hugging Face and on [publicai.co](https://publicai.co), while a not-for-profit [cooperative](https://publicai.ch) brings local focus to the vision.
+An Apertus demo is freely accessible on Hugging Face and on [publicai.co](https://publicai.co), while a not-for-profit [cooperative](https://publicai.ch) brings local focus to the vision.
 
-8B & 70B  ✅ Free demo  ✅ Large community ✅ Social enterprise
+8B & 70B  ✅ Free demo ✅ Large community ✅ Social enterprise
 
 Join the active &amp; [growing community](https://publicai.co/stories/apertus-1-5)
 
