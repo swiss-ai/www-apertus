@@ -10,7 +10,7 @@ comments: false
 ---
 
 
-#### No longer limited to the research lab or the local workstation, Apertus is being deployed across a vibrant ecosystem from on‑premise deployments to high‑throughput APIs. Find out more in this update.
+#### Apertus is being deployed across a vibrant ecosystem from on‑premise deployments to high‑throughput APIs. Find out more in this update.
 
 Apertus 1.5 adds image understanding competitive with leading open-weight models at scale, experimental audio understanding, stronger tool use, and thinking mode from our second-generation post-training pipeline. You can read more about this in our [July announcement](https://apertus-ai.org/articles/2026-07-apertus-1-5/).
 
