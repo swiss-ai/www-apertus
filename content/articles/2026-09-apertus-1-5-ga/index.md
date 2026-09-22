@@ -16,7 +16,30 @@ Apertus 1.5 adds image understanding competitive with leading open-weight models
 
 Some of these capabilities need to be enabled through configuration changes and upgrades on the inference side. Pioneering organizations have gone above-and-beyond to support our work this summer, in some cases contributing their engineer's expertise and code commits to key open source components to benefit the entire community.
 
+<small>§ &nbsp; All logos shown above are trademarks of their respective owners.</small>
+
+# Community Evaluation
+
+An outreach and community function connects external contributors and deployment engineers with the development process and collects their findings to improve model compatibility. [1] The public website [^1] includes the charter, usage guides, benchmark resources, model documentation, links to downstream projects; newsletters, social media, and multilingual media monitoring complement it. Direct involvement of the engineering team has included presentations to science and industry, round-tables with companies, support of hackathons, and hands-on workshops.
+
+One month before the Apertus 1.5 release, 15 organizations evaluated the 8B and 70B model weights, represented by roughly 50 engineers and experts. This pre-release exercise covered multiple areas of deployment readiness: quantization, alignment, multimodal input, tokenizer distribution, and general compatibility. It encouraged the production of quantizations and community builds for several inference frameworks.
+
 We are grateful to evaluators and contributors at [Artificialy](https://huggingface.co/artificialy), [Begasoft](https://www.begasoft.ch/themenbeitraege/zukunft-der-ki), [Exoscale](https://huggingface.co/exoscale), [Federal Court](https://bger.ch/) (BGER), [Infomaniak](https://huggingface.co/Infomaniak-AI), [Liip](https://www.liip.ch/en/blog/apertus-1-5-first-impressions-from-using-switzerland-s-updated-ai-model), [OnPrem.ai](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/), [Phoeniqs](https://phoeniqs.com/en), [Public AI](https://publicai.co/stories/apertus-1-5), [Puzzle AG](https://www.puzzle.ch/service-products/ai), [stepping stone](https://www.stepping-stone.ch/en/products/artificial-intelligence/ai-on-demand-powered-by-swiss-ai-initiative), [Swisscom](https://docs.cloud.swisscom.ch/guide/cloud-services/aip/models/apertus-1_5_70B), [Switch](https://www.switch.ch/en) and [VSHN](https://www.vshn.ch/en/) who participated in the pre-release feedback round.
+
+A limited-scale performance evaluation was run with several providers of the 70B model. To give an idea of the difference in the real-world speed of the various APIs on offer, the table below shows anonymized scores on simulated workload performance (Latency, Throughput) using the open source tool [GuideLLM](https://vllm-project.github.io/guidellm/main/), in order of ascending latency:
+
+| Provider | Latency (s) | Input (tokens/s) | Output (tokens/s) | TTFT (ms) |
+|----------|-------------|----------------------------|-----------------------------|-----------|
+| CH       | 1.89762 | 179.696881 | 67.938525 | 103.629446 |
+| P3       | 2.086661 | 157.557343 | 61.516734 | 87.940463 |
+| P5       | 2.181321 | 150.90462 | 58.917091 | 171.180878 |
+| P1       | 2.307436 | 143.597144 | 56.354363 | 469.813888 |
+| P4       | 3.634175 | 92.761177 | 35.291866 | 81.59709 |
+| P2       | 4.296362 | 79.530041 | 29.930671 | 223.610248 |
+
+<small>CH is our own research data center. TTFT denotes time to first token. Lower latency and TTFT, and higher throughput, are better.</small>
+
+---
 
 # General Availability
 
@@ -37,13 +60,17 @@ The fully open model is [available for download](https://huggingface.co/collecti
 | [Microsoft Azure](/docs/deploy/azure/) | 8B, 70B | 🌍 |  | [`github.com`](https://github.com/Azure-Samples/swiss-llm-quickstart/blob/main/azure-virtual-machine/README.md) |
 | [Google Vertex AI](/docs/deploy/vertex/) | 8B, 70B | 🌍 |  | [`cloud.google.com`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/open-models/deploy-custom-vllm) |
 
+<small>
 Information is current as of September 2026. Notes:
 1. Physical location of the datacenter where user data is processed.
 2. Per-token rates are available for metered Apertus 1.5 model usage.
+</small>
+
+---
 
 # Providers
 
-You can find the links to current providers in the future on our [Get Started page](https://apertus-ai.org/pages/get-started/). Instructions for deploying our models to several cloud providers are also available in the technical [deployment guides](/docs/deploy/). Please contact us if there are others that you are using.
+You can find the links to current general-access providers who we are working with on our [Get Started page](https://apertus-ai.org/pages/get-started/). More technical instructions for deploying our models to several additional cloud providers are also available in the technical [deployment guides](/docs/deploy/). Please contact us if there are others that you are using.
 
 ### Swisscom
 
