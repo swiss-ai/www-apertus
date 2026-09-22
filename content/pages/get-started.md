@@ -41,7 +41,7 @@ title: "Get Started"
     <span class="badge badge-swiss">Switzerland</span>
     <span class="badge badge-free">Per-token</span>
   </a>
-  <a href="https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/" class="card" target="_blank">
+  <a href="https://www.onprem.ai/en/ai-llm-models/" class="card" target="_blank">
       <img src="/images/logos/onprem-logo.png" alt="Logo" class="card-logo card-logo-left">
     <h4>OnPrem AI</h4>
     <p>On premise deployment</p>
@@ -67,7 +67,7 @@ title: "Get Started"
     <span class="badge">Various regions</span>
     <span class="badge badge-free">Per-token</span>
   </a>
-  <a href="https://featherless.ai/models?query=apertus" class="card" target="_blank">
+  <a href="/docs/deploy/featherless" class="card" target="_blank">
       <img src="/images/logos/featherless-logo.png" alt="Logo" class="card-logo card-logo-left">
     <h4>Featherless</h4>
     <p>Pay-per-token API</p>
@@ -77,5 +77,5 @@ title: "Get Started"
 </div>
 
 <p>
-    Please consult our <a href="/docs/guides">tech guides</a> for deploying Apertus on other cloud providers.
+    Please consult our <a href="/articles/2026-09-apertus-1-5-ga/#general-availability">Inference Ecosystem</a> post for an overview, the <a href="/docs/deploy">deployment guides</a> cover more providers.
 </p>

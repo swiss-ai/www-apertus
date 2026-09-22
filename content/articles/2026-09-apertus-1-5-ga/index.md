@@ -29,7 +29,7 @@ The fully open model is [available for download](https://huggingface.co/collecti
 | [Infomaniak](#infomaniak)       | 70B | 🇨🇭 | ✅ | [`infomaniak.com`](https://www.infomaniak.com/en/hosting/ai-services/open-source-models) |
 | [PHOENIQS](#phoeniqs)         | 70B | 🇨🇭 | ✅ | [`kvant.cloud`](https://documentation.kvant.cloud/maas/active-models/) |
 | [Safe Swiss Cloud](#safe-swiss-cloud) | 70B | 🇨🇭 | ✅ | [`safeswisscloud.com`](https://safeswisscloud.com/en/private-ai/) |
-| [OnPrem.ai](#onprem-ai)        | 70B | 🇨🇭 |  | [`onprem.ai`](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/) |
+| [OnPrem.ai](#onprem-ai)        | 70B | 🇨🇭 |  | [`onprem.ai`](https://www.onprem.ai/en/ai-llm-models/) |
 | [stepping stone](#stepping-stone)    | 8B | 🇨🇭 |  | [`stepping-stone.ch`](https://www.stepping-stone.ch/en/products/artificial-intelligence/ai-on-demand-powered-by-swiss-ai-initiative) |
 | [Public AI](#public-ai)        | 8B, 70B | 🌍 | ✅ | [`publicai.co`](https://platform.publicai.co) |
 | [Featherless](/docs/deploy/featherless/)        | 70B | 🌍 | ✅ | [`featherless.ai`](https://featherless.ai/models?query=apertus) |
@@ -84,7 +84,7 @@ Offers quantized, full-featured [Apertus builds](https://huggingface.co/onprem-a
 
 70B  ✅ On premise deployment ✅ Consulting support ✅ Code contributor
 
-Details: [Blog post](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/)
+Details: [Blog post](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/), [Models](https://www.onprem.ai/en/ai-llm-models/)
 
 
 ### stepping stone
