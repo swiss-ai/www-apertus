@@ -23,19 +23,19 @@ Over the summer, we became thanks to our enthusiastic community the highest down
 
 ![A graph of Apertus Model downloads over time](/images/pub/huggingface-stats-0926.png)
 
-| Model               | Release | Downloads/month |
-|---------------------|---------|-----------------|
-| **Apertus 8B Instruct** | 2025    | 472k            |
-| Mistral Small 3.1 24B | 2025    | 462k            |
-| Ministral 3 14B Instruct | 2025    | 417k            |
-| Devstral Small 2 24B   | 2025    | 275k            |
-| **Apertus v1.5 8B**       | 2026    | 201k            |
-| Mistral Medium 3.5 128B| 2026    | 89k             |
-| Mistral Small 4        | 2026    | 54k             |
-| **Apertus 70B Instruct**  | 2025    | 22k             |
-| **Apertus v1.5 70B**      | 2026    | 17k             |
+| Model name and version | Release year | Downloads/month (thousands) |
+|------|------|------|
+| **Apertus 8B Instruct** | 2025    | 472 |
+| Mistral Small 3.1 24B | 2025    | 462 |
+| Ministral 3 14B Instruct | 2025    | 417 |
+| Devstral Small 2 24B   | 2025    | 275 |
+| **Apertus v1.5 8B**       | 2026    | 201 |
+| Mistral Medium 3.5 128B| 2026    | 89  |
+| Mistral Small 4        | 2026    | 54  |
+| **Apertus 70B Instruct**  | 2025    | 22  |
+| **Apertus v1.5 70B**      | 2026    | 17  |
 
-<small>Monthly top model downloads, main official repositories, as of 20.9.2026 from <a href="https://huggingface.co/docs/hub/models-download-stats">Hugging Face</a></small>
+<small>Monthly top model downloads, main official repositories, as of 21.9.2026 from <a href="https://huggingface.co/docs/hub/models-download-stats">Hugging Face</a></small>
 
 # Community Evaluation
 
@@ -43,18 +43,18 @@ One month before the Apertus 1.5 release, 15 organizations evaluated the 8B and 
 
 We are grateful to evaluators and contributors at [Artificialy](https://huggingface.co/artificialy), [Begasoft](https://www.begasoft.ch/themenbeitraege/zukunft-der-ki), [Exoscale](https://huggingface.co/exoscale), [Federal Court](https://bger.ch/) (BGER), [Infomaniak](https://huggingface.co/Infomaniak-AI), [Liip](https://www.liip.ch/en/blog/apertus-1-5-first-impressions-from-using-switzerland-s-updated-ai-model), [OnPrem.ai](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/), [Phoeniqs](https://phoeniqs.com/en), [Public AI](https://publicai.co/stories/apertus-1-5), [Puzzle AG](https://www.puzzle.ch/service-products/ai), [stepping stone](https://www.stepping-stone.ch/en/products/artificial-intelligence/ai-on-demand-powered-by-swiss-ai-initiative), [Swisscom](https://docs.cloud.swisscom.ch/guide/cloud-services/aip/models/apertus-1_5_70B), [Switch](https://www.switch.ch/en) and [VSHN](https://www.vshn.ch/en/) who participated in the pre-release feedback round.
 
-A limited-scale performance evaluation was run with several providers of the 70B model. To give an idea of the difference in the real-world speed of the various APIs on offer, the table below shows anonymized scores on simulated workload performance (Latency, Throughput) using the open source tool [GuideLLM](https://vllm-project.github.io/guidellm/main/), in order of ascending latency:
+A limited-scale performance evaluation was run with several providers of the 70B model. To give an idea of the difference in the real-world speed of the various APIs on offer, the table below shows anonymized scores on simulated workload performance (Latency, Throughput) using the open source tool [GuideLLM](https://vllm-project.github.io/guidellm/main/), in order of ascending relative latency:
 
-| Provider | Latency (s) | Input (tokens/s) | Output (tokens/s) | TTFT (ms) |
+| Provider | Latency (ms) | Input (tokens/s) | Output (tokens/s) | TTFT (ms) |
 |----------|-------------|----------------------------|-----------------------------|-----------|
-| CH       | 1.89762 | 179.696881 | 67.938525 | 103.629446 |
-| P3       | 2.086661 | 157.557343 | 61.516734 | 87.940463 |
-| P5       | 2.181321 | 150.90462 | 58.917091 | 171.180878 |
-| P1       | 2.307436 | 143.597144 | 56.354363 | 469.813888 |
-| P4       | 3.634175 | 92.761177 | 35.291866 | 81.59709 |
-| P2       | 4.296362 | 79.530041 | 29.930671 | 223.610248 |
+| CSCS       | - | 179 | 67 | 103 |
+| P3       | 1.09 | 157 | 61 | 87 |
+| P5       | 1.18 | 150 | 58 | 171 |
+| P1       | 1.31 | 143 | 56 | 469 |
+| P4       | 2.63 | 92 | 35 | 81 |
+| P2       | 3.29 | 79 | 29 | 223 |
 
-<small>CH is our own research data center. TTFT denotes time to first token. Lower latency and TTFT, and higher throughput, are better.</small>
+<small>CSCS is our own research data center in Lugano, from where the tests were run on 16.9.2026.<br>TTFT denotes time to first token. Lower latency and TTFT, and higher throughput, are better.</small>
 
 ---
 
@@ -80,8 +80,8 @@ We are glad to announce general availability of third-party services that provid
 | [Google Vertex AI](/docs/deploy/vertex/) | 8B, 70B | 🌍 |  | [`cloud.google.com`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/open-models/deploy-custom-vllm) |
 
 <small>
-Information is current as of September 2026. Notes:
-1. Physical location of the datacenter where user data is processed.
+Information is current as of September 2026. <br>
+1. Physical location of the datacenter where user data is processed. <br>
 2. Per-token rates are available for metered Apertus 1.5 model usage.
 </small>
 
@@ -95,21 +95,21 @@ You can find the links to current general-access providers who we are working wi
 
 > "Switzerland shouldn't only consume AI, it should be able to build it. Apertus 1.5 shows the Swiss research community can deliver a genuinely open, genuinely capable model — and Swisscom's job is to make it usable: hosted in Switzerland, hardened for regulated industries, available from day one." — _Sarah Levy, Head of [Swiss AI Platform](https://www.swisscom.ch/en/business/enterprise/offer/platforms-applications/data-driven-business/swiss-ai-platform.html)_
 
-Swisscom is offering 1000 keys for Apertus during the [Swiss {ai} Weeks](https://ai-weeks.ch/events?tag=Hackathon) hackathons
-
-70B  ✅ High availability  ✅ Security certification  ✅ Strategic Partner
+Swisscom is offering 1000 keys for Apertus during the [Swiss {ai} Weeks](https://ai-weeks.ch/events?tag=Hackathon) hackathons.
 
 Documentation: [cloud.swisscom.ch](https://docs.cloud.swisscom.ch/guide/cloud-services/aip/models/apertus-1_5_70B)
+
+⚙️ 70B  ✅ High availability  ✅ Security certification  ✅ Strategic Partner
 
 ### Infomaniak
 
 > "Robust and sovereign European cloud offering LLM access with full data protection, 100 % renewable energy, and a clear no‑logs policy---letting you integrate any open‑source model into your applications while keeping your data securely hosted in Swiss data centers."
 
-The [Euria app](https://euria.infomaniak.com/) supports Apertus 1.5 on mobile phones and in kSuite
-
-70B  ✅ Swiss data center  ✅ Per-token rates ✅ Code contributor
+The [Euria app](https://euria.infomaniak.com/) supports Apertus 1.5 on mobile phones and in the [kSuite](https://www.infomaniak.com/en/ksuite) collaboration suite.
 
 To get started: [Discover Euria](https://www.infomaniak.com/en/support/faq/2924/discover-euria-and-the-apertus-model), or connect to [AI services](https://www.infomaniak.com/en/hosting/ai-services/open-source-models) for API access to Apertus.
+
+⚙️ 70B  ✅ Swiss data center  ✅ Per-token rates ✅ Code contributor
 
 ### PHOENIQS
 
@@ -117,9 +117,9 @@ To get started: [Discover Euria](https://www.infomaniak.com/en/support/faq/2924/
 
 The PHOENIQS AI platform brings Apertus to regulated enterprise and public sector workloads.
 
-70B  ✅ Swiss data center ✅ Enterprise scalability ✅ Consulting support
-
 See [model documentation](https://documentation.kvant.cloud/maas/active-models/)
+
+⚙️ 70B  ✅ Swiss data center ✅ Enterprise scalability ✅ Consulting support
 
 
 ### OnPrem AI
@@ -128,9 +128,9 @@ See [model documentation](https://documentation.kvant.cloud/maas/active-models/)
 
 Offers quantized, full-featured [Apertus builds](https://huggingface.co/onprem-ai/) at roughly half the rated GPU power of the reference deployment, approximately 35% less energy per generated token than the FP8 alternative, and 99% of FP8 MMLU quality in a 48 GiB checkpoint.
 
-70B  ✅ On premise deployment ✅ Consulting support ✅ Code contributor
-
 Details: [Blog post](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/), [Models](https://www.onprem.ai/en/ai-llm-models/)
+
+⚙️ 70B  ✅ On premise deployment ✅ Consulting support ✅ Code contributor
 
 
 ### stepping stone
@@ -139,9 +139,9 @@ Details: [Blog post](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single
 
 The model deployment is [openly documented](https://wiki.stoney-cloud.com/wiki/AI_on_demand:_apertus-ai/Apertus-v1.5-8B) and operated on Swiss infrastructure.
 
-8B  ✅ Swiss data center ✅ ISO certification ✅ Consulting support
-
 Consult the [solution offer](https://www.stepping-stone.ch/en/products/artificial-intelligence/ai-on-demand-powered-by-swiss-ai-initiative)
+
+⚙️ 8B  ✅ Swiss data center ✅ ISO certification ✅ Consulting support
 
 ### Safe Swiss Cloud
 
@@ -149,9 +149,9 @@ Consult the [solution offer](https://www.stepping-stone.ch/en/products/artificia
 
 Apertus 1.5 is available, optimized for multilingual dialogue use cases.
 
-70B  ✅ Swiss data center ✅ ISO certification ✅ Per-token rates
-
 Get started with fully [private AI](https://safeswisscloud.com/en/private-ai/)
+
+⚙️ 70B  ✅ Swiss data center ✅ ISO certification ✅ Per-token rates
 
 
 ### Public AI
@@ -160,9 +160,9 @@ Get started with fully [private AI](https://safeswisscloud.com/en/private-ai/)
 
 An Apertus demo is freely accessible on Hugging Face and on [publicai.co](https://publicai.co), while a not-for-profit [cooperative](https://publicai.ch) brings local focus to the vision.
 
-8B & 70B  ✅ Free demo ✅ Large community ✅ Social enterprise
-
 Join the active &amp; [growing community](https://publicai.co/stories/apertus-1-5)
+
+⚙️ 8B & 70B  ✅ Free demo ✅ Large community ✅ Social enterprise
 
 
 ---
