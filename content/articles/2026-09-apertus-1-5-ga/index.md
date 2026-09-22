@@ -39,8 +39,6 @@ Over the summer, we became thanks to our enthusiastic community the highest down
 
 # Community Evaluation
 
-An outreach and community function connects external contributors and deployment engineers with the development process and collects their findings to improve model compatibility. [1] The public website [^1] includes the charter, usage guides, benchmark resources, model documentation, links to downstream projects; newsletters, social media, and multilingual media monitoring complement it. Direct involvement of the engineering team has included presentations to science and industry, round-tables with companies, support of hackathons, and hands-on workshops.
-
 One month before the Apertus 1.5 release, 15 organizations evaluated the 8B and 70B model weights, represented by roughly 50 engineers and experts. This pre-release exercise covered multiple areas of deployment readiness: quantization, alignment, multimodal input, tokenizer distribution, and general compatibility. It encouraged the production of quantizations and community builds for several inference frameworks.
 
 We are grateful to evaluators and contributors at [Artificialy](https://huggingface.co/artificialy), [Begasoft](https://www.begasoft.ch/themenbeitraege/zukunft-der-ki), [Exoscale](https://huggingface.co/exoscale), [Federal Court](https://bger.ch/) (BGER), [Infomaniak](https://huggingface.co/Infomaniak-AI), [Liip](https://www.liip.ch/en/blog/apertus-1-5-first-impressions-from-using-switzerland-s-updated-ai-model), [OnPrem.ai](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/), [Phoeniqs](https://phoeniqs.com/en), [Public AI](https://publicai.co/stories/apertus-1-5), [Puzzle AG](https://www.puzzle.ch/service-products/ai), [stepping stone](https://www.stepping-stone.ch/en/products/artificial-intelligence/ai-on-demand-powered-by-swiss-ai-initiative), [Swisscom](https://docs.cloud.swisscom.ch/guide/cloud-services/aip/models/apertus-1_5_70B), [Switch](https://www.switch.ch/en) and [VSHN](https://www.vshn.ch/en/) who participated in the pre-release feedback round.
@@ -111,7 +109,7 @@ The [Euria app](https://euria.infomaniak.com/) supports Apertus 1.5 on mobile ph
 
 70B  ✅ Swiss data center  ✅ Per-token rates ✅ Code contributor
 
-To get started: [Discover Euria](https://www.infomaniak.com/en/support/faq/2924/discover-euria-and-the-apertus-model), connect to [AI services](https://www.infomaniak.com/en/hosting/ai-services/open-source-models)
+To get started: [Discover Euria](https://www.infomaniak.com/en/support/faq/2924/discover-euria-and-the-apertus-model), or connect to [AI services](https://www.infomaniak.com/en/hosting/ai-services/open-source-models) for API access to Apertus.
 
 ### PHOENIQS
 
