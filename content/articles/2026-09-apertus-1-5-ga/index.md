@@ -23,20 +23,6 @@ Over the summer, we became thanks to our enthusiastic community the highest down
 
 ![A graph of Apertus Model downloads over time](/images/pub/huggingface-stats-0926.png)
 
-| Model name and version | Release year | Downloads/month (thousands) |
-|------|------|------|
-| **Apertus 8B Instruct** | 2025    | 472 |
-| Mistral Small 3.1 24B | 2025    | 462 |
-| Ministral 3 14B Instruct | 2025    | 417 |
-| Devstral Small 2 24B   | 2025    | 275 |
-| **Apertus v1.5 8B**       | 2026    | 201 |
-| Mistral Medium 3.5 128B| 2026    | 89  |
-| Mistral Small 4        | 2026    | 54  |
-| **Apertus 70B Instruct**  | 2025    | 22  |
-| **Apertus v1.5 70B**      | 2026    | 17  |
-
-<small>Monthly top model downloads, main official repositories, as of 21.9.2026 from <a href="https://huggingface.co/docs/hub/models-download-stats">Hugging Face</a></small>
-
 ---
 
 # Community Evaluation
