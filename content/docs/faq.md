@@ -17,13 +17,13 @@ author: "Apertus Project"
 
 <div class="faq-item">
 <h4>What makes Apertus different from other open models?</h4>
-<p>Apertus is fully open, offering complete access to training data, code, and alignment principles, not just open weights. This openness supports research, collaboration and informed use, creating a valuable tool for the global AI community. See <a target="_blank" href="https://swiss-ai.org">Swiss AI Initiative</a>.</p>
+<p>Apertus is fully open, offering complete access to training data, code, and alignment principles, not just open weights. This openness supports research, collaboration and informed use, creating a valuable tool for the global AI community. See the <a target="_blank" href="https://swiss-ai.org">Swiss AI Initiative</a>, and browse our <a href="/docs/">documentation area</a> to get started.</p>
 </div>
 
 <div class="faq-item">
 <h4>Can I use Apertus just like other AI systems?</h4>
-<p>Apertus is not a consumer product: this is foundational infrastructure. Designed to support innovation across research, education, government, and industry, while remaining aligned with Swiss and European values of transparency, neutrality, and accountability.
-Many organizations are currently piloting solutions with the model, and we will update <a href="/pages/get-started/">our showcase</a> as new products based on Apertus become available. See also <a href="https://www.swissinfo.ch/eng/swiss-ai/fact-and-fiction-about-the-swiss-ai-model-apertus/90110034" target="_blank">swissinfo 10.2025</a>.
+<p>Apertus is a foundational component of AI infrastructure, not a ready-to-use product - designed to support innovation across research, education, government, and industry, while remaining aligned with Swiss and European values of transparency, neutrality, and accountability.
+Many organizations are offering <a href="/pages/get-started">hosting services</a> or piloting solutions with the model, and we will update <a href="/pages/get-showcase/">our showcase</a> as new products based on Apertus become available.
 </p>
 </div>
 
@@ -39,7 +39,6 @@ While the Apertus 1.5 release remains fully open in its development process, the
 </p>
 </div>
 
-<div class="faq-item">
 <div class="faq-item">
 <h4>May I use Apertus commercially?</h4>
 <p>Yes. Apertus is released under Apache 2.0, allowing both research and commercial use without restrictions or royalties. Use it freely in any project, but abide by license terms and be aware of statutory limitations. Try the <a target="_blank" href="https://www.choosingalicense.com/license/apache-2.0">Open License Helper</a>.</p>
@@ -67,6 +66,3 @@ See the <a href="/pages/charter">Apertus Charter</a> for details.
 <p>Our identity and domain name reflect the <a href="https://en.wikipedia.org/wiki/Switzerland_in_the_Roman_era" target="_blank">Helvetic-Roman heritage</a> of our nation, and the history of Swiss scholarship. The <tt>APERTVS</tt> logo was designed by 
 <a href="http://www.molinaridesign.ch/" target="_blank">Florian Molinari</a>.</p>
 </div>
-
-<div class="faq-item">
-<h4>

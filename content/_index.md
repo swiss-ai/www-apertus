@@ -1,7 +1,7 @@
 ---
 title: "Apertus"
-mission: "Fully Open Foundation Model for Sovereign AI"
-description: "Developed by the Swiss AI Initiative as a collaborative effort between EPFL, ETH Zurich, and CSCS. Open weights, open data, open science. Trained on 15 trillion tokens across 1,000+ languages."
+mission: "Open weights, open data, open science"
+description: "Fully Open Foundation Model for Sovereign AI, developed by the Swiss AI Initiative as a collaborative effort between EPFL, ETH Zurich, and CSCS. Open weights, open data, open science. Trained on 15 trillion tokens across 1,000+ languages."
 hero_primary_label: "Get Started"
 hero_primary_url: "/pages/get-started/"
 hero_secondary_label: "Showcase"

@@ -12,7 +12,11 @@ author: "Apertus Project"
 
 `DRAFT` _THIS DOCUMENT IS A WORK IN PROGRESS_
 
-We are working on a tutorial for deployment of Apertus on Exoscale. For the time being, please visit:
+Exoscale provides AI Ready Cloud Servers with transparent per-minute pricing in Switzerland and across EU zones.
+
+We are working on a tutorial for deployment of Apertus with support of the technical team. 
+
+For the time being, please visit:
 
 - [Exoscale Documentation](https://community.exoscale.com/)
 - [Dedicated Inference How-to](https://community.exoscale.com/product/concrete-ai/dedicated-inference/how-to/)

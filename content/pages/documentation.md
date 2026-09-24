@@ -9,25 +9,6 @@ title: "Documentation"
   The <a href="/docs/faq">Frequently Asked Questions</a> cover many common issues.
 </p>
 
-<div class="card-grid">
-  <a href="https://github.com/swiss-ai/apertus-legal/raw/main/apertus_1.5/USAGE_POLICY.pdf" class="card" style="padding: 1rem" target="_blank">
-    <h4>Apertus 1.5 Usage Policy</h4>
-    <p>Terms and conditions for model use</p>
-  </a>
-  <a href="/pages/charter" class="card" style="padding: 1rem">
-    <h4>Apertus Charter</h4>
-    <p>The values and principles that guide Apertus</p>
-  </a>
-  <a href="https://github.com/swiss-ai/apertus-legal/raw/main/apertus_1.5/Apertus_1_5_EU_Public_Summary.pdf" class="card" style="padding: 1rem" target="_blank">
-    <h4>EU Public Summary</h4>
-    <p>Public summary for EU AI Act compliance</p>
-  </a>
-  <a href="https://github.com/swiss-ai/apertus-legal/raw/main/apertus_1.5/Apertus_1_5_EU_Code_of_Practice.pdf" class="card" style="padding: 1rem" target="_blank">
-    <h4>EU Code of Practice</h4>
-    <p>Code of practice documentation</p>
-  </a>
-</div>
-
 <p class="section-intro">
   Download the <b>official 
   <a href="https://huggingface.co/swiss-ai">swiss-ai</a> releases</b> from the Apertus team:
@@ -62,6 +43,25 @@ title: "Documentation"
     Download →
     <a href="https://huggingface.co/collections/swiss-ai/apertus-v1" target="_blank">View collection</a>
   </div>
+</div>
+
+<div class="card-grid">
+  <a href="/pages/charter" class="card" style="padding: 1rem">
+    <h4>Apertus Charter</h4>
+    <p>The values and principles that guide Apertus</p>
+  </a>
+  <a href="https://github.com/swiss-ai/apertus-legal/raw/main/apertus_1.5/USAGE_POLICY.pdf" class="card" style="padding: 1rem" target="_blank">
+    <h4>Apertus Usage Policy</h4>
+    <p>Terms and conditions for model use</p>
+  </a>
+  <a href="https://github.com/swiss-ai/apertus-legal/raw/main/apertus_1.5/Apertus_1_5_EU_Public_Summary.pdf" class="card" style="padding: 1rem" target="_blank">
+    <h4>EU Public Summary</h4>
+    <p>Public summary for EU AI Act compliance</p>
+  </a>
+  <a href="https://github.com/swiss-ai/apertus-legal/raw/main/apertus_1.5/Apertus_1_5_EU_Code_of_Practice.pdf" class="card" style="padding: 1rem" target="_blank">
+    <h4>EU Code of Practice</h4>
+    <p>Code of practice documentation</p>
+  </a>
 </div>
 
 ## Code Base
