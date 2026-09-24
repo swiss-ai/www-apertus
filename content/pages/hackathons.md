@@ -2,25 +2,23 @@
 title: "Hackathons"
 ---
 
-Hey there, awesome participant!
+## 🏆🇨🇭 Hey there awesome participant 🫕🌻
 
-We are a research group commited to advancing the state of the art of Large Language Models with powerful hardware and talented people - as part of the **Swiss AI Initiative** (swiss-ai.org)
+We are a collaboration of research groups commited to advancing the state of the art of Large Language Models with powerful hardware and talented people as part of the [Swiss AI Initiative](https://swiss-ai.org) (swiss-ai.org).
+<br>
+This page is for participants and organizers of hackathons, some of which we are supporting directly, others which are self-organized, or can just benefit from open resources.
 
-_This page is for participants and organizers of hackathons in Switzerland, some of which we are supporting through our extended team and network of members and partners._
+![Apertus logo](/articles/2026-07-apertus-1-5/apertus-keyvisual-1-5.jpg)
 
-![Apertus logo](/articles/2025-09-apertus-1-0/csm_ETH_Apertus_Keyvisual_Final-LY2_keyvisual_04d728dd41.jpeg)
+[Introducing Apertus](/articles/2025-09-apertus-1-0/) | [Announcing Apertus 1.5](/articles/2026-07-apertus-1-5/)
 
-[Introducing Apertus](/articles/2025-09-apertus-1-0/)
+If you've never heard of it, no problem: we had our first public release just over a year ago, and the improved 1.5 update was [deployed in the summer](/articles/2026-07-apertus-1-5). Already, there are several great ways to access Apertus.
 
-If you've never heard of it, no problem: we had our first public release a year ago, the improved 1.5 update was [deployed in the summer](/articles/2026-07-apertus-1-5). And already, there are several great ways to access Apertus.
-
-**Let's find out how to get started with your hackathon projects!**
+**Let's dig in! Find out how to get started with your hackathon project ⬇️**
 
 ## Go local
 
-Apertus is completely free (Apache 2.0 licensed) to download and use on your local or cloud machine. The 8B variant runs well on top laptops, and we even have the [Apertus Mini](/articles/2026-06-apertus-mini) builds for the most modest machines. 
-
-There are instructions for the adventurous --> [Documentation](/pages/documentation/) including free and open source harnesses like Ollama, LM Studio, vLLM and SGlang.
+Apertus is completely free (Apache 2.0 licensed) to download and use on your local or cloud machine. The 8B variant runs well on top laptops, and we even have the [Apertus Mini](/articles/2026-06-apertus-mini) builds for even the most modest machines. For the adventurous with plenty of disk space, the [User Guides](/docs/user/) cover free and open source harnesses like Jan, Ollama, LM Studio and Open Web UI.
 
 ![](https://log.alets.ch/content/images/size/w1600/2026/01/Screenshot-2026-01-06-at-11.44.23.jpg)
 
@@ -70,4 +68,3 @@ So as you can see.. our schools, many companies, and even NGOs are invested into
 More providers are on their way, and the list on our web page will be updated over time. Drop us a line on the hackathon platform if you need help with this. Can't wait to hear about your results! 
 
 Visit https://apertus-ai.org/subscribe to stay tuned.
-
