@@ -172,7 +172,7 @@ Edit `content/_index.md` to update homepage content. The frontmatter controls th
 ```yaml
 ---
 title: "Apertus"
-mission: "A Fully Open Foundation Model for Sovereign AI"
+mission: "Open weights, open data, open science"
 description: "Your description here..."
 hero_primary_label: "Explore Models"
 hero_primary_url: "https://huggingface.co/..."

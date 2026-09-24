@@ -12,12 +12,11 @@ author: "Apertus Project"
 
 Featherless.ai launched the [Open world](https://featherless.ai/openworld) campaign in 2026, hosting various versions of [Apertus models](https://featherless.ai/models?v=c&query=apertus) on their platform. 
 
-They have generously provided starter keys for recent hackathons at the EPFL and ETHZ - let us know if you need extra access for your event.
-
+They have generously provided starter keys for recent hackathons at the EPFL and ETHZ - contact us if you would also like to get additional support for your event.
 
 The following instructions are based on the [Quickstart guide](https://featherless.ai/docs/quickstart-guide) in the official Featherless.ai documentation. See also the [Zero to AI blog post](https://featherless.ai/blog/zero-to-ai-deploying-language-models-without-the-infrastructure-headache).
 
-> Featherless AI is a serverless AI inference platform. Our goal is to make all AI models available for serverless inference and we’ve started with large language models (e.g. Qwen, Llama, Mistral, DeepSeek, RWKV). We provide inference via API to a continually expanding library of open-weight models, including the most popular models for role-playing, creative writing, coding assistance, and more.
+> Our goal is to make all AI models available for serverless inference and we’ve started with large language models (e.g. Qwen, Llama, Mistral, DeepSeek, RWKV). We provide inference via API to a continually expanding library of open-weight models, including the most popular models for role-playing, creative writing, coding assistance, and more.
 
 ![Screenshot from Featherless AI](/images/guides/featherless-model.png)
 

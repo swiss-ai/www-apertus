@@ -23,19 +23,7 @@ Over the summer, we became thanks to our enthusiastic community the highest down
 
 ![A graph of Apertus Model downloads over time](/images/pub/huggingface-stats-0926.png)
 
-| Model name and version | Release year | Downloads/month (thousands) |
-|------|------|------|
-| **Apertus 8B Instruct** | 2025    | 472 |
-| Mistral Small 3.1 24B | 2025    | 462 |
-| Ministral 3 14B Instruct | 2025    | 417 |
-| Devstral Small 2 24B   | 2025    | 275 |
-| **Apertus v1.5 8B**       | 2026    | 201 |
-| Mistral Medium 3.5 128B| 2026    | 89  |
-| Mistral Small 4        | 2026    | 54  |
-| **Apertus 70B Instruct**  | 2025    | 22  |
-| **Apertus v1.5 70B**      | 2026    | 17  |
-
-<small>Monthly top model downloads, main official repositories, as of 21.9.2026 from <a href="https://huggingface.co/docs/hub/models-download-stats">Hugging Face</a></small>
+---
 
 # Community Evaluation
 
@@ -43,31 +31,16 @@ One month before the Apertus 1.5 release, 15 organizations evaluated the 8B and 
 
 We are grateful to evaluators and contributors at [Artificialy](https://huggingface.co/artificialy), [Begasoft](https://www.begasoft.ch/themenbeitraege/zukunft-der-ki), [Exoscale](https://huggingface.co/exoscale), [Federal Court](https://bger.ch/) (BGER), [Infomaniak](https://huggingface.co/Infomaniak-AI), [Liip](https://www.liip.ch/en/blog/apertus-1-5-first-impressions-from-using-switzerland-s-updated-ai-model), [OnPrem.ai](https://www.onprem.ai/en/knowhow/run-apertus-v15-70b-single-nvidia-rtx-6000/), [Phoeniqs](https://phoeniqs.com/en), [Public AI](https://publicai.co/stories/apertus-1-5), [Puzzle AG](https://www.puzzle.ch/service-products/ai), [stepping stone](https://www.stepping-stone.ch/en/products/artificial-intelligence/ai-on-demand-powered-by-swiss-ai-initiative), [Swisscom](https://docs.cloud.swisscom.ch/guide/cloud-services/aip/models/apertus-1_5_70B), [Switch](https://www.switch.ch/en) and [VSHN](https://www.vshn.ch/en/) who participated in the pre-release feedback round.
 
-A limited-scale performance evaluation was run with several providers of the 70B model. To give an idea of the difference in the real-world speed of the various APIs on offer, the table below shows anonymized scores on simulated workload performance (Latency, Throughput) using the open source tool [GuideLLM](https://vllm-project.github.io/guidellm/main/), in order of ascending relative latency:
-
-| Provider | Latency (ms) | Input (tokens/s) | Output (tokens/s) | TTFT (ms) |
-|----------|-------------|----------------------------|-----------------------------|-----------|
-| CSCS       | - | 179 | 67 | 103 |
-| P3       | 1.09 | 157 | 61 | 87 |
-| P5       | 1.18 | 150 | 58 | 171 |
-| P1       | 1.31 | 143 | 56 | 469 |
-| P4       | 2.63 | 92 | 35 | 81 |
-| P2       | 3.29 | 79 | 29 | 223 |
-
-<small>CSCS is our own research data center in Lugano, from where the tests were run on 16.9.2026.<br>TTFT denotes time to first token. Lower latency and TTFT, and higher throughput, are better.</small>
-
----
-
 # General Availability
 
-The fully open model is [available for download](https://huggingface.co/collections/swiss-ai/apertus-v15) in two configurations - an 8B version that runs on many laptops and workstations, and the full-scale 70B parameter model for server-class hardware. 
+The fully open model is now generally [available for download](https://huggingface.co/collections/swiss-ai/apertus-v15) in two configurations - an 8B version that runs on many laptops and workstations, and the full-scale 70B parameter model for server-class hardware. Please see our [technical documentation](/docs/) area for installation instructions.
 
-We are glad to announce general availability of third-party services that provide access and support of Apertus 1.5: 
+We are glad to announce general availability of third-party services that provide access and support of Apertus 1.5. The results of an initial [performance review](#performance-review) can be found further down. Here is a brief overview of what we could learn about the current Apertus-related services on offer:
 
 
 | Provider         | Models | Location¹ | Per-Token² | Docs |
 |------------------|--------|----------|------------------|------|
-| [Swisscom](#swisscom)         | 70B | 🇨🇭 |  | [`cloud.swisscom.ch`](https://docs.cloud.swisscom.ch/guide/cloud-services/aip/models/apertus-1_5_70B) |
+| [Swisscom](#swisscom)         | 70B | 🇨🇭 | ✅ | [`cloud.swisscom.ch`](https://docs.cloud.swisscom.ch/guide/cloud-services/aip/models/apertus-1_5_70B) |
 | [Infomaniak](#infomaniak)       | 70B | 🇨🇭 | ✅ | [`infomaniak.com`](https://www.infomaniak.com/en/hosting/ai-services/open-source-models) |
 | [PHOENIQS](#phoeniqs)         | 70B | 🇨🇭 | ✅ | [`kvant.cloud`](https://documentation.kvant.cloud/maas/active-models/) |
 | [Safe Swiss Cloud](#safe-swiss-cloud) | 70B | 🇨🇭 | ✅ | [`safeswisscloud.com`](https://safeswisscloud.com/en/private-ai/) |
@@ -75,9 +48,15 @@ We are glad to announce general availability of third-party services that provid
 | [stepping stone](#stepping-stone)    | 8B | 🇨🇭 |  | [`stepping-stone.ch`](https://www.stepping-stone.ch/en/products/artificial-intelligence/ai-on-demand-powered-by-swiss-ai-initiative) |
 | [Public AI](#public-ai)        | 8B, 70B | 🌍 | ✅ | [`publicai.co`](https://platform.publicai.co) |
 | [Featherless](/docs/deploy/featherless/)        | 70B | 🌍 | ✅ | [`featherless.ai`](https://featherless.ai/models?query=apertus) |
-| [AWS Sagemaker](/docs/deploy/sagemaker/) | 8B, 70B | 🌍 |  | [`aws.amazon.com`](https://aws.amazon.com/blogs/alps/switzerlands-open-source-apertus-llms-now-available-on-amazon-sagemaker-ai/) |
-| [Microsoft Azure](/docs/deploy/azure/) | 8B, 70B | 🌍 |  | [`github.com`](https://github.com/Azure-Samples/swiss-llm-quickstart/blob/main/azure-virtual-machine/README.md) |
-| [Google Vertex AI](/docs/deploy/vertex/) | 8B, 70B | 🌍 |  | [`cloud.google.com`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/open-models/deploy-custom-vllm) |
+
+Instructions are available for deployment of Apertus models on various cloud hosts, such as:
+
+| Provider         | Models | Location | Docs |
+|------------------|--------|----------|------------------|------|
+| [Exoscale](/docs/deploy/exoscale) | 8B, 70B | 🇨🇭 | [`exoscale.com`](https://www.exoscale.com/ai-cloud-infrastructure/dedicated-inference/) |
+| [AWS Sagemaker](/docs/deploy/sagemaker/) | 8B, 70B | 🌍 | [`aws.amazon.com`](https://aws.amazon.com/blogs/alps/switzerlands-open-source-apertus-llms-now-available-on-amazon-sagemaker-ai/) |
+| [Microsoft Azure](/docs/deploy/azure/) | 8B, 70B | 🌍 | [`github.com`](https://github.com/Azure-Samples/swiss-llm-quickstart/blob/main/azure-virtual-machine/README.md) |
+| [Google Vertex AI](/docs/deploy/vertex/) | 8B, 70B | 🌍 | [`cloud.google.com`](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/open-models/deploy-custom-vllm) |
 
 <small>
 Information is current as of September 2026. <br>
@@ -167,6 +146,25 @@ Join the active &amp; [growing community](https://publicai.co/stories/apertus-1-
 
 ---
 
+# Performance Review
+
+Thanks to wider availability, we are able to start running independent evaluations with providers of the Apertus model. Our early results show slight differences in the quality and performance, and should be reproduced independently for advising end-users. 
+
+To give an idea of the speed of the various APIs on offer, the table below shows anonymized scores on simulated workload performance (Latency, Throughput) using the open source tool [GuideLLM](https://vllm-project.github.io/guidellm/main/) from the vLLM project:
+
+| Provider | Load (requests/s) | Input (tokens/s) | Output (tokens/s) | TTFT (ms) |
+|----------|-------------|----------------------------|-----------------------------|-----------|
+| CSCS       | 1.90 | 179 | 67 | 103 |
+| P3       | 2.09 | 157 | 61 | 87 |
+| P5       | 2.18 | 150 | 58 | 171 |
+| P1       | 2.31 | 143 | 56 | 469 |
+| P4       | 3.63 | 92 | 35 | 81 |
+| P2       | 4.29 | 79 | 29 | 223 |
+
+<small>CSCS is our own research data center in Lugano, from where the tests were run on 16.9.2026.<br>TTFT denotes time to first token. Higher load, throughput and TTFT are better.</small>
+
+---
+
 # What This Means for You
 
 From academic research groups that demand strict data sovereignty to startups that require seamless API access, the breadth of providers ensures that Apertus can be plugged into your workflow in the way that best matches your operational and ethical requirements.
@@ -176,7 +174,6 @@ From academic research groups that demand strict data sovereignty to startups th
 - Community initiatives like Public AI keep a free or low-cost gateway running on shared compute, preserving inclusivity with an easy way to demo new services.
 
 Please check back on our [Get Started](https://apertus-ai.org/pages/get-started/) website for links, contact us if you are aware of other providers, or have a question about getting Apertus running on another platform.
-
 
 ### Looking Ahead
 

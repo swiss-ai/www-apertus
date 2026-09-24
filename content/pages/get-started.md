@@ -24,8 +24,8 @@ title: "Get Started"
     <img src="/images/logos/swisscom-logo.jpg" alt="Logo" class="card-logo card-logo-left">
     <h4>Swisscom</h4>
     <p>Swiss AI Platform</p>
-    <span class="badge badge-partner">Strategic Partner</span>
     <span class="badge badge-swiss">Switzerland</span>
+    <span class="badge badge-free">Per-token</span>
   </a>
   <a href="https://www.infomaniak.com/en/hosting/ai-services/open-source-models" class="card" target="_blank">
       <img src="/images/logos/infomaniak-square.png" alt="Logo" class="card-logo card-logo-left">
@@ -70,7 +70,7 @@ title: "Get Started"
   <a href="/docs/deploy/featherless" class="card" target="_blank">
       <img src="/images/logos/featherless-logo.png" alt="Logo" class="card-logo card-logo-left">
     <h4>Featherless</h4>
-    <p>Pay-per-token API</p>
+    <p>Serverless inference platform</p>
     <span class="badge">Various regions</span>
     <span class="badge badge-free">Per-token</span>
   </a>
