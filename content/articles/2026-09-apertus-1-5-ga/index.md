@@ -152,7 +152,7 @@ Thanks to wider availability, we are able to start running independent evaluatio
 
 To give an idea of the speed of the various APIs on offer, the table below shows anonymized scores on simulated workload performance (Latency, Throughput) using the open source tool [GuideLLM](https://vllm-project.github.io/guidellm/main/) from the vLLM project:
 
-| Provider | Load (requests/s) | Input (tokens/s) | Output (tokens/s) | TTFT (ms) |
+| Provider | Latency (s) | Input (tokens/s) | Output (tokens/s) | TTFT (ms) |
 |----------|-------------|----------------------------|-----------------------------|-----------|
 | CSCS       | 1.90 | 179 | 67 | 103 |
 | P3       | 2.09 | 157 | 61 | 87 |
@@ -161,7 +161,7 @@ To give an idea of the speed of the various APIs on offer, the table below shows
 | P4       | 3.63 | 92 | 35 | 81 |
 | P2       | 4.29 | 79 | 29 | 223 |
 
-<small>CSCS is our own research data center in Lugano, from where the tests were run on 16.9.2026.<br>TTFT denotes time to first token. Higher load, throughput and TTFT are better.</small>
+<small>CSCS is our own research data center in Lugano, from where the tests were run on 16.9.2026.<br>TTFT denotes time to first token. Lower latency and TTFT are better; higher throughput is better.</small>
 
 ---
 
