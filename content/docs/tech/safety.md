@@ -26,9 +26,19 @@ Here is an overview of some of these general concepts:
 
 During pretraining, Apertus models are trained on openly available data that has been filtered to remove sensitive information. This filtering process respects `robots.txt` exclusions and removes non-permissive, toxic, and personally identifiable content.
 
+Here is a high-level view on the filtering process:
+
+1. **License double-check** (in the dataset's paper, in other places where it can be found).
+2. **Sub-datasets licenses** (if the dataset contains sub-datasets, check each license individually).
+3. **Non-compliance exclusion** (if non-compliant or even fishy sub-sets are found, they are removed).
+4. **ROBOTS.txt filtering** when relevant (i.e. if the data's source URLs are given).
+5. **PII/toxicity/other filtering** (when relevant for text data).
+
 ### Memorization Prevention
 
 The Goldfish objective is a key component of the Apertus approach. It is designed to suppress verbatim recall of data during pretraining. This means that the model is trained to forget specific pieces of information it has learned, making it less likely to memorize sensitive data.
+
+For more details, see the [Hans et al. 2024](https://arxiv.org/abs/2406.10209) and section 2.3 of our [Technical Report](https://arxiv.org/abs/2509.14233).
 
 ### Parameter Unlearning
 
