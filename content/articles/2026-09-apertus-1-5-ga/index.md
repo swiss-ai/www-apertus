@@ -23,20 +23,6 @@ Over the summer, we became thanks to our enthusiastic community the highest down
 
 ![A graph of Apertus Model downloads over time](/images/pub/huggingface-stats-0926.png)
 
-| Model name and version | Release year | Downloads/month (thousands) |
-|------|------|------|
-| **Apertus 8B Instruct** | 2025    | 472 |
-| Mistral Small 3.1 24B | 2025    | 462 |
-| Ministral 3 14B Instruct | 2025    | 417 |
-| Devstral Small 2 24B   | 2025    | 275 |
-| **Apertus v1.5 8B**       | 2026    | 201 |
-| Mistral Medium 3.5 128B| 2026    | 89  |
-| Mistral Small 4        | 2026    | 54  |
-| **Apertus 70B Instruct**  | 2025    | 22  |
-| **Apertus v1.5 70B**      | 2026    | 17  |
-
-<small>Monthly top model downloads, main official repositories, as of 21.9.2026 from <a href="https://huggingface.co/docs/hub/models-download-stats">Hugging Face</a></small>
-
 ---
 
 # Community Evaluation
@@ -166,7 +152,7 @@ Thanks to wider availability, we are able to start running independent evaluatio
 
 To give an idea of the speed of the various APIs on offer, the table below shows anonymized scores on simulated workload performance (Latency, Throughput) using the open source tool [GuideLLM](https://vllm-project.github.io/guidellm/main/) from the vLLM project:
 
-| Provider | Load (requests/s) | Input (tokens/s) | Output (tokens/s) | TTFT (ms) |
+| Provider | Latency (s) | Input (tokens/s) | Output (tokens/s) | TTFT (ms) |
 |----------|-------------|----------------------------|-----------------------------|-----------|
 | CSCS       | 1.90 | 179 | 67 | 103 |
 | P3       | 2.09 | 157 | 61 | 87 |
@@ -175,7 +161,7 @@ To give an idea of the speed of the various APIs on offer, the table below shows
 | P4       | 3.63 | 92 | 35 | 81 |
 | P2       | 4.29 | 79 | 29 | 223 |
 
-<small>CSCS is our own research data center in Lugano, from where the tests were run on 16.9.2026.<br>TTFT denotes time to first token. Higher load, throughput and TTFT are better.</small>
+<small>CSCS is our own research data center in Lugano, from where the tests were run on 16.9.2026.<br>TTFT denotes time to first token. Lower latency and TTFT are better; higher throughput is better.</small>
 
 ---
 
