@@ -36,9 +36,11 @@ Here is a high-level view on the filtering process:
 
 ### Memorization Prevention
 
-The Goldfish objective is a key component of the Apertus approach. It is designed to suppress verbatim recall of data during pretraining. This means that the model is trained to forget specific pieces of information it has learned, making it less likely to memorize sensitive data.
+The Goldfish objective is a key component of the Apertus approach. It is designed to suppress verbatim recall of data during pretraining. This means that the model is trained to forget specific pieces of information it has learned, making it less likely to memorize sensitive data. For details, please consult:
 
-For more details, see the [Hans et al. 2024](https://arxiv.org/abs/2406.10209) and section 2.3 of our [Technical Report](https://arxiv.org/abs/2509.14233).
+- [Apertus et al. 2025](https://arxiv.org/abs/2509.14233) (Section 2.3)
+- [Yixuan Xu 2025](https://infoscience.epfl.ch/entities/publication/bbf28e20-11df-45ad-b71f-1e710e1c79ef)
+- [Hans et al. 2024](https://arxiv.org/abs/2406.10209) 
 
 ### Parameter Unlearning
 
