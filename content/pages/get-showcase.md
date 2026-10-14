@@ -78,7 +78,7 @@ title: "Get Started"
   <a href="https://opendataeditor.okfn.org/" class="card">
     <img src="https://storage.googleapis.com/django-statics-okf-website-production/headers/images/ODE-notext-full-rgb3x.png" alt="Open Data Editor" class="card-logo">
     <h4>Open Data Editor</h4>
-    <p>A no-code app for working with spreadsheets, that features an AI component to help users better understand FAIR data with Apertus Mini.
+    <p>Work with spreadsheets, explore and easily annotate FAIR data with Apertus on your desktop.
     </p>
   </a>
 

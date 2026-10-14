@@ -42,10 +42,6 @@ The Goldfish objective is a key component of the Apertus approach. It is designe
 - [Yixuan Xu 2025](https://infoscience.epfl.ch/entities/publication/bbf28e20-11df-45ad-b71f-1e710e1c79ef)
 - [Hans et al. 2024](https://arxiv.org/abs/2406.10209) 
 
-### Parameter Unlearning
-
-During post-training, Apertus models can be fine-tuned with guardrails to remove unwanted information from their parameters. This process involves identifying and adjusting the specific parameters where the unwanted data is stored, effectively removing it from the model.
-
 ### Data-Influence Unlearning
 
 In addition to parameter unlearning, Apertus models can also use data-influence unlearning to degrade the model's perception of the data to be forgotten and reinforce the importance of the remaining data. This approach helps ensure that the model forgets the unwanted information while maintaining its overall functionality and accuracy.
