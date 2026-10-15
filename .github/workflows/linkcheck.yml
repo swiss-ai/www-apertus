@@ -21,9 +21,9 @@ jobs:
     timeout-minutes: 15
     env:
       DART_SASS_VERSION: 1.102.0
-      GO_VERSION: 1.26.5
-      HUGO_VERSION: 0.164.0
-      NODE_VERSION: 24.13.0
+      GO_VERSION: 1.27.2
+      HUGO_VERSION: 0.168.0
+      NODE_VERSION: 24.22.0
       TZ: Europe/Zurich
     steps:
       - name: "Checkout"
