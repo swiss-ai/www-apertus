@@ -4,7 +4,7 @@ date: 2026-10-14T00:00:00+01:00
 draft: false
 author: "ETH EPFL CSCS"
 tags: ["Apertus", "Release", "Announcement"]
-featured_image: "technical-report.jpg"
+featured_image: "apertus-keyvisual-1-5.jpg"
 summary: "Multimodal input, reasoning, longer context, and better instruction following"
 comments: false
 ---
@@ -13,11 +13,14 @@ comments: false
 
 The updated [8B and 70B model weights](https://huggingface.co/collections/swiss-ai/apertus-v15) were released to Hugging Face on July 24, 2026 under an Apache 2.0 license. Further details are now available from the project [Technical Report](https://arxiv.org/abs/2610.15542), and summarized here. 
 
+<a href="https://huggingface.co/blog/swiss-ai/apertus-v15-release-notes" rel="nofollow"><img src="/images/pub/follow-us-on-hf.svg" alt="Follow us on HuggingFace"></a>
+<a href="https://github.com/swiss-ai" rel="nofollow"><img src="/images/pub/follow-us-on-gh.svg" alt="Follow us on GitHub"></a>
+
 Apertus 1.5 is a continued pretraining of the first generation model: adding 4 trillion tokens of text and multimodal training data to the 8B model and 2 trillion tokens to the 70B model, for a total of 19T and 17T, respectively.  As with every Apertus release, the models are fully open: open [weights](https://huggingface.co/collections/swiss-ai/apertus-v15), open [data](https://github.com/swiss-ai/apertus-data-transparency/), open [values](/pages/charter/), and full training [details](/pages/research/).
 
 ![Screenshot of Apertus](Apertus-1.5-Wasserkraftwerks_Niederried-Radelfingen,_Schnittzeichnung.jpg)
 
-_Screenshot of multimodal processing from developer testing: Apertus 1.5 70B interprets the contents of a technical drawing of a [Water power plant](https://commons.wikimedia.org/wiki/File:Wasserkraftwerks_Niederried-Radelfingen,_Schnittzeichnung.jpg) (CC BY 4.0) based on an image and short prompt, replying with a description in the form of a text response._
+_Screenshot of multimodal processing from developer testing: Apertus 1.5 70B interprets the contents of a technical drawing of a [Water power plant](https://commons.wikimedia.org/wiki/File:Wasserkraftwerks_Niederried-Radelfingen,_Schnittzeichnung.jpg) (CC BY 4.0) based on an image and short prompt. More screenshots can be found in a [Discussion thread](https://github.com/swiss-ai/www-apertus/discussions/66)._
 
 ## Key Enhancements
 
