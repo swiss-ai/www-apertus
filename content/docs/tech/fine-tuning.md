@@ -13,11 +13,13 @@ author: "Apertus Project"
 
 Fine-tuning is essential to adapt Apertus to your domain or task, whether you are working on specialized knowledge, improving performance on a certain dataset, or creating a custom application. This is a general class of techniques which add or modify the weights of the LLM, tinkering with the capabilities, and they are used in the development and maintenance of the models themselves. 
 
-Apertus [fine-tuning recipes](https://github.com/swiss-ai/apertus-finetuning-recipes) are available: these are sample configurations for training on a range of hardware levels. In the future we hope to also provide more references from our community.
+Apertus [fine-tuning recipes](https://github.com/swiss-ai/apertus-finetuning-recipes) are available: these are sample configurations for training on a range of hardware levels. There are additional references available from our community:
+
+- [Andreas Martin](https://www.kaggle.com/code/andreasmartinch/sft-apertus-v1-5-8b-hack-apertus-template) (HackApertus / Kaggle)
 
 ## Learning Path for Fine-tuning LLMs
 
-Here is a structured learning path from beginner to advanced for finetuning, developed with help from Apertus 1.5:
+Here is a structured learning path from beginner to advanced for finetuning:
 
 ### 1. Foundations 
 
