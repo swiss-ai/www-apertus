@@ -11,17 +11,10 @@ title: "Research"
 </p>
 
 <div class="card-grid">
-  <div class="card card-grey">
-    <h4>Apertus 1.5 Technical Report</h4>
-    <p><em>Coming soon</em></p>
-  </div>
-</div>
-
-<div class="card-grid">
-  <a href="https://arxiv.org/abs/2509.14233" class="card" target="_blank">
+  <a href="https://arxiv.org/abs/2610.15542"class="card" target="_blank">
     <img src="/images/pub/tech-report.jpg" align="left" height="80"/>
-    <h4>Apertus: Democratizing Open and Compliant LLMs for Global Language Environments</h4>
-    <p>Main technical report: architecture, training methodology, data pipeline, evaluation.</p>
+    <h4>Apertus 1.5: From Open Text Models to Open Multimodal Reasoners</h4>
+    <p>Current technical report: architecture, training methodology, data pipeline, evaluation.</p>
   </a>
 </div>
 
@@ -32,6 +25,12 @@ title: "Research"
 </div>
 
 <div class="card-grid">
+
+  <a href="/articles/2026-04-acl/#start-content" class="card" target="_blank">
+    <h4>Apertus: Democratizing Open and Compliant LLMs for Global Language Environments</h4>
+    <div class="authors">Project Apertus, et al</div>
+    <p>The original technical report of the Apertus model: architecture, training methodology, data pipeline, evaluation. Published at ACL 2026.</p>
+  </a>
 
   <a href="https://arxiv.org/abs/2504.06219" class="card" target="_blank">
     <h4>Can Performant LLMs Be Ethical? Quantifying the Impact of Web Crawling Opt-Outs</h4>

@@ -24,6 +24,7 @@
   {{ end }}
 
   {{/* Page content with top padding to clear fixed navbar */}}
+  <a name="start-content"></a>
   <section class="page-content bg-white pb-5 {{ if .Params.featured_image }}mt-4{{ else }}mt-5 pt-5{{ end }}">
     <div class="container" style="max-width: 900px;">
       {{ if .Params.author }}
@@ -94,6 +95,21 @@
   }
   .content-body img {
     max-width: 100%;
+  }
+  .content-body blockquote {
+    margin-left: 0.5em;
+    padding-left: 1em;
+    border-left: 1px solid grey;
+    font-size: 125%;
+    opacity: 0.8;
+  }
+  .content-body table {
+    margin-bottom: 2em;
+  }
+  .content-body table th,
+  .content-body table td {
+      padding: 1em 1em 0 0;
+      border-bottom: 1px solid #e5e7eb;
   }
 
   /* Card grid - used by Get Started, Documentation, Research */
@@ -169,6 +185,7 @@
     font-weight: 500;
     margin-right: 0.5rem;
     margin-bottom: 0.25rem;
+    background: #fff; color: #999;
   }
   .badge-free { background: #d1fae5; color: #065f46; }
   .badge-swiss { background: #fee2e2; color: #991b1b; }

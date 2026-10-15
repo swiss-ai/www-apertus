@@ -54,7 +54,7 @@ chmod +x llamafile
 ./llamafile --model /path/to/apertus-8b.gguf --out apertus.llamafile
 ```
 
-See our [ollama page](/docs/guides/ollama/) for some recommended GGUF builds.
+See our [ollama page](/docs/user/ollama/) for some recommended GGUF builds.
 
 ### **Resources**
 
