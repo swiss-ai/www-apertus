@@ -1,5 +1,5 @@
 baseURL = 'https://apertus-ai.org/'
-title = 'Apertus AI'
+title = 'Apertus'
 description = 'Fully Open Foundation Model for Sovereign AI'
 contentDir = 'content'
 enableEmoji = true
@@ -29,7 +29,7 @@ enableGitInfo = true
       block = true
 
 [params]
-  description = 'Fully Open Foundation Model for Sovereign AI'
+  description = 'Open weights, open data, open science from the Swiss AI Initiative'
   author = 'Swiss AI Initiative'
   [params.footer]
     copyright = 'Swiss AI Initiative © 2026'
