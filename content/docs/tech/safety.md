@@ -9,7 +9,11 @@ categories: [""]
 author: "Apertus Project"
 ---
 
-In the development and deployment of LLMs, guardrails are mechanisms used to shape the output of an AI system and ensure appropriate behavior. These controls help manage responses across key domains including topic restrictions, predefined interaction flows, style preferences, structured data extraction, and other content guidelines
+In the development and deployment of LLMs, guardrails are mechanisms used to shape the output of an AI system and ensure appropriate behavior. These controls help manage responses across key domains including topic restrictions, predefined interaction flows, style preferences, structured data extraction, and other content guidelines.
+
+**If you believe to have found a serious security or safety issue in any of the official Apertus models, we encourage you to let us know right away. You can report it to us by mail to `safety` @ this domain.**
+
+## Executive overview
 
 In the Apertus LLM, various safety features are being designed to prevent the model from accessing or generating sensitive information, such as personal data, copyrighted content, or toxic material. Guardrails in the training process are based on data filtering, model features like the Goldfish objective, parameter unlearning, and data-influence unlearning to prevent models from accessing or generating sensitive information. 
 
