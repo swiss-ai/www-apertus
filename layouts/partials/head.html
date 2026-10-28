@@ -1,14 +1,40 @@
 <head>
     <meta charset="utf-8" />
-    <title>{{- .Site.Title }}</title>
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
     {{- if not hugo.IsProduction }}
     <meta name="robots" content="noindex">
     {{- end }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{- $pageDescription := .Site.Params.description }}
+    {{- if eq .Section "articles" }}{{ $pageDescription = .Params.summary }}{{ end }}
+    {{ with $pageDescription }}<meta name="description" content="{{ . }}">{{ end }}
+    <!-- Open Graph / Twitter share cards -->
+    {{- $ogTitle := .Site.Title }}
+    {{- if not .IsHome }}{{ $ogTitle = .Title }}{{ end }}
+    {{- $siteName := .Site.Title }}
+    {{- if eq .Section "articles" }}{{ $siteName = "Apertus News" }}{{ end }}
+    {{- $image := "" }}
+    {{- if and .IsPage .Params.featured_image }}
+        {{- with .Resources.GetMatch .Params.featured_image }}{{ $image = .Permalink }}{{ end }}
+    {{- end }}
+    <meta property="og:site_name" content="{{ $siteName }}">
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:title" content="{{ $ogTitle }}">
+    <meta property="og:description" content="{{ $pageDescription }}">
+    {{ with $image }}
+    <meta property="og:image" content="{{ . }}">
+    <meta property="og:image:alt" content="{{ $ogTitle }}">
+    {{ end }}
+    <meta name="twitter:card" content="{{ if $image }}summary_large_image{{ else }}summary{{ end }}">
+    <meta name="twitter:title" content="{{ $ogTitle }}">
+    <meta name="twitter:description" content="{{ $pageDescription }}">
+    {{ with $image }}
+    <meta name="twitter:image" content="{{ . }}">
+    {{ end }}
     {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-    <meta name="website" content="https://APERTVS.ai" />
-    <meta name="version" content="v1.0" />
+    <meta name="website" content="Apertus" />
+    <meta name="version" content="v1.5" />
     <!-- favicon -->
     {{ block "head/favicon" . }}{{ partialCached "favicon.html" . }}{{ end }}
     <!-- Google Fonts -->

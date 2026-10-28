@@ -17,6 +17,12 @@ comments: false
 
 Again, note that this evaluation strictly relates to the documentation, and makes no judgement of the performance, accessibility or openness of the model described.
 
+![Screenshot of a table](gpai-table4.png)
+
+The [Quality Assessment paper](https://arxiv.org/abs/2603.13270) goes into further detail on the methodology and background of this work.
+
+### Research findings
+
 Their key observation was that many AI companies are not complying with the [EU’s AI Act](https://en.wikipedia.org/wiki/Artificial_Intelligence_Act) requirement to publish summaries on their model training data. The AI Act mandates this information to help copyright holders enforce their rights and to ensure transparency. However, the lack of a unified system for sharing these summaries has made them hard to locate, and companies are not facing consequences for non-compliance until enforcement begins in August 2026\. 
 
 The researchers also noted that the existing EU template for summaries led to inconsistent submissions that made it challenging to assess compliance. They recommend the UK AI Office create a centralized portal to host these summaries, which would improve transparency and enforcement. While some smaller organizations like Switzerland’s national Apertus model have provided summaries, larger companies like Microsoft’s have been underwhelming, with missing details in their submissions.
@@ -27,7 +33,7 @@ This result has now been featured in [Euractiv](https://www.euractiv.com/news/re
 
 *Screenshot of the [overall evaluation](https://aial.ie/research/gpai-training-transparency/) results, with each model assigned a grade. `A+` is the highest grade and `F` the lowest, with `N/A` shown for missing summaries. A detailed evaluation page has more information, a link to the summary, and evaluation notes. You can also see a detailed overview of scores for each section of the public summary.*
 
-—
+---
 
 The researchers have recently been in touch with the Apertus team, and made a series of recommendations, which include:
 
@@ -40,6 +46,10 @@ The researchers have recently been in touch with the Apertus team, and made a se
 * Providing a clear description of training data without stating transparency and reproducibility in 1.3.
 
 We aim to have Apertus as a model with a "perfect" data summary, and will do our best to comply with this, while encouraging the whole community to be aware as well.
+
+![Table of analytics](gpai-ratingscard-apertus.png)
+
+You can find these and further notes in the [Results of Evaluation for Apertus](https://aial.ie/research/gpai-training-transparency/evals/apertus/).
 
 See also:
 

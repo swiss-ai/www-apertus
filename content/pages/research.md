@@ -6,17 +6,32 @@ title: "Research"
 
 <p class="section-intro">
   Papers and technical reports from the Apertus project.
-  See the <a href="/news">News area</a> for general announcements.
+  This list is continuously expanded: please visit our <a href="https://www.zotero.org/groups/6385576/apertus" target="_blank">📖&nbsp;Zotero group</a> for other shared literature, and the 
+  <a href="/news">News area</a> for general announcements.
 </p>
 
 <div class="card-grid">
-  <a href="https://arxiv.org/abs/2509.14233" class="card" target="_blank">
-    <img src="/images/tech-report.jpg" align="left" height="80"/>
-    <h4>Apertus: Democratizing Open and Compliant LLMs for Global Language Environments</h4>
-    <p>Main technical report — architecture, training methodology, data pipeline, evaluation.</p>
+  <a href="https://arxiv.org/abs/2610.15542"class="card" target="_blank">
+    <img src="/images/pub/tech-report.jpg" align="left" height="80"/>
+    <h4>Apertus 1.5: From Open Text Models to Open Multimodal Reasoners</h4>
+    <p>Current technical report: architecture, training methodology, data pipeline, evaluation.</p>
   </a>
 </div>
+
 <div class="card-grid">
+  <a href="https://apertus-claritas.org" class="card" target="_blank" style="padding: 2px;">
+    <img src="/images/pub/apertus-claritas.png" width="100%"/>
+  </a>
+</div>
+
+<div class="card-grid">
+
+  <a href="/articles/2026-04-acl/#start-content" class="card" target="_blank">
+    <h4>Apertus: Democratizing Open and Compliant LLMs for Global Language Environments</h4>
+    <div class="authors">Project Apertus, et al</div>
+    <p>The original technical report of the Apertus model: architecture, training methodology, data pipeline, evaluation. Published at ACL 2026.</p>
+  </a>
+
   <a href="https://arxiv.org/abs/2504.06219" class="card" target="_blank">
     <h4>Can Performant LLMs Be Ethical? Quantifying the Impact of Web Crawling Opt-Outs</h4>
     <div class="authors">Fan, Sabolčec, Ansaripour, Tarun, Jaggi, Bosselut, Schlag</div>
@@ -29,7 +44,7 @@ title: "Research"
     <p>Research on memorization patterns and copyright risks in LLMs.</p>
   </a>
 
-  <a href="https://infoscience.epfl.ch/handle/20.500.14299/241591" class="card" target="_blank">
+  <a href="https://infoscience.epfl.ch/entities/publication/bbf28e20-11df-45ad-b71f-1e710e1c79ef" class="card" target="_blank">
     <h4>Quantifying Training Data Retention in Large Language Models: An Analysis of Pretraining Factors and Mitigation Strategies</h4>
     <div class="authors">Yixuan Xu (Master Thesis)</div>
     <p>Analysis of memorization and mitigation strategies applied in Apertus.</p>
@@ -50,13 +65,13 @@ title: "Research"
   <a href="https://arxiv.org/abs/2412.03304" class="card" target="_blank">
     <h4>Global MMLU: Multilingual Evaluation</h4>
     <div class="authors">Singh et al.</div>
-    <p>Understanding addressing cultural, linguistic biases.</p>
+    <p>Understanding and addressing cultural and linguistic biases.</p>
   </a>
   
   <a href="https://arxiv.org/abs/2505.20524" class="card" target="_blank">
     <h4>Towards Fully FP8 GEMM LLM Training at Scale</h4>
     <div class="authors">Hernández-Cano et al.</div>
-    <p>A new LLM architecture, enables unprecedented throughput gains.</p>
+    <p>A new LLM architecture that enables unprecedented throughput gains.</p>
   </a>
   
   <a href="https://arxiv.org/abs/2405.19279" class="card" target="_blank">
@@ -124,9 +139,35 @@ title: "Research"
     <div class="authors">Böther et al.</div>
     <p>Define and dynamically adjust data mixtures during training without performance bottlenecks.</p>
   </a>
+
+  <a href="https://arxiv.org/abs/2604.12973" class="card" target="_blank">
+    <h4>An Engineering Journey Training Large Language Models at Scale on Alps: The Apertus Experience</h4>
+    <div class="authors">Coles et al.</div>
+    <p>
+      Details the challenges encountered in readying HPC infrastructure for training AI models.
+    </p>
+  </a>
+
+  <a href="https://arxiv.org/abs/2605.29128" class="card" target="_blank">
+    <h4>
+      Apertus LLM Family Expansion via Distillation and Quantization
+    </h4>
+    <div class="authors">Panferov et al.</div>
+    <p>
+      Apertus-v1.1 is a distilled family of models trained on 1.7T permissive license tokens.
+    </p>
+  </a>
+
+  <a href="https://arxiv.org/abs/2606.25971" class="card" target="_blank">
+    <h4>Improving Neural Network Training by Decoupling the Magnitude and Direction of Weight Vectors</h4>
+    <div class="authors">Hägele et al.</div>
+    <p>An optimizer modification to improve warmup, decay, training dynamics and performance across model scales.</p>
+  </a>
+
+  <a href="https://www.usenix.org/conference/osdi26/presentation/yao" class="card" target="_blank">
+    <h4>OpenTela: Unifying Decentralized Computing Resources for Heterogeneous LLM Serving</h4>
+    <div class="authors">Yao, Jiang, Badanin, Hu, Smith, Yuan, Schlag, Yoneki, Klimovic</div>
+    <p>Builds a system for serving LLMs in decentralized, volatile and heterogeneous GPU clusters.</p>
+  </a>
     
 </div>
-
-<p class="section-intro">
-  This list is continuously expanded: please visit our <a href="https://www.zotero.org/groups/6385576/apertus" target="_blank">📖 Zotero group</a> for further literature.
-</p>

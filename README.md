@@ -1,6 +1,8 @@
-# APERTVS.ai
+# www-apertus
 
-Official website for [Apertus](https://apertvs.ai), a fully open foundation model for sovereign AI developed by the Swiss AI Initiative. This is a static website featuring a minimal, research-focused design. It serves as the public face of the Apertus project, providing information about the models, research, documentation, and governance.
+Official website for [Apertus](https://apertus-ai.org), a fully open foundation model for sovereign AI developed by the Swiss AI Initiative. This is a static website featuring a minimal, research-focused design. It serves as the public face of the Apertus project, providing information about the models, research, documentation, and governance.
+
+See the [Code of Conduct](CONDUCT.md) for all contributors to the Apertus project.
 
 ## Tech Stack
 
@@ -170,7 +172,7 @@ Edit `content/_index.md` to update homepage content. The frontmatter controls th
 ```yaml
 ---
 title: "Apertus"
-mission: "A Fully Open Foundation Model for Sovereign AI"
+mission: "Open weights, open data, open science"
 description: "Your description here..."
 hero_primary_label: "Explore Models"
 hero_primary_url: "https://huggingface.co/..."

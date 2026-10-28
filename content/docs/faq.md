@@ -1,5 +1,5 @@
 ---
-title: "FAQ"
+title: "F.A.Q."
 weight: 500
 description: "Frequently Asked Questions"
 icon: "information"
@@ -11,25 +11,32 @@ categories: [""]
 author: "Apertus Project"
 ---
 
-<p>Is there a question you would like to see answered here? Please
-<a href="/feedback/">drop us a line</a>.
+<p>Is there a question you would like to see answered here, or any other concern? Please
+<a href="/contact">contact us</a>.
 </p><hr />
 
 <div class="faq-item">
 <h4>What makes Apertus different from other open models?</h4>
-<p>Apertus is fully open — offering complete access to training data, code, and alignment principles, not just open weights. This openness supports research, collaboration and informed use, creating a valuable tool for the global AI community. See <a target="_blank" href="https://swiss-ai.org">Swiss AI Initiative</a>.</p>
+<p>Apertus is fully open, offering complete access to training data, code, and alignment principles, not just open weights. This openness supports research, collaboration and informed use, creating a valuable tool for the global AI community. See the <a target="_blank" href="https://swiss-ai.org">Swiss AI Initiative</a>, and browse our <a href="/docs/">documentation area</a> to get started.</p>
 </div>
 
 <div class="faq-item">
 <h4>Can I use Apertus just like other AI systems?</h4>
-<p>Apertus is not a consumer product: this is foundational infrastructure. Designed to support innovation across research, education, government, and industry — while remaining aligned with Swiss and European values of transparency, neutrality, and accountability.
-Many organizations are currently piloting solutions with the model, and we will update <a href="/pages/get-started/">our showcase</a> as new products based on Apertus become available.
+<p>Apertus is a foundational component of AI infrastructure, not a ready-to-use product - designed to support innovation across research, education, government, and industry, while remaining aligned with Swiss and European values of transparency, neutrality, and accountability.
+Many organizations are offering <a href="/pages/get-started">hosting services</a> or piloting solutions with the model, and we will update <a href="/pages/get-showcase/">our showcase</a> as new products based on Apertus become available.
 </p>
 </div>
 
 <div class="faq-item">
 <h4>Is Apertus compliant with the EU AI Act?</h4>
-<p>Designed for compliance, Apertus is built to meet EU AI Act requirements from day one, including opt-out mechanisms, PII removal, and memorization prevention. Day-to-day compliance is still the responsibility of users deploying Apertus. Read <a target="_blank" href="https://arxiv.org/abs/2509.14233">Tech Report section 3.1</a> and <a href="https://arxiv.org/abs/2504.06219" target="_blank">Fan et al., 2025</a> for details.</p>
+<p>Apertus is designed with the EU AI Act in mind, including opt-out mechanisms, PII removal, and memorization prevention. An <a target="_blank" href="https://latticeflow.ai/news/is-swiss-llm-ready-for-enterprise-adoption">independent evaluation by LatticeFlow AI</a> found Apertus "EU AI Act-ready" and 99% secure with guardrails in place.</p>
+</div>
+
+<div class="faq-item">
+<h4>Why are some model weights gated?</h4>
+<p>
+While the Apertus 1.5 release remains fully open in its development process, the gating mechanism on Hugging Face is a legal requirement in order to help make sure that the Usage Terms and other policies are complied with. The approval process is automatic and immediate, not intended to prevent you from downloading the model. Your data will never be used for marketing, or any other purpose. 
+</p>
 </div>
 
 <div class="faq-item">
@@ -49,16 +56,13 @@ Many organizations are currently piloting solutions with the model, and we will 
 
 <div class="faq-item">
 <h4>How is Apertus aligned?</h4>
-<p>Apertus was trained with ethical and safety principles to align with Swiss values and EU AI Act goals (e.g., transparency, fairness, human oversight). 
+<p>Apertus was trained with ethical and safety principles to align with public values (e.g., transparency, fairness, human oversight). 
 While we strive to minimize bias, users should be aware of inherent biases in language data and test for fairness in their applications.
-See the <a href="/pages/charter">Swiss AI Charter</a> for details.
+See the <a href="/pages/charter">Apertus Charter</a> for details.
 </div>
 
 <div class="faq-item">
 <h4>Why the name Apertus?</h4>
-<p>Our identity and domain name reflect the <a href="https://en.wikipedia.org/wiki/Switzerland_in_the_Roman_era" target="_blank">Helvetic-Roman heritage</a> of our nation, and the history of Swiss scholarship. The APERTVS logo was designed by 
+<p>Our identity and domain name reflect the <a href="https://en.wikipedia.org/wiki/Switzerland_in_the_Roman_era" target="_blank">Helvetic-Roman heritage</a> of our nation, and the history of Swiss scholarship. The <tt>APERTVS</tt> logo was designed by 
 <a href="http://www.molinaridesign.ch/" target="_blank">Florian Molinari</a>.</p>
 </div>
-
-<div class="faq-item">
-<h4>
