@@ -2,7 +2,7 @@
 
 Thank you for your interest in contributing to the Apertus open dataset collection. By sharing your dataset, you help advance research, innovation, and collaboration in machine learning and data science. This guide will walk you through the process of preparing, documenting, and publishing your dataset on **Hugging Face**.
 
-We are building these instructions on the foundation of the official [Adding Datasets - Hugging Face](https://huggingface.co/docs/hub/datasets-adding) docs, as well as tutorials in the community. Please send us any questions or [feedback](/feedback). 
+We are building these instructions on the foundation of the official [Adding Datasets - Hugging Face](https://huggingface.co/docs/hub/datasets-adding) docs, as well as tutorials in the community. Please note: __following this guide does not guarantee that your dataset will be included in the Apertus training runs__.
 
 1. [Before You Start](#before-you-start)
 2. [Preparing Your Dataset](#preparing-your-dataset)
@@ -139,29 +139,12 @@ You can also publish your dataset on other platforms:
 
 If you publish elsewhere, let us know! If we use your results in a release, we will **link to your dataset** from the Apertus publications.
 
-## 6. Need Help?
-
-### Contact Us
-
-Have questions or need assistance? Reach out to us:
-
-- **Email**: [llm-requests@swiss-ai.org](mailto:support@apertus.ai)
-- **Discord**: [Join our community](https://discord.gg/apertvs)
-- **GitHub Issues**: [Open an issue](https://github.com/apertus-ai/datasets/issues)
-
-### Feedback
-
-Your feedback helps us improve! Let us know:
-- What worked well.
-- What could be clearer.
-- Any features you’d like to see.
-
 ## Next Steps
 
 1. **Prepare your dataset** using the guidelines above.
 2. **Document it thoroughly** with a `README.md`.
 3. **Publish it** on Hugging Face or another platform.
-4. **Share it** with the Apertus community!
+4. **Share it** with the [Apertus community](/pages/contact)!
 
 ---
 
@@ -171,5 +154,8 @@ Thank you for contributing to open science with Apertus! 🚀
 
 # References
 
+- [Apertus data transparency](https://github.com/swiss-ai/apertus-data-transparency/#apertus-data-transparency) (GitHub)
+- [huggingface-rdf library](https://pypi.org/project/huggingface-rdf/)
+- [A survey on dataset quality in machine learning](https://www.sciencedirect.com/science/article/pii/S0950584923001222) (Gong et al. 2023)
 - [Llama-Ready Data Guide](https://www.marktechpost.com/2025/04/17/uploading-datasets-to-hugging-face-a-step-by-step-guide/)
 - [Jianglong’s Blog Post](https://jaron-u.github.io/posts/upload_dataset_huggingface/)
