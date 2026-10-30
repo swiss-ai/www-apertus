@@ -33,6 +33,10 @@ EPFL reserves the right to modify or erase content published on its websites wit
 
 We do not use cookies or collect any personally identifiable data on this site. Visit the [EPFL Privacy Policy](https://www.epfl.ch/about/overview/regulations-and-guidelines/epfl-privacy-policy/) for details.
 
+# Trademark Notice
+
+APERTUS is a registered trademark owned by EPFL and ETH Zurich. The name may not be used for products, services, events or promotional activities in a manner that suggests endorsement, affiliation or sponsorship by EPFL and ETH Zurich without prior authorization.
+
 # Accessibility
 
 Ensuring our website is accessible to people with disabilities is one of our top priorities. We take special care to use colors that accommodate different types of color blindness, ensuring a comfortable browsing experience for all.
@@ -53,4 +57,4 @@ This website may contain links to external websites that are not provided or mai
 
 ---
 
-*Last updated: February 2026*
+*Last updated: October 2026*
