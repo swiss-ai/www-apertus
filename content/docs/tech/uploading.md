@@ -32,65 +32,55 @@ What you will need:
 - A **README file** with clear documentation (see below for details).
 - An account on **Hugging Face** ([sign up here](https://huggingface.co/join)) or an [alternative platform](#alternative-platforms).
 
-## 2. Preparing Your Dataset
+## 2. Preparing and Documenting Your Dataset
 
-Organize your data for successful deployment, training or future maintenance with these tips:
+Organize your data for successful deployment, training, and future maintenance with the tips below.
+
+### Organize
 
 - Ensure your dataset is **clean, well-structured, and consistent**.
 - Use **standard file formats** (e.g., CSV for tabular data, JSON for structured data).
-- If your dataset is large, consider **splitting it into smaller files** for easier download.
+- If your dataset is large, **split it into smaller files** for easier download.
 
-While this is by no means an exhaustive guide, here are some ways we can try to control and improve quality:
+### Verify quality and ethical sourcing
 
-- Review your dataset for **biases, errors, or missing values**.
+Review your dataset for **biases, errors, and missing values**, then take these steps to confirm it is **ethically sourced** and **reproducible**:
 
-Here are some steps you should take to verify that a dataset is **ethically sourced** and is **reproducible**: 
+1. **Version-control your data** — host it on Hugging Face, GitHub, or Zenodo for traceability. If it isn't version-controlled, use tools like Xet to version it (e.g., add a version in the filename when using `hf download`).
+2. **Check legal compliance** — use a permissive license (Apache 2.0, ODbL, CC-BY, CC0). Avoid restrictive licenses (SA, NC) unless required. If a dataset is not compliant, republish it under an open license or contact the authors.
+3. **Check ethical compliance** — ensure your dataset complies with Swiss/EU privacy regulations (e.g., GDPR) and moral codes. Apertus [technical reports](/pages/research) and data guidelines have further recommendations, such as respecting opt-outs.
 
-1. The dataset should be version-controlled (e.g., hosted on Hugging Face, GitHub, or Zenodo) to enable traceability.  
-    - If not version-controlled, use tools like Xet to version your data (e.g., add a version in the filename if using hf download).
-2. Check for legal compliance:  
-    - Ensure the dataset has a permissive license (e.g., Apache 2.0, MIT, CC-BY, CC0).  
-    - Avoid datasets with restrictive licenses (SA, NC) unless explicitly permitted. Check Apertus license guidelines.  
-    - If the dataset is not compliant, consider republishing it under an open license or reaching out to the authors.
-3. Ethical Considerations:  
-    - Your datasets complies with Swiss/EU privacy regulations (e.g., DVSO, GDPR) and moral codes.
-    - Apertus [technical reports](/pages/research) and data guidelines have further recommendations, such as respecting opt-outs.  
-
-Preparing datasets for use in LLMs includes additional steps, such as:
+### Prepare for AI/LLM use
 
 - Follow best practices for **tokenization and formatting** (e.g., JSONL for text data).
-- Consider filtering and splitting needs, provide guidance for machine learning use.
+- Consider filtering and splitting needs, and provide guidance for machine learning use.
 - Include **metadata** such as language, domain, and intended use cases.
 
-For your dataset to be fully AI-ready, follow these key recommendations (see [AI-Ready Data Whitepaper](#references) for details):
+For a dataset to be fully AI-ready, follow these key recommendations (see [AI-Ready Data Whitepaper](#references)):
 
-- **Metadata**: Use standards (e.g., ML Croissant), add semantic and governance metadata, and use dynamic, machine-actionable metadata.
-- **FAIR**: Improve interoperability of unstructured data; consider MCP for agent-to-agent access.
-- **Quality**: Build verification into AI systems; increase lineage and traceability.
-- **Volume & Diversity**: Ensure sufficient volume and diversity to avoid bias (sampling, historical, label, temporal).
-- **Compliance**: Adhere to GDPR, EU AI Act, internal policies, and ethical standards.
-- **Approach**: Implement as a data product using a Medallion architecture; focus on governance and data/AI literacy.
+- **Metadata**: use standards (e.g., ML Croissant); add semantic and governance metadata; keep it dynamic and machine-actionable.
+- **FAIR**: improve interoperability of unstructured data; consider MCP for agent-to-agent access.
+- **Quality**: build verification into AI systems; increase lineage and traceability.
+- **Volume & Diversity**: ensure sufficient volume and diversity to avoid bias (sampling, historical, label, temporal).
+- **Compliance**: adhere to GDPR, the EU AI Act, internal policies, and ethical standards.
+- **Approach**: implement as a data product using a Medallion architecture; focus on governance and data/AI literacy.
 
 Apertus supports AI-ready data pipelines through its open model, training code, and compliance tools, enabling a reproducible cycle from ingestion to fine-tuning.
 
-## 3. Documenting Your Dataset
+### Document with a README
 
-A well-documented dataset is **easier to use and more impactful**.
+A well-documented dataset is **easier to use and more impactful**. Visit the [@swiss-ai organization](https://huggingface.co/swiss-ai) that hosts the Apertus project for example datasets.
 
-Visit the [@swiss-ai organization](https://huggingface.co/swiss-ai) that hosts the Apertus project for example datasets.
+Include the following sections in your `README.md`:
 
-Include the following in your `README.md` file:
+1. **Dataset Name** — a clear, descriptive title.
+2. **Description** — what the dataset contains, how it was created, and its purpose.
+3. **License** — specify the license; we recommend [data licenses](https://book.the-turing-way.org/reproducible-research/licensing/licensing-data/).
+4. **Citation** — how users should cite your dataset; see [CESSDA](https://datacitation.cessda.eu/The-Anatomy-of-a-Data-Citation).
+5. **Usage** — example code or instructions for loading the dataset.
+6. **Metadata** — file structure, column descriptions, and data types.
 
-### Required Sections
-
-1. **Dataset Name**: A clear, descriptive title.
-2. **Description**: What the dataset contains, the method of its creation, and its purpose.
-3. **License**: Specify the license - we recommend [data licenses](https://book.the-turing-way.org/reproducible-research/licensing/licensing-data/).
-4. **Citation**: How users should cite your dataset - see [CESSDA](https://datacitation.cessda.eu/The-Anatomy-of-a-Data-Citation).
-5. **Usage**: Example code or instructions for loading the dataset.
-6. **Metadata**: File structure, column descriptions, and data types.
-
-### Example README Template
+#### Examples README template
 
 ```markdown
 # [Dataset Name]
@@ -109,18 +99,18 @@ Include the following in your `README.md` file:
 
 **Metadata**:
 
-| File          | Description         | Size |
-| ------------- | ------------------- | ---- |
-| data.csv      | Main dataset file   | 10MB |
-| metadata.json | Additional metadata | 1MB  |
+| File          | Description           | Size |
+| ------------- | --------------------- | ---- |
+| data.csv      | Main dataset file     | 10MB |
+| metadata.json | Additional metadata   | 1MB  |
 
-**Contact**:  
-[Your email or link to a support channel.]
+**Contact**:
+[Your email or a link to a support channel.]
 ```
 
 ---
 
-## 4. Publishing on Hugging Face
+## 3. Publishing on Hugging Face
 
 Create a New Repository
 
@@ -147,7 +137,7 @@ Publish
 
 ---
 
-## 5. Alternative Platforms
+## 4. Alternative Platforms {#alternative-platforms}
 
 You can also publish your dataset on other platforms:
 
@@ -157,7 +147,7 @@ You can also publish your dataset on other platforms:
 
 If you publish elsewhere, let us know! If we use your results in a release, we will **link to your dataset** from the Apertus publications.
 
-## 6. Sharing is Caring
+## 5. Sharing is Caring
 
 There are many ways to announce your dataset, from metadata portals, to blogs and social media. The ideal format for open research is a formal publication or pre-print. You can also propose developing on it at a hackathon.
 
@@ -178,4 +168,4 @@ Thank you for contributing to open science with Apertus! 🚀
 - [CESSDA Data Citation Guide](https://datacitation.cessda.eu/)
 - [A survey on dataset quality in machine learning](https://www.sciencedirect.com/science/article/pii/S0950584923001222) (Gong et al. 2023)
 - [Llama-Ready Data Guide](https://www.marktechpost.com/2025/04/17/uploading-datasets-to-hugging-face-a-step-by-step-guide/)
-- [Jianglong’s Blog Post](https://jaron-u.github.io/posts/upload_dataset_huggingface/)
+- [Jianglong's blog post](https://jaron-u.github.io/posts/upload_dataset_huggingface/)
