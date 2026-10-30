@@ -144,8 +144,9 @@ You can also publish your dataset on other platforms:
 - **[Zenodo](https://zenodo.org/)**: Ideal for long-term archiving and DOI assignment.
 - **[Kaggle](https://www.kaggle.com/datasets)**: Great for competitions and collaborative projects.
 - **[DataHub](https://datahub.io/)**: Open data platform with versioning.
+- **[GitHub](https://github.com/topics/dataset)**: For smaller datasets or with Git LFS.
 
-If you publish elsewhere, let us know! If we use your results in a release, we will **link to your dataset** from the Apertus publications.
+Once you publish, let us know! If we use your results in a release, we will cite and link to your dataset from the relevant Apertus publications.
 
 ## 5. Sharing is Caring
 
