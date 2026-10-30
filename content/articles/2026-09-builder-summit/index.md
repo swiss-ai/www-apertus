@@ -35,7 +35,7 @@ Professor Krause, Chair of the ETH AI Center Steering Committee, opened the Summ
 
 Prof. Martin Jaggi, co-lead of the Apertus project and head of the Machine Learning and Optimization Laboratory at EPFL, highlighted the growing demand for trustworthy open models. He described this demand as an encouraging signal from the open-source developer community and traced the evolution of Apertus from its initial release in September 2025 to Apertus 1.5 in July 2026. He also presented the ambitions for Apertus 2, including a new Mixture-of-Experts architecture designed to support considerably larger models. Developed through a collaboration between ETH Zurich, EPFL and the Swiss National Supercomputing Centre (CSCS), Apertus had demonstrated the potential of combining academic research, national computing infrastructure and open development practices. Prof. Jaggi invited further community contributions across pretraining, post-training, infrastructure, data, environments, evaluation, safety and alignment, emphasizing that the next generation of open models would depend on broader international participation.
 
-[[2026] Open Model Builders event intro.pdf](https://drive.google.com/file/d/16xrVxF28S1JKfxW_wx8xdAIbL4YIFzcs/view?usp=sharing)
+Slides: [2026 Open Model Builders event intro](https://drive.google.com/file/d/16xrVxF28S1JKfxW_wx8xdAIbL4YIFzcs/view?usp=sharing)
 
 ##### Jeff Hammerbacher --- Open Athena & Marin
 
@@ -47,7 +47,7 @@ The founder and CEO of Open Athena, explored how more rigorous scientific method
 
 A researcher involved in AI Singapore's SEA-LION initiative emphasized that model development needed to account for cultural context as well as technical performance. Their group has developed open models designed to better represent the languages, cultures and knowledge of Southeast Asia. Leong guided participants through the development pipeline behind SEA-LION 4.8, illustrating the considerations involved in building and adapting models for regional needs. Her presentation also raised questions about the future of reinforcement learning, including whether AI agents could generate their own training environments or sandboxes. The project demonstrated how regional model development could benefit from global open-source foundations while addressing requirements that might otherwise remain underserved.
 
-[SEA-LION v4.8 3rd Open LLM Builders Summit.pdf](https://drive.google.com/file/d/1WR1dRjufM9GtEJ1ghtyqjUHCrCnmVn6v/view?usp=sharing)
+Slides: [SEA-LION v4.8 3rd Open LLM Builders Summit](https://drive.google.com/file/d/1WR1dRjufM9GtEJ1ghtyqjUHCrCnmVn6v/view?usp=sharing)
 
 ##### Ahmad Chamma --- K2 Horizon, MBZUAI
 
@@ -65,7 +65,7 @@ The co-founder and scientific lead of LAION and a researcher at the Jülich Supe
 
 The Chief Technology Officer of a "global partnership building a public option for AI", addressed the challenge of transforming open foundation models into competitive, accessible products. This international initiative connects researchers, governments, philanthropic organizations and open-source developers around the development of public-interest AI technology. Tan explored what it would take to build viable alternatives to commercial product suites using foundations such as Apertus. His presentation examined the different layers of the technology stack, from models and infrastructure to applications and user-facing services. He emphasized the opportunities for collaboration between projects that contributed different components of this ecosystem. The session raised a central question for the Summit: how could the open AI community translate shared research achievements into integrated products that people and organizations could deploy and use?
 
-[20260930-Join-the-potluck.pdf](https://drive.google.com/file/d/1qzWlWxAKJCgBQ0PX0EFU08UoOwj1IBdd/view?usp=sharing)
+Slides: [20260930-Join-the-potluck](https://drive.google.com/file/d/1qzWlWxAKJCgBQ0PX0EFU08UoOwj1IBdd/view?usp=sharing)
 
 ### Open-Weight Initiatives
 
@@ -73,7 +73,7 @@ The Chief Technology Officer of a "global partnership building a public option f
 
 A senior deep learning data scientist at NVIDIA presented the Nemotron family of open models and the associated datasets, training techniques and development tools. The Nemotron initiative had made capabilities available for reasoning, conversational applications and agentic AI systems, alongside resources designed to support customization and deployment. Bendris explained key elements of NVIDIA's broader offering and illustrated model capabilities through performance comparisons. Her presentation contributed an industry perspective to the discussion of open AI, highlighting the interplay between model architectures, specialized hardware, development tools and efficient inference.
 
-[NVIDIA Nemotron3 - Open LLM builders Summit - Zurich - 2026.pdf](https://drive.google.com/file/d/1h2DteDsqbbX5-2MWOjM4_l5cWKLJw013/view?usp=sharing)
+Slides: [NVIDIA Nemotron3 - Open LLM builders Summit - Zurich - 2026](https://drive.google.com/file/d/1h2DteDsqbbX5-2MWOjM4_l5cWKLJw013/view?usp=sharing)
 
 ### Calls for Collaborative Projects
 
@@ -81,13 +81,13 @@ A senior deep learning data scientist at NVIDIA presented the Nemotron family of
 
 The Deputy Director for Science at the Swiss National Supercomputing Centre, presented the computing infrastructure needed to support increasingly demanding AI research, in a talk that addressed the challenges of providing computational resources for training, evaluation and inference, as well as the opportunities for collaboration through major computing facilities. His contribution highlighted that making AI models openly available was only one part of ensuring broad access to advanced AI capabilities. The infrastructure required to train, evaluate and operate such models also needed to be considered. VandeVondele subsequently led the breakout discussion on computing and infrastructure, where participants explored how resources and expertise might be shared across institutions and borders.
 
-[ML_at_CSCS_VandeVondele_LLM_Summit_Sept_2026.pptx.pdf](https://drive.google.com/file/d/1rgYcDuX5d3AMR8e4RMkkX6-X4TmqAamd/view?usp=sharing)
+Slides: [ML_at_CSCS_VandeVondele_LLM_Summit_Sept_2026](https://drive.google.com/file/d/1rgYcDuX5d3AMR8e4RMkkX6-X4TmqAamd/view?usp=sharing)
 
 ##### Timothy Llewellynn --- Euresearch / EuroHPC
 
 Our National Contact Point for Digital at Euresearch, presented opportunities for researchers and other eligible organizations to access advanced computing resources through European programmes. His session focused on EuroHPC AI Factories and related access calls, explaining potential pathways for collaborative AI research and development. These facilities had been established to support a wider range of organizations with computing capacity and associated services. The presentation complemented the CSCS perspective by highlighting mechanisms through which international teams could seek the resources required for ambitious AI initiatives.
 
-[20260930_Euresearch_EuroHPCJU_AIFactories_Collaboration.pdf](https://drive.google.com/file/d/11LvOKrJ9FfGnDWTJecyMC1BrpTQmd8lT/view?usp=sharing)
+Slides: [20260930_Euresearch_EuroHPCJU_AIFactories_Collaboration](https://drive.google.com/file/d/11LvOKrJ9FfGnDWTJecyMC1BrpTQmd8lT/view?usp=sharing)
 
 ### Birds of a Feather Sessions
 
@@ -160,6 +160,8 @@ The third Open LLM Builders Summit demonstrated how far the open ecosystem had p
 Thanks to all who support our Summit by taking these discussions and presentations further in the future.
 
 ## Photo gallery
+
+Credit: ETH AI Center, Moritz Hoegemann
 
 ![260930_ETH_OLLMB_Summit_006_Moritz_Hoegemann Medium.jpeg](https://static.wixstatic.com/media/f2ce77_33fcd22fd2624837a217f911097bb8ea~mv2.jpeg/v1/fill/w_600,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/260930_ETH_OLLMB_Summit_006_Moritz_Hoegemann%20Medium.jpeg)
 
