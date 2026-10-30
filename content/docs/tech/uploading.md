@@ -1,41 +1,46 @@
-# Apertus Open Dataset Publishing Guide
+---
+title: "Uploading"
+description: "On preparing datasets for use with LLMs"
+toc: true
+tags: ["Technical"]
+categories: [""]
+author: "Apertus Project"
+---
 
-Thank you for your interest in contributing to the Apertus open dataset collection. By sharing your dataset, you help advance research, innovation, and collaboration in machine learning and data science. This guide will walk you through the process of preparing, documenting, and publishing your dataset on **Hugging Face**.
 
-We are building these instructions on the foundation of the official [Adding Datasets - Hugging Face](https://huggingface.co/docs/hub/datasets-adding) docs, as well as tutorials in the community. Please note: __following this guide does not guarantee that your dataset will be included in the Apertus training runs__.
+By sharing non-personal datasets, you can help advance research, innovation, and collaboration in machine learning and data science. This guide will walk you through the process of preparing, documenting, and publishing **AI-Ready Data**.
 
-1. [Before You Start](#before-you-start)
-2. [Preparing Your Dataset](#preparing-your-dataset)
-3. [Documenting Your Dataset](#documenting-your-dataset)
-4. [Publishing on Hugging Face](#publishing-on-hugging-face)
-5. [Alternative Platforms](#alternative-platforms)
-6. [Need Help?](#need-help)
+We are building these instructions on the foundation of the official [Adding Datasets](https://huggingface.co/docs/hub/datasets-adding) docs from Hugging Face, and [other publications](#references) in the community. 
+
+Please note: __following this guide does not guarantee__ that your dataset will be included in Apertus training runs.
+
+# Open Dataset Publishing Guide
 
 ---
 
 ## 1. Before You Start
 
-Why publish open AI-ready data?
+Why publish open, AI-ready data?
 
 - **Visibility**: Your dataset will be discoverable by researchers and developers on frontier efforts.
 - **Impact**: Contribute to open science, accelerate innovation, get recognition on a global level.
-- **Support**: Tap into our community as a valuable resources for assistance and impact.
+- **Support**: Tap into the open data community as a valuable resources for assistance and impact.
 
-What you’ll need:
+What you will need:
 
-- A **Hugging Face account** ([sign up here](https://huggingface.co/join)).
 - Your dataset in a **standard format** (CSV, JSON, Parquet, etc.).
 - A **README file** with clear documentation (see below for details).
+- An account on **Hugging Face** ([sign up here](https://huggingface.co/join)) or an [alternative platform](#alternative-platforms).
 
 ## 2. Preparing Your Dataset
 
-### Step 1: Organize Your Data
+Organize Your Data
 
 - Ensure your dataset is **clean, well-structured, and consistent**.
 - Use **standard file formats** (e.g., CSV for tabular data, JSON for structured data).
 - If your dataset is large, consider **splitting it into smaller files** for easier download.
 
-### Step 2: Quality Control
+Quality Control
 
 - Review your dataset for **biases, errors, or missing values**.
 - Ensure it is **ethically sourced** and is **reproducible**:  
@@ -47,25 +52,28 @@ What you’ll need:
      - If the dataset is not compliant, consider republishing it under an open license or reaching out to the authors.
   3. Ethical Considerations:  
       - Your datasets complies with Swiss/EU privacy regulations (e.g., DVSO, GDPR) and moral codes.
-      - Apertus data guidelines have further recommendations (e.g., respecting `robots.txt` for web scraped data).  
+      - Apertus [technical reports](/pages/research) and data guidelines have further recommendations, such as respecting opt-outs.  
 
-### Step 3: Prepare for use in LLMs
+Prepare for use in LLMs
 
 - Follow best practices for **tokenization and formatting** (e.g., JSONL for text data).
+- Consider filtering and splitting needs, provide guidance for machine learning use.
 - Include **metadata** such as language, domain, and intended use cases.
-
-...
 
 ## 3. Documenting Your Dataset
 
-A well-documented dataset is **easier to use and more impactful**. Include the following in your `README.md` file:
+A well-documented dataset is **easier to use and more impactful**.
+
+Visit the [@swiss-ai organization](https://huggingface.co/swiss-ai) that hosts the Apertus project for example datasets.
+
+Include the following in your `README.md` file:
 
 ### Required Sections
 
 1. **Dataset Name**: A clear, descriptive title.
-2. **Description**: What the dataset contains and its purpose.
-3. **License**: Specify the license (e.g., MIT, Apache 2.0, CC-BY-SA).
-4. **Citation**: How users should cite your dataset.
+2. **Description**: What the dataset contains, the method of its creation, and its purpose.
+3. **License**: Specify the license - we recommend [data licenses](https://book.the-turing-way.org/reproducible-research/licensing/licensing-data/).
+4. **Citation**: How users should cite your dataset - see [CESSDA](https://datacitation.cessda.eu/The-Anatomy-of-a-Data-Citation).
 5. **Usage**: Example code or instructions for loading the dataset.
 6. **Metadata**: File structure, column descriptions, and data types.
 
@@ -101,28 +109,25 @@ A well-documented dataset is **easier to use and more impactful**. Include the f
 
 ## 4. Publishing on Hugging Face
 
-### Step 1: Create a New Repository
+### 4.1: Create a New Repository
 
 1. Log in to your **Hugging Face account**.
 2. Navigate to your personal account or organization.
 3. Click **"New Dataset"** and select **"Create Dataset"**.
-4. Name your dataset (e.g., `apertus/[your-dataset-name]`).
 
-Visit the [@swiss-ai organization](https://huggingface.co/swiss-ai) that hosts the Apertus project for example datasets.
-
-### Step 2: Upload Your Dataset
+### 4.2: Upload Your Dataset
 
 1. **Drag and drop** your dataset files into the repository.
 2. Upload your `README.md` and any additional documentation.
 3. Use the **Hugging Face Dataset Viewer** to preview your dataset.
 
-### Step 3: Add Metadata
+### 4.3: Add Metadata
 
 1. Fill in the **dataset card** with a description, tags, and license.
 2. Specify the **dataset structure** (e.g., train/validation/test splits).
 3. Add **example code** for loading the dataset.
 
-### Step 4: Publish
+### 4.4: Publish
 
 1. Click **"Publish"** to make your dataset publicly available.
 2. Share the link with your network and the Apertus community!
@@ -139,14 +144,13 @@ You can also publish your dataset on other platforms:
 
 If you publish elsewhere, let us know! If we use your results in a release, we will **link to your dataset** from the Apertus publications.
 
-## Next Steps
+## 6. Sharing is Caring
 
-1. **Prepare your dataset** using the guidelines above.
-2. **Document it thoroughly** with a `README.md`.
-3. **Publish it** on Hugging Face or another platform.
-4. **Share it** with the [Apertus community](/pages/contact)!
+There are many ways to announce your dataset, from metadata portals, to blogs and social media. The ideal format for open research is a formal publication or pre-print. You can also propose developing on it at a hackathon.
 
----
+If your dataset is AI-Ready, it should be possible to apply fine-tuning techniques, optimizing the ability of LLMs to "speak the language", distinguish concepts or languages contained in it. See [our guide](/docs/tech/finetuning) for some more detail.
+
+Please use the [contacts on our website](/contact) to share a link with our community.
 
 Thank you for contributing to open science with Apertus! 🚀
 
@@ -155,7 +159,10 @@ Thank you for contributing to open science with Apertus! 🚀
 # References
 
 - [Apertus data transparency](https://github.com/swiss-ai/apertus-data-transparency/#apertus-data-transparency) (GitHub)
+- [AI-Ready Data Whitepaper](https://www.swissdataalliance.ch/en/publikationen/whitepaper-ai-ready-data)
 - [huggingface-rdf library](https://pypi.org/project/huggingface-rdf/)
+- [The Turing Way](https://book.the-turing-way.org/)
+- [CESSDA Data Citation Guide](https://datacitation.cessda.eu/)
 - [A survey on dataset quality in machine learning](https://www.sciencedirect.com/science/article/pii/S0950584923001222) (Gong et al. 2023)
 - [Llama-Ready Data Guide](https://www.marktechpost.com/2025/04/17/uploading-datasets-to-hugging-face-a-step-by-step-guide/)
 - [Jianglong’s Blog Post](https://jaron-u.github.io/posts/upload_dataset_huggingface/)
