@@ -28,37 +28,50 @@ Why publish open, AI-ready data?
 
 What you will need:
 
-- Your dataset in a **standard format** (CSV, JSON, Parquet, etc.).
+- Your structured information or plain text in a **standard format** (CSV, JSON, Parquet, etc.)
 - A **README file** with clear documentation (see below for details).
 - An account on **Hugging Face** ([sign up here](https://huggingface.co/join)) or an [alternative platform](#alternative-platforms).
 
 ## 2. Preparing Your Dataset
 
-Organize Your Data
+Organize your data for successful deployment, training or future maintenance with these tips:
 
 - Ensure your dataset is **clean, well-structured, and consistent**.
 - Use **standard file formats** (e.g., CSV for tabular data, JSON for structured data).
 - If your dataset is large, consider **splitting it into smaller files** for easier download.
 
-Quality Control
+While this is by no means an exhaustive guide, here are some ways we can try to control and improve quality:
 
 - Review your dataset for **biases, errors, or missing values**.
-- Ensure it is **ethically sourced** and is **reproducible**:  
-  1. The dataset should be version-controlled (e.g., hosted on Hugging Face, GitHub, or Zenodo) to enable traceability.  
-     - If not version-controlled, use tools like Xet to version your data (e.g., add a version in the filename if using hf download).
-  2. Check for legal compliance:  
-     - Ensure the dataset has a permissive license (e.g., Apache 2.0, MIT, CC-BY, CC0).  
-     - Avoid datasets with restrictive licenses (SA, NC) unless explicitly permitted. Check Apertus license guidelines.  
-     - If the dataset is not compliant, consider republishing it under an open license or reaching out to the authors.
-  3. Ethical Considerations:  
-      - Your datasets complies with Swiss/EU privacy regulations (e.g., DVSO, GDPR) and moral codes.
-      - Apertus [technical reports](/pages/research) and data guidelines have further recommendations, such as respecting opt-outs.  
 
-Prepare for use in LLMs
+Here are some steps you should take to verify that a dataset is **ethically sourced** and is **reproducible**: 
+
+1. The dataset should be version-controlled (e.g., hosted on Hugging Face, GitHub, or Zenodo) to enable traceability.  
+    - If not version-controlled, use tools like Xet to version your data (e.g., add a version in the filename if using hf download).
+2. Check for legal compliance:  
+    - Ensure the dataset has a permissive license (e.g., Apache 2.0, MIT, CC-BY, CC0).  
+    - Avoid datasets with restrictive licenses (SA, NC) unless explicitly permitted. Check Apertus license guidelines.  
+    - If the dataset is not compliant, consider republishing it under an open license or reaching out to the authors.
+3. Ethical Considerations:  
+    - Your datasets complies with Swiss/EU privacy regulations (e.g., DVSO, GDPR) and moral codes.
+    - Apertus [technical reports](/pages/research) and data guidelines have further recommendations, such as respecting opt-outs.  
+
+Preparing datasets for use in LLMs includes additional steps, such as:
 
 - Follow best practices for **tokenization and formatting** (e.g., JSONL for text data).
 - Consider filtering and splitting needs, provide guidance for machine learning use.
 - Include **metadata** such as language, domain, and intended use cases.
+
+For your dataset to be fully AI-ready, follow these key recommendations (see [AI-Ready Data Whitepaper](#references) for details):
+
+- **Metadata**: Use standards (e.g., ML Croissant), add semantic and governance metadata, and use dynamic, machine-actionable metadata.
+- **FAIR**: Improve interoperability of unstructured data; consider MCP for agent-to-agent access.
+- **Quality**: Build verification into AI systems; increase lineage and traceability.
+- **Volume & Diversity**: Ensure sufficient volume and diversity to avoid bias (sampling, historical, label, temporal).
+- **Compliance**: Adhere to GDPR, EU AI Act, internal policies, and ethical standards.
+- **Approach**: Implement as a data product using a Medallion architecture; focus on governance and data/AI literacy.
+
+Apertus supports AI-ready data pipelines through its open model, training code, and compliance tools, enabling a reproducible cycle from ingestion to fine-tuning.
 
 ## 3. Documenting Your Dataset
 
@@ -109,25 +122,25 @@ Include the following in your `README.md` file:
 
 ## 4. Publishing on Hugging Face
 
-### 4.1: Create a New Repository
+Create a New Repository
 
 1. Log in to your **Hugging Face account**.
 2. Navigate to your personal account or organization.
 3. Click **"New Dataset"** and select **"Create Dataset"**.
 
-### 4.2: Upload Your Dataset
+Upload Your Dataset
 
 1. **Drag and drop** your dataset files into the repository.
 2. Upload your `README.md` and any additional documentation.
 3. Use the **Hugging Face Dataset Viewer** to preview your dataset.
 
-### 4.3: Add Metadata
+Add Metadata
 
 1. Fill in the **dataset card** with a description, tags, and license.
 2. Specify the **dataset structure** (e.g., train/validation/test splits).
 3. Add **example code** for loading the dataset.
 
-### 4.4: Publish
+Publish
 
 1. Click **"Publish"** to make your dataset publicly available.
 2. Share the link with your network and the Apertus community!
