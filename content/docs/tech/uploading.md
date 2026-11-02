@@ -8,9 +8,9 @@ author: "Apertus Project"
 ---
 
 
-By sharing non-personal datasets, you can help advance research, innovation, and collaboration in machine learning and data science. This guide will walk you through the process of preparing, documenting, and publishing **AI-Ready Data**.
+By sharing non-personal datasets, you can help advance research, innovation, and collaboration in machine learning and data science. This guide will walk you through the process of preparing, documenting, and publishing [AI-Ready Data](https://www.swissdataalliance.ch/en/publikationen/whitepaper-ai-ready-data).
 
-We are building these instructions on the foundation of the official [Adding Datasets](https://huggingface.co/docs/hub/datasets-adding) docs from Hugging Face, and [other publications](#references) in the community. 
+We are building this with reference to the [Hugging Face](https://huggingface.co/docs/hub/datasets-adding) docs and other [relevant literature](#references). 
 
 Please note: __following this guide does not guarantee__ that your dataset will be included in Apertus training runs.
 
@@ -30,7 +30,7 @@ What you will need:
 
 - Your structured information or plain text in a **standard format** (CSV, JSON, Parquet, etc.)
 - A **README file** with clear documentation (see below for details).
-- An account on **Hugging Face** ([sign up here](https://huggingface.co/join)) or an [alternative platform](#alternative-platforms).
+- An account on **Hugging Face** ([sign up here](https://huggingface.co/join)) or an [alternative platform](#4-alternative-platforms).
 
 ## 2. Preparing a Dataset
 
@@ -152,7 +152,7 @@ Once you publish, let us know! If we use your results in a release, we will cite
 
 There are many ways to announce your dataset, from metadata portals, to blogs and social media. The ideal format for open research is a formal publication or pre-print. You can also propose developing on it at a hackathon.
 
-If your dataset is AI-Ready, it should be possible to apply fine-tuning techniques, optimizing the ability of LLMs to "speak the language", distinguish concepts or languages contained in it. See [our guide](/docs/tech/finetuning) for some more detail.
+If your dataset is AI-Ready, it should be possible to apply fine-tuning techniques, optimizing the ability of LLMs to "speak the language", distinguish concepts or languages contained in it. See [our guide](/docs/tech/fine-tuning) for some more detail.
 
 Please use the [contacts on our website](/contact) to share a link with our community.
 
@@ -164,7 +164,7 @@ Thank you for contributing to open science with Apertus! 🚀
 
 - [Apertus data transparency](https://github.com/swiss-ai/apertus-data-transparency/#apertus-data-transparency) (GitHub)
 - [AI-Ready Data Whitepaper](https://www.swissdataalliance.ch/en/publikationen/whitepaper-ai-ready-data) (Swiss Data Alliance)
-- [The Turing Way](https://book.the-turing-way.org/) (book)
+- [Research Data Management](https://book.the-turing-way.org/reproducible-research/rdm/) (The Turing Way) 
 - [CESSDA Data Citation Guide](https://datacitation.cessda.eu/)
-- [A survey on dataset quality in machine learning](https://www.sciencedirect.com/science/article/pii/S0950584923001222) (Gong et al. 2023)
 - [Llama-Ready Data Guide](https://www.marktechpost.com/2025/04/17/uploading-datasets-to-hugging-face-a-step-by-step-guide/) (2025)
+- [A survey on dataset quality in ML](https://www.sciencedirect.com/science/article/pii/S0950584923001222) (Gong et al. 2023)
