@@ -2,7 +2,7 @@
 title: "F.A.Q."
 weight: 500
 description: "Frequently Asked Questions"
-icon: "information"
+icon: "info"
 date: "2026-02-11T11:11:00+01:00"
 lastmod: "2026-02-17T15:11:45+01:00"
 toc: true
@@ -11,7 +11,7 @@ categories: [""]
 author: "Apertus Project"
 ---
 
-<p>Is there a question you would like to see answered here, or any other concern? Please
+<p>Is there a question you would like to see answered here, any other concern related to the Apertus project? Please
 <a href="/contact">contact us</a>.
 </p><hr />
 
