@@ -19,9 +19,9 @@ The Builders Summit built on two previous gatherings, held in [Geneva in July 20
 
 Three goals shaped the programme:
 
-1. sharing progress from leading open-source and open-weight model initiatives;
-2. enabling concrete international collaborations, incl. access to computing resources;
-3. exploring what it would take to define and finance a shared flagship project.
+1. Sharing progress from leading open-source and open-weight model initiatives
+2. Enabling concrete international collaborations, incl. access to computing resources
+3. Exploring what it would take to define and finance a shared flagship project
 
 These questions set the stage for the afternoon discussions, in which participants explored four interconnected dimensions of global collaboration: a shared flagship project, computing infrastructure, financing and sustainability, and adoption and impact.
 
