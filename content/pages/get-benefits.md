@@ -8,7 +8,7 @@ This guide synthesizes insights to explain how organizations of all types can sa
 
 See also: [further links](#resources) below.
 
-### 🔑 Key Benefits of Apertus
+### 🔑 Key benefits of Apertus
 
 1. **Multilingual & Affordable**  
    - Apertus supports ~1,800 languages—ideal for organizations who want help-desk chat in local dialects without licensing overhead.
@@ -28,11 +28,13 @@ See also: [further links](#resources) below.
 6. **Strong Swiss Academic & Compute Backbone**  
    - CSCS & EPFL provide fast inference access for validated Swiss‑based projects.
 
-### 🧾 Sample “Value Story” You Can Use in Proposals
+### 🧾 Fictional “Value Story” to use in Proposals
 
 > *“Our Nonprofit *Lingua‑Aid* serves displaced populations across French, Arabic, and Swahili-speaking regions. By adopting Apertus (open, multilingual, EU‑compliant), we reduce per-user translation costs by ~40% and maintain privacy​—no vendor-locked SaaS, no per-token fees beyond our own compute. Fine-tuning on our aid-guidance library boosted first-call accuracy to 91% in appropriate local dialects, allowing our volunteers to focus on complex cases rather than babysitting chatbots.”*
 
-### 📌 Practical Checklist Before You Go Live
+For actual case studies, please visit our [Community Showcase](/pages/get-showcase/) and [News Archive](/news).
+
+### 📌 Practical Checklist before you go Live
 
 | Item | Action | Why |
 |------|--------|-----|
