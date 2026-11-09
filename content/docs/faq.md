@@ -27,8 +27,14 @@ author: "Apertus Project"
 </div>
 
 <div class="faq-item">
-<h4>How do I start or promote something based on Apertus?</h4>
-<p>Many organizations are offering <a href="/pages/get-started">hosting services</a> or piloting solutions with the model, and we will update <a href="/pages/get-showcase/">our showcase</a> as new products based on Apertus become available.
+<h4>How do I start a project based on Apertus?</h4>
+<p>Many organizations are offering <a href="/pages/get-started">hosting services</a> or piloting solutions with the model, and we keep our <a href="/docs/">developer guides</a> up-to-date as more platforms enable getting started with Apertus.
+</p>
+</div>
+
+<div class="faq-item">
+<h4>How could I get help in promoting a use case?</h4>
+<p>Projects that pass review appear on the <a href="/pages/get-showcase/">Apertus Showcase</a>. Selected projects are featured in our <a href="/news/">Community News</a>, social media posts and  <a href="/subscribe/">Newsletter</a>. From time to time, we may invite you to co-present with us at an upcoming event, or feature your work in official presentations. 
 </p>
 </div>
 

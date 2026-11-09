@@ -7,7 +7,7 @@ sitemap:
 
 # Submissions for Showcase
 
-Tell us about your projects based on Apertus. Please try to include some specifics in the description, such as which size or version of the model, whether your solution is open source, or what kind of audience it is for. If you have unresolved questions or issues, please use our [contact page](/contact) to get in touch. 
+Tell us about your projects based on Apertus. Please try to include some specifics in the description, such as which size or version of the model, whether your solution is open source, or what kind of audience it is for. Curious what happens with your submission? See [how we evaluate and promote community projects](/docs/tech/showcase/). If you have unresolved questions or issues, please use our [contact page](/contact) to get in touch. 
 
 ---
 
