@@ -8,33 +8,38 @@ This guide synthesizes insights to explain how organizations of all types can sa
 
 See also: [further links](#resources) below.
 
-### 🔑 Key benefits of Apertus
+### Key benefits of Apertus
 
-1. **Multilingual & Affordable**  
+1. **Strong Swiss Academic & Compute Backbone**  
+   - CSCS & EPFL provide fast inference access for validated Swiss‑based projects.
+ 
+2. **Multilingual & Affordable**  
    - Apertus supports ~1,800 languages—ideal for organizations who want help-desk chat in local dialects without licensing overhead.
 
-2. **Transparency & Ethics‑by‑Design**  
+3. **Transparency & Ethics‑by‑Design**  
    - **EU AI Act–ready** safeguards mean you can meet reporting and audit requirements from the start as your build out AI safety layers.
 
-3. **Open License**  
+4. **Open License**  
    - **Apache 2.0** lets you develop bespoke tools, redistribute as part of your service stack, or embed in existing software stacks without fear of infringement.
 
-4. **Extensibility**  
-   - Specialise Apertus on your domain: legal briefs for legal‑aid NGOs, health terminology for clinics, education content for NGOs running literacy programs, etc.
+5. **Extensibility**  
+   - Specialise Apertus on your domain: legal briefs for lawmakers, health terminology for public offices, education content for NGOs running literacy programs, etc.
 
-5. **No Vendor Lock‑in**  
-   - You’re never tied to a SaaS provider; move hosting if you outgrow one vendor or switch providers for legal or budget reasons.
+6. **No Vendor Lock‑in**  
+   - You are not tied to a single API or SaaS provider; move hosting if you outgrow one vendor, switch providers for legal or budget reasons, or deploy Apertus on premises.
 
-6. **Strong Swiss Academic & Compute Backbone**  
-   - CSCS & EPFL provide fast inference access for validated Swiss‑based projects.
 
-### 🧾 Fictional “Value Story” to use in Proposals
+### Value Story
+
+A fictional template for use in fundraising applications or project proposals:
 
 > *“Our Nonprofit *Lingua‑Aid* serves displaced populations across French, Arabic, and Swahili-speaking regions. By adopting Apertus (open, multilingual, EU‑compliant), we reduce per-user translation costs by ~40% and maintain privacy​—no vendor-locked SaaS, no per-token fees beyond our own compute. Fine-tuning on our aid-guidance library boosted first-call accuracy to 91% in appropriate local dialects, allowing our volunteers to focus on complex cases rather than babysitting chatbots.”*
 
 For actual case studies, please visit our [Community Showcase](/pages/get-showcase/) and [News Archive](/news).
 
-### 📌 Practical Checklist before you go Live
+### Practical Checklist
+
+Before you go live with Apertus, we recommend you to check:
 
 | Item | Action | Why |
 |------|--------|-----|
