@@ -101,4 +101,5 @@ title: "Get Started"
 
 <p class="section-intro">
   Would you like to see your Apertus project here? 
-  <a href="/showcase" target="_blank">Let us know.</a></p>
+  <a href="/showcase" target="_blank">Let us know.</a><br/>
+  Read how we <a href="/docs/tech/showcase/">evaluate and promote</a> community projects.</p>
