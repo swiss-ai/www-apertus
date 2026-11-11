@@ -43,14 +43,9 @@ Deploying the Apertus models to SageMaker AI can be done via the **JumpStart web
   - `p4d.24xlarge` or `p5.48xlarge` for Apertus 70B
   - `g5.xlarge`, `g6e.xlarge` or `p4d.24xlarge` for Apertus 8B
 
-### Deploying Apertus with SageMaker JumpStart
+### Deploying Apertus with SageMaker
 
-The Apertus 1.5 models are available on SageMaker JumpStart. We recommend the Instruct versions for most users, as they are fine-tuned to follow natural language instructions more effectively:
-
-- **[Apertus-v1.5-8B](https://huggingface.co/swiss-ai/Apertus-v1.5-8B)**
-- **[Apertus-v1.5-70B](https://huggingface.co/swiss-ai/Apertus-v1.5-70B)**
-
-Complete the following steps to deploy Apertus through the SageMaker JumpStart UI.
+The Apertus 1.0 (**2509** Base and Instruct) models are available on **SageMaker JumpStart**. We recommend the **Instruct** versions for most users, as they are fine-tuned to follow natural language instructions more effectively. Complete the following steps to deploy Apertus through the SageMaker JumpStart UI.
 
 To access SageMaker JumpStart, use one of the following methods:
 
@@ -102,6 +97,8 @@ Then follow the instructions in the notebook [Swiss-ai-apertus-LMI-V15.ipynb](ht
 
 ### Thinking Mode
 
+> NOTA BENE: _Apertus 1.5 is not yet available on Jumpstart_
+
 To enable thinking mode when deploying via the SageMaker Python SDK, set the `OPTION_REASONING_PARSER` environment variable to `apertus` and `OPTION_ENABLE_THINKING` to `true` in your container environment. The tool-call flags are intentionally omitted: tool calling is unsupported in thinking mode, so we don't recommend combining the two.
 
 For [Apertus-v1.5-8B](https://huggingface.co/swiss-ai/Apertus-v1.5-8B):
@@ -149,7 +146,7 @@ model = Model(
 )
 ```
 
-### Omni Patch
+### Omni Patch: workaround for Apertus 1.5
 
 The Apertus 1.5 release has not been completely merged in the Transformers and vLLM libraries. In particular, to use multimodal features and tool calling capabilities, a custom configuration is recommended.
 
@@ -286,7 +283,7 @@ Alternatively, you can delete the endpoint in the SageMaker Studio web UI under 
 
 We benchmarked the throughput performance of both model sizes with multiple instance types to give general performance guidance for production deployments. The benchmark setup uses the open source [Deep Java Library (DJL) Large Model Inference (LMI)](https://docs.djl.ai/master/docs/serving/serving/docs/lmi/index.html) container with [vLLM](https://github.com/vllm-project/vllm). The LMI container image bundles the model server with optimized inference libraries for high-performance LLM deployment. This setup is equivalent to an Apertus model deployed with Amazon SageMaker JumpStart. We use the [vLLM provided benchmark suite](https://docs.vllm.ai/en/latest/cli/bench/serve.html) and the [ShareGPT dataset](https://huggingface.co/datasets/RyokoAI/ShareGPT52K) for the experiments.
 
-Apertus 1.5 70B benchmark results:
+Apertus 70B benchmark results:
 
 | Instance Type | Request Throughput (req/s) | Output Token Throughput (tok/s) | Total Token Throughput (tok/s) |
 | --- | --- | --- | --- |
@@ -296,7 +293,7 @@ Apertus 1.5 70B benchmark results:
 | `p4d.24xlarge` | 10.87 | 2193.92 | 4704.70 |
 | `p5.48xlarge` | 27.72 | 5597.77 | 12002.46 |
 
-Apertus 1.5 8B benchmark results:
+Apertus 8B benchmark results:
 
 | Instance Type | Request Throughput (req/s) | Output Token Throughput (tok/s) | Total Token Throughput (tok/s) |
 | --- | --- | --- | --- |
