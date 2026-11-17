@@ -40,7 +40,7 @@ author: "Apertus Project"
 
 <div class="faq-item">
 <h4>Is Apertus compliant with the EU AI Act?</h4>
-<p>Apertus is designed with the EU AI Act in mind, including opt-out mechanisms, PII removal, and memorization prevention. Independent evaluations, such as by <a target="_blank" href="/articles/2026-02-gpai/">Trinity College Dublin</a> and <a target="_blank" href="https://latticeflow.ai/news/is-swiss-llm-ready-for-enterprise-adoption">LatticeFlow AI</a>, have found Apertus EU AI Act-ready from the point of view of policies and guardrails.</p>
+<p>As a component in AI solutions compliant with Swiss data protection regulations, Apertus was designed with the <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank">AI Act</a> of the European Union in mind: including content opt-out, personal information removal, and memorization prevention. Independent evaluations, such as by <a target="_blank" href="/articles/2026-02-gpai/">Trinity College Dublin</a>, have highlighted certain aspects of this. See our <a href="/pages/research">Technical Reports</a> for more details.</p>
 </div>
 
 <div class="faq-item">
