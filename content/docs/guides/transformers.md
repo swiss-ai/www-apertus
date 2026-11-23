@@ -13,11 +13,7 @@ author: "Apertus Project"
 
 This document outlines how to use the [Transformers library](https://huggingface.co/docs/transformers/index) from Hugging Face with Apertus.
 
-> 🚧 **Information for Apertus 1.5** - we are currently working on integrating changes from the [latest release](https://huggingface.co/swiss-ai/Apertus-v1.5-8B#how-to-use). Apertus 1.5 accepts interleaved text, image, and audio inputs and generates text. The model does not generate audio or images. The integration is not yet part of a released Transformers version (upstreaming is in progress). Until then, install transformers from our branch:
-
-```bash
-pip install "transformers[torch,vision,audio] @ git+https://github.com/swiss-ai/transformers.git@apertusv1p5-release-pre-upstream"
-```
+**[Transformers v5.24.0](https://github.com/huggingface/transformers/releases/tag/v5.24.0) fully supports Apertus 1.5, accepting interleaved text, image, and audio inputs and generates text. Please update your deployments now.**
 
 Transformers acts as the model-definition framework for state-of-the-art machine learning models in text, computer vision, audio, video, and multimodal models, for both inference and training. Visit the [official documentation](https://huggingface.co/docs/transformers/index) for further information.
 

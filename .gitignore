@@ -4,6 +4,7 @@ assets/js/bootstrap/
 resources/_gen/
 .vscode/
 .env
+.venv
 .vercel
 node_modules
 package-lock.json
