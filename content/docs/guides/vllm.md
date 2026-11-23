@@ -13,9 +13,9 @@ author: "Apertus Project"
 
 Documentation on deploying Apertus on vLLM, a community-driven, efficient library for deploying large language models for inference and serving. 
 
-> 🚧 **Information for Apertus 1.5** - We are currently working on adding support for our models to upstream vLLM and transformers releases. In the meantime, you can use our modified version of [vLLM](https://github.com/swiss-ai/vllm/tree/a601a9d998ddeb488f0c17e8512874b116aa7658) and [transformers](https://github.com/swiss-ai/transformers/tree/3797303dda74844e3d1f8977ff5518bb91f818b4) to run the models. We have pre-installed the dependencies in a [Docker image](https://github.com/swiss-ai/model-launch/pkgs/container/vllm_apertus_1.5_release) which is available in the GitHub Container Registry. See the [Thinking Mode](#thinking-mode) and [Omni Patch](#omni-patch) sections below for additional early adopter details.
+> 🚧 **Information for Apertus 1.5** - [Transformers v5.24.0](https://github.com/huggingface/transformers/releases/tag/v5.24.0) supports Apertus 1.5, and we are working on adding full support to vLLM. Until then, you can use our modified version of [vLLM](https://github.com/swiss-ai/vllm/tree/a601a9d998ddeb488f0c17e8512874b116aa7658) to run the models. We have pre-installed the dependencies in a [Docker image](https://github.com/swiss-ai/model-launch/pkgs/container/vllm_apertus_1.5_release) which is available in the GitHub Container Registry. 
 
-Support work for vLLM compatibility with Apertus is taking place in https://github.com/swiss-ai/vllm
+See the [Thinking Mode](#thinking-mode) and [Omni Patch](#omni-patch) sections below for further setup details. Support work for vLLM compatibility with Apertus is taking place in https://github.com/swiss-ai/vllm
 
 Initially developed by the Sky Computing Lab at UC Berkeley, vLLM has evolved through contributions from academia and industry. While the library itself is user-friendly, deployment can be challenging due to its reliance on NVIDIA libraries and CUDA tools. For IT teams using DevOps tools like Kubernetes, vLLM’s multiplatform support and integration capabilities are significant advantages.
 

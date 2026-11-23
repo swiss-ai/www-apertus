@@ -14,7 +14,7 @@ author: "Apertus Project"
 
 This guide will help you get up and running with the Apertus models on Microsoft Azure.
 
-Deploying Apertus currently requires a customized vLLM container or environment. Since Apertus 1.5 introduces a novel multimodal architecture for native image and audio processing, the model dependencies are not yet fully merged into upstream vLLM and Transformers releases. The Apertus team provides pre-built Docker images and custom forks of [vLLM](/docs/guides/vllm) and [Transformers](/docs/guides/transformers) that you can use in the meantime.
+Deploying Apertus currently requires a customized vLLM container or environment. Since Apertus 1.5 introduces a novel multimodal architecture for native image and audio processing. The engineering team provides pre-built Docker images and custom forks of [vLLM](/docs/guides/vllm) and [Transformers](/docs/guides/transformers) that you can use.
 
 The following guide is based on the [Azure Samples Swiss LLM Quickstart](https://github.com/Azure-Samples/swiss-llm-quickstart/blob/main/azure-virtual-machine/README.md) (MIT license) developed by [Francesco Sodano](https://github.com/francesco-sodano) and [Dominique Broeglin](https://github.com/dbroeglin) at Microsoft.
 
@@ -158,7 +158,7 @@ nvcc --version || echo "nvcc not found; ensure CUDA toolkit installed"
 
 ### Prepare the Python Environment
 
-> **Information for Apertus 1.5** — We are currently working on adding support for our models to upstream [vLLM](/docs/guides/vllm) and [Transformers](/docs/guides/transformers) releases. See the [Docker deployment](#deploy-with-a-docker-container) section below as an alternative to a manual Python environment.
+[Transformers v5.24.0](https://github.com/huggingface/transformers/releases/tag/v5.24.0) fully supports Apertus 1.5, accepting interleaved text, image, and audio inputs and generates text. We are currently working on adding full support to [vLLM](/docs/guides/vllm) as well. See the [Docker deployment](#deploy-with-a-docker-container) section below as an alternative to a manual Python environment.
 
 Log in again into the VM and execute the following commands to install `uv` and prepare a Python environment:
 
@@ -188,11 +188,11 @@ EOF
 uv add torch torchvision
 ```
 
-Install the Apertus-modified vLLM and Transformers from the Swiss AI forks, along with the remaining dependencies:
+Install the Apertus-modified vLLM from the Swiss AI forks, along with the remaining dependencies:
 
 ```bash
 uv add "vllm @ git+https://github.com/swiss-ai/vllm.git"
-uv add "transformers @ git+https://github.com/swiss-ai/transformers.git"
+uv add transformers # Ensure v5.24.0+
 uv add git+https://github.com/nickjbrowning/XIELU
 uv add "huggingface_hub[cli]" hf_transfer
 uv add rich
