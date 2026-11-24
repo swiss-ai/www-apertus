@@ -1,0 +1,50 @@
+{{/*
+  baserow-table partial
+
+  Renders a Markdown table snapshot exported from Baserow by scripts/baserow
+  into the site's data/ folder.
+
+  Expects a dict with:
+
+    - src     : path of the snapshot relative to data/ (required),
+                e.g. "baserow/table-123-view-45.md"
+    - caption : optional caption rendered as <figcaption> (Markdown allowed)
+    - class   : optional extra CSS classes for the wrapping <figure>
+
+  Usage in a template:
+
+    {{ partial "baserow-table.html" (dict "src" "baserow/table-123-view-45.md") }}
+
+  The metadata comment written by scripts/baserow is stripped before
+  rendering. If the snapshot is missing or contains no rows, the partial
+  renders nothing and logs a Hugo warning, so an incomplete export can never
+  break the build.
+*/}}
+
+{{- $src := default "" .src -}}
+{{- $caption := default "" .caption -}}
+{{- $class := default "" .class -}}
+
+{{- if not $src -}}
+  {{- errorf "baserow-table: the src parameter is required, e.g. src=\"baserow/table-123-view-45.md\"" -}}
+{{- end -}}
+
+{{- $path := path.Join "data" $src -}}
+{{- if not (fileExists $path) -}}
+  {{- warnf "baserow-table: %s not found; run 'go run ./scripts/baserow -table <id> -view <id>' to generate it" $path -}}
+{{- else -}}
+  {{- $raw := os.ReadFile $path -}}
+  {{- $content := trim (replaceRE `(?s)<!--.*?-->` "" $raw) "\n\t " -}}
+  {{- if not $content -}}
+    {{- warnf "baserow-table: %s contains no rows; nothing to render" $path -}}
+  {{- else -}}
+    <figure class="baserow-table{{ with $class }} {{ . }}{{ end }}">
+      <div class="table-responsive">
+        {{- $content | markdownify -}}
+      </div>
+      {{- with $caption }}
+      <figcaption class="text-muted small mt-2">{{ . | markdownify }}</figcaption>
+      {{- end }}
+    </figure>
+  {{- end -}}
+{{- end -}}
