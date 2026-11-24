@@ -17,7 +17,7 @@ import (
 
 // fakeTransport intercepts the client's requests and answers with canned
 // responses, so the tests never touch the network. The page payloads are raw
-// JSON so the field order is preserved exactly as Baserow would send it.
+// JSON so the rows are passed through exactly as Baserow would send them.
 type fakeTransport struct {
 	pagesJSON map[int]string // page -> raw JSON array of rows
 	statuses  map[int]int    // page -> HTTP status, default 200
@@ -68,7 +68,8 @@ func patchTransport(fake http.RoundTripper) func() {
 }
 
 // fixturePagesJSON provides page payloads with fields in a deliberate,
-// non-alphabetical order, exactly as Baserow would send them.
+// non-alphabetical order and with JSON values of mixed types (number, string,
+// array), exactly as Baserow would send them.
 var fixturePagesJSON = map[int]string{
 	1: `[
 		{"Model": "Apertus 8B", "Params": 8000000000, "Notes": "line one\nline two", "Flags": ["open weights", "EU | trained"]},
@@ -77,7 +78,7 @@ var fixturePagesJSON = map[int]string{
 	2: `[{"Model": "Apertus Mini"}]`,
 }
 
-func TestFetchRowsAndRender(t *testing.T) {
+func TestFetchRowsAndRenderJSON(t *testing.T) {
 	transport := &fakeTransport{
 		pagesJSON: fixturePagesJSON,
 		count:     3,
@@ -88,7 +89,7 @@ func TestFetchRowsAndRender(t *testing.T) {
 	cfg := config{
 		baseURL: "https://baserow.test", apiKey: "test-key",
 		tableID: 42, viewID: 7, pageSize: 200,
-		outPath: filepath.Join(t.TempDir(), "out.md"),
+		outPath: filepath.Join(t.TempDir(), "out.json"),
 	}
 	snap, err := fetchRows(cfg, client)
 	if err != nil {
@@ -120,38 +121,66 @@ func TestFetchRowsAndRender(t *testing.T) {
 		t.Errorf("Authorization header = %q", got)
 	}
 
-	// Column order follows the API response, not Go's random map order.
-	if got := strings.Join(columnOrder(snap.rows), ","); got != "Model,Params,Notes,Flags" {
-		t.Errorf("column order = %q, want Model,Params,Notes,Flags", got)
+	// Rows are kept as raw JSON, byte-for-byte as the API sent them.
+	if got := string(snap.rows[0]); !strings.Contains(got, `"Model": "Apertus 8B"`) {
+		t.Errorf("first row = %s, want the untouched API row", got)
 	}
 
-	md := renderMarkdown(snap, time.Now().UTC())
-	for _, want := range []string{
-		"Table:     42",
-		"View:      7",
-		"| Model | Params | Notes | Flags |",
-		"| --- | --- | --- | --- |",
-		"| Apertus 8B | 8000000000 | line one<br>line two | open weights, EU \\| trained |",
-		"| Apertus 70B |  |  |  |",
-		"| Apertus Mini |  |  |  |",
-	} {
-		if !strings.Contains(md, want) {
-			t.Errorf("markdown misses %q\ngot:\n%s", want, md)
-		}
+	generated := time.Date(2026, 11, 24, 14, 32, 47, 0, time.UTC)
+	data, err := renderJSON(snap, generated)
+	if err != nil {
+		t.Fatalf("renderJSON: %v", err)
 	}
-	if strings.Contains(md, " EU | trained ") {
-		t.Error("unescaped pipe found in rendered markdown")
+
+	var export exportFile
+	if err := json.Unmarshal(data, &export); err != nil {
+		t.Fatalf("export is not valid JSON: %v\n%s", err, data)
+	}
+	if export.Meta.Table != 42 || export.Meta.View != 7 || export.Meta.Count != 3 {
+		t.Errorf("meta = %+v, want table 42, view 7, count 3", export.Meta)
+	}
+	if !export.Meta.Generated.Equal(generated) {
+		t.Errorf("meta.generated = %v, want %v", export.Meta.Generated, generated)
+	}
+	if !strings.Contains(export.Meta.Source, "/api/database/rows/table/42/") {
+		t.Errorf("meta.source = %q", export.Meta.Source)
+	}
+	if len(export.Rows) != 3 {
+		t.Errorf("export has %d rows, want 3", len(export.Rows))
+	}
+
+	// Values keep their JSON types and content: no Markdown escaping.
+	var row0 map[string]any
+	if err := json.Unmarshal(export.Rows[0], &row0); err != nil {
+		t.Fatalf("row is not valid JSON: %v", err)
+	}
+	if params, ok := row0["Params"].(float64); !ok || params != 8000000000 {
+		t.Errorf("Params = %#v, want the number 8000000000", row0["Params"])
+	}
+	if notes, _ := row0["Notes"].(string); notes != "line one\nline two" {
+		t.Errorf("Notes = %q, want a plain string with the original newline", notes)
+	}
+	flags, ok := row0["Flags"].([]any)
+	if !ok || len(flags) != 2 || flags[1] != "EU | trained" {
+		t.Errorf("Flags = %#v, want [\"open weights\", \"EU | trained\"] with the pipe intact", row0["Flags"])
 	}
 }
 
-func TestRenderMarkdownEmpty(t *testing.T) {
+func TestRenderJSONEmpty(t *testing.T) {
 	snap := &snapshot{tableID: 1, count: 0}
-	md := renderMarkdown(snap, time.Now().UTC())
-	if !strings.HasPrefix(md, "<!--") {
-		t.Errorf("empty export should keep the metadata comment, got %q", md)
+	data, err := renderJSON(snap, time.Now().UTC())
+	if err != nil {
+		t.Fatalf("renderJSON: %v", err)
 	}
-	if strings.Contains(md, "|") {
-		t.Errorf("empty export should contain no table, got %q", md)
+	var export exportFile
+	if err := json.Unmarshal(data, &export); err != nil {
+		t.Fatalf("export is not valid JSON: %v\n%s", err, data)
+	}
+	if export.Rows == nil || len(export.Rows) != 0 {
+		t.Errorf("empty export should carry an empty rows array, got %s", data)
+	}
+	if strings.Contains(string(data), `"view"`) {
+		t.Errorf("view 0 should be omitted from the metadata, got %s", data)
 	}
 }
 
@@ -185,7 +214,7 @@ func TestRunEndToEnd(t *testing.T) {
 	})
 	defer restore()
 
-	out := filepath.Join(t.TempDir(), "data", "baserow", "out.md")
+	out := filepath.Join(t.TempDir(), "data", "baserow", "out.json")
 	env := func(key string) string {
 		switch key {
 		case "BASEROW_URL":
@@ -204,10 +233,12 @@ func TestRunEndToEnd(t *testing.T) {
 	if err != nil {
 		t.Fatalf("reading output: %v", err)
 	}
-	if !strings.Contains(string(content), "| Model | Params | Notes | Flags |") {
-		t.Errorf("output file misses the markdown table:\n%s", content)
+	for _, want := range []string{"\"meta\"", "\"rows\"", "\"Model\": \"Apertus 8B\""} {
+		if !strings.Contains(string(content), want) {
+			t.Errorf("output file misses %q:\n%s", want, content)
+		}
 	}
-	if !strings.Contains(stdout.String(), "2 rows, 4 columns") {
+	if !strings.Contains(stdout.String(), "wrote "+out+" (2 rows)") {
 		t.Errorf("unexpected summary output: %s", stdout.String())
 	}
 }
@@ -234,10 +265,10 @@ func TestRunRequiresTableAndKey(t *testing.T) {
 }
 
 func TestDefaultOutPath(t *testing.T) {
-	if got := defaultOutPath(42, 0); got != filepath.Join("data", "baserow", "table-42.md") {
+	if got := defaultOutPath(42, 0); got != filepath.Join("data", "baserow", "table-42.json") {
 		t.Errorf("defaultOutPath(42, 0) = %q", got)
 	}
-	if got := defaultOutPath(42, 7); got != filepath.Join("data", "baserow", "table-42-view-7.md") {
+	if got := defaultOutPath(42, 7); got != filepath.Join("data", "baserow", "table-42-view-7.json") {
 		t.Errorf("defaultOutPath(42, 7) = %q", got)
 	}
 }

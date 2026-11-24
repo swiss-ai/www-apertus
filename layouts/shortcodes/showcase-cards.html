@@ -1,0 +1,29 @@
+{{/*
+  showcase-cards shortcode
+
+  Renders a section of community showcase cards from the JSON snapshot that
+  scripts/baserow exported into data/. Rows are filtered by type and turned
+  into <a class="card"> boxes with a type badge at build time. Example:
+
+    {{< showcase-cards types="Fine-tune" >}}
+
+  Parameters:
+
+    - src      : path of the snapshot relative to data/ (optional)
+    - types    : comma-separated "Type" values to include; omit for all types
+    - badges   : "false" hides the type badge on each card
+    - active   : "false" also renders rows with Active = false
+    - truncate : maximum description length in characters (default 240)
+*/}}
+
+{{- $badges := true -}}
+{{- if eq (.Get "badges" | default "true") "false" -}}{{- $badges = false -}}{{- end -}}
+{{- $active := true -}}
+{{- if eq (.Get "active" | default "true") "false" -}}{{- $active = false -}}{{- end -}}
+
+{{- partial "showcase-cards.html" (dict
+    "src"      (.Get "src")
+    "types"    (.Get "types")
+    "badges"   $badges
+    "active"   $active
+    "truncate" (.Get "truncate")) -}}

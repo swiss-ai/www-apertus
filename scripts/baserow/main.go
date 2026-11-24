@@ -1,6 +1,7 @@
-// Command baserow exports the rows of a Baserow table view as a Markdown
-// table, ready to be committed to the Hugo site's data/ folder and rendered
-// with the baserow-table shortcode (layouts/shortcodes/baserow-table.html).
+// Command baserow exports the rows of a Baserow table view as a JSON
+// snapshot, ready to be committed to the Hugo site's data/ folder and
+// rendered at build time with the showcase-cards shortcode
+// (layouts/shortcodes/showcase-cards.html).
 //
 // Configuration is read from the environment:
 //
@@ -11,7 +12,7 @@
 // non-secret parameters:
 //
 //	go run ./scripts/baserow -table 123 -view 45
-//	go run ./scripts/baserow -table 123 -view 45 -out data/baserow/roadmap.md
+//	go run ./scripts/baserow -table 123 -view 45 -out data/baserow.json
 //
 // Rows are fetched from
 //
@@ -20,10 +21,17 @@
 // so the filters, sortings and column visibility of the view apply, and field
 // values come back in their human readable form (see
 // https://api.baserow.io/api/redoc/#operation/list_database_table_rows).
+//
+// The snapshot file has the shape
+//
+//	{"meta": {"table": …, "view": …, "count": …, "source": …, "generated": …},
+//	 "rows": [ …the rows, exactly as the API returned them… ]}
+//
+// Hugo templates load it with os.ReadFile + transform.Unmarshal, which keeps
+// the original field names and value types (no Markdown escaping round-trip).
 package main
 
 import (
-	"bytes"
 	"encoding/json"
 	"flag"
 	"fmt"
@@ -45,20 +53,29 @@ const (
 	userAgent        = "www-apertus-baserow-fetch"
 )
 
-// row is a Baserow row whose fields are kept in the order they appear in the
-// API response, so the generated Markdown columns match the table layout.
-type row struct {
-	keys   []string
-	values map[string]any
-}
-
-// snapshot is the complete, paginated result of one export run.
+// snapshot is the complete, paginated result of one export run. Rows are kept
+// as raw JSON, so they are written back byte-for-byte as Baserow sent them.
 type snapshot struct {
 	tableID   int
 	viewID    int
 	count     int
 	sourceURL string
-	rows      []row
+	rows      []json.RawMessage
+}
+
+// exportFile is the on-disk shape of a snapshot.
+type exportFile struct {
+	Meta meta              `json:"meta"`
+	Rows []json.RawMessage `json:"rows"`
+}
+
+// meta documents where a snapshot came from and when it was taken.
+type meta struct {
+	Table     int       `json:"table"`
+	View      int       `json:"view,omitempty"`
+	Count     int       `json:"count"`
+	Source    string    `json:"source"`
+	Generated time.Time `json:"generated"`
 }
 
 type config struct {
@@ -86,18 +103,21 @@ func run(args []string, getenv func(string) string, stdout, stderr io.Writer) in
 		return 1
 	}
 
-	markdown := renderMarkdown(snap, time.Now().UTC())
+	data, err := renderJSON(snap, time.Now().UTC())
+	if err != nil {
+		fmt.Fprintf(stderr, "baserow: encoding JSON: %v\n", err)
+		return 1
+	}
 	if err := os.MkdirAll(filepath.Dir(cfg.outPath), 0o755); err != nil {
 		fmt.Fprintf(stderr, "baserow: creating output directory: %v\n", err)
 		return 1
 	}
-	if err := os.WriteFile(cfg.outPath, []byte(markdown), 0o644); err != nil {
+	if err := os.WriteFile(cfg.outPath, data, 0o644); err != nil {
 		fmt.Fprintf(stderr, "baserow: writing %s: %v\n", cfg.outPath, err)
 		return 1
 	}
 
-	fmt.Fprintf(stdout, "wrote %s (%d rows, %d columns)\n",
-		cfg.outPath, len(snap.rows), len(columnOrder(snap.rows)))
+	fmt.Fprintf(stdout, "wrote %s (%d rows)\n", cfg.outPath, len(snap.rows))
 	return 0
 }
 
@@ -117,7 +137,7 @@ func parseFlags(args []string, getenv func(string) string, stderr io.Writer) (co
 		tableFlag    = fs.Int("table", 0, "Baserow table ID (required)")
 		databaseFlag = fs.Int("database", 0, "alias for -table")
 		viewFlag     = fs.Int("view", 0, "Baserow view ID (applies the view's filters, sortings and hidden columns)")
-		outFlag      = fs.String("out", "", "output Markdown path (default data/baserow/table-<id>[-view-<id>].md)")
+		outFlag      = fs.String("out", "", "output JSON path (default data/baserow/table-<id>[-view-<id>].json)")
 		pageSizeFlag = fs.Int("page-size", defaultPageSize, "rows per request (Baserow allows at most 200)")
 		urlFlag      = fs.String("url", "", "Baserow API base URL (overrides $BASEROW_URL)")
 	)
@@ -175,7 +195,7 @@ func defaultOutPath(tableID, viewID int) string {
 	if viewID != 0 {
 		name += fmt.Sprintf("-view-%d", viewID)
 	}
-	return filepath.Join("data", "baserow", name+".md")
+	return filepath.Join("data", "baserow.json")
 }
 
 func fetchRows(cfg config, client *http.Client) (*snapshot, error) {
@@ -209,14 +229,7 @@ func fetchRows(cfg config, client *http.Client) (*snapshot, error) {
 			return nil, fmt.Errorf("%s returned invalid JSON: %w", reqURL, err)
 		}
 		snap.count = envelope.Count
-
-		for _, raw := range envelope.Results {
-			r, err := decodeRow(raw)
-			if err != nil {
-				return nil, fmt.Errorf("%s returned a malformed row: %w", reqURL, err)
-			}
-			snap.rows = append(snap.rows, r)
-		}
+		snap.rows = append(snap.rows, envelope.Results...)
 
 		if envelope.Next == nil || *envelope.Next == "" || len(envelope.Results) == 0 {
 			return snap, nil
@@ -260,159 +273,28 @@ func getJSON(client *http.Client, apiKey, reqURL string) ([]byte, error) {
 	return body, nil
 }
 
-// decodeRow unmarshals one row while preserving the field order of the JSON
-// object, which Go's map decoding would discard.
-func decodeRow(raw json.RawMessage) (row, error) {
-	r := row{values: map[string]any{}}
-	dec := json.NewDecoder(bytes.NewReader(raw))
-	dec.UseNumber()
-
-	tok, err := dec.Token()
+// renderJSON produces the data-file contents: the export metadata followed by
+// the rows exactly as the API returned them. With no rows the rows array is
+// empty rather than null, so downstream templates can range over it directly.
+func renderJSON(snap *snapshot, generated time.Time) ([]byte, error) {
+	rows := snap.rows
+	if rows == nil {
+		rows = []json.RawMessage{}
+	}
+	data, err := json.MarshalIndent(exportFile{
+		Meta: meta{
+			Table:     snap.tableID,
+			View:      snap.viewID,
+			Count:     snap.count,
+			Source:    snap.sourceURL,
+			Generated: generated.UTC().Round(time.Second),
+		},
+		Rows: rows,
+	}, "", "  ")
 	if err != nil {
-		return r, err
+		return nil, err
 	}
-	if delim, ok := tok.(json.Delim); !ok || delim != '{' {
-		return r, fmt.Errorf("expected a JSON object, got %v", tok)
-	}
-	for dec.More() {
-		keyTok, err := dec.Token()
-		if err != nil {
-			return r, err
-		}
-		key, ok := keyTok.(string)
-		if !ok {
-			return r, fmt.Errorf("expected a field name, got %v", keyTok)
-		}
-		var val any
-		if err := dec.Decode(&val); err != nil {
-			return r, err
-		}
-		if _, seen := r.values[key]; !seen {
-			r.keys = append(r.keys, key)
-		}
-		r.values[key] = val
-	}
-	if _, err := dec.Token(); err != nil { // closing brace
-		return r, err
-	}
-	return r, nil
-}
-
-// columnOrder returns the union of all field names in first-seen order.
-func columnOrder(rows []row) []string {
-	var cols []string
-	seen := make(map[string]bool)
-	for _, r := range rows {
-		for _, k := range r.keys {
-			if !seen[k] {
-				seen[k] = true
-				cols = append(cols, k)
-			}
-		}
-	}
-	return cols
-}
-
-// renderMarkdown produces the data-file contents: an HTML comment with the
-// export metadata followed by the rows as a GitHub Flavored Markdown table.
-// With no rows only the comment is written.
-func renderMarkdown(snap *snapshot, generated time.Time) string {
-	var b strings.Builder
-	view := "-"
-	if snap.viewID != 0 {
-		view = strconv.Itoa(snap.viewID)
-	}
-	fmt.Fprintf(&b, `<!--
-  Baserow table snapshot, generated by scripts/baserow - do not edit.
-  Table:     %d
-  View:      %s
-  Rows:      %d
-  Source:    %s
-  Generated: %s
--->
-`, snap.tableID, view, snap.count, snap.sourceURL, generated.Format(time.RFC3339))
-
-	cols := columnOrder(snap.rows)
-	if len(snap.rows) == 0 || len(cols) == 0 {
-		return b.String()
-	}
-
-	b.WriteString("\n")
-	headers := make([]string, len(cols))
-	for i, c := range cols {
-		headers[i] = escapeCell(c)
-	}
-	b.WriteString("| " + strings.Join(headers, " | ") + " |\n")
-
-	b.WriteString("|")
-	for range cols {
-		b.WriteString(" --- |")
-	}
-	b.WriteString("\n")
-
-	for _, r := range snap.rows {
-		cells := make([]string, len(cols))
-		for i, c := range cols {
-			cells[i] = formatCell(r.values[c])
-		}
-		b.WriteString("| " + strings.Join(cells, " | ") + " |\n")
-	}
-	return b.String()
-}
-
-// formatCell turns any Baserow field value into Markdown table cell text.
-func formatCell(v any) string {
-	return escapeCell(rawCell(v))
-}
-
-// rawCell renders a value without Markdown escaping; arrays are joined so the
-// final cell is escaped exactly once.
-func rawCell(v any) string {
-	switch x := v.(type) {
-	case nil:
-		return ""
-	case string:
-		return x
-	case json.Number:
-		return x.String()
-	case bool:
-		return strconv.FormatBool(x)
-	case []any:
-		parts := make([]string, 0, len(x))
-		for _, e := range x {
-			parts = append(parts, rawCell(e))
-		}
-		return strings.Join(parts, ", ")
-	case map[string]any:
-		// Link-to-table, lookup and similar fields return nested objects;
-		// prefer a display key, otherwise fall back to compact JSON.
-		for _, key := range []string{"value", "name", "title", "visible_name"} {
-			if display, ok := x[key]; ok {
-				return rawCell(display)
-			}
-		}
-		encoded, err := json.Marshal(x)
-		if err != nil {
-			return fmt.Sprint(x)
-		}
-		return string(encoded)
-	default:
-		encoded, err := json.Marshal(x)
-		if err != nil {
-			return fmt.Sprint(x)
-		}
-		return string(encoded)
-	}
-}
-
-// escapeCell makes a value safe inside a GFM table cell: pipes cannot split
-// the cell and line breaks become <br>.
-func escapeCell(s string) string {
-	s = strings.ReplaceAll(s, "|", `\|`)
-	s = strings.ReplaceAll(s, "\r\n", "<br>")
-	s = strings.ReplaceAll(s, "\n", "<br>")
-	s = strings.ReplaceAll(s, "\r", "<br>")
-	return s
+	return append(data, '\n'), nil
 }
 
 func truncate(s string, n int) string {
@@ -422,7 +304,7 @@ func truncate(s string, n int) string {
 	return s[:n] + "..."
 }
 
-const usage = `Export a Baserow table view as a Markdown table for Hugo's data/ folder.
+const usage = `Export a Baserow table view as a JSON snapshot for Hugo's data/ folder.
 
 Usage:
   go run ./scripts/baserow -table <id> [-view <id>] [flags]
@@ -430,7 +312,7 @@ Usage:
 Flags:
   -table int      Baserow table ID (required; -database is an alias)
   -view int       Baserow view ID; its filters, sortings and hidden columns apply
-  -out string     output Markdown path (default data/baserow/table-<id>[-view-<id>].md)
+  -out string     output JSON path (default data/baserow.json)
   -page-size int  rows per request, max 200 (default 200)
   -url string     Baserow API base URL (overrides $BASEROW_URL)
 
