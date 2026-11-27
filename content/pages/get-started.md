@@ -76,6 +76,12 @@ title: "Get Started"
   </a>
 </div>
 
+<center>
+    <a href="/pages/get-usecase" class="btn btn-lg px-4 py-3" style="background-color: #227; color: white; border-radius: 8px; border-color: #d1d5db;">
+      Open use cases list
+    </a>
+</center>
+
 <p>
     Please consult our <a href="/articles/2026-09-apertus-1-5-ga/#general-availability">Inference Ecosystem</a> post for an overview, the <a href="/docs/deploy">deployment guides</a> cover more providers.
 </p>

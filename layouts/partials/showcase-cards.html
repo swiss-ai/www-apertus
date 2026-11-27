@@ -1,0 +1,76 @@
+{{/*
+  showcase-cards partial
+
+  Renders community showcase entries from a JSON snapshot exported by
+  scripts/baserow into data/ as a responsive grid of cards:
+
+    <a target="_blank" href="…" class="card">
+      <h4>Name</h4>
+      <p>Description …</p><span class="badge badge-web-app">Web app</span>
+    </a>
+
+  Expects a dict with:
+
+    - src      : path of the snapshot relative to data/ (default
+                 "baserow.json")
+    - types    : comma-separated list of "Type" values to include;
+                 empty or omitted renders all types
+    - badges   : render the type badge on each card (default true)
+    - active   : render only rows whose Active field is true (default true)
+    - truncate : maximum description length in characters (default 240)
+
+  Usage in a template:
+
+    {{ partial "showcase-cards.html" (dict "types" "Fine-tune,Hosting") }}
+
+  The snapshot is read and parsed once per build (os.ReadFile +
+  transform.Unmarshal), so the original Baserow field names and value types
+  survive the round-trip; cards are plain HTML styled by the .card-grid /
+  .card / .badge rules in layouts/_default/single.html. Rows are ordered by
+  their "order" field. A missing snapshot or an empty selection renders
+  nothing and logs a Hugo warning, so a stale export can never break the build.
+*/}}
+
+{{- $src := .src | default "baserow.json" -}}
+{{- $types := slice -}}
+{{- range split (default "" .types) "," -}}
+  {{- with trim . " " -}}{{- $types = $types | append . -}}{{- end -}}
+{{- end -}}
+{{- $badges := true -}}
+{{- if isset . "badges" -}}{{- $badges = .badges -}}{{- end -}}
+{{- $onlyActive := true -}}
+{{- if isset . "active" -}}{{- $onlyActive = .active -}}{{- end -}}
+{{- $truncate := 240 -}}
+{{- with .truncate -}}{{- $truncate = int . -}}{{- end -}}
+
+{{- $path := path.Join "data" $src -}}
+{{- if not (fileExists $path) -}}
+  {{- warnf "showcase-cards: %s not found; run 'go run ./scripts/baserow -table <id> -view <id>' to generate it" $path -}}
+{{- else -}}
+  {{- $snap := os.ReadFile $path | transform.Unmarshal -}}
+  {{- $rows := $snap.rows | default slice -}}
+  {{- if $onlyActive -}}
+    {{- $rows = where $rows "Active" true -}}
+  {{- end -}}
+  {{- if gt (len $types) 0 -}}
+    {{- $rows = where $rows "Type" "in" $types -}}
+  {{- end -}}
+  {{- if not $rows -}}
+    {{- warnf "showcase-cards: no matching rows in %s (types: %s)" $src (delimit $types ", ") -}}
+  {{- else -}}
+<div class="card-grid">
+{{- range $row := sort $rows "order" }}
+  {{- $url := default "" $row.URL -}}
+  {{- $type := default "" $row.Type -}}
+  {{- $desc := default "" $row.Notes | plainify | replaceRE "\\s+" " " | replaceRE "^ | $" "" | truncate $truncate -}}
+  {{- if $url }}<a target="_blank" href="{{ $url }}" class="card">{{ else }}<div class="card">{{ end }}
+    <h4>{{ default "" $row.Name }}</h4>
+    {{- with $desc }}
+    <p>{{ . }}</p>
+    {{- end }}
+    {{- if and $badges $type }}<span class="badge badge-{{ $type | urlize }}">{{ $type }}</span>{{- end }}
+  {{- if $url }}</a>{{ else }}</div>{{ end -}}
+{{- end }}
+</div>
+  {{- end -}}
+{{- end -}}

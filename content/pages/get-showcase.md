@@ -96,8 +96,13 @@ title: "Get Started"
     <p>A RAG Chatbot demo developed by Liip to ask questions about city laws with the Apertus model.</p>
   </a>
 
-
 </div>
+
+<center>
+    <a href="/pages/get-usecase" class="btn btn-lg px-4 py-3" style="background-color: #227; color: white; border-radius: 8px; border-color: #d1d5db;">
+      Open use cases list
+    </a>
+</center>
 
 <p class="section-intro">
   Would you like to see your Apertus project here? 

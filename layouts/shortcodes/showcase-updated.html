@@ -1,0 +1,33 @@
+{{/*
+  showcase-updated shortcode
+
+  Prints where the showcase snapshot comes from and when it was taken, based
+  on the metadata of a JSON snapshot exported by scripts/baserow. Example:
+
+    {{< showcase-updated
+        src="baserow.json"
+        href="https://baserow.io/database/1111/table/2222/3333" >}}
+
+  Parameters:
+
+    - src   : path of the snapshot relative to data/ (optional; defaults to
+              baserow.json)
+    - href  : optional link behind the snapshot label
+    - label : snapshot label (default "project database")
+*/}}
+
+{{- $src := .Get "src" | default "baserow/table.json" -}}
+{{- $label := .Get "label" | default "project database" -}}
+{{- $href := .Get "href" | default "" -}}
+
+{{- $path := path.Join "data" $src -}}
+{{- if not (fileExists $path) -}}
+  {{- warnf "showcase-updated: %s not found; run 'go run ./scripts/baserow -table <id> -view <id>' to generate it" $path -}}
+{{- else -}}
+  {{- $meta := (os.ReadFile $path | transform.Unmarshal).meta -}}
+  {{- with $meta -}}
+<p class="text-muted small">
+  Snapshot of the {{ with $href }}<a href="{{ . }}" target="_blank">{{ $label }}</a>{{ else }}{{ $label }}{{ end }}, generated {{ with .generated }}{{ time.AsTime . | time.Format "Jan 2, 2006" }}{{ end }}.
+</p>
+  {{- end -}}
+{{- end -}}
